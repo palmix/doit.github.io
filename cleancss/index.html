@@ -185,82 +185,82 @@
         <fieldset class="settings__group">
           <div class="settings__group__wrapper">
             <select class="settings__option settings__option--select js-settings-compatibility js-settings-option" id="compatibility" name="compatibility">
-              <option value="" selected>Modern browsers compatibility (Internet Explorer 10+)</option>
-              <option value="ie9">Modern browsers &amp; Internet Explorer 9+ compatibility</option>
-              <option value="ie8">Modern browsers &amp; Internet Explorer 8+ compatibility</option>
-              <option value="ie7">Modern browsers &amp; Internet Explorer 7+ compatibility</option>
+              <option value="" selected>توافق المتصفحات الحديثة (Internet Explorer 10+)</option>
+              <option value="ie9">متوافق مع متصفحات  Internet Explorer 9+</option>
+              <option value="ie8">متوافق مع متصفحات  Internet Explorer 8+</option>
+              <option value="ie7">متوافق مع متصفحات  Internet Explorer 7+</option>
             </select>
           </div>
           <div class="settings__group__wrapper">
             <input class="settings__option settings__option--checkbox js-settings-format js-settings-option" type="checkbox" id="format" name="format" />
-            <label class="settings__label" for="format">output formatting</label>
+            <label class="settings__label" for="format">تنسيق الإخراج</label>
           </div>
           <ul class="fine-grained-options fine-grained-options--hidden js-settings-format-options" data-visibility-class="fine-grained-options--hidden">
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_after_at_rule" name="format_breaks[afterAtRule]" checked />
-              <label class="settings__label" for="format_breaks_after_at_rule">insert line break after at-rules</label>
+              <label class="settings__label" for="format_breaks_after_at_rule">إدراج فاصل أسطر بعد القواعد</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_after_block_begins" name="format_breaks[afterBlockBegins]" checked />
-              <label class="settings__label" for="format_breaks_after_block_begins">insert line break after block begins</label>
+              <label class="settings__label" for="format_breaks_after_block_begins">إدراج فاصل أسطر بعد بدء الكتلة</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_after_block_ends" name="format_breaks[afterBlockEnds]" checked />
-              <label class="settings__label" for="format_breaks_after_block_ends">insert line break after block ends</label>
+              <label class="settings__label" for="format_breaks_after_block_ends">إدراج فاصل أسطر بعد انتهاء الكتلة</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_after_comment" name="format_breaks[afterComment]" checked />
-              <label class="settings__label" for="format_breaks_after_comment">insert line break after comments</label>
+              <label class="settings__label" for="format_breaks_after_comment">إدراج فاصل أسطر بعد التعليقات</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_after_property" name="format_breaks[afterProperty]" checked />
-              <label class="settings__label" for="format_breaks_after_property">insert line break after properties</label>
+              <label class="settings__label" for="format_breaks_after_property">إدراج فاصل أسطر بعد الخصائص</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_after_rule_begins" name="format_breaks[afterRuleBegins]" checked />
-              <label class="settings__label" for="format_breaks_after_rule_begins">insert line break after rule begins</label>
+              <label class="settings__label" for="format_breaks_after_rule_begins">إدراج فاصل أسطر بعد بدء القاعدة</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_after_rule_ends" name="format_breaks[afterRuleEnds]" checked />
-              <label class="settings__label" for="format_breaks_after_rule_ends">insert line break after rule ends</label>
+              <label class="settings__label" for="format_breaks_after_rule_ends">إدراج فاصل أسطر بعد انتهاء القاعدة</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_before_block_ends" name="format_breaks[beforeBlockEnds]" checked />
-              <label class="settings__label" for="format_breaks_before_block_ends">insert line break before block ends</label>
+              <label class="settings__label" for="format_breaks_before_block_ends">إدراج فاصل أسطر قبل انتهاء الكتلة</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_breaks_between_selectors" name="format_breaks[betweenSelectors]" checked />
-              <label class="settings__label" for="format_breaks_between_selectors">insert line break between selectors</label>
+              <label class="settings__label" for="format_breaks_between_selectors">إدراج فاصل أسطر بين المحددات</label>
             </li>
             <li class="fine-grained-options__option">
-              <label class="settings__label" for="format_indent_by">indent with</label>
+              <label class="settings__label" for="format_indent_by">مسافة بادئة مع</label>
               <input class="settings__option settings__option--number js-settings-option" type="number" min="0" max="16" id="format_indent_by" name="format[indentBy]" value="2" />
               <select class="settings__option settings__option--inline-select js-settings-option" id="format_indent_with" name="format[indentWith]">
-                <option value="space" selected>space(s)</option>
-                <option value="tab">tab(s)</option>
+                <option value="space" selected>المسافة</option>
+                <option value="tab">التبويب</option>
               </select>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_spaces_around_selector_relation" name="format_spaces[aroundSelectorRelation]" checked />
-              <label class="settings__label" for="format_spaces_around_selector_relation">insert space between selector relation</label>
+              <label class="settings__label" for="format_spaces_around_selector_relation">أدخل مسافة بين علاقة المحدد</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_spaces_before_block_begins" name="format_spaces[beforeBlockBegins]" checked />
-              <label class="settings__label" for="format_spaces_before_block_begins">insert space before block begins</label>
+              <label class="settings__label" for="format_spaces_before_block_begins">أدخل مسافة قبل أن تبدأ الكتلة</label>
             </li>
             <li class="fine-grained-options__option">
               <input class="settings__option settings__option--checkbox js-settings-option" type="checkbox" id="format_spaces_before_value" name="format_spaces[beforeValue]" checked />
-              <label class="settings__label" for="format_spaces_before_value">insert space before property value</label>
+              <label class="settings__label" for="format_spaces_before_value">أدخل مسافة قبل قيمة الخاصية</label>
             </li>
             <li class="fine-grained-options__option">
-              <label class="settings__label" for="format_wrap_at">wrap lines when longer than</label>
+              <label class="settings__label" for="format_wrap_at">التفاف الخطوط عندما تكون أطول من</label>
               <input class="settings__option settings__option--number js-settings-option" type="number" min="0" id="format_wrap_at" name="format[wrapAt]" value="" />
-              <label class="settings__label" for="format_wrap_at">characters</label>
+              <label class="settings__label" for="format_wrap_at">حرف</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="settings__group">
-          <input class="settings__option settings__option--reset js-settings-reset" type="reset" value="Reset settings to defaults" />
+          <input class="settings__option settings__option--reset js-settings-reset" type="reset" value="إعادة تعيين الإعدادات الافتراضية" />
         </fieldset>
       </form>
     </section>
