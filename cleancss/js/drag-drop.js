@@ -68,7 +68,7 @@
     var stylesBlob = new Blob([output.styles])
 
     fileNode.classList.add('dropped-files__file--optimized')
-    summaryNode.innerText = ' - saved ' + formatAsKb(saved, 1) + ' kB'
+    summaryNode.innerText = ' تم حفظ - ' + formatAsKb(saved, 1) + ' kB'
     downloadNode.href = URL.createObjectURL(stylesBlob)
 
     copyToClipboardNode.addEventListener('click', function (event) {
