@@ -102,16 +102,20 @@ noscript {
 .dropped-files__file:not(.dropped-files__file--optimized) > .dropped-files__file__action {
   display: none;
 }
-
+.dropped-files__file__name{
+    float: left;
+}
 .dropped-files__file__summary {
   color: hsl(0, 0%, 45%);
   font-style: italic;
+  float: left;
+  margin-left: 10px;
 }
 
 .dropped-files__file__action {
   display: inline-block;
-  float: right;
-  margin-left: 0.5rem;
+  float: left;
+  margin-right: 0.5rem;
 }
 
 .settings {
