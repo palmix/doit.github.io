@@ -118,8 +118,8 @@ noscript {
 
 .dropped-files__file__action {
   display: inline-block;
-  float: left;
-  margin-right: 0.5rem;
+  float: right;
+  margin-left: 0.5rem;
 }
 
 .settings {
