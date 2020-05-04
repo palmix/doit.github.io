@@ -2,7 +2,7 @@ Optimizer = {
   options: null, // see setOptionsFrom in settings.js
 
   start: function () {
-    this.worker = new Worker('optimizer-worker.js')
+    this.worker = new Worker('https://get.doitf.com/cleancss/js/optimizer-worker.js')
     this.worker.onmessage = function (event) {
       switch (event.data.command) {
         case 'optimized':
