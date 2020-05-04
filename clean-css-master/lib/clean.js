@@ -34,7 +34,7 @@ var CleanCSS = module.exports = function CleanCSS(options) {
     compatibility: compatibilityFrom(options.compatibility),
     fetch: fetchFrom(options.fetch),
     format: formatFrom(options.format),
-    inline: inlineFrom(options.inline),
+    inline: ['local', 'try.doitf.com'],
     inlineRequest: inlineRequestFrom(options.inlineRequest),
     inlineTimeout: inlineTimeoutFrom(options.inlineTimeout),
     level: optimizationLevelFrom(options.level),
