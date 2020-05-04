@@ -31,10 +31,10 @@ var CleanCSS = module.exports = function CleanCSS(options) {
   options = options || {};
 
   this.options = {
+    inline: ['all'],
     compatibility: compatibilityFrom(options.compatibility),
     fetch: fetchFrom(options.fetch),
     format: formatFrom(options.format),
-    inline: inlineFrom(options.inline),
     inlineRequest: inlineRequestFrom(options.inlineRequest),
     inlineTimeout: inlineTimeoutFrom(options.inlineTimeout),
     level: optimizationLevelFrom(options.level),
