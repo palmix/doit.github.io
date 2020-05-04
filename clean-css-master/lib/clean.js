@@ -28,13 +28,16 @@ var serializeStyles = require('./writer/simple');
 var serializeStylesAndSourceMap = require('./writer/source-maps');
 
 var CleanCSS = module.exports = function CleanCSS(options) {
+  new CleanCSS({
+  inline: ['all'] 
+})
   options = options || {};
 
  this.options = {
     compatibility: compatibilityFrom(options.compatibility),
     fetch: fetchFrom(options.fetch),
     format: formatFrom(options.format),
-    inline: ['local', 'try.doitf.com'],
+    inline: inlineFrom(options.inline),
     inlineRequest: inlineRequestFrom(options.inlineRequest),
     inlineTimeout: inlineTimeoutFrom(options.inlineTimeout),
     level: optimizationLevelFrom(options.level),
