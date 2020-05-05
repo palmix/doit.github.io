@@ -220,10 +220,11 @@ noscript {
 }
 
 .settings__option--reset {
-  background: transparent;
-  border: 1px solid hsl(0, 0%, 80%);
-  float: right;
-  padding: 0.5rem 1rem;
+    background: rgba(43, 174, 230, 0.93);
+    border: 1px solid hsl(198, 16%, 52%);
+    float: right;
+    padding: 0.5rem 1rem;
+    color: #fff;
 }
 
 .clipboard-copy {
