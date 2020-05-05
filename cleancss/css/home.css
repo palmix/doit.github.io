@@ -17,9 +17,12 @@ a, article, body, div, fieldset, form, h1, h2, h3, h4, h5, h6, input, label, li,
   margin-top: 0;
 
 }
-article{
+article {
     font-family: 'droid arabic naskh',sans-serif;
-
+    font-size: .8em;
+}
+article a{
+    text-decoration: none !important;
 }
 select {
   font-size: 16px;
@@ -120,6 +123,7 @@ noscript {
   display: inline-block;
   float: right;
   margin-left: 0.5rem;
+  font-family: 'droid arabic kufi',sans-serif,tahoma;
 }
 
 .settings {
