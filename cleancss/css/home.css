@@ -226,6 +226,10 @@ noscript {
     padding: 0.5rem 1rem;
     color: #fff;
 }
+.settings__option--reset:hover {
+    background: rgb(113, 140, 152);
+    border: 1px solid hsl(198, 49%, 14%);
+}
 
 .clipboard-copy {
   border: none;
