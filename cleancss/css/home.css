@@ -76,6 +76,7 @@ noscript {
   line-height: 12rem;
   text-align: center;
   text-transform: uppercase;
+  font-size: 18px;
 }
 
 .dropped-files__file {
