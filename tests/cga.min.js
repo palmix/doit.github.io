@@ -1450,7 +1450,7 @@ function addNewTab(filename, ifNew, mode) {
 			title: tabtitle,
 			id: tabid,
 			closable: false,
-			href: "https://get.doitf.com/test/load_file.html",
+			href: "https://get.doitf.com/tests/load_file.html",
 			extractor: function(data) {
    			    return data;
 			},
