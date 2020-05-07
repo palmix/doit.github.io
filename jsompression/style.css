@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     word-wrap: break-word !important;
-    font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -57,7 +56,7 @@ float: left;
 
 .tab-nav li {
     padding: 3px 15px;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     display: inline-block;
     border-radius: 3px 3px 0 0;
@@ -112,7 +111,7 @@ float: left;
     cursor: not-allowed;
 }
 .buttonjsc.download {
-    margin-right: 15px;
+    margin-left: 15px;
 }
 .hide {
     display: none;
