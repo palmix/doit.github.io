@@ -459,7 +459,7 @@ function fetchContent( device ){
                }else{
                   if( preview ){
                        $("#googleadv").css({"display": "none"});
-					   var tests = document.getElementsByClassName("panel-body").value; 
+					   var tests = document.getElementsByClassName("panel-body")[0].value; 
                        contentframe.contents().find('body').html(tests);
                   }else{
                        contentcover.html('<div style="padding-left:10px;"><pre style="margin:5px;">' + data + '</pre></div>');
