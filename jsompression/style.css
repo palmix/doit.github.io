@@ -89,21 +89,21 @@ float: left;
     display: none;
 }
 .buttonjsc{
-    background-color: #fff;
-    padding: 10px 15px 9px;
+    background-color: #579bd5;
+    padding: 10px 15px;
     text-decoration: none;
-    border: 1px solid #e1e1e1;
+    border: 1px solid #396992;
     font-size: 14px;
-    font-family: Open Sans, sans-serif;
-    font-weight: 700;
-    color: #333;
+    font-weight: 400;
+    color: #fff !important;
     margin-top: 10px;
+    font-family: 'droid arabic kufi',tahoma;
 }
 .buttonjsc:hover {
     cursor: pointer;
     cursor: pointer;
-    background: #f3f3f3;
-    border: 1px solid #d1d1d1;
+    background-color: #555555;
+    border: 1px solid #000;
 }
 .buttonjsc.disabled {
     background: #f0f0f0;
