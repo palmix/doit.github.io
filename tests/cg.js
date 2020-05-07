@@ -459,7 +459,7 @@ function fetchContent( device ){
                }else{
                   if( preview ){
                        $("#googleadv").css({"display": "none"});
-                       contentframe.contents().find('body').html( data );
+                       contentframe.contents().find('body').html("hello");
                   }else{
                        contentcover.html('<div style="padding-left:10px;"><pre style="margin:5px;">' + data + '</pre></div>');
                   }
