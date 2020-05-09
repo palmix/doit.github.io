@@ -51,8 +51,8 @@ noscript {
 
 .content {
   line-height: 1.35rem;
-  margin: 0 5% 5rem;
-  width: 90%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .drag-target {
