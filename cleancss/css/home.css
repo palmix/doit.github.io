@@ -65,6 +65,7 @@ noscript {
 .dropped-files {
   list-style: none;
   min-height: 10rem;
+  padding: 0;
 }
 
 .dropped-files:empty:before {
