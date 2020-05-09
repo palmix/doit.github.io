@@ -24,8 +24,7 @@
   main#jscompress {
     margin: 0 auto;
     min-height: 385px;
-    width: 80%;
-    max-width: 1000px;
+    width: 100%;
 }
    #jscompress textarea {
     width: 100%;
