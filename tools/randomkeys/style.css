@@ -78,7 +78,7 @@ input {
     background: #f7f7f7;
     border-bottom: 1px solid #e1e1e1;
     border-top: none;
-    text-align: left;
+    text-align: right;
     margin: 0;
     padding: 5px 15px;
     font-weight: 700;
@@ -124,7 +124,12 @@ p.heading {
     }
 }
   @media all and (max-width: 860px) {
-
+    .description-title {
+        display: none;
+    }
+	    .description {
+        display: none
+    }
     .refresh {
         padding: 35px 10px 10px;
     }
@@ -137,10 +142,10 @@ p.heading {
         width: 94%;
     }
 
-    p.heading {
+     p.heading {
         font-size: 13px
     }
-    p {
+    section p {
         font-size: 13px
     }
  .three-lines {
