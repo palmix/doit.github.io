@@ -80,13 +80,13 @@ input {
     border-top: none;
     text-align: right;
     margin: 0;
-    padding: 5px 15px;
+    padding: 15px;
     font-weight: 700;
 }
 
 
 
-.info {
+section .info {
     display: block;
     margin: 0;
     clear: both;
@@ -95,12 +95,12 @@ input {
     padding: 0 0 15px;
 }
 
-.info ul,
-.info ol {
+section .info ul,
+section .info ol {
     margin: 5px 0 5px 10px;
 }
 
-.info li {
+section .info li {
     margin: 0 0 0 15px;
     padding: 0;
     font-size: 14px;
@@ -124,13 +124,13 @@ p.heading {
     }
 }
   @media all and (max-width: 860px) {
-    .description-title {
+    section .description-title {
         display: none;
     }
-	    .description {
+	   section .description {
         display: none
     }
-    .refresh {
+    section .refresh {
         padding: 35px 10px 10px;
     }
  }
