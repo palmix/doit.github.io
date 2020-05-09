@@ -122,7 +122,6 @@ noscript {
 
 .dropped-files__file__action {
   display: inline-block;
-  float: right;
   margin-left: 0.5rem;
   font-family: 'droid arabic kufi',sans-serif,tahoma;
 }
