@@ -1,6 +1,0 @@
-*.log
-node_modules
-deploy_rsa
-.dpl # created by Travis
-.npmrc
-.eslintcache
