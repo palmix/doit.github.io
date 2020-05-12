@@ -155,7 +155,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
 
 
 body.darktheme.CodeMirror { background: #090300; color: #d6d5d4; }
-body.darktheme div.CodeMirror-selected { background: #3a3432; }
+body.darktheme div.CodeMirror-selected { background: #579bd5; }
 body.darktheme .CodeMirror-line::selection, body.darktheme .CodeMirror-line > span::selection, body.darktheme .CodeMirror-line > span > span::selection { background: rgba(58, 52, 50, .99); }
 body.darktheme .CodeMirror-line::-moz-selection, body.darktheme .CodeMirror-line > span::-moz-selection, body.darktheme .CodeMirror-line > span > span::-moz-selection { background: rgba(58, 52, 50, .99); }
 body.darktheme .CodeMirror-gutters { background: #090300; border-right: 0px; }
