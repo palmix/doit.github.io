@@ -151,6 +151,45 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
 .CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
 .CodeMirror-activeline-background {background: #e8f2ff;}
 
+/* black styles for common addons */
+
+
+body.darktheme.CodeMirror { background: #090300; color: #d6d5d4; }
+body.darktheme div.CodeMirror-selected { background: #3a3432; }
+body.darktheme .CodeMirror-line::selection, body.darktheme .CodeMirror-line > span::selection, body.darktheme .CodeMirror-line > span > span::selection { background: rgba(58, 52, 50, .99); }
+body.darktheme .CodeMirror-line::-moz-selection, body.darktheme .CodeMirror-line > span::-moz-selection, body.darktheme .CodeMirror-line > span > span::-moz-selection { background: rgba(58, 52, 50, .99); }
+body.darktheme .CodeMirror-gutters { background: #090300; border-right: 0px; }
+body.darktheme .CodeMirror-guttermarker { color: #db2d20; }
+body.darktheme .CodeMirror-guttermarker-subtle { color: #5c5855; }
+body.darktheme .CodeMirror-linenumber { color: #5c5855; }
+
+body.darktheme .CodeMirror-cursor { border-left: 1px solid #807d7c; }
+
+body.darktheme span.cm-comment { color: #cdab53; }
+body.darktheme span.cm-atom { color: #a16a94; }
+body.darktheme span.cm-number { color: #a16a94; }
+
+body.darktheme span.cm-property, body.darktheme span.cm-attribute { color: #01a252; }
+body.darktheme span.cm-keyword { color: #db2d20; }
+body.darktheme span.cm-string { color: #fded02; }
+
+body.darktheme span.cm-variable { color: #01a252; }
+body.darktheme span.cm-variable-2 { color: #01a0e4; }
+body.darktheme span.cm-def { color: #e8bbd0; }
+body.darktheme span.cm-bracket { color: #d6d5d4; }
+body.darktheme span.cm-tag { color: #db2d20; }
+body.darktheme span.cm-link { color: #a16a94; }
+body.darktheme span.cm-error { background: #db2d20; color: #807d7c; }
+
+body.darktheme .CodeMirror-activeline-background { background: #2F2F2F; }
+body.darktheme .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
+
+
+
+
+
+
+
 /* STOP */
 
 /* The rest of this file contains styles related to the mechanics of
@@ -347,3 +386,7 @@ div.CodeMirror-dragcursors {
 
 /* Help users use markselection to safely style text background */
 span.CodeMirror-selectedtext { background: none; }
+body.darktheme .CodeMirror {
+  background-color:rgb(40, 44, 52);
+  color:rgb(255, 255, 255);
+}
