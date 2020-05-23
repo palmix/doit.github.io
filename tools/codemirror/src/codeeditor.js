@@ -1,4 +1,5 @@
-         CodeMirror.modeURL = "https://get.doitf.com/tools/codemirror/mode/%N/%N.js";
+ 
+          CodeMirror.modeURL = "https://get.doitf.com/tools/codemirror/mode/%N/%N.js";
 
  var sel_top = document.getElementById("buffers");
 CodeMirror.on(sel_top, "change", function() {
@@ -188,7 +189,29 @@ CodeMirror.defineMode("mustache", function(config, parserConfig) {
             lang: ["ar","en", "de", "fr", "nl"],
             dir: ["rtl","ltr"],
           },
-          children: ["animal", "plant"]
+          children: ["head","body","animal", "plant"]
+        },
+        div: {
+          attrs: {
+          id:  ["awtest1", "awtest2", "awtest3"],
+          class: ["aw-test1", "aw-test2", "aw-test3"]
+          },
+          children: ["div", "span","a", "i"]
+        },
+        span: {
+          attrs: {
+          id:  ["awtest1", "awtest2", "awtest3"],
+          class: ["aw-test1", "aw-test2", "aw-test3"]
+          },
+          children: ["div", "span","a", "i"]
+        },
+        a: {
+          attrs: {
+          href: null,
+          id:  ["awtest1", "awtest2", "awtest3"],
+          class: ["aw-test1", "aw-test2", "aw-test3"]
+          },
+          children: ["h1", "h2","h3", "i"]
         },
         animal: {
           attrs: {
@@ -254,12 +277,18 @@ var editor  = CodeMirror.fromTextArea(document.getElementById("code"), {
        hintOptions: false
 
 });
+}
+
+
+
+
+
 editor.on("change", function(){
 window.addEventListener("beforeunload", function(event) {
   event.returnValue = "ربما لم يتم حفظ التعديلات! خروج على اي حال؟";
 });
 });
-}
+
 
 
 
@@ -314,7 +343,6 @@ selectBuffer(editor, "ملف HTML");
 
 
 
-
 var delay;
 editor.on("change", function() {
 clearTimeout(delay);
@@ -333,6 +361,13 @@ function previewcheck() {
       }
       setTimeout(updatePreview, 300);
       document.getElementById("previewiframe").style.display = "block";
+        if (editor.getOption("mode") == "text/html"){
+document.getElementById("previewiframe").style.display = "block";
+}else if (editor.getOption("mode") == "[object Object]"){
+ document.getElementById("previewiframe").style.display = "block";
+}else{
+document.getElementById("previewiframe").style.display = "none";
+}
   }else{
 document.getElementById("previewiframe").style.display = "none";
 }
