@@ -713,7 +713,7 @@ checkBoxsize.style.display = "inline-block";
     $(".inputc7").toggle(inputc7El.prop("checked"));
     $(".inputc8").toggle(inputc8El.prop("checked"));
     $(".inputc9").toggle(inputc9El.prop("checked"));
-    $(".inputc10").toggle(input103El.prop("checked"));
+    $(".inputc10").toggle(inputc10El.prop("checked"));
     $(".inputc11").toggle(inputc11El.prop("checked"));
     $(".inputc12").toggle(inputc12El.prop("checked"));
     $(".inputc13").toggle(inputc13El.prop("checked"));
