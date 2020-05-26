@@ -244,7 +244,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.getElementById("sizeCols").value = sizeCols;
 		makeTableCode();
 	};
- 
+ 	el1.onchange = function() {
+		sizeCols = document.getElementById('sizeCols').value;
+		sizeCols = sizeCols.replace(/[^0-9]+/g,'').replace(/\s+/, '');
+		document.getElementById("sizeCols").value = sizeCols;
+		makeTableCode();
+	};
+	
  	//Listener for sizeRows
 	var el2 = document.getElementById('sizeRows');
 	el2.onkeyup = function() {
@@ -253,7 +259,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.getElementById("sizeRows").value = sizeRows;
 		makeTableCode();
 	};
- 
+	el2.onchange = function() {
+		sizeRows = document.getElementById("sizeRows").value;
+		sizeRows = sizeRows.replace(/[^0-9]+/g,'').replace(/\s+/, '');
+		document.getElementById("sizeRows").value = sizeRows;
+		makeTableCode();
+	};
+	
  	var el3 = document.getElementById('tableColor');
 	el3.onchange = function() {
 		tableColor = document.getElementById('tableColor').value;
