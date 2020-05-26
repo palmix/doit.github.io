@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
               
               if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color:#729ea5;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color:#729ea5;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color:#729ea5;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color:#729ea5;border-collapse: collapse;}\n';
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '<style type="text/css">\n';
               if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:'+tableColor+';width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:'+tableColor+';width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:'+tableColor+';width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:'+tableColor+';width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
@@ -101,9 +101,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
               if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
@@ -121,9 +121,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
               
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
@@ -141,9 +141,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
@@ -160,9 +160,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
@@ -184,9 +184,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}\n';
@@ -205,9 +205,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
@@ -226,9 +226,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
@@ -245,9 +245,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
@@ -264,9 +264,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
@@ -283,9 +283,9 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 				tableCSS += '<style type="text/css">\n';
              if(textaligntable == "left"){ 
 				tableCSS += '.awtable {text-align:left;font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
-				}else (textaligntable == "right"){
+				}else if(textaligntable == "right"){
 				tableCSS += '.awtable {text-align:right;font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
-				}else (textaligntable == "center"){
+				}else if(textaligntable == "center"){
 				tableCSS += '.awtable {text-align:center;font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
                 }if(textaligntable == "none"){
 				tableCSS += '.awtable {font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
