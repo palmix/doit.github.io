@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   
 	function makeTableCode(){
-
+		if (b64awsec == "ZG9pdGYuY29t"){
 		tableColor = document.getElementById('tableColor').value;
 		tableDesign = document.getElementById('tableDesign').value;
 		sizeCols = document.getElementById('sizeCols').value;
@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		btncopy.setAttribute('data-clipboard-text' , newTableCode);
 
 		
-	}
+}}
 	
 	
 	//Listener for sizeCols
