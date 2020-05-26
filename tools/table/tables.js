@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 	//Listener for sizeCols
 	var el1 = document.getElementById('sizeCols');
-	el1.onkeyup = function() {
+	el1 = function() {
 		sizeCols = document.getElementById('sizeCols').value;
 		sizeCols = sizeCols.replace(/[^0-9]+/g,'').replace(/\s+/, '');
 		document.getElementById("sizeCols").value = sizeCols;
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	
  	//Listener for sizeRows
 	var el2 = document.getElementById('sizeRows');
-	el2.onkeyup = function() {
+	el2 = function() {
 		sizeRows = document.getElementById("sizeRows").value;
 		sizeRows = sizeRows.replace(/[^0-9]+/g,'').replace(/\s+/, '');
 		document.getElementById("sizeRows").value = sizeRows;
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 	
  	var el3 = document.getElementById('tableColor');
-	el3.onchange = function() {
+	el3 = function() {
 		tableColor = document.getElementById('tableColor').value;
 		tableDesign = document.getElementById('tableDesign').value;
 		if (tableColor == "None"){document.getElementById("tableDesign").selectedIndex = 2;}
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
  	};
  
   	var el4 = document.getElementById('tableDesign');
-	el4.onchange = function() {
+	el4 = function() {
 		tableColor = document.getElementById('tableColor').value;
 		tableDesign = document.getElementById('tableDesign').value;
 		if (tableDesign == "noStyle"){document.getElementById("tableColor").selectedIndex = 6;}
@@ -273,27 +273,19 @@ document.addEventListener('DOMContentLoaded', function () {
  	};
  
    	var el5 = document.getElementById('tableHighlight');
-	el5.onchange = function() {
+	el5 = function() {
 		makeTableCode()
  	};
 	
   	var el6 = document.getElementById('tableInfo');
-	el6.onchange = function() {
+	el6 = function() {
 		makeTableCode();  
  	};	 
 	
 	
 	//intialize on entry
 	makeTableCode(); 
-	
-	var textBox = document.getElementById("newCode");
-	textBox.onfocus = function() {
-		textBox.select();
-		textBox.onmouseup = function() {
-			textBox.onmouseup = null;
-			return false;
-		};
-	};
+
 
 });
 
