@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (sizeCols == "0"){sizeCols = "1";document.getElementById('sizeCols').value = "1"}
 		if (sizeRows == "0"){sizeRows = "1";document.getElementById('sizeRows').value = "1"}
 		tableInfo = document.getElementById('tableInfo').value;
-		tableHighlight = document.getElementById('tableHighlight').value;
+		tableHighlight = document.getElementById('tableHighlight');
 		
 		if(tableDesign == "alternating"){
 			tableCSS = "";
@@ -50,7 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#d4e3e5;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}}
+              
+              
+  if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}}          
+              
+              
+              
 				tableCSS += '</style>\n\n';
 			}else if(tableColor == "Green"){
 				var green1 = "#abd28e";var green2 = "#bedda7"; var green3 = "#9dcc7a";
@@ -60,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#abd28e;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#bedda7;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}}
+if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}} 
 				tableCSS += '</style>\n\n';
 			
 			}else if(tableColor == "Grey"){
@@ -71,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#b8b8b8;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#cdcdcd;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}}
+if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}} 
 				tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "Orange"){
@@ -82,8 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#e6983b;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#f0c169;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}}
-				tableCSS += '</style>\n\n';
+if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}} 
+              tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "Brown"){
 				var brown1 = "#ded0b0";var brown2 = "#e9dbbb"; var brown3 = "#bcaf91";
@@ -93,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#ded0b0;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#e9dbbb;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}}
-				tableCSS += '</style>\n\n';
+if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffffff;}\n';}} 
+              tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "Black"){
 				var black1 = "#171515";var black2 = "#2f2f2f"; var black3 = "#686767";
@@ -104,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#171515;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#2f2f2f;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#171515;}\n';}}
+              if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#171515;}\n';}} 
 				tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "None"){
@@ -120,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#ffffff;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}}
+              if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}} 
+
 				tableCSS += '</style>\n\n';
 				
 				
@@ -132,7 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#abd28e;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#ffffff;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}}
+              if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}} 
+
 				tableCSS += '</style>\n\n';
 				
 			
@@ -144,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#b8b8b8;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#ffffff;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}}
+              if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}} 
 				tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "Orange"){
@@ -155,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#e6983b;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#ffffff;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}}
+              if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}} 
 				tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "Brown"){
@@ -166,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#ded0b0;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#ffffff;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}}
+              if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#ffff99;}\n';}} 
 				tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "Black"){
@@ -177,7 +184,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '.awtable th {font-size:12px;background-color:#171515;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;text-align:left;}\n';
 				tableCSS += '.awtable tr {background-color:#171515;}\n';
 				tableCSS += '.awtable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}\n';
-				if (tableHighlight != "none"){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#666666;}\n';}}
+              if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtable tr:hover {background-color:#666666;}\n';}} 
+
 				tableCSS += '</style>\n\n';
 				
 			}else if(tableColor == "None"){
@@ -294,3 +302,4 @@ btncopy.setAttribute('data-clipboard-text' , newTableCode);
 
 
 });
+
