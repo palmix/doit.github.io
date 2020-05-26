@@ -1,4 +1,3 @@
-//generate-table.js
 document.addEventListener('DOMContentLoaded', function () {
 		
 	var sizeCols = "";
