@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		tableDesign = document.getElementById('tableDesign').value;
 		sizeCols = document.getElementById('sizeCols').value;
 		sizeRows = document.getElementById('sizeRows').value;
-		if (sizeCols == "0"){sizeCols = "5";document.getElementById('sizeCols').value = "5"}
-		if (sizeRows == "0"){sizeRows = "7";document.getElementById('sizeRows').value = "7"}
+		if (sizeCols == "0"){sizeCols = "1";document.getElementById('sizeCols').value = "1"}
+		if (sizeRows == "0"){sizeRows = "1";document.getElementById('sizeRows').value = "1"}
 		tableInfo = document.getElementById('tableInfo').value;
 		tableHighlight = document.getElementById('tableHighlight').value;
 		
@@ -253,13 +253,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	var el1 = document.getElementById('setcodenew');
 	el1.onclick = function() {
     	sizeCols = document.getElementById('sizeCols').value;
-		sizeCols = sizeCols.replace(/[^0-9]+/g,'').replace(/\s+/, '');
 		document.getElementById("sizeCols").value = sizeCols;
 
 	
  	//Listener for sizeRows
 		sizeRows = document.getElementById("sizeRows").value;
-		sizeRows = sizeRows.replace(/[^0-9]+/g,'').replace(/\s+/, '');
 		document.getElementById("sizeRows").value = sizeRows;
 	
 		tableColor = document.getElementById('tableColor').value;
@@ -296,4 +294,3 @@ btncopy.setAttribute('data-clipboard-text' , newTableCode);
 
 
 });
-
