@@ -207,7 +207,11 @@ if (tableHighlight.checked == true){if(tableColor != "None"){tableCSS += '.awtab
 		var iiii = 0;
 		while(ii< sizeCols){
 			iii = ii + 1;
+           if (tableInfo.checked == true){
 			tableHTML += '<th>عنوان '+iii+'</th>';
+           }else{
+           tableHTML += '<th> </th>';
+           }
 			ii++;
 		}
 		tableHTML += "</tr>\n";
