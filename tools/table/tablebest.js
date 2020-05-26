@@ -9,6 +9,7 @@
     addModeClass: true
 
   });
+function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)))}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
 
 document.addEventListener('DOMContentLoaded', function () {
 		
@@ -51,8 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	var awtablecolor;
 	var tdtablecolor;
 
-  
-  if (b64awsec == )
 	function makeTableCode(){
 		if (b64awsec == "ZG9pdGYuY29t"){
 		tableColor = document.getElementById('tableColor').value;
