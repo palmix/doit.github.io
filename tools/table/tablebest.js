@@ -1,4 +1,26 @@
 
+
+function showadvdesign() {
+  var checkBox = document.getElementById("advdesign");
+  if (checkBox.checked == true){
+$('#collapseadvdesign').collapse('show');
+$('#tableDesign').attr("disabled", "disabled");
+$('#tableColor').attr("disabled", "disabled");
+  } else {
+$('#collapseadvdesign').collapse('hide');
+$('#tableDesign').removeAttr("disabled", "disabled");
+$('#tableColor').removeAttr("disabled", "disabled");
+    }
+}
+
+
+
+
+
+
+
+
+
   var editor = CodeMirror.fromTextArea(document.getElementById("newCode"), {
     mode: "text/html",
     readOnly: true,
@@ -10,6 +32,44 @@
 
   });
 function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)))}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
+	var html5color1 = document.getElementById('html5color1');
+	var html5color2 = document.getElementById('html5color2');
+	var html5color3 = document.getElementById('html5color3');
+	var html5color4 = document.getElementById('html5color4');
+	var html5color5 = document.getElementById('html5color5');
+	var html5color6 = document.getElementById('html5color6');
+	var html5color7 = document.getElementById('html5color7');
+
+	var colorbox1 = document.getElementById('tablecolor1');
+	var colorbox2 = document.getElementById('tablecolor2');
+	var colorbox3 = document.getElementById('tablecolor3');
+	var colorbox4 = document.getElementById('tablecolor4');
+	var colorbox5 = document.getElementById('tablecolor5');
+	var colorbox6 = document.getElementById('tablecolor6');
+	var colorbox7 = document.getElementById('tablecolor7');
+
+    
+  function tablecolor1(){
+      document.getElementById('tablecolor1').value = html5color1.value;
+  }
+  function tablecolor2(){
+      document.getElementById('tablecolor2').value = html5color2.value;
+  }
+  function tablecolor3(){
+      document.getElementById('tablecolor3').value = html5color3.value;
+  }
+  function tablecolor4(){
+      document.getElementById('tablecolor4').value = html5color4.value;
+  }
+  function tablecolor5(){
+      document.getElementById('tablecolor5').value = html5color5.value;
+  }
+  function tablecolor6(){
+      document.getElementById('tablecolor6').value = html5color6.value;
+  }
+  function tablecolor7(){
+      document.getElementById('tablecolor7').value = html5color7.value;
+  }
 
 document.addEventListener('DOMContentLoaded', function () {
 		
@@ -31,14 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	var awHighlight = "";
 	var awHighlightb = "";
   
-	var textaligntable = "";
-	var borderawtable = "";
-	var backgroundtable = "";
-	var borderth = "";
-	var backgroundtr = "";
-	var bordertd = "";
-	var backgroundtrhover = "";
-	var awtablefontsize;
+	var textaligntable;
+	var borderawtable;
+	var backgroundtable;
+	var borderth;
+	var backgroundtr;
+	var bordertd;
+	var backgroundtrhover;
 	var thfontsize;
 	var tdfontsize;
 	var awtableborderwidth;
@@ -51,16 +110,24 @@ document.addEventListener('DOMContentLoaded', function () {
 	var awtabletdpadding;
 	var awtablecolor;
 	var tdtablecolor;
+    var selectfontfamily;
+    var awtablefontsize;
+    var awtdfontsize;
 
 	function makeTableCode(){
 		if (b64awsec == "ZG9pdGYuY29t"){
+        awtablefontsize = document.getElementById('awtablefontsize').value;
+        awtdfontsize = document.getElementById('awtdfontsize').value;
+        selectfontfamily = document.getElementById('selectfontfamily').value;
 		tableColor = document.getElementById('tableColor').value;
 		tableDesign = document.getElementById('tableDesign').value;
 		sizeCols = document.getElementById('sizeCols').value;
 		sizeRows = document.getElementById('sizeRows').value;
 		textaligntable = document.getElementById('textaligntable').value;
-		if (sizeCols == "0"){sizeCols = "1";document.getElementById('sizeCols').value = "1";}
-		if (sizeRows == "0"){sizeRows = "1";document.getElementById('sizeRows').value = "1";}
+		if (sizeCols <= 0){sizeCols = "1";document.getElementById('sizeCols').value = "1";}
+		if (sizeRows <= 0){sizeRows = "1";document.getElementById('sizeRows').value = "1";}
+		if (awtablefontsize <= 9){awtablefontsize = "9";document.getElementById('awtablefontsize').value = "9";}
+		if (awtdfontsize <= 9){awtdfontsize = "9";document.getElementById('awtdfontsize').value = "9";}
 		tableInfo = document.getElementById('tableInfo');
 		tableHighlight = document.getElementById('tableHighlight');
 		tableCSS = "";
@@ -81,12 +148,8 @@ document.addEventListener('DOMContentLoaded', function () {
         backgroundtable ='#acc8cc;';
         }else if(tableDesign == "minimal"){
               backgroundtable ='#729ea5;';
-              backgroundtr ='#ffffff;';
+              backgroundtr ='none;';
               backgroundtrhover ='#d4e3e5;';
-		}else if(tableDesign == "alternatingXY"){
-			tableCSS = "<!-- alternatingXY -->\n";
-		}else if(tableDesign == "minimalXY"){
-			tableCSS = "<!-- minimalXY -->\n";
 		}else if(tableDesign == "noStyle"){
 			tableCSS = "";
 		}
@@ -106,12 +169,8 @@ document.addEventListener('DOMContentLoaded', function () {
         backgroundtable ='#abd28e;';
         }else if(tableDesign == "minimal"){
               backgroundtable ='#abd28e;';
-              backgroundtr ='#ffffff;';
+              backgroundtr ='none';
               backgroundtrhover ='#abd28e;';
-		}else if(tableDesign == "alternatingXY"){
-			tableCSS = "<!-- alternatingXY -->\n";
-		}else if(tableDesign == "minimalXY"){
-			tableCSS = "<!-- minimalXY -->\n";
 		}else if(tableDesign == "noStyle"){
 			tableCSS = "";
 		}
@@ -135,12 +194,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }else if(tableDesign == "minimal"){
               backgroundtable ='#b8b8b8;';
-              backgroundtr ='#ffffff;';
+              backgroundtr ='none;';
               backgroundtrhover ='#b8b8b8;';
-		}else if(tableDesign == "alternatingXY"){
-			tableCSS = "<!-- alternatingXY -->\n";
-		}else if(tableDesign == "minimalXY"){
-			tableCSS = "<!-- minimalXY -->\n";
 		}else if(tableDesign == "noStyle"){
 			tableCSS = "";
 		}
@@ -163,12 +218,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }else if(tableDesign == "minimal"){
               backgroundtable ='#e6983b;';
-              backgroundtr ='#ffffff;';
+              backgroundtr ='none;';
               backgroundtrhover ='#e6983b;';
-		}else if(tableDesign == "alternatingXY"){
-			tableCSS = "<!-- alternatingXY -->\n";
-		}else if(tableDesign == "minimalXY"){
-			tableCSS = "<!-- minimalXY -->\n";
 		}else if(tableDesign == "noStyle"){
 			tableCSS = "";
 		}
@@ -190,12 +241,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }else if(tableDesign == "minimal"){
               backgroundtable ='#bcaf91;';
-              backgroundtr ='#ffffff;';
+              backgroundtr ='none;';
               backgroundtrhover ='#bcaf91;';
-		}else if(tableDesign == "alternatingXY"){
-			tableCSS = "<!-- alternatingXY -->\n";
-		}else if(tableDesign == "minimalXY"){
-			tableCSS = "<!-- minimalXY -->\n";
 		}else if(tableDesign == "noStyle"){
 			tableCSS = "";
 		}
@@ -216,46 +263,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }else if(tableDesign == "minimal"){
               backgroundtable ='#686767;';
-              backgroundtr ='#ffffff;';
+              backgroundtr ='none;';
               backgroundtrhover ='#686767;';
               tdtablecolor ='#000;';
               awtablecolor ='#fbfbfb;';
-
-		}else if(tableDesign == "alternatingXY"){
-			tableCSS = "<!-- alternatingXY -->\n";
-		}else if(tableDesign == "minimalXY"){
-			tableCSS = "<!-- minimalXY -->\n";
 		}else if(tableDesign == "noStyle"){
 			tableCSS = "";
 		}
    
 
 				
-			}else if(tableColor == "None"){
-              awtablecolor ='#000000;';
-              borderawtable = '#000000;';
-              backgroundtable ='none;';
-              borderth ='#000000;';
-              backgroundtr ='none;';
-              bordertd ='#000000;';
-              backgroundtrhover ='none;'; 
 			}
+            if (advdesign.checked == true){
+              awtablecolor =colorbox4.value+';';
+              tdtablecolor =colorbox5.value+';';
+              borderawtable = colorbox3.value+';';
+              backgroundtable =colorbox1.value+';';
+              borderth =colorbox3.value+';';
+              backgroundtr =colorbox2.value+';';
+              bordertd =colorbox3.value+';';
+              backgroundtrhover =colorbox6.value+';';
+              html5color1.value = colorbox1.value;
+              html5color2.value = colorbox2.value;
+              html5color3.value = colorbox3.value;
+              html5color4.value = colorbox4.value;
+              html5color5.value = colorbox5.value;
+              html5color6.value = colorbox6.value;
+              html5color7.value = colorbox7.value;
+            }
           
           
           
-          
-          
-          
-          
+
           
           
           
           
 				
-              awtablefontsize = 12;
               thfontsize = 12;
               tdfontsize = 12;
-              
+              if (advdesign.checked == true){
+              thfontsize = awtablefontsize;
+              tdfontsize = awtdfontsize;
+              }
 
               awtableborderwidth = 1;
               thawtableborderwidth = 1;
@@ -272,10 +322,14 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += '<style type="text/css">\n';
 				tableCSS += '.awtable{';
 				tableCSS += 'color:'+awtablecolor+';';
+                 if (advdesign.checked == true){
+				if(selectfontfamily != "none"){
+                 tableCSS += 'font-family:'+selectfontfamily+';';
+                  }}
+                  
 				if(textaligntable != "none"){
                      tableCSS += 'text-align:'+textaligntable+';';
                   }
-				tableCSS += 'font-size:'+awtablefontsize+'px;';
 				tableCSS += 'width:'+awtablewidth+awtablewidthpercent;
 				tableCSS += 'border-width:'+awtableborderwidth+'px;';
 				tableCSS += 'border-color:'+borderawtable;
@@ -308,10 +362,19 @@ document.addEventListener('DOMContentLoaded', function () {
 					if(tableColor != "None"){
                       tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+';}\n';
                     }
+                    if (advdesign.checked == true){
+					if(tableColor != "None"){
+                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}\n';
+                    }}
+
                 }
 				tableCSS += '</style>\n\n';
           
-          
+          if(tableColor == "None"){
+            if (advdesign.checked == false){
+              tableCSS ="";
+              }
+			}
           
 
 			
@@ -414,7 +477,6 @@ btncopy.setAttribute('data-clipboard-text' , newTableCode);
  	};	 
 	
 	
-	//intialize on entry
 	makeTableCode(); 
 
 
