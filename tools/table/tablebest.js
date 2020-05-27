@@ -1,17 +1,19 @@
 
 
-
-
 function showadvdesign() {
   var checkBox = document.getElementById("advdesign");
   if (checkBox.checked == true){
 $('#collapseadvdesign').collapse('show');
 $('#tableDesign').attr("disabled", "disabled");
 $('#tableColor').attr("disabled", "disabled");
+$('#basicdesign').collapse('hide');
+
   } else {
+$('#basicdesign').collapse('show');
 $('#collapseadvdesign').collapse('hide');
 $('#tableDesign').removeAttr("disabled", "disabled");
 $('#tableColor').removeAttr("disabled", "disabled");
+
     }
 }
 
