@@ -1,5 +1,7 @@
 
 
+
+
 function showadvdesign() {
   var checkBox = document.getElementById("advdesign");
   if (checkBox.checked == true){
@@ -14,7 +16,24 @@ $('#tableColor').removeAttr("disabled", "disabled");
 }
 
 
+function backgroundrows2() {
+  var backgroundrows2 = document.getElementById("backgroundrows2");
+  var advdesign = document.getElementById("advdesign");
+  if (advdesign.checked == true){
+  if (backgroundrows2.checked == true){
+$('#html5color8').removeAttr("disabled", "disabled");
+$('#tablecolor8').removeAttr("disabled", "disabled");
+$('#backgroundrows1').html("خلفية الصفوف 1");
 
+  } else {
+$('#html5color8').attr("disabled", "disabled");
+$('#tablecolor8').attr("disabled", "disabled");
+$('#backgroundrows1').html("خلفية الصفوف");
+  }
+
+
+    }
+}
 
 
 
@@ -39,6 +58,7 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}functi
 	var html5color5 = document.getElementById('html5color5');
 	var html5color6 = document.getElementById('html5color6');
 	var html5color7 = document.getElementById('html5color7');
+	var html5color8 = document.getElementById('html5color8');
 
 	var colorbox1 = document.getElementById('tablecolor1');
 	var colorbox2 = document.getElementById('tablecolor2');
@@ -47,6 +67,7 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}functi
 	var colorbox5 = document.getElementById('tablecolor5');
 	var colorbox6 = document.getElementById('tablecolor6');
 	var colorbox7 = document.getElementById('tablecolor7');
+	var colorbox8 = document.getElementById('tablecolor8');
 
     
   function tablecolor1(){
@@ -69,6 +90,9 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}functi
   }
   function tablecolor7(){
       document.getElementById('tablecolor7').value = html5color7.value;
+  }
+  function tablecolor8(){
+      document.getElementById('tablecolor8').value = html5color8.value;
   }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -113,10 +137,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var selectfontfamily;
     var awtablefontsize;
     var awtdfontsize;
+    var backgroundrows2;
 
 	function makeTableCode(){
 		if (b64awsec == "ZG9pdGYuY29t"){
         awtablefontsize = document.getElementById('awtablefontsize').value;
+        backgroundrows2 = document.getElementById('backgroundrows2');
         awtdfontsize = document.getElementById('awtdfontsize').value;
         selectfontfamily = document.getElementById('selectfontfamily').value;
 		tableColor = document.getElementById('tableColor').value;
@@ -357,7 +383,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				tableCSS += 'border-color:'+bordertd;
                 tableCSS += 'color:'+tdtablecolor;
 				tableCSS += '}\n';
-              
 				if (tableHighlight.checked == true){
 					if(tableColor != "None"){
                       tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+';}\n';
@@ -366,8 +391,11 @@ document.addEventListener('DOMContentLoaded', function () {
 					if(tableColor != "None"){
                       tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}\n';
                     }}
-
                 }
+                    if (advdesign.checked == true){
+             	   if (backgroundrows2.checked == true){
+                  tableCSS += '.awtable  tr:nth-of-type(odd){background-color:'+colorbox8.value+';}\n';
+           		     }}
 				tableCSS += '</style>\n\n';
           
           if(tableColor == "None"){
@@ -477,6 +505,7 @@ btncopy.setAttribute('data-clipboard-text' , newTableCode);
  	};	 
 	
 	
+	//intialize on entry
 	makeTableCode(); 
 
 
