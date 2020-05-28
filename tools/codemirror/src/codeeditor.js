@@ -1,3 +1,4 @@
+
  
           CodeMirror.modeURL = "https://get.doitf.com/tools/codemirror/mode/%N/%N.js";
 
@@ -126,16 +127,39 @@ openBuffer("ملف JS", nodeContent("testscript"), "javascript");
 
 
 
+  document.getElementById('saveDocument').onclick = function () {
+  var fileextension;
+var modeInputs = document.getElementById("select");
+var modeInput1 = document.getElementById("buffers");
+  var myindexs  = modeInputs.selectedIndex;
+  var modeflys = modeInputs.options[myindexs].value.toLowerCase();
+  var modeflymodes = modeInputs.options[myindexs].id.toLowerCase();
+  
+  var myindex1  = modeInput1.selectedIndex;
+  var modeflymode1 = modeInput1.options[myindex1].textContent.toLowerCase();
 
 
-
-
-
-
-
-
-
-
+  if(modeflymodes == "text/x-textile"){
+  fileextension = modeflymode1+".html";
+  }else if(modeflymodes == "text/html"){
+  fileextension = modeflymode1+".html";
+  }else if(modeflymodes == "text/javascript"){
+  fileextension = modeflymode1+".js";
+  }else if(modeflymodes == "text/css"){
+  fileextension = modeflymode1+".css";
+  }else if(modeflymodes == "application/json"){
+  fileextension = modeflymode1+".json";
+  }else if(modeflymodes == "text/x-php"){
+  fileextension = modeflymode1+".php";
+  }else{
+  if (m = /.+\.([^.]+)$/.exec(modeflymode1)) {
+  fileextension = modeflymode1;
+  }else{
+  fileextension = modeflymode1+".html";
+  }}
+var blob = new Blob([editor.getValue()], {type: modeflymodes+';charset=utf-8'});
+    saveAs(blob, fileextension);
+}; 
 
 
 
@@ -553,4 +577,3 @@ document.getElementById("select").style.backgroundColor = "";
 function remobacfile(){
 document.getElementById("buffers").style.backgroundColor = "";
 }
-
