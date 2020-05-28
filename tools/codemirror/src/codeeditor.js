@@ -1,5 +1,4 @@
 
- 
           CodeMirror.modeURL = "https://get.doitf.com/tools/codemirror/mode/%N/%N.js";
 
  var sel_top = document.getElementById("buffers");
@@ -125,8 +124,6 @@ openBuffer("ملف JS", nodeContent("testscript"), "javascript");
 
 
 
-
-
   document.getElementById('saveDocument').onclick = function () {
   var fileextension;
 var modeInputs = document.getElementById("select");
@@ -137,8 +134,40 @@ var modeInput1 = document.getElementById("buffers");
   
   var myindex1  = modeInput1.selectedIndex;
   var modeflymode1 = modeInput1.options[myindex1].textContent.toLowerCase();
+  
+  var modeflymode2 = document.getElementById("buffers").value;
+
+  
+  
+  
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    if(modeflymode2 == "ملف HTML"){
+modeInputs.selectedIndex = 1;
+fileextension = modeflymode1+".html";
+  }else if(modeflymode2 == "ملف CSS"){
+fileextension = modeflymode1+".css";
+modeInputs.selectedIndex = 3;
+  }else if(modeflymode2 == "ملف JS"){
+fileextension = modeflymode1+".js";
+modeInputs.selectedIndex = 2;
+  }else{
   if(modeflymodes == "text/x-textile"){
   fileextension = modeflymode1+".html";
   }else if(modeflymodes == "text/html"){
@@ -157,6 +186,7 @@ var modeInput1 = document.getElementById("buffers");
   }else{
   fileextension = modeflymode1+".html";
   }}
+}
 var blob = new Blob([editor.getValue()], {type: modeflymodes+';charset=utf-8'});
     saveAs(blob, fileextension);
 }; 
@@ -361,7 +391,8 @@ CodeMirror.autoLoadMode(editor, modefly);
       
   }
 
-
+  
+  
 selectBuffer(editor, "ملف HTML");
 
 
