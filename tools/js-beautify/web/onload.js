@@ -6,8 +6,8 @@ $(function() {
   $.getJSON("https://get.doitf.com/tools/js-beautify/package.json", function(data) {
     $('#version-number').text('(v' + data.version + ')');
   });
-  var default_html="<!--هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n يمكنك تغيير نوع الرمز البرمجي من أعلى هذ الصندوق .-->\n\n<!DOCTYPE html> <html dir='rtl'> <head> <meta charset='utf-8'>\n\n<title>موقع أدوات ويب</title></head><body><h1>كيف يمكن إعادة ترتيب ملفات html </h1>\n<p>أداة إعادة ترتيب الرموز البرمجية لمحتويات الويب</p> <p id='demo'>\n\n</p><script> var text = 'إختبار إعادة تنظيم الملفات'; document.getElementById('demo').innerHTML = text;</script></body></html>"
-var default_css = "/*=== هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n يمكنك تغيير نوع الرمز البرمجي من أعلى هذ الصندوق . ===*/\n/*=== مرحبا في أداة تنظيم الرموز البرمجية ===*/\n\n#adawatweb{border: 1px solid #eee;height:auto;padding:15px;text-align:center;}\n.adawatweb h1{color:red}.adawatweb p{color:#579bd5}"
+  var default_html="<!--هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n يمكنك تغيير نوع الرمز البرمجي من أعلى هذ الصندوق .-->\n\n<!DOCTYPE html> <html dir='rtl'> <head> <meta charset='utf-8'>\n\n<title>موقع أدوات ويب</title></head><body><h1>كيف يمكن إعادة ترتيب ملفات html </h1>\n<p>أداة إعادة ترتيب الرموز البرمجية لمحتويات الويب</p> <p id='demo'>\n\n</p><script> var text = 'إختبار إعادة تنظيم الملفات'; document.getElementById('demo').innerHTML = text;</script></body></html>";
+var default_css = "/*=== هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n يمكنك تغيير نوع الرمز البرمجي من أعلى هذ الصندوق . ===*/\n/*=== مرحبا في أداة تنظيم الرموز البرمجية ===*/\n\n#adawatweb{border: 1px solid #eee;height:auto;padding:15px;text-align:center;}\n.adawatweb h1{color:red}.adawatweb p{color:#579bd5}";
   var default_text =
     "// هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n //يمكنك تغيير نوع الرمز البرمجي من أعلى هذ الصندوق .\n\nif ('this_is'==/an_example/){of_beautifier();}else{var a=b?(c%d):e[f];}";
   var textArea = $('#source')[0];
