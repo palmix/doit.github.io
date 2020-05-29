@@ -10,7 +10,7 @@ var the = {
 
 requirejs.config({
   //By default load any module IDs from js/lib
-  baseUrl: 'js/lib',
+  baseUrl: 'https://get.doitf.com/tools/js-beautify/js/lib',
   paths: {
     'beautifier': the.beautifier_file
   }
