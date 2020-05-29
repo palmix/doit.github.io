@@ -11,8 +11,15 @@ var default_css = "/*=== هذا مجرد نموذج للرمز البرمجي، 
   var default_text =
     "// هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n //يمكنك تغيير نوع الرمز البرمجي من أعلى هذ الصندوق .\n\nif ('this_is'==/an_example/){of_beautifier();}else{var a=b?(c%d):e[f];}";
   var textArea = $('#source')[0];
+		  if ($("#language").val() === "css"){
+			$('#source').val(default_css);
+      }else if ($("#language").val() === "html"){
+		 $('#source').val(default_html);
+	  }else if($("#language").val() === "js"){
+		  $('#source').val(default_text);
+	  }else{
   $('#source').val(default_text);
-
+	}
   if (the.use_codemirror && typeof CodeMirror !== 'undefined') {
 
     the.editor = CodeMirror.fromTextArea(textArea, {
