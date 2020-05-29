@@ -2,7 +2,7 @@
 /*exported run_tests, read_settings_from_cookie, beautify, submitIssue */
 var the = {
   use_codemirror: !window.location.href.match(/without-codemirror/),
-  beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : './beautifier.min',
+  beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : 'https://get.doitf.com/tools/js-beautify/js/lib/beautifier.min',
   beautifier: null,
   beautify_in_progress: false,
   editor: null // codemirror editor
