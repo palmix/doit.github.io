@@ -42,10 +42,10 @@ function set_editor_mode() {
 }
 
 function run_tests() {
-  $.when($.getScript("js/test/sanitytest.js"),
-      $.getScript("js/test/generated/beautify-javascript-tests.js"),
-      $.getScript("js/test/generated/beautify-css-tests.js"),
-      $.getScript("js/test/generated/beautify-html-tests.js"))
+  $.when($.getScript("https://get.doitf.com/tools/js-beautify/js/test/sanitytest.js"),
+      $.getScript("https://get.doitf.com/tools/js-beautify/js/test/generated/beautify-javascript-tests.js"),
+      $.getScript("https://get.doitf.com/tools/js-beautify/js/test/generated/beautify-css-tests.js"),
+      $.getScript("https://get.doitf.com/tools/js-beautify/js/test/generated/beautify-html-tests.js"))
     .done(function() {
       var st = new SanityTest();
       run_javascript_tests(st, Urlencoded, the.beautifier.js, the.beautifier.html, the.beautifier.css);
@@ -83,7 +83,7 @@ function read_settings_from_cookie() {
   $('#indent-inner-html').prop('checked', Cookies.get('indent-inner-html') === 'on');
   $('#comma-first').prop('checked', Cookies.get('comma-first') === 'on');
   $('#e4x').prop('checked', Cookies.get('e4x') === 'on');
-  $('#language').val(any(Cookies.get('language'), 'js'));
+  $('#language').val(any(Cookies.get('language'), 'html'));
   $('#indent-empty-lines').prop('checked', Cookies.get('indent-empty-lines') === 'on');
 }
 
@@ -243,7 +243,7 @@ function mergeObjects(allOptions, additionalOptions) {
 }
 
 function submitIssue() {
-  var url = 'https://github.com/beautify-web/js-beautify/issues/new?';
+  var url = 'https://get.doitf.com';
 
   var encoded = encodeURIComponent(getSubmitIssueBody()).replace(/%20/g, "+");
   if (encoded.length > 7168) {
