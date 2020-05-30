@@ -23,6 +23,7 @@ var default_css = "/*===\nهذا مجرد نموذج للرمز البرمجي،
   if (the.use_codemirror && typeof CodeMirror !== 'undefined') {
 
     the.editor = CodeMirror.fromTextArea(textArea, {
+		foldGutter: true,
       lineNumbers: true
     });
     set_editor_mode();
