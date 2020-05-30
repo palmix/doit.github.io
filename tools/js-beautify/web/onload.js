@@ -11,6 +11,25 @@ var default_css = "/*===\nهذا مجرد نموذج للرمز البرمجي،
   var default_text =
     "// هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n //يمكنك تغيير لغة الرمز البرمجي من أعلى هذا الصندوق .\n\nif ('this_is'==/an_example/){of_beautifier();}else{var a=b?(c%d):e[f];}\n//إضغط على زر تطبيق لمشاهدة مثال";
   var textArea = $('#source')[0];
+  
+  
+$('#language').change(function() {
+if ($("#language").val() === "css"){
+if (the.editor.getValue() === default_css){
+			the.editor.setValue(default_css);
+      }
+}else if ($("#language").val() === "html"){
+if (the.editor.getValue() === default_html){
+		  the.editor.setValue(default_html);
+	  }
+}else if($("#language").val() === "js"){
+if(the.editor.getValue() === default_text){
+		  the.editor.setValue('');
+	  }
+}
+});
+
+
 		  if ($("#language").val() === "css"){
 			$('#source').val(default_css);
       }else if ($("#language").val() === "html"){
