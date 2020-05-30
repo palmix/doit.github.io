@@ -112,7 +112,7 @@ function store_settings_to_cookie() {
   Cookies.set('indent-empty-lines', $('#indent-empty-lines').prop('checked') ? 'on' : 'off', opts);
 
 }
-function remove_cookie() ,{
+function remove_cookie() {
 $.removeCookie('tabsize',{ path: '/' });
 $.removeCookie('brace-style',{ path: '/' });
 $.removeCookie('detect-packers',{ path: '/' });
