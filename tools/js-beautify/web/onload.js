@@ -97,9 +97,13 @@ if(the.editor.getValue() === default_text){
   });
 
   $('.submit').click(beautify);
-  $('select').change(beautify);
   $(':checkbox').change(beautify);
   $('#additional-options').change(beautify);
+  $('#tabsize').change(beautify);
+  $('#max-preserve-newlines').change(beautify);
+  $('#wrap-line-length').change(beautify);
+  $('#brace-style').change(beautify);
+  $('#indent-scripts').change(beautify);
 
 
 });
