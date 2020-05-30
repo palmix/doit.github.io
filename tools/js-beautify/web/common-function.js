@@ -113,24 +113,29 @@ function store_settings_to_cookie() {
 
 }
 function remove_cookie() {
-$.removeCookie('tabsize',{ path: '/' });
-$.removeCookie('brace-style',{ path: '/' });
-$.removeCookie('detect-packers',{ path: '/' });
-$.removeCookie('max-preserve-newlines',{ path: '/' });
-$.removeCookie('keep-array-indentation',{ path: '/' });
-$.removeCookie('break-chained-methods',{ path: '/' });
-$.removeCookie('space-before-conditional',{ path: '/' });
-$.removeCookie('unescape-strings',{ path: '/' });
-$.removeCookie('jslint-happy',{ path: '/' });
-$.removeCookie('end-with-newline',{ path: '/' });
-$.removeCookie('wrap-line-length',{ path: '/' });
-$.removeCookie('indent-scripts',{ path: '/' });
-$.removeCookie('additional-options',{ path: '/' });
-$.removeCookie('indent-inner-html',{ path: '/' });
-$.removeCookie('comma-first',{ path: '/' });
-$.removeCookie('e4x',{ path: '/' });
-$.removeCookie('language',{ path: '/' });
-$.removeCookie('indent-empty-lines',{ path: '/' });
+  var opts = {
+    expires: Thu, 01 Jan 1970 00:00:00 GMT
+  };
+  Cookies.set('tabsize', $('#tabsize').val(), opts);
+  Cookies.set('brace-style', $('#brace-style').val(), opts);
+  Cookies.set('detect-packers', $('#detect-packers').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('max-preserve-newlines', $('#max-preserve-newlines').val(), opts);
+  Cookies.set('keep-array-indentation', $('#keep-array-indentation').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('break-chained-methods', $('#break-chained-methods').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('space-before-conditional', $('#space-before-conditional').prop('checked') ? 'on' : 'off',
+    opts);
+  Cookies.set('unescape-strings', $('#unescape-strings').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('jslint-happy', $('#jslint-happy').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('end-with-newline', $('#end-with-newline').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('wrap-line-length', $('#wrap-line-length').val(), opts);
+  Cookies.set('indent-scripts', $('#indent-scripts').val(), opts);
+  Cookies.set('additional-options', $('#additional-options').val(), opts);
+  Cookies.set('indent-inner-html', $('#indent-inner-html').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('comma-first', $('#comma-first').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('e4x', $('#e4x').prop('checked') ? 'on' : 'off', opts);
+  Cookies.set('language', $('#language').val(), opts);
+  Cookies.set('indent-empty-lines', $('#indent-empty-lines').prop('checked') ? 'on' : 'off', opts);
+
 }
 
 
