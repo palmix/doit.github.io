@@ -112,25 +112,25 @@ function store_settings_to_cookie() {
   Cookies.set('indent-empty-lines', $('#indent-empty-lines').prop('checked') ? 'on' : 'off', opts);
 
 }
-function remove_cookie() {
-$.cookie("tabsize", null, { path: '/' });
-$.cookie("brace-style", null, { path: '/' });
-$.cookie("detect-packers", null, { path: '/' });
-$.cookie("max-preserve-newlines", null, { path: '/' });
-$.cookie("keep-array-indentation", null, { path: '/' });
-$.cookie("break-chained-methods", null, { path: '/' });
-$.cookie("space-before-conditional", null, { path: '/' });
-$.cookie("unescape-strings", null, { path: '/' });
-$.cookie("jslint-happy", null, { path: '/' });
-$.cookie("end-with-newline", null, { path: '/' });
-$.cookie("wrap-line-length", null, { path: '/' });
-$.cookie("indent-scripts", null, { path: '/' });
-$.cookie("additional-options", null, { path: '/' });
-$.cookie("indent-inner-html", null, { path: '/' });
-$.cookie("comma-first", null, { path: '/' });
-$.cookie("e4x", null, { path: '/' });
-$.cookie("language", null, { path: '/' });
-$.cookie("indent-empty-lines", null, { path: '/' });
+function remove_cookie() ,{
+$.removeCookie('tabsize',{ path: '/' });
+$.removeCookie('brace-style',{ path: '/' });
+$.removeCookie('detect-packers',{ path: '/' });
+$.removeCookie('max-preserve-newlines',{ path: '/' });
+$.removeCookie('keep-array-indentation',{ path: '/' });
+$.removeCookie('break-chained-methods',{ path: '/' });
+$.removeCookie('space-before-conditional',{ path: '/' });
+$.removeCookie('unescape-strings',{ path: '/' });
+$.removeCookie('jslint-happy',{ path: '/' });
+$.removeCookie('end-with-newline',{ path: '/' });
+$.removeCookie('wrap-line-length',{ path: '/' });
+$.removeCookie('indent-scripts',{ path: '/' });
+$.removeCookie('additional-options',{ path: '/' });
+$.removeCookie('indent-inner-html',{ path: '/' });
+$.removeCookie('comma-first',{ path: '/' });
+$.removeCookie('e4x',{ path: '/' });
+$.removeCookie('language',{ path: '/' });
+$.removeCookie('indent-empty-lines',{ path: '/' });
 }
 
 
