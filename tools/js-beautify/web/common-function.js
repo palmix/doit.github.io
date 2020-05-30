@@ -114,7 +114,7 @@ function store_settings_to_cookie() {
 }
 function remove_cookie() {
   var opts = {
-    expires: 'Thu, 01 Jan 1970 00:00:00 GMT'
+    expires: -1
   };
   Cookies.set('tabsize', $('#tabsize').val(), opts);
   Cookies.set('brace-style', $('#brace-style').val(), opts);
