@@ -17,18 +17,29 @@ $('#language').change(function() {
 if ($("#language").val() === "css"){
 if (the.editor.getValue() === default_css){
 			the.editor.setValue(default_css);
-      }
+      }else if (the.editor.getValue() === default_html){
+			the.editor.setValue(default_html);
+      }else if (the.editor.getValue() === default_text){
+			the.editor.setValue(default_text);
+      } 
 }else if ($("#language").val() === "html"){
 if (the.editor.getValue() === default_html){
-		  the.editor.setValue(default_html);
-	  }
+			the.editor.setValue(default_html);
+      }else if (the.editor.getValue() === default_css){
+			the.editor.setValue(default_css);
+      }else if (the.editor.getValue() === default_text){
+			the.editor.setValue(default_text);
+      } 
 }else if($("#language").val() === "js"){
 if(the.editor.getValue() === default_text){
-		  the.editor.setValue('');
-	  }
+			the.editor.setValue(default_text);
+      }else if (the.editor.getValue() === default_css){
+			the.editor.setValue(default_css);
+      }else if (the.editor.getValue() === default_html){
+			the.editor.setValue(default_html);
+      } 
 }
 });
-
 
 		  if ($("#language").val() === "css"){
 			$('#source').val(default_css);
