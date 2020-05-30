@@ -52,6 +52,7 @@ var default_css = "/*===\nهذا مجرد نموذج للرمز البرمجي،
 		  if ($("#language").val() === "css"){
 			$(this).val(default_css);
       }else if ($("#language").val() === "html"){
+		  default_html = replace.default_html("<!--إضغط على زر تطبيق لمشاهدة مثال-->","")
 		  $(this).val(default_html);
 	  }else if($("#language").val() === "js"){
 		  $(this).val(default_text);
