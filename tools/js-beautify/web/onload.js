@@ -24,6 +24,7 @@ var default_css = "/*===\nهذا مجرد نموذج للرمز البرمجي،
 
     the.editor = CodeMirror.fromTextArea(textArea, {
 		foldGutter: true,
+		gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
       lineNumbers: true
     });
     set_editor_mode();
