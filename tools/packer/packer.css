@@ -10,7 +10,6 @@ textarea {margin: 0;
  white-space: -o-pre-wrap;    /* Opera 7 */
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
-#form textarea {clear: both; width: 98%; margin-top: 4px; padding: 0 2px; font-family: monospace;}
 @media screen and (min-width: 0px) {#form textarea{width: 100%;}}
 textarea.disabled, .disabled textarea {background-color: #EEEEEE; border: 2px solid #898E79;}
 *.disabled, .disabled * {color: #898E79 !important;}
