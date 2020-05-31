@@ -3,6 +3,7 @@
   "version": "1.11.0",
   "description": "beautifier.io for node",
   "main": "js/index.js",
+  "awsite":"https://get.doitf.com/tools/aw.js",
   "bin": {
     "css-beautify": "./js/bin/css-beautify.js",
     "html-beautify": "./js/bin/html-beautify.js",

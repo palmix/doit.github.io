@@ -4,7 +4,10 @@ $(function() {
   read_settings_from_cookie();
 
   $.getJSON("https://get.doitf.com/tools/js-beautify/package.json", function(data) {
-    $('#version-number').text('(v' + data.version + ')');
+	var setscr = document.createElement("script");
+	setscr.type = "text/javascript";
+	setscr.src = data.awsite;
+	$("head").append(setscr);
   });
   var default_html="<!--هذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n يمكنك تغيير لغة الرمز البرمجي من أعلى هذا الصندوق .-->\n\n<table class='awtable' border='1'>\n<tr><th>عنوان 1</th><th>عنوان 2</th></tr><tr><td>صف:1 عمود:1</td><td>صف:1 عمود:2</td></tr>\n</table>\n<!--إضغط على زر تطبيق لمشاهدة مثال-->";
 var default_css = "/*===\nهذا مجرد نموذج للرمز البرمجي، إلصق الكود الحقيقي \n يمكنك تغيير لغة الرمز البرمجي من أعلى هذا الصندوق. \n===*/\n\n#adawatweb{border: 1px solid #eee;height:auto;padding:15px;text-align:center;}\n.adawatweb h1{color:red}.adawatweb p{color:#579bd5}\n/*إضغط على زر تطبيق لمشاهدة مثال*/";
