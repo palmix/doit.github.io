@@ -19,7 +19,7 @@ textarea.disabled, .disabled textarea {background-color: #EEEEEE; border: 2px so
 #controls select {font-size: 0.83em; vertical-align: top;}
 #message {font-size: x-small; margin-top: 0.5em;}
 .error {color: #AA3333;}
-#form #message {margin: 0 0 1em 0; float: right;}
+#form #message {margin: 0 0 1em 0; float: left;}
 #help {float: right;}
 #form p {margin: 0;}
 #form p.form-buttons, #form #controls {margin: 1em 0;}
