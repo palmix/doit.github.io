@@ -1,5 +1,4 @@
-
-          CodeMirror.modeURL = "https://get.doitf.com/tools/codemirror/mode/%N/%N.js";
+CodeMirror.modeURL = "https://get.doitf.com/tools/codemirror/mode/%N/%N.js";
 
  var sel_top = document.getElementById("buffers");
 CodeMirror.on(sel_top, "change", function() {
@@ -138,25 +137,6 @@ var modeInput1 = document.getElementById("buffers");
   var modeflymode2 = document.getElementById("buffers").value;
 
   
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     if(modeflymode2 == "ملف HTML"){
 modeInputs.selectedIndex = 1;
@@ -340,6 +320,7 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
 
 
 editor.on("change", function(){
+ $(".copy").attr("data-clipboard-text", editor.getValue());
 window.addEventListener("beforeunload", function(event) {
   event.returnValue = "ربما لم يتم حفظ التعديلات! خروج على اي حال؟";
 });
