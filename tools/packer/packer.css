@@ -23,7 +23,6 @@ textarea.disabled, .disabled textarea {background-color: #EEEEEE; border: 2px so
 #form p {margin: 0;}
 #form p.form-buttons, #form #controls {margin: 1em 0;}
 p.form-buttons button {margin-right: 0.2em;}
-.menu {display: none;}
 #disabled {font-weight: bold; text-align: center; display: none; color: #000000 !important;}
 .disabled #disabled {display: block;}
 #upload-script {display: none;}
