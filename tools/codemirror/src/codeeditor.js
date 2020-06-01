@@ -122,6 +122,11 @@ openBuffer("ملف JS", nodeContent("testscript"), "javascript");
 
 
 
+ 
+document.getElementById('copy').onclick = function () {
+$(".copy").attr("data-clipboard-text", editor.getValue());
+}
+
 
   document.getElementById('saveDocument').onclick = function () {
   var fileextension;
@@ -320,7 +325,6 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
 
 
 editor.on("change", function(){
- $(".copy").attr("data-clipboard-text", editor.getValue());
 window.addEventListener("beforeunload", function(event) {
   event.returnValue = "ربما لم يتم حفظ التعديلات! خروج على اي حال؟";
 });
