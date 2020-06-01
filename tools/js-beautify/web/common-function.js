@@ -263,7 +263,7 @@ function beautify() {
   } else {
     $('#source').val(output);
   }
-
+ $(".copy").attr("data-clipboard-text", output);
   the.lastOutput = output;
   the.lastOpts = selectedOptions;
 
