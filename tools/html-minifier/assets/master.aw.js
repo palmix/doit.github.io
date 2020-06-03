@@ -69,16 +69,7 @@
       var diff = originalValue.length - minifiedValue.length;
       var savings = originalValue.length ? (100 * diff / originalValue.length).toFixed(2) : 0;
 
-
-  var editor = CodeMirror.fromTextArea(byId('newCode'), {
-    mode: 'text/html',
-    readOnly: true,
-    htmlMode: true,
-   lineNumbers: true,
-    lineWrapping: true,
-    smartIndent: false,
-    addModeClass: true
-  });
+ 
   editor.setValue(minifiedValue)
       byId('stats').innerHTML =
         '<span class="success">' +
@@ -88,7 +79,8 @@
         '</span>';
       byId('minify-btn').disabled = false;
     }, function(err) {
-      byId('newCode').innerHTML = '';
+      byId('output').value = '';
+	  editor.setValue('');
       byId('stats').innerHTML = '<span class="failure">' + escapeHTML(err) + '</span>';
       byId('minify-btn').disabled = false;
     });
@@ -124,7 +116,16 @@
     return false;
   };
 })();
+  var editor = CodeMirror.fromTextArea(document.getElementById('newCode'), {
+    mode: "text/html",
+    readOnly: true,
+    htmlMode: true,
+   lineNumbers: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true
 
+  });
 /* eslint-disable */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
