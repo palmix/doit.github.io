@@ -64,7 +64,7 @@
 
   byId('minify-btn').onclick = function() {
     byId('minify-btn').disabled = true;
-    var originalValue = editorcode.getValue();
+    var originalValue = editor.getValue();
     minify(originalValue, getOptions(), function(minifiedValue) {
       var diff = originalValue.length - minifiedValue.length;
       var savings = originalValue.length ? (100 * diff / originalValue.length).toFixed(2) : 0;
@@ -118,7 +118,6 @@
 })();
   var editor = CodeMirror.fromTextArea(document.getElementById('newCode'), {
     mode: 'text/html',
-    readOnly: true,
     htmlMode: true,
    lineNumbers: true,
     lineWrapping: true,
@@ -126,21 +125,12 @@
     addModeClass: true
 
   });
-    var editorcode = CodeMirror.fromTextArea(document.getElementById('code'), {
-    mode: 'text/html',
-    htmlMode: true,
-   lineNumbers: true,
-    lineWrapping: true,
-    smartIndent: false,
-    addModeClass: true
 
-  });
   
   editorcode.on("change", function(){
 	  
   })
-    editor.setValue('')
-    editorcode.setValue('')
+    editor.setValue('');
 /* eslint-disable */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
