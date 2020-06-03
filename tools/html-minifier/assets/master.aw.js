@@ -128,7 +128,6 @@
   });
     var editorcode = CodeMirror.fromTextArea(document.getElementById('code'), {
     mode: 'text/html',
-    readOnly: true,
     htmlMode: true,
    lineNumbers: true,
     lineWrapping: true,
