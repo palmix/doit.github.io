@@ -18,7 +18,7 @@
     };
   })();
   if (typeof Worker === 'function') {
-    var worker = new Worker('https://get.doitf.com/tools/html-minifier/assets/worker.js?m=1');
+    var worker = new Worker('//get.doitf.com/tools/html-minifier/assets/worker.js?x=1');
     worker.onmessage = function() {
       minify = function(value, options, callback, errorback) {
         worker.onmessage = function(event) {
