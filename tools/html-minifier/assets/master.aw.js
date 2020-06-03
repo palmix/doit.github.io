@@ -80,7 +80,7 @@
       byId('minify-btn').disabled = false;
     }, function(err) {
       byId('output').value = '';
-	  editor.setValue('');
+	  editor.setValue(minifiedValue);
       byId('stats').innerHTML = '<span class="failure">' + escapeHTML(err) + '</span>';
       byId('minify-btn').disabled = false;
     });
