@@ -64,7 +64,7 @@
 
   byId('minify-btn').onclick = function() {
     byId('minify-btn').disabled = true;
-    var originalValue = editorcode.getValue;
+    var originalValue = editorcode.getValue();
     minify(originalValue, getOptions(), function(minifiedValue) {
       var diff = originalValue.length - minifiedValue.length;
       var savings = originalValue.length ? (100 * diff / originalValue.length).toFixed(2) : 0;
