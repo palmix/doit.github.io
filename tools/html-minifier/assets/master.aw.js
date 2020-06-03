@@ -117,7 +117,7 @@
   };
 })();
   var editor = CodeMirror.fromTextArea(document.getElementById('newCode'), {
-    mode: "text/html",
+    mode: 'text/html',
     readOnly: true,
     htmlMode: true,
    lineNumbers: true,
@@ -126,6 +126,7 @@
     addModeClass: true
 
   });
+    editor.setValue('')
 /* eslint-disable */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
