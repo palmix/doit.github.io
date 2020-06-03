@@ -69,8 +69,17 @@
       var diff = originalValue.length - minifiedValue.length;
       var savings = originalValue.length ? (100 * diff / originalValue.length).toFixed(2) : 0;
 
-      byId('output').value = minifiedValue;
 
+  var editor = CodeMirror.fromTextArea(byId('newCode'), {
+    mode: 'text/html',
+    readOnly: true,
+    htmlMode: true,
+   lineNumbers: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true
+  });
+  editor.setValue(minifiedValue)
       byId('stats').innerHTML =
         '<span class="success">' +
           'Original size: <strong>' + commify(originalValue.length) + '</strong>' +
