@@ -18,7 +18,7 @@
     };
   })();
   if (typeof Worker === 'function') {
-    var worker = new Worker('//get.doitf.com/tools/html-minifier/assets/worker.js?x=1');
+    var worker = new Worker('assets/worker.js');
     worker.onmessage = function() {
       minify = function(value, options, callback, errorback) {
         worker.onmessage = function(event) {

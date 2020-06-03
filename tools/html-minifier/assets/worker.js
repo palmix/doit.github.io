@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  importScripts('//get.doitf.com/tools/html-minifier/dist/htmlminifier.min.js');
+  importScripts('../dist/htmlminifier.min.js');
   var minify = require('html-minifier').minify;
   addEventListener('message', function(event) {
     try {
