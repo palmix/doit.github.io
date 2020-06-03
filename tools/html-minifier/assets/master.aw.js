@@ -69,7 +69,6 @@
       var diff = originalValue.length - minifiedValue.length;
       var savings = originalValue.length ? (100 * diff / originalValue.length).toFixed(2) : 0;
 
-      byId('newCode').innerHTML = '';
   var editor = CodeMirror.fromTextArea(byId('newCode'), {
     mode: 'text/html',
     readOnly: true,
@@ -88,7 +87,7 @@
         '</span>';
       byId('minify-btn').disabled = false;
     }, function(err) {
-      byId('output').value = '';
+      byId('newCode').value = '';
       byId('stats').innerHTML = '<span class="failure">' + escapeHTML(err) + '</span>';
       byId('minify-btn').disabled = false;
     });
