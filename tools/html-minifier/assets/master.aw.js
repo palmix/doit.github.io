@@ -73,9 +73,9 @@
   editor.setValue(minifiedValue)
       byId('stats').innerHTML =
         '<span class="success">' +
-          'Original size: <strong>' + commify(originalValue.length) + '</strong>' +
-          '. Minified size: <strong>' + commify(minifiedValue.length) + '</strong>' +
-          '. Savings: <strong>' + commify(diff) + ' (' + savings + '%)</strong>.' +
+          'الحجم الأصلي: <strong>' + commify(originalValue.length) + '</strong>.<br/>' +
+          'الحجم المصغر: <strong>' + commify(minifiedValue.length) + '</strong>.<br/>' +
+          'التوفير: <strong>' + commify(diff) + ' (' + savings + '%)</strong>.' +
         '</span>';
       byId('minify-btn').disabled = false;
     }, function(err) {
