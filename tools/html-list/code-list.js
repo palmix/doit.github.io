@@ -23,18 +23,8 @@ document.getElementById("html-list").addEventListener("click", function () {
 		allHTML = allHTML.replace(/(\r\n|\n|\r|\t)/gm,"");
 		allHTML = allHTML.replace(/\s+/g," ");
 	}
+editor.setValue(allHTML);
 
-  var editor = CodeMirror.fromTextArea(document.getElementById("newCode"), {
-    mode: "text/html",
-    readOnly: true,
-    htmlMode: true,
-   lineNumbers: true,
-    lineWrapping: true,
-    smartIndent: false,
-    addModeClass: true,
-	value: allHTML
-
-  });
 });	
 
 //reset text areas
@@ -43,3 +33,13 @@ document.getElementById("clearText").addEventListener("click", function () {
 	editor.setValue("");
 	document.getElementById("oldCode").focus();
 });
+  var editor = CodeMirror.fromTextArea(document.getElementById("newCode"), {
+    mode: "text/html",
+    readOnly: true,
+    htmlMode: true,
+   lineNumbers: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true,
+	value: ""
+  });
