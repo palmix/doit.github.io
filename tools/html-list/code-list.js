@@ -6,8 +6,9 @@ document.getElementById("code-list").addEventListener("click", function () {
 	var litypeval= litype.options[litype.selectedIndex].value;
 	var septype = document.getElementById("septype");
 	var septypeval= septype.options[septype.selectedIndex].value;
-	
-	if (septypeval == "lines" || septypeval == ""){
+	if(septypeval == "|"){
+		septypeval = '\n';
+	}else if (septypeval == "lines" || septypeval == ""){
 		septypeval = '\n';
 	}
 	allHTML = allHTML.trim();
