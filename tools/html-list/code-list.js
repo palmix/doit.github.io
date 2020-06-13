@@ -1,4 +1,4 @@
-document.getElementById("html-list").addEventListener("click", function () {
+document.getElementById("code-list").addEventListener("click", function () {
 	
 	var allHTML = document.getElementById("oldCode").value;
 	var headstatus = document.getElementById("headstatus").checked;
@@ -33,7 +33,7 @@ document.getElementById("clearText").addEventListener("click", function () {
 	editor.setValue("");
 	document.getElementById("oldCode").focus();
 });
-document.getElementById("oldCode").value = "مثلة"+/n+"مثال 1"+/n+"مثال 2"+/n+"مثال 3";
+document.getElementById("oldCode").value = "أمثلة\nمثال 1\nمثال 2\nمثال 3";
   var editor = CodeMirror.fromTextArea(document.getElementById("newCode"), {
     mode: "text/html",
     readOnly: true,
@@ -41,6 +41,6 @@ document.getElementById("oldCode").value = "مثلة"+/n+"مثال 1"+/n+"مثا
    lineNumbers: true,
     lineWrapping: true,
     smartIndent: false,
-    addModeClass: true,
-	value: "<ul>/n	<li>أمثلة</li>/n	<li>مثال 1</li>/n	<li>مثال 2</li>/n	<li>مثال 3</li>/n</ul>"
+    addModeClass: true
   });
+	editor.setValue(" <ul>\n	<li>أمثلة</li>\n	<li>مثال 1</li>\n	<li>مثال 2</li>\n	<li>مثال 3</li>\n </ul>");
