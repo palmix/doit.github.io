@@ -33,6 +33,7 @@ document.getElementById("clearText").addEventListener("click", function () {
 	editor.setValue("");
 	document.getElementById("oldCode").focus();
 });
+document.getElementById("oldCode").value = "أمثلة/n مثال 1/n مثال 2/n مثال 3/n";
   var editor = CodeMirror.fromTextArea(document.getElementById("newCode"), {
     mode: "text/html",
     readOnly: true,
@@ -41,5 +42,5 @@ document.getElementById("clearText").addEventListener("click", function () {
     lineWrapping: true,
     smartIndent: false,
     addModeClass: true,
-	value: ""
+	value: "<ul>/n	<li>أمثلة</li>/n	<li>مثال 1</li>/n	<li>مثال 2</li>/n	<li>مثال 3</li>/n</ul>"
   });
