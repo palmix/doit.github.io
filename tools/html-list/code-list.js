@@ -23,8 +23,9 @@ document.getElementById("code-list").addEventListener("click", function () {
 		allHTML = allHTML.replace(/(\r\n|\n|\r|\t)/gm,"");
 		allHTML = allHTML.replace(/\s+/g," ");
 	}
+	var btncopy = document.getElementById("buttoncopy");
 editor.setValue(allHTML);
-
+btncopy.setAttribute('data-clipboard-text' , allHTML);
 });	
 
 //reset text areas
@@ -43,4 +44,7 @@ document.getElementById("oldCode").value = "أمثلة\nمثال 1\nمثال 2\n
     smartIndent: false,
     addModeClass: true
   });
-	editor.setValue(" <ul>\n	<li>أمثلة</li>\n	<li>مثال 1</li>\n	<li>مثال 2</li>\n	<li>مثال 3</li>\n </ul>");
+	var testtext = " <ul>\n	<li>أمثلة</li>\n	<li>مثال 1</li>\n	<li>مثال 2</li>\n	<li>مثال 3</li>\n </ul>";
+	var btncopy = document.getElementById("buttoncopy");
+	editor.setValue(testtext);
+btncopy.setAttribute('data-clipboard-text' , testtext);
