@@ -28,9 +28,12 @@ btncopy.setAttribute('data-clipboard-text' , allHTML);
 
 //reset text areas
 document.getElementById("clearText").addEventListener("click", function () {
+		var btncopy = document.getElementById("buttoncopy");
+		btncopy.setAttribute('data-clipboard-text' , '');
 	document.getElementById("oldCode").value = "";
 	editor.setValue("");
 	document.getElementById("oldCode").focus();
+	
 });
 document.getElementById("oldCode").value = "أمثلة\nمثال 1\nمثال 2\nمثال 3";
   var editor = CodeMirror.fromTextArea(document.getElementById("newCode"), {
