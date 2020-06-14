@@ -29,7 +29,7 @@ btncopy.setAttribute('data-clipboard-text' , allHTML);
 //reset text areas
 document.getElementById("clearText").addEventListener("click", function () {
 		var btncopy = document.getElementById("buttoncopy");
-		btncopy.setAttribute('data-clipboard-text' , '');
+		btncopy.setAttribute("data-clipboard-text" , "");
 	document.getElementById("oldCode").value = "";
 	editor.setValue("");
 	document.getElementById("oldCode").focus();
