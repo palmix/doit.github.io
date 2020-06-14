@@ -6,9 +6,7 @@ document.getElementById("code-list").addEventListener("click", function () {
 	var litypeval= litype.options[litype.selectedIndex].value;
 	var septype = document.getElementById("septype");
 	var septypeval= septype.options[septype.selectedIndex].value;
-	if(septypeval == "|"){
-		septypeval = '\n';
-	}else if (septypeval == "lines" || septypeval == ""){
+	if (septypeval == "lines" || septypeval == ""){
 		septypeval = '\n';
 	}
 	allHTML = allHTML.trim();
@@ -20,7 +18,6 @@ document.getElementById("code-list").addEventListener("click", function () {
 		allHTML = "<ul>\n"+allHTML+"\n</ul>";
 	}
 	if(headstatus == true){
-		//Compress all the things!
 		allHTML = allHTML.replace(/(\r\n|\n|\r|\t)/gm,"");
 		allHTML = allHTML.replace(/\s+/g," ");
 	}
