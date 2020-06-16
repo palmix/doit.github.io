@@ -1,3 +1,17 @@
+function textalign() {
+var x = document.getElementById("textalign").value;
+if (x == "right"){
+document.getElementById("oldText").style.textAlign = "right";
+document.getElementById("oldText").style.direction = "rtl";
+document.getElementById("newText").style.textAlign = "right";
+document.getElementById("newText").style.direction = "rtl";
+}else{
+document.getElementById("oldText").style.textAlign = "left";
+document.getElementById("oldText").style.direction = "ltr";
+document.getElementById("newText").style.textAlign = "left";
+document.getElementById("newText").style.direction = "ltr";
+}}
+
 function removeBreaks(){
 if (b64awsec == "ZG9pdGYuY29t"){
 var para = document.getElementById("paragraphs").checked;
