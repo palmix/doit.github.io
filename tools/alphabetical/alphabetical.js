@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 	//Alphabetize button logic
 	document.getElementById("Alphabetize-Text").addEventListener("click", function () {
-				if (1 == "ZG9pdGYuY29t"){
+				if (b64awsec == "ZG9pdGYuY29t"){
 		newCode = document.getElementById("oldText").value;
 		if (newCode.length > 1){
 			document.getElementById("displaystart").style.display = "block";
