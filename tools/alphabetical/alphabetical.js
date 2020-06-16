@@ -1,7 +1,8 @@
 
 document.getElementById("addtexttext").addEventListener("click", function (){
-document.getElementById("oldText").value = "هذا نص تجريبي لإختبار الترتيب الأبجدي ، يمكنك تعديل الخيارات حسب الحاجة.";
+document.getElementById("oldText").value = "د س 8 3 ث ظ 6 ج ف 0 ز ح ض ي 1 غ 5 خ ت 2 ب ص 7 ل ه ك 9 ع ر 4 ذ ط ش 6 أ ق م و ن";
 $('#displaystartmodal').modal('hide');
+document.getElementById("sepspI").checked = true;
 });
 
 function textalign() {
