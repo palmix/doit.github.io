@@ -1,3 +1,4 @@
+
 document.getElementById("addtexttext").addEventListener("click", function (){
 document.getElementById("oldText").value = "هذا نص تجريبي لإختبار الترتيب الأبجدي ، يمكنك تعديل الخيارات حسب الحاجة.";
 $('#displaystartmodal').modal('hide');
@@ -138,10 +139,14 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (b64awsec == "ZG9pdGYuY29t"){
 		newCode = document.getElementById("oldText").value;
 		if (newCode.length > 1){
-			document.getElementById("displaystart").style.display = "block";
+            $('#newCode').removeAttr("disabled", "disabled");
+            $('#buttoncopy').removeAttr("disabled", "disabled");
 		}else{
-			document.getElementById("displaystart").style.display = "none";
-			$('#displaystartmodal').modal('show')
+
+            $('#newCode').attr("disabled", "disabled");
+            $('#buttoncopy').attr("disabled", "disabled");
+        			$('#displaystartmodal').modal('show');
+
 		}
 		newCode = newCode.trim();
 		//remove HTML tags
