@@ -1,3 +1,7 @@
+document.getElementById("addtexttext").addEventListener("click", function (){
+document.getElementById("oldText").value = "هذا نص تجريبي لإختبار الترتيب الأبجدي ، يمكنك تعديل الخيارات حسب الحاجة.";
+$('#displaystartmodal').modal('hide');
+});
 
 function textalign() {
 var x = document.getElementById("textalign").value;
@@ -137,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementById("displaystart").style.display = "block";
 		}else{
 			document.getElementById("displaystart").style.display = "none";
+			$('#displaystartmodal').modal('show')
 		}
 		newCode = newCode.trim();
 		//remove HTML tags
