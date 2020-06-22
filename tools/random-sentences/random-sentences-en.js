@@ -64,7 +64,7 @@ function wordGen(){
 	//
 	rs[5] = "It was then the " + radjectives[ra5] + " " + rnouns[rn11] + " met the " + radjectives[ra6] + " " + rnouns[rn12] + ".<br><br>";
 
-	arrStr = arrStr + ' <p style="font-size:36px;">' + rs[rnum1] + rs[rnum2] + '</p>';
+	arrStr = arrStr + ' <p>' + rs[rnum1] + rs[rnum2] + '</p>';
 
 };
 	
