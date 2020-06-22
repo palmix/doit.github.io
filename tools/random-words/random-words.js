@@ -28,7 +28,7 @@ function wordGen(){
 	var a = 0;
     
 	while(a < numWords){
-		arrStr = arrStr + ' <span class="badge bg-info text-white m-1" id="wordspan'+a+'">' + rwords[a] + '</span>';
+		arrStr = arrStr + ' <span class="badge bg-success text-white m-1" id="wordspan'+a+'">' + rwords[a] + '</span>';
 		a++;
 	}
 };
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var settext = this;
 				document.getElementById("wordPen").appendChild(settext);
 				var sethtml = $("#wordPen").html();
-                var remhtml = sethtml.replace(/<span class="badge bg-info text-white m-1">/g,'');
+                var remhtml = sethtml.replace(/<span class="badge bg-success text-white m-1">/g,'');
                 if(separatorWords == 'enter'){
                 var remhtml1 = remhtml.replace(/<\/span>/g,'\n');
                 }else{
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				document.getElementById("wordPen").appendChild(settext);
                 
 				var sethtml = $("#wordPen").html();
-                var remhtml = sethtml.replace(/<span class="badge bg-info text-white m-1">/g,'');
+                var remhtml = sethtml.replace(/<span class="badge bg-success text-white m-1">/g,'');
                 if(separatorWords == 'enter'){
                 var remhtml1 = remhtml.replace(/<\/span>/g,'\n');
                 }else{
@@ -94,5 +94,3 @@ document.getElementById("wordPen").innerHTML = "";
 	
 	arrStr="";
 });
-
-
