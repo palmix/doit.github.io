@@ -52,17 +52,17 @@ function wordGen(){
 	} while(rnum2 == rnum1);
 	
 	//
-	rs[0] = "The " + radjectives[ra1] + " " + rnouns[rn1] + " can't " + rverbs[rv1] +" the " + rnouns[rn2] +".<br><br>";
+	rs[0] = "The " + radjectives[ra1] + " " + rnouns[rn1] + " can't " + rverbs[rv1] +" the " + rnouns[rn2] +".<br>";
 	
-	rs[1] = "Did the " + radjectives[ra2] + " " + rnouns[rn3] + " really " + rverbs[rv2] + " the " + rnouns[rn4] + "?<br><br>";
+	rs[1] = "Did the " + radjectives[ra2] + " " + rnouns[rn3] + " really " + rverbs[rv2] + " the " + rnouns[rn4] + "?<br>";
 	
-	rs[2] = "The " + radjectives[ra7] + " " + rnouns[rn5] + " " + rverbs[rv7] + "s into the " + radjectives[ra3] + " " + rnouns[rn6] + ".<br><br>";
+	rs[2] = "The " + radjectives[ra7] + " " + rnouns[rn5] + " " + rverbs[rv7] + "s into the " + radjectives[ra3] + " " + rnouns[rn6] + ".<br>";
 	//
-	rs[3] = "What if the " + radjectives[rv4] + " " + rnouns[rn7] + " ate the " + rnouns[rn8] + "?<br><br>";
+	rs[3] = "What if the " + radjectives[rv4] + " " + rnouns[rn7] + " ate the " + rnouns[rn8] + "?<br>";
 	//
-	rs[4] = "Is the " + rverbs[rv5] + " " + rnouns[rn9] + " better than the " + rnouns[rn10] + "?<br><br>";
+	rs[4] = "Is the " + rverbs[rv5] + " " + rnouns[rn9] + " better than the " + rnouns[rn10] + "?<br>";
 	//
-	rs[5] = "It was then the " + radjectives[ra5] + " " + rnouns[rn11] + " met the " + radjectives[ra6] + " " + rnouns[rn12] + ".<br><br>";
+	rs[5] = "It was then the " + radjectives[ra5] + " " + rnouns[rn11] + " met the " + radjectives[ra6] + " " + rnouns[rn12] + ".<br>";
 
 	arrStr = arrStr + ' <p>' + rs[rnum1] + rs[rnum2] + '</p>';
 
