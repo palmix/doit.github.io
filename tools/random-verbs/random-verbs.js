@@ -10,7 +10,7 @@ function shuffleWords(o) {
 
 var arrStr="";
 
-var numWords = 6;
+var numWords = 10;
 var lang = "ar";
 var separatorWords = ",";
 
