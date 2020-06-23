@@ -20,12 +20,12 @@ function countCharacters(){
 		}else{
 			var titles;
 			var titledescs;
-if (titleText.length < 60 ){
+if (titleText.length < 61 ){
 	titles = '<b class="text-success">'+titleText.length+'</b>';
 }else{
 	titles = '<b class="text-danger">'+titleText.length+'</b>';
 }
-if (titleDesc.length < 160 ){
+if (titleDesc.length < 161 ){
 	titledescs = '<b class="text-success">'+titleDesc.length+'</b>';
 }else{
 	titledescs = '<b class="text-danger">'+titleDesc.length+'</b>';
@@ -34,15 +34,15 @@ if (titleDesc.length < 160 ){
 
 
 				if (titleText !== ""){
-					var pTitleLen = "<p><b>العنوان:</b> " + titles + " حرف.</p>"; 
+					var pTitleLen = "<table class='table table-bordered'><tr><th>العنوان</th><td>"+titles+" حرف.</td></tr>"; 
 				}else{
-					var pTitleLen = "";
+					var pTitleLen = "<table class='table table-bordered'>";
 				}
 
 				if (titleDesc !== ""){
-					var pDescLen = "<p><b>الوصف:</b> " + titledescs + " حرف.</p>"; 
+					var pDescLen = "<tr><th scope='row'>الوصف</th><td scope='row'>" + titledescs + "  حرف.</td></tr>"; 
 				}else{
-					var pDescLen = "";
+					var pDescLen = "</table>";
 				}
 					var zeResults = pTitleLen + pDescLen + "&nbsp;";
 			
