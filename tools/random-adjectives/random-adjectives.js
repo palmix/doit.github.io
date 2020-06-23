@@ -27,7 +27,7 @@ function wordGen(){
 	var a = 0;
     
 	while(a < numWords){
-		arrStr = arrStr + ' <span class="savedWords" id="wordspan'+a+'">' + rwords[a] + '</span>';
+		arrStr = arrStr + ' <span class="badge bg-success text-white m-1" id="wordspan'+a+'">' + rwords[a] + '</span>';
 		a++;
 	}
 		}else{
