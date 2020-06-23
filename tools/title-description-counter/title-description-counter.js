@@ -58,7 +58,7 @@ if (titleDesc.length < 160 ){
 		//Put new title back in place
 		document.getElementById("oldText").value = titleText;
 		document.getElementById("newText").value = titleDesc;
-		document.getElementById("copyStr").value = titleText + "\r\n\r\n" + titleDesc;
+		document.getElementById("copyStr").value = titleText + "&nbsp;\r\n\r\n" + titleDesc;
 		document.getElementById("theResults").innerHTML = zeResults;
 		}
 
