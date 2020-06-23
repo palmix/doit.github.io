@@ -29,7 +29,7 @@ for (var i = 0; i < wSingLength; i++) {
 }
 
 if (victory !== 1){
-	noBreaksText = "Result not found."
+	noBreaksText = "لم يتم العثور على النتيجة."
 }
 
 
