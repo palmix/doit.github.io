@@ -36,15 +36,15 @@ if (titleDesc.length < 161 ){
 
 
 				if (titleText !== ""){
-					var pTitleLen = "<div class='table-responsive-xl'><table class='table table-bordered table-responsive-xl'><tr><th>العنوان</th><td>"+titles+" حرف.</td></tr>"; 
+					var pTitleLen = "<table class='table table-bordered' style='max-width:300px;'><tr><th>العنوان</th><td>"+titles+" حرف.</td></tr>"; 
 				}else{
-					var pTitleLen = "<div class='table-responsive-xl'><table class='table table-bordered table-responsive-xl'>";
+					var pTitleLen = "<table class='table table-bordered' style='max-width:300px;'>";
 				}
 
 				if (titleDesc !== ""){
-					var pDescLen = "<tr><th scope='row'>الوصف</th><td scope='row'>" + titledescs + "  حرف.</td></tr></table></div>"; 
+					var pDescLen = "<tr><th scope='row'>الوصف</th><td scope='row'>" + titledescs + "  حرف.</td></tr></table>"; 
 				}else{
-					var pDescLen = "</table></div>";
+					var pDescLen = "</table>";
 				}
 					var zeResults = pTitleLen + pDescLen + "&nbsp;";
 			
