@@ -10,7 +10,7 @@ function modalclass(){
 		}else if(qrSize == "300x300"){
 		$('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 		}else if(qrSize == "500x500"){
-		$('#modalclass').attr('class','modal-dialog modal-lg modal-dialog-centered	');
+		$('#modalclass').attr('class','modal-dialog modal-lg modal-dialog-centered');
 		}else{
 		$('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 		}
