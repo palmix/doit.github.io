@@ -6,13 +6,13 @@ var x = document.getElementById("textalign").value;
 if (x == "right"){
 document.getElementById("oldText").style.textAlign = "right";
 document.getElementById("oldText").style.direction = "rtl";
-document.getElementById("newCode").style.textAlign = "right";
-document.getElementById("newCode").style.direction = "rtl";
+document.getElementById("newText").style.textAlign = "right";
+document.getElementById("newText").style.direction = "rtl";
 }else{
 document.getElementById("oldText").style.textAlign = "left";
 document.getElementById("oldText").style.direction = "ltr";
-document.getElementById("newCode").style.textAlign = "left";
-document.getElementById("newCode").style.direction = "ltr";
+document.getElementById("newText").style.textAlign = "left";
+document.getElementById("newText").style.direction = "ltr";
 }}
 
 document.getElementById("removeSpaces").addEventListener("click", function () {
