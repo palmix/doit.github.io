@@ -30,8 +30,8 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			}
 			oldText = encodeURIComponent(oldText).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').  replace(/\)/g, '%29').replace(/\*/g, '%2A'); 
 			var qrSize = document.getElementById("qr-size").value;
-			if (qrSize == ""){qrSize = "100x100";}
-			var newQR = '<img src="https://chart.googleapis.com/chart?chs=' + qrSize + '&amp;cht=qr&amp;chl=' + oldText + '&amp;choe=UTF-8" alt="QR code" />';
+			if (qrSize == ""){qrSize = "300x300";}
+			var newQR = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="sr-only">يرجى الإنتظار...</span></div><img class="qrimg" src="https://chart.googleapis.com/chart?chs=' + qrSize + '&amp;cht=qr&amp;chl=' + oldText + '&amp;choe=UTF-8" alt="QR code" /></div>';
 			document.getElementById("oldText").value = oldText;
 			document.getElementById("qr-code").innerHTML = newQR;
 		}else{
