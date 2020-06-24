@@ -1,5 +1,19 @@
 function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)));}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)));}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
-
+function modalclass(){
+		var qrSize = document.getElementById("qr-size").value;
+		$('#modalclass').attr('class','');
+		if (qrSize == "100x100"){
+		$('#modalclass').attr('class','modal-dialog modal-sm modal-dialog-centered');
+		}else if(qrSize == "200x200"){
+		$('#modalclass').attr('class','modal-dialog modal-sm modal-dialog-centered');
+		}else if(qrSize == "300x300"){
+		$('#modalclass').attr('class','modal-dialog modal-dialog-centered');
+		}else if(qrSize == "500x500"){
+		$('#modalclass').attr('class','modal-dialog modal-lg modal-dialog-centered	');
+		}else{
+		$('#modalclass').attr('class','modal-dialog modal-dialog-centered');
+		}
+}
 	document.getElementById("generate-qr-code").addEventListener("click", function () {
 		if (b64awsec == "ZG9pdGYuY29t"){
 		if (document.getElementById("oldText").value != ""){
@@ -7,9 +21,9 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)));}funct
 			if(oldText.length > 160){
 				oldText = oldText.substring(0,160);
 			}
-			
 			oldText = encodeURIComponent(oldText).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').  replace(/\)/g, '%29').replace(/\*/g, '%2A'); 
-			var qrSize = document.getElementById("qr-size").value;if (qrSize == ""){qrSize = "100x100";}
+			var qrSize = document.getElementById("qr-size").value;
+			if (qrSize == ""){qrSize = "100x100";}
 			var newQR = '<img src="https://chart.googleapis.com/chart?chs=' + qrSize + '&amp;cht=qr&amp;chl=' + oldText + '&amp;choe=UTF-8" alt="QR code" />';
 			document.getElementById("oldText").value = oldText;
 			document.getElementById("qr-code").innerHTML = newQR;
