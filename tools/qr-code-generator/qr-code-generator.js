@@ -15,7 +15,6 @@ function modalclass(){
 		$('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 		}
 }else{
-$('#modalclass').attr('class','');
 $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 }
 
