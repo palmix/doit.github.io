@@ -1,7 +1,7 @@
 document.getElementById("oldText").style.textAlign = "left";
 document.getElementById("oldText").style.direction = "ltr";
-document.getElementById("newCode").style.textAlign = "left";
-document.getElementById("newCode").style.direction = "ltr";
+document.getElementById("newText").style.textAlign = "left";
+document.getElementById("newText").style.direction = "ltr";
 function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)));}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)));}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
 
 document.getElementById("capitalizeSentences").addEventListener("click", function () {
