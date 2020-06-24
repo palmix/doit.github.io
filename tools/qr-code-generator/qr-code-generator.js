@@ -2,7 +2,6 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)));}funct
 function modalclass(){
 	if (document.getElementById("oldText").value != ""){
 		var qrSize = document.getElementById("qr-size").value;
-		$('#modalclass').attr('class','');
 		if (qrSize == "100x100"){
 		$('#modalclass').attr('class','modal-dialog modal-sm modal-dialog-centered');
 		}else if(qrSize == "200x200"){
