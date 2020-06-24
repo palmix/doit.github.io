@@ -1,5 +1,6 @@
 function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)));}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)));}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
 function modalclass(){
+	if (document.getElementById("oldText").value != ""){
 		var qrSize = document.getElementById("qr-size").value;
 		$('#modalclass').attr('class','');
 		if (qrSize == "100x100"){
@@ -13,6 +14,12 @@ function modalclass(){
 		}else{
 		$('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 		}
+}else{
+$('#modalclass').attr('class','');
+$('#modalclass').attr('class','modal-dialog modal-dialog-centered');
+}
+
+
 }
 	document.getElementById("generate-qr-code").addEventListener("click", function () {
 		if (b64awsec == "ZG9pdGYuY29t"){
