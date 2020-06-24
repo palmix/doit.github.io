@@ -35,7 +35,9 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			document.getElementById("oldText").value = oldTextval;
 			document.getElementById("qr-code").innerHTML = newQR;
 			if(textlength > 160){
-			document.getElementById("code-length").innerHTML = '<div class="alert alert-dismissible alert-warning fade show"role="alert"><strong>ملاحظة!</strong> عدد الحروف التي تم إدخالها هو <strong>'+textlength+'</strong> وهذا العدد يتجاوز الحد المسموح وهو 160 حرف، لذلك تم إنشاء رمز QR لأول 160 حرف فقط. <button aria-label="Close"class="close"data-dismiss="alert"type="button"><span aria-hidden="true">×</span></button></div>';
+			document.getElementById('code-length').innerHTML = '<div class="alert alert-dismissible alert-warning fade show"role="alert"><strong>ملاحظة!</strong> عدد الحروف التي تم إدخالها هو <strong>'+textlength+'</strong> وهذا العدد يتجاوز الحد المسموح وهو 160 حرف، لذلك تم إنشاء رمز QR لأول 160 حرف فقط. <button aria-label="Close"class="close"data-dismiss="alert"type="button"><span aria-hidden="true">×</span></button></div>';
+			}else{
+			document.getElementById('code-length').innerHTML = '';
 			}
 		}else{
 			document.getElementById("qr-code").innerHTML = "يجب إدخال النص أو عنوان URL أولاً";
