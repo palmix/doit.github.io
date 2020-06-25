@@ -4,6 +4,7 @@ document.getElementById("oldNumber").addEventListener("keyup", function () {
 		noBadCharacters = noBadCharacters.replace(/[^0-9\s.,]/g,'');  
 		document.getElementById("oldNumber").value = noBadCharacters;
 });
+function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)));}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)));}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
 
 document.getElementById("convertBinary").addEventListener("click", function () {
 	if (b64awsec == "ZG9pdGYuY29t"){
