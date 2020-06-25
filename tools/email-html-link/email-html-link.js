@@ -60,7 +60,7 @@ var newCode;
 		newCode = '<a href="mailto:'+awEmail+awSubject+awBody+'">'+awLink+'</a>';		
 		
 		document.getElementById("newCode").value = newCode;
-		newCode = "Working link: " + newCode;
+		newCode = "نتيجة الرمز الخاص بك: " + newCode;
 		
 		document.getElementById("workingExample").innerHTML = newCode;
 	});
