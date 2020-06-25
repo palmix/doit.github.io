@@ -1,25 +1,19 @@
-
-
-
 function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)));}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)));}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
 	
 	document.getElementById("aw-submit").addEventListener("click", function () {
+      var rwords;
 				if (b64awsec == "ZG9pdGYuY29t"){
 		document.getElementById("oldText").value = "";
-		var x = document.getElementById("textalign").value;
+		var xc = document.getElementById("textalign").value;
 		if (xc == "right"){
 document.getElementById("oldText").style.textAlign = "right";
 document.getElementById("oldText").style.direction = "rtl";
-		var rwords=["أنت تعرف الإجابة مسبقا.","اذهب مع الخيار الأسهل.","اذهب مع غرائزك.","الآن ليس الوقت المناسب لاتخاذ القرار.","الآن هو الوقت الخطأ لطرح هذا السؤال.","الجواب غير معروف.","الجواب لا.","الجواب لا.","الجواب نعم.","الجواب نعم.","الجواب هو الذي تخافه.","الجواب هو نعم على الارجح.","انتظر وسوف يأتي الجواب.","خذ الخيار الأصعب.","ربما يكون الجواب بالتأكيد.","هل تسأل السؤال الصحيح؟"];
+		rwords=["أنت تعرف الإجابة مسبقا.","اذهب مع الخيار الأسهل.","اذهب مع غرائزك.","الآن ليس الوقت المناسب لاتخاذ القرار.","الآن هو الوقت الخطأ لطرح هذا السؤال.","الجواب غير معروف.","الجواب لا.","الجواب لا.","الجواب نعم.","الجواب نعم.","الجواب هو الذي تخافه.","الجواب هو نعم على الارجح.","انتظر وسوف يأتي الجواب.","خذ الخيار الأصعب.","ربما يكون الجواب بالتأكيد.","هل تسأل السؤال الصحيح؟"];
 }else{
 document.getElementById("oldText").style.textAlign = "left";
 document.getElementById("oldText").style.direction = "ltr";
-		var rwords=["The answer is yes.","The answer is no.","The answer is yes.","The answer is no.","The answer is probably yes.","Now is the wrong time to ask this question.","The answer is unknown.","Go with your instincts.","Now is not the time to decide.","Go with the easier choice.","Take the harder option.","The answer is the one you fear.","Wait and the answer will come.","Are you asking the right question?","The answer is definitely maybe.","You already know the answer."];
+		rwords=["The answer is yes.","The answer is no.","The answer is yes.","The answer is no.","The answer is probably yes.","Now is the wrong time to ask this question.","The answer is unknown.","Go with your instincts.","Now is not the time to decide.","Go with the easier choice.","Take the harder option.","The answer is the one you fear.","Wait and the answer will come.","Are you asking the right question?","The answer is definitely maybe.","You already know the answer."];
 
 }
 
