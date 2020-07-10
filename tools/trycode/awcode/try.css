@@ -53,7 +53,7 @@ button.doit-button{font-size:20px;margin-top:-2px;}
   min-width:380px;
   position:absolute;
   width:100%;
-  top:140px;
+  top:100px;
   background-color:#f1f1f1;
 }
 .trytopnav a {
@@ -93,7 +93,7 @@ a.doitschoolslink:hover,a.doitschoolslink:active {
   width:100%;
   overflow:auto;
   position:absolute;
-  top:179px;
+  top:140px;
   bottom:0;
 
   height:auto;
