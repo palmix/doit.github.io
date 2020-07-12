@@ -66,22 +66,23 @@ document.getElementById("pages_url").value += $(this).val()+"\n";
 		targetCode = ' target="' + lTarget + '"';
 	}
 			
-				newCode = newCode;
+				newCode = newCode.replace(/(\n\r|\n|\r)/gm,"XbreakX");
 				re1a = /\s+/g;
+				newCode = newCode.replace(re1a,"");
 				re1b = /XbreakX/gi;
 				newCode = newCode.replace(re1b," ");
 				newCode = newCode.replace(re1a," ");
 				newCode = newCode.trim();
 
 				newCodeUrl = newCodeUrl.replace(/(\n\r|\n|\r)/gm,"XbreakX");
-				re2a = /\s+/g;
-				newCodeUrl = newCodeUrl.replace(re2a,"");
-				re2b = /XbreakX/gi;
-				newCodeUrl = newCodeUrl.replace(re2b," ");
-				newCodeUrl = newCodeUrl.replace(re2a," ");
+				re1a = /\s+/g;
+				newCodeUrl = newCodeUrl.replace(re1a,"");
+				re1b = /XbreakX/gi;
+				newCodeUrl = newCodeUrl.replace(re1b," ");
+				newCodeUrl = newCodeUrl.replace(re1a," ");
 				newCodeUrl = newCodeUrl.trim();
 
-				var newCodeArray = newCode.split("'");
+				var newCodeArray = newCode.split(" ");
 				var newCodeUrlArray = newCodeUrl.split(" ");
 				newCode = "";
                 for (var i = 0; i < newCodeArray.length; i++) {
