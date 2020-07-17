@@ -34,8 +34,9 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			if (qrSize == ""){qrSize = "300x300";}
 			var urlimg = 'https://chart.googleapis.com/chart?chs=' + qrSize + '&amp;cht=qr&amp;chl=' + oldText + '&amp;choe=UTF-8'
 			var newQR = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="sr-only">يرجى الإنتظار...</span></div><img class="qrimg" src="'+urlimg+'" alt="QR code" /></div>';
+			var newimgurl = urlimg.replace("&amp;","&");
 			saveimgs.setAttribute("target", "_blank");
-			saveimgs.setAttribute("href", urlimg);
+			saveimgs.setAttribute("href", newimgurl);
 			document.getElementById("oldText").value = oldTextval;
 			document.getElementById("qr-code").innerHTML = newQR;
 			if(textlength > 160){
