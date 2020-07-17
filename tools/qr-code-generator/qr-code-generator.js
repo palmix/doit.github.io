@@ -37,6 +37,7 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			var newimgurl = urlimg.replace("&amp;","&");
 			saveimgs.setAttribute("target", "_blank");
 			saveimgs.setAttribute("href", newimgurl);
+			saveimgs.style.display = "block";
 			document.getElementById("oldText").value = oldTextval;
 			document.getElementById("qr-code").innerHTML = newQR;
 			if(textlength > 160){
@@ -45,6 +46,7 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			document.getElementById('code-length').innerHTML = '';
 			}
 		}else{
+			saveimgs.style.display = "none";
 			document.getElementById("qr-code").innerHTML = "يجب إدخال النص أو عنوان URL أولاً";
 		}
 		}else{
