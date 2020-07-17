@@ -23,6 +23,7 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 		if (b64awsec == "ZG9pdGYuY29t"){
 		if (document.getElementById("oldText").value != ""){
 			var oldText = document.getElementById("oldText").value;
+			var saveimgs = document.getElementById("saveImg");
 			var textlength = oldText.length;
 			if(oldText.length > 160){
 				oldText = oldText.substring(0,160);
@@ -33,8 +34,8 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			if (qrSize == ""){qrSize = "300x300";}
 			var urlimg = 'https://chart.googleapis.com/chart?chs=' + qrSize + '&amp;cht=qr&amp;chl=' + oldText + '&amp;choe=UTF-8'
 			var newQR = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="sr-only">يرجى الإنتظار...</span></div><img class="qrimg" src="'+urlimg+'" alt="QR code" /></div>';
-			$('#saveImg').attr('href',urlimg);
-			$('#saveImg').attr('target','_blank');
+			saveimgs.setAttribute("target", "_blank");
+			saveimgs.setAttribute("href", urlimg);
 			document.getElementById("oldText").value = oldTextval;
 			document.getElementById("qr-code").innerHTML = newQR;
 			if(textlength > 160){
