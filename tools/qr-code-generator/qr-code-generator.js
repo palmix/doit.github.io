@@ -20,10 +20,10 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 
 }
 	document.getElementById("generate-qr-code").addEventListener("click", function () {
+		var saveimgs = document.getElementById("saveImg");
 		if (b64awsec == "ZG9pdGYuY29t"){
 		if (document.getElementById("oldText").value != ""){
 			var oldText = document.getElementById("oldText").value;
-			var saveimgs = document.getElementById("saveImg");
 			var textlength = oldText.length;
 			if(oldText.length > 160){
 				oldText = oldText.substring(0,160);
