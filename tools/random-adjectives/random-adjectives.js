@@ -13,7 +13,7 @@ var numWords = 10;
 var lang = "ar";
 var separatorWords = ",";
 	document.getElementById("reset").addEventListener("click", function () {
-document.getElementById("oldText").innerHTML = "";
+document.getElementById("wordPen").innerHTML = "";
 });
 function wordGen(){
 	if (b64awsec == "ZG9pdGYuY29t"){
