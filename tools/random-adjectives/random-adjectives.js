@@ -12,7 +12,9 @@ var arrStr="";
 var numWords = 10;
 var lang = "ar";
 var separatorWords = ",";
-	
+	document.getElementById("reset").addEventListener("click", function () {
+document.getElementById("oldText").value = "";
+});
 function wordGen(){
 	if (b64awsec == "ZG9pdGYuY29t"){
 	separatorWords = document.getElementById("separator").value;
