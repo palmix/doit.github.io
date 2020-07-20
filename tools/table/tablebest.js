@@ -414,7 +414,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			
 		//Start table
-		tableHTML = '<table class="awtable" border="1">\n<tr>';
         if(dirtable == "right"){
         tableHTML += '<table dir="rtl" class="awtable" border="1">\n<tr>';
         }else if(dirtable == "left"){
