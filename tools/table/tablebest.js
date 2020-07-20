@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var awtdfontsize;
     var backgroundrows2;
     var dirtable;
+    var cellbacolor;
 
 	function makeTableCode(){
 		if (b64awsec == "ZG9pdGYuY29t"){
@@ -153,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		sizeRows = document.getElementById('sizeRows').value;
 		textaligntable = document.getElementById('textaligntable').value;
 		dirtable = document.getElementById('dirtable').value;
-		dirtable = document.getElementById('cellbacolor');
+		cellbacolor = document.getElementById('cellbacolor');
 		if (sizeCols <= 0){sizeCols = "1";document.getElementById('sizeCols').value = "1";}
 		if (sizeRows <= 0){sizeRows = "1";document.getElementById('sizeRows').value = "1";}
 		if (awtablefontsize <= 9){awtablefontsize = "9";document.getElementById('awtablefontsize').value = "9";}
