@@ -1,5 +1,4 @@
 
-
 function showadvdesign() {
   var checkBox = document.getElementById("advdesign");
   if (checkBox.checked == true){
@@ -140,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var awtablefontsize;
     var awtdfontsize;
     var backgroundrows2;
+    var dirtable;
 
 	function makeTableCode(){
 		if (b64awsec == "ZG9pdGYuY29t"){
@@ -152,6 +152,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		sizeCols = document.getElementById('sizeCols').value;
 		sizeRows = document.getElementById('sizeRows').value;
 		textaligntable = document.getElementById('textaligntable').value;
+		dirtable = document.getElementById('dirtable').value;
+		dirtable = document.getElementById('cellbacolor');
 		if (sizeCols <= 0){sizeCols = "1";document.getElementById('sizeCols').value = "1";}
 		if (sizeRows <= 0){sizeRows = "1";document.getElementById('sizeRows').value = "1";}
 		if (awtablefontsize <= 9){awtablefontsize = "9";document.getElementById('awtablefontsize').value = "9";}
@@ -346,8 +348,8 @@ document.addEventListener('DOMContentLoaded', function () {
               awtablethpadding = 8;
               awtabletdpadding = 8;
 
-              
-				tableCSS += '<style type="text/css">\n';
+
+                tableCSS += '<style type="text/css">\n';
 				tableCSS += '.awtable{';
 				tableCSS += 'color:'+awtablecolor+';';
                  if (advdesign.checked == true){
@@ -391,8 +393,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                     if (advdesign.checked == true){
 					if(tableColor != "None"){
+                    if (cellbacolor.checked == true){
                       tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}\n';
-                    }}
+                      
+                    }}}
                 }
                     if (advdesign.checked == true){
              	   if (backgroundrows2.checked == true){
@@ -410,6 +414,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			
 		//Start table
 		tableHTML = '<table class="awtable" border="1">\n<tr>';
+        if(dirtable == "right"){
+        tableHTML += '<table dir="rtl" class="awtable" border="1">\n<tr>';
+        }else if(dirtable == "left"){
+        tableHTML += '<table dir="ltr" class="awtable" border="1">\n<tr>';
+        }else{
+        tableHTML += '<table class="awtable" border="1">\n<tr>';
+        }
 		//Make header
 		var ii = 0;
 		var iii = 0;
