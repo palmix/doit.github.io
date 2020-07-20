@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var tableColor2b = "";
 	var tableDesign = "";
 	var tableInfo = "";
+	var comsc = "";
 	var tableHighlight = "";
 	var tableJS = "";
 	var tableCSS = "";
@@ -160,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (awtablefontsize <= 9){awtablefontsize = "9";document.getElementById('awtablefontsize').value = "9";}
 		if (awtdfontsize <= 9){awtdfontsize = "9";document.getElementById('awtdfontsize').value = "9";}
 		tableInfo = document.getElementById('tableInfo');
+		comsc = document.getElementById('comsc');
 		tableHighlight = document.getElementById('tableHighlight');
 		tableCSS = "";
 
@@ -414,6 +416,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			
 		//Start table
+        if(comsc.checked == true){
+         comsc = '';
+        }else{
+         comsc = '\n';
+        }
         if(dirtable == "right"){
         tableHTML = '<table dir="rtl" class="awtable" border="1">\n<tr>';
         }else if(dirtable == "left"){
@@ -428,9 +435,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		while(ii< sizeCols){
 			iii = ii + 1;
            if (tableInfo.checked == true){
-			tableHTML += '<th>عنوان '+iii+'</th>';
+			tableHTML += '<th>عنوان '+iii+'</th>'+comsc;
            }else{
-           tableHTML += '<th> </th>';
+           tableHTML += '<th> </th>'+comsc;
            }
 			ii++;
 		}
@@ -438,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		//make rows
 		var i = 0;
 		while(i< sizeRows -1){
-			tableHTML = tableHTML + "<tr>";
+			tableHTML = tableHTML + "<tr>"+comsc;
 			var ii = 0;
 			while(ii< sizeCols){
 				iii = i + 1;
@@ -447,9 +454,9 @@ document.addEventListener('DOMContentLoaded', function () {
               
               
          if (tableInfo.checked == true){
-     	tableHTML = tableHTML + "<td>صف:"+iii+" عمود:"+iiii+"</td>";
+     	tableHTML = tableHTML + "<td>صف:"+iii+" عمود:"+iiii+"</td>"+comsc;
               }else{
-      		tableHTML = tableHTML + "<td> </td>";
+      		tableHTML = tableHTML + "<td> </td>"+comsc;
               } 
 			ii++;
 			}
