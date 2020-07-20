@@ -415,11 +415,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			
 		//Start table
         if(dirtable == "right"){
-        tableHTML += '<table dir="rtl" class="awtable" border="1">\n<tr>';
+        tableHTML = '<table dir="rtl" class="awtable" border="1">\n<tr>';
         }else if(dirtable == "left"){
-        tableHTML += '<table dir="ltr" class="awtable" border="1">\n<tr>';
+        tableHTML = '<table dir="ltr" class="awtable" border="1">\n<tr>';
         }else{
-        tableHTML += '<table class="awtable" border="1">\n<tr>';
+        tableHTML = '<table class="awtable" border="1">\n<tr>';
         }
 		//Make header
 		var ii = 0;
