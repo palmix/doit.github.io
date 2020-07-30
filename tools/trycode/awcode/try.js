@@ -96,7 +96,7 @@ function showFrameSize() {
   var width, height;
   width = Number(doit_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
   height = Number(doit_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
-  document.getElementById("framesize").innerHTML = "حجم صفحة المحتوى: <span>" + width + "x" + height + "</span> <a data-target='#contentModaltry' data-toggle='modal' href='#' style='margin: 0 5px;'><i aria-hidden='true' class='fa fa-info-circle'/></a>";
+  document.getElementById("framesize").innerHTML = "حجم صفحة المحتوى: <span>" + width + "x" + height + "</span>";
 }
 var dragging = false;
 var stack;
