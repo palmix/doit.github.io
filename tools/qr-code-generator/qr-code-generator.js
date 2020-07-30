@@ -19,6 +19,7 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 
 
 }
+var saveimgs = document.getElementById("saveImg");
 	document.getElementById("generate-qr-code").addEventListener("click", function () {
 		if (b64awsec == "ZG9pdGYuY29t"){
 		if (document.getElementById("oldText").value != ""){
@@ -33,8 +34,10 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			if (qrSize == ""){qrSize = "300x300";}
 			var urlimg = 'https://chart.googleapis.com/chart?chs=' + qrSize + '&amp;cht=qr&amp;chl=' + oldText + '&amp;choe=UTF-8'
 			var newQR = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="sr-only">يرجى الإنتظار...</span></div><img class="qrimg" src="'+urlimg+'" alt="QR code" /></div>';
-			$('#saveImg').attr('href',urlimg);
-			$('#saveImg').attr('target','_blank');
+			var newimgurl = urlimg.replace(/&amp;/gi,"&");
+			saveimgs.setAttribute("target", "_blank");
+			saveimgs.setAttribute("href", newimgurl);
+			saveimgs.style.display = "block";
 			document.getElementById("oldText").value = oldTextval;
 			document.getElementById("qr-code").innerHTML = newQR;
 			if(textlength > 160){
@@ -43,6 +46,7 @@ $('#modalclass').attr('class','modal-dialog modal-dialog-centered');
 			document.getElementById('code-length').innerHTML = '';
 			}
 		}else{
+			saveimgs.style.display = "none";
 			document.getElementById("qr-code").innerHTML = "يجب إدخال النص أو عنوان URL أولاً";
 		}
 		}else{

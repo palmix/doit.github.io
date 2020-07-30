@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	var newTableCode = "";
 	var awHighlight = "";
 	var awHighlightb = "";
-  
+  	var comsc = "";
+	
 	var textaligntable;
 	var borderawtable;
 	var backgroundtable;
@@ -140,7 +141,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var awtablefontsize;
     var awtdfontsize;
     var backgroundrows2;
-
+    var dirtable;
+    var cellbacolor;
+	
 	function makeTableCode(){
 		if (b64awsec == "ZG9pdGYuY29t"){
         awtablefontsize = document.getElementById('awtablefontsize').value;
@@ -152,11 +155,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		sizeCols = document.getElementById('sizeCols').value;
 		sizeRows = document.getElementById('sizeRows').value;
 		textaligntable = document.getElementById('textaligntable').value;
+		dirtable = document.getElementById('dirtable').value;
+		cellbacolor = document.getElementById('cellbacolor');
 		if (sizeCols <= 0){sizeCols = "1";document.getElementById('sizeCols').value = "1";}
 		if (sizeRows <= 0){sizeRows = "1";document.getElementById('sizeRows').value = "1";}
 		if (awtablefontsize <= 9){awtablefontsize = "9";document.getElementById('awtablefontsize').value = "9";}
 		if (awtdfontsize <= 9){awtdfontsize = "9";document.getElementById('awtdfontsize').value = "9";}
 		tableInfo = document.getElementById('tableInfo');
+		comsc = document.getElementById('comsc');
 		tableHighlight = document.getElementById('tableHighlight');
 		tableCSS = "";
 
@@ -391,8 +397,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                     if (advdesign.checked == true){
 					if(tableColor != "None"){
+						if (cellbacolor.checked == true){
                       tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}\n';
-                    }}
+                    }}}
                 }
                     if (advdesign.checked == true){
              	   if (backgroundrows2.checked == true){
@@ -409,7 +416,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			
 		//Start table
-		tableHTML = '<table class="awtable" border="1">\n<tr>';
+        if(comsc.checked == true){
+         comsc = '';
+        }else{
+         comsc = '\n';
+        }
+        if(dirtable == "right"){
+        tableHTML = '<table dir="rtl" class="awtable" border="1">\n<tr>';
+        }else if(dirtable == "left"){
+        tableHTML = '<table dir="ltr" class="awtable" border="1">\n<tr>';
+        }else{
+        tableHTML = '<table class="awtable" border="1">\n<tr>';
+        }
 		//Make header
 		var ii = 0;
 		var iii = 0;
@@ -417,9 +435,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		while(ii< sizeCols){
 			iii = ii + 1;
            if (tableInfo.checked == true){
-			tableHTML += '<th>عنوان '+iii+'</th>';
+			tableHTML += '<th>عنوان '+iii+'</th>'+comsc;
            }else{
-           tableHTML += '<th> </th>';
+           tableHTML += '<th> </th>'+comsc;
            }
 			ii++;
 		}
@@ -427,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		//make rows
 		var i = 0;
 		while(i< sizeRows -1){
-			tableHTML = tableHTML + "<tr>";
+			tableHTML = tableHTML + "<tr>"+comsc;
 			var ii = 0;
 			while(ii< sizeCols){
 				iii = i + 1;
@@ -436,9 +454,9 @@ document.addEventListener('DOMContentLoaded', function () {
               
               
          if (tableInfo.checked == true){
-     	tableHTML = tableHTML + "<td>صف:"+iii+" عمود:"+iiii+"</td>";
+     	tableHTML = tableHTML + "<td>صف:"+iii+" عمود:"+iiii+"</td>"+comsc;
               }else{
-      		tableHTML = tableHTML + "<td> </td>";
+      		tableHTML = tableHTML + "<td> </td>"+comsc;
               } 
 			ii++;
 			}
