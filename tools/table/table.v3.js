@@ -560,7 +560,7 @@ for(i = 0; i < awOldTextArr.length; i++){
     if (tableHighlight.checked == true){
      if(tableColor != "None"){
 					if (backgroundrows2.checked == true){
-                      tableCSS += '.awtable tr:hover,.awtable  tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+';}\n';
+                      tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+';}\n';
                     }else{
 					tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+';}\n';
 					}
