@@ -559,8 +559,12 @@ for(i = 0; i < awOldTextArr.length; i++){
     tableCSS += '}\n';
     if (tableHighlight.checked == true){
      if(tableColor != "None"){
-                      tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+';}\n';
-                    }
+					if (backgroundrows2.checked == true){
+                      tableCSS += '.awtable tr:hover,.awtable  tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+';}\n';
+                    }else{
+					tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+';}\n';
+					}
+		}
                     if (advdesign.checked == true){
      if(tableColor != "None"){
                     if (cellbacolor.checked == true){
