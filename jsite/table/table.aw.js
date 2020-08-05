@@ -222,10 +222,16 @@ var awOldText = document.getElementById("awOldText").value;
 var awOldTextArr = awOldText.split("\n");
 var awNewText = "";
    comsc = document.getElementById('comsc');
-          if(comsc.checked == true){
+   comscss = document.getElementById('comscss');
+          if(comsc.checked === true){
          comsc = '';
         }else{
          comsc = '\n';
+        }
+          if(comscss.checked === true){
+         comscss = '';
+        }else{
+         comscss = '\n';
         }
 //Get rid of quotes at beginning and end
 for(i = 0; i < awOldTextArr.length; i++){
@@ -473,7 +479,7 @@ for(i = 0; i < awOldTextArr.length; i++){
               awtabletdpadding = 8;
 
 
-                tableCSS += '<style type="text/css">\n';
+                tableCSS += '<style type="text/css">'+comscss;
     tableCSS += '.awtable{';
     tableCSS += 'color:'+awtablecolor;
                  if (advdesign.checked == true){
@@ -494,7 +500,7 @@ for(i = 0; i < awOldTextArr.length; i++){
     tableCSS += 'border-color:'+borderawtable;
     }
     tableCSS += 'border-collapse:collapse;';
-    tableCSS += '}'+comsc;
+    tableCSS += '}'+comscss;
 
 
  
@@ -521,7 +527,7 @@ for(i = 0; i < awOldTextArr.length; i++){
     if (advdesign.checked == true){
     if (bordershow.checked == true){
     tableCSS += 'border-width:'+thawtableborderwidth+'px;';
-    tableCSS += 'border-style:solid;';
+    tableCSS += 'border-style: solid;';
     tableCSS += 'border-color:'+borderth;
     }}else{
     tableCSS += 'border-width:'+thawtableborderwidth+'px;';
@@ -532,7 +538,7 @@ for(i = 0; i < awOldTextArr.length; i++){
     }
     
     
-    tableCSS += '}'+comsc;
+    tableCSS += '}'+comscss;
 
 
 
@@ -540,7 +546,7 @@ for(i = 0; i < awOldTextArr.length; i++){
 
     tableCSS += '.awtable tr{';
     tableCSS += 'background-color:'+backgroundtr;
-    tableCSS += comsc;
+    tableCSS += '}'+comscss;
               
     tableCSS += '.awtable td{';
     tableCSS += 'font-size:'+tdfontsize+'px;';
@@ -556,25 +562,25 @@ for(i = 0; i < awOldTextArr.length; i++){
     }
     tableCSS += 'padding:'+awtabletdpadding+'px;';
                 tableCSS += 'color:'+tdtablecolor;
-    tableCSS += comsc;
+    tableCSS += '}'+comscss;
     if (tableHighlight.checked == true){
      if(tableColor != "None"){
 					if (backgroundrows2.checked == true){
-                      tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+'}'+comsc;
+                      tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+'}'+comscss;
                     }else{
-					tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+'}'+comsc;
+					tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+'}'+comscss;
 					}
 		}
                     if (advdesign.checked == true){
      if(tableColor != "None"){
                     if (cellbacolor.checked == true){
-                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}'+comsc;
+                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}'comscss;
                       
                     }}}
                 }
                     if (advdesign.checked == true){
                  if (backgroundrows2.checked == true){
-                  tableCSS += '.awtable tr:nth-of-type(odd){background-color:'+colorbox8.value+';}'+comsc;
+                  tableCSS += '.awtable  tr:nth-of-type(odd){background-color:'+colorbox8.value+';}'+comscss;
                   }}
     tableCSS += '</style>\n';
           
@@ -631,7 +637,7 @@ for(i = 0; i < awOldTextArr.length; i++){
    tableHTML = tableHTML + "</tr>"+comsc;
   i++;
   }
-  tableHTML += "</table>\n";
+  tableHTML += "</table>"+comsc;
        }else{
        
        
@@ -650,7 +656,7 @@ for(i = 0; i < awOldTextArr.length; i++){
   //make rows
 
   tableHTML += awNewText + comsc;
-  tableHTML += "</table>\n";
+  tableHTML += "</table>"+comsc;
          
        }
   
