@@ -574,7 +574,7 @@ for(i = 0; i < awOldTextArr.length; i++){
                     if (advdesign.checked == true){
      if(tableColor != "None"){
                     if (cellbacolor.checked == true){
-                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}'comscss;
+                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}'+comscss;
                       
                     }}}
                 }
