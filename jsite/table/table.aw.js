@@ -726,5 +726,8 @@ btncopy.setAttribute('data-clipboard-text' , newTableCode);
  //intialize on entry
  makeTableCode(); 
 
+document.getElementById("awOldText").value = 'HEADER 1,HEADER 2,HEADER 3\nRow 1 - Cell 1,Row 1 - Cell 2,Row 1 - Cell 3\nRow 2 - Cell 1,Row 2 - Cell 2,Row 2 - Cell 3';
+
+
 
 });
