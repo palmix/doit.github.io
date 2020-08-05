@@ -286,7 +286,9 @@ for(i = 0; i < awOldTextArr.length; i++){
   cellbacolor = document.getElementById('cellbacolor');
   placetitle = document.getElementById('placetitle');
   if (sizeCols <= 0){sizeCols = "1";document.getElementById('sizeCols').value = "1";}
+  if (sizeCols >= 999){sizeCols = "999";document.getElementById('sizeCols').value = "999";}
   if (sizeRows <= 0){sizeRows = "1";document.getElementById('sizeRows').value = "1";}
+  if (sizeRows >= 999){sizeRows = "999";document.getElementById('sizeRows').value = "999";}
   if (awtablefontsize <= 9){awtablefontsize = "9";document.getElementById('awtablefontsize').value = "9";}
   if (awtdfontsize <= 9){awtdfontsize = "9";document.getElementById('awtdfontsize').value = "9";}
   tableInfo = document.getElementById('tableInfo');
