@@ -212,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
  var textforcellsshow;
 
  function makeTableCode(){
-	 	 $("#addspin").addClass("fa-spin");
   if (b64awsec == "ZG9pdGYuY29t"){
           //Make variables
 var lineSep = document.getElementById("lineSep").value;
@@ -687,6 +686,7 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
  //Listener for sizeCols
  var el1 = document.getElementById('setcodenew');
  el1.onclick = function() {
+	 	 	 $("#addspin").addClass("fa-spin");
      sizeCols = document.getElementById('sizeCols').value;
   document.getElementById("sizeCols").value = sizeCols;
 
