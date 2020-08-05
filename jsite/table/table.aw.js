@@ -684,7 +684,7 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
  //Listener for sizeCols
  var el1 = document.getElementById('setcodenew');
  el1.onclick = function() {
-	 	 $("#addspin").last().addClass("fa-spin");
+	 $("#addspin").addClass("fa-spin");
      sizeCols = document.getElementById('sizeCols').value;
   document.getElementById("sizeCols").value = sizeCols;
 
@@ -712,7 +712,7 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
  
   document.getElementById("newTable").innerHTML = newTableCode;
 btncopy.setAttribute('data-clipboard-text' , newTableCode);
-	 $("#addspin").last().removeClass("fa-spin");
+	 $("#addspin").removeClass("fa-spin");
   };  
  
  
