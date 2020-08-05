@@ -683,8 +683,13 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
  
  //Listener for sizeCols
 
- document.getElementById("setcodenew").addEventListener("click", function () {
-	    $('.fa-cog').addClass('fa-spin');
+var previewauto = document.getElementById('tablecolor1').checked;
+
+  if (previewauto == true){
+
+
+
+$(".onchanges").on('keyup change', function (){
      sizeCols = document.getElementById('sizeCols').value;
   document.getElementById("sizeCols").value = sizeCols;
 
@@ -712,9 +717,42 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
  
   document.getElementById("newTable").innerHTML = newTableCode;
 btncopy.setAttribute('data-clipboard-text' , newTableCode);
-   $('#addspin').removeClass('fa-spin');
   });  
+
+
+
+  }else{
+	  
+ document.getElementById("setcodenew").addEventListener("click", function () {
+     sizeCols = document.getElementById('sizeCols').value;
+  document.getElementById("sizeCols").value = sizeCols;
+
  
+  //Listener for sizeRows
+  sizeRows = document.getElementById("sizeRows").value;
+  document.getElementById("sizeRows").value = sizeRows;
+ 
+  tableColor = document.getElementById('tableColor').value;
+  tableDesign = document.getElementById('tableDesign').value;
+  if (tableColor == "None"){document.getElementById("tableDesign").selectedIndex = 2;}
+  if (tableColor != "None" && tableDesign == "noStyle"){document.getElementById("tableDesign").selectedIndex = 0;}
+ 
+  tableColor = document.getElementById('tableColor').value;
+  tableDesign = document.getElementById('tableDesign').value;
+  if (tableDesign == "noStyle"){document.getElementById("tableColor").selectedIndex = 6;}
+  if (tableDesign != "noStyle" && tableColor == "None"){document.getElementById("tableColor").selectedIndex = 0;}
+ 
+  makeTableCode();
+       editor.setValue(newTableCode);
+
+  var text = document.getElementById("newCode").value;
+  var btncopy = document.getElementById("buttoncopy");
+
+ 
+  document.getElementById("newTable").innerHTML = newTableCode;
+btncopy.setAttribute('data-clipboard-text' , newTableCode);
+  });  
+  }
  
  //intialize on entry
  makeTableCode(); 
