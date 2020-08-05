@@ -683,7 +683,7 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
  
  //Listener for sizeCols
 
-var previewauto = document.getElementById('tablecolor1').checked;
+var previewauto = document.getElementById('previewauto').checked;
 
   if (previewauto == true){
 
