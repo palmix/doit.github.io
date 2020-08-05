@@ -494,7 +494,7 @@ for(i = 0; i < awOldTextArr.length; i++){
     tableCSS += 'border-color:'+borderawtable;
     }
     tableCSS += 'border-collapse:collapse;';
-    tableCSS += '}\n';
+    tableCSS += '}'+comsc;
 
 
  
@@ -521,7 +521,7 @@ for(i = 0; i < awOldTextArr.length; i++){
     if (advdesign.checked == true){
     if (bordershow.checked == true){
     tableCSS += 'border-width:'+thawtableborderwidth+'px;';
-    tableCSS += 'border-style: solid;';
+    tableCSS += 'border-style:solid;';
     tableCSS += 'border-color:'+borderth;
     }}else{
     tableCSS += 'border-width:'+thawtableborderwidth+'px;';
@@ -532,7 +532,7 @@ for(i = 0; i < awOldTextArr.length; i++){
     }
     
     
-    tableCSS += '}\n';
+    tableCSS += '}'+comsc;
 
 
 
@@ -540,7 +540,7 @@ for(i = 0; i < awOldTextArr.length; i++){
 
     tableCSS += '.awtable tr{';
     tableCSS += 'background-color:'+backgroundtr;
-    tableCSS += '}\n';
+    tableCSS += comsc;
               
     tableCSS += '.awtable td{';
     tableCSS += 'font-size:'+tdfontsize+'px;';
@@ -556,27 +556,27 @@ for(i = 0; i < awOldTextArr.length; i++){
     }
     tableCSS += 'padding:'+awtabletdpadding+'px;';
                 tableCSS += 'color:'+tdtablecolor;
-    tableCSS += '}\n';
+    tableCSS += comsc;
     if (tableHighlight.checked == true){
      if(tableColor != "None"){
 					if (backgroundrows2.checked == true){
-                      tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+'}\n';
+                      tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+'}'+comsc;
                     }else{
-					tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+'}\n';
+					tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+'}'+comsc;
 					}
 		}
                     if (advdesign.checked == true){
      if(tableColor != "None"){
                     if (cellbacolor.checked == true){
-                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}\n';
+                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}'+comsc;
                       
                     }}}
                 }
                     if (advdesign.checked == true){
                  if (backgroundrows2.checked == true){
-                  tableCSS += '.awtable  tr:nth-of-type(odd){background-color:'+colorbox8.value+';}\n';
+                  tableCSS += '.awtable tr:nth-of-type(odd){background-color:'+colorbox8.value+';}'+comsc;
                   }}
-    tableCSS += '</style>\n\n';
+    tableCSS += '</style>\n';
           
           if(tableColor == "None"){
             if (advdesign.checked == false){
@@ -590,11 +590,11 @@ for(i = 0; i < awOldTextArr.length; i++){
 
   if (textforcellsshow.checked == false){
         if(dirtable == "right"){
-        tableHTML = '<table dir="rtl" class="awtable">\n<tr>';
+        tableHTML = '<table dir="rtl" class="awtable">'+comsc+'<tr>';
         }else if(dirtable == "left"){
-        tableHTML = '<table dir="ltr" class="awtable">\n<tr>';
+        tableHTML = '<table dir="ltr" class="awtable">'+comsc+'<tr>';
         }else{
-        tableHTML = '<table class="awtable">\n<tr>';
+        tableHTML = '<table class="awtable">'+comsc+'<tr>';
         }
   //Make header
   var ii = 0;
@@ -609,7 +609,7 @@ for(i = 0; i < awOldTextArr.length; i++){
            }
    ii++;
   }
-  tableHTML += "</tr>\n";
+  tableHTML += "</tr>"+comsc;
   //make rows
   var i = 0;
   while(i< sizeRows -1){
@@ -628,10 +628,10 @@ for(i = 0; i < awOldTextArr.length; i++){
               } 
    ii++;
    }
-   tableHTML = tableHTML + "</tr>\n";
+   tableHTML = tableHTML + "</tr>"+comsc;
   i++;
   }
-  tableHTML += "</table>\n\n";
+  tableHTML += "</table>\n";
        }else{
        
        
@@ -640,17 +640,17 @@ for(i = 0; i < awOldTextArr.length; i++){
        
        
        if(dirtable == "right"){
-        tableHTML = '<table dir="rtl" class="awtable">\n';
+        tableHTML = '<table dir="rtl" class="awtable">'+comsc;
         }else if(dirtable == "left"){
-        tableHTML = '<table dir="ltr" class="awtable">\n';
+        tableHTML = '<table dir="ltr" class="awtable">'+comsc;
         }else{
-        tableHTML = '<table class="awtable">\n';
+        tableHTML = '<table class="awtable">'+comsc;
         }
 
   //make rows
 
-  tableHTML += awNewText + "\n";
-  tableHTML += "</table>\n\n";
+  tableHTML += awNewText + comsc;
+  tableHTML += "</table>\n";
          
        }
   
