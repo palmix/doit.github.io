@@ -27,7 +27,7 @@ if (texttablesave.length > 0 && setTextsavec != awOldTextsave.value){
 document.getElementById("tablessaved").innerHTML += "<textarea style='display:none' class='awsavetable' id='awsave"+n+"' name='awOldText' rows='0' cols='0'>"+texttablesave+"</textarea>";
 
 var o = new Option("option text", "awsave"+n);
-$(o).html("جدول محفوظ "+n);
+$(o).html("رقم الجدول "+(n+1));
 $("#alltablesave").append(o);
 document.getElementById('alltablesave').selectedIndex = n;
 $('#collapsavetable').collapse('show');
