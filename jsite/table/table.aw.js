@@ -210,6 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var bordershow;
     var placetitle;
  var textforcellsshow;
+ var comscss;
 
  function makeTableCode(){
   if (b64awsec == "ZG9pdGYuY29t"){
@@ -566,21 +567,21 @@ for(i = 0; i < awOldTextArr.length; i++){
     if (tableHighlight.checked == true){
      if(tableColor != "None"){
 					if (backgroundrows2.checked == true){
-                      tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover {background-color:'+backgroundtrhover+'}'+comscss;
+                      tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{background-color:'+backgroundtrhover+'}'+comscss;
                     }else{
-					tableCSS += '.awtable tr:hover {background-color:'+backgroundtrhover+'}'+comscss;
+					tableCSS += '.awtable tr:hover{background-color:'+backgroundtrhover+'}'+comscss;
 					}
 		}
                     if (advdesign.checked == true){
      if(tableColor != "None"){
                     if (cellbacolor.checked == true){
-                      tableCSS += '.awtable tr td:hover {background-color:'+colorbox7.value+';}'+comscss;
+                      tableCSS += '.awtable tr td:hover{background-color:'+colorbox7.value+';}'+comscss;
                       
                     }}}
                 }
                     if (advdesign.checked == true){
                  if (backgroundrows2.checked == true){
-                  tableCSS += '.awtable  tr:nth-of-type(odd){background-color:'+colorbox8.value+';}'+comscss;
+                  tableCSS += '.awtable tr:nth-of-type(odd){background-color:'+colorbox8.value+';}'+comscss;
                   }}
     tableCSS += '</style>\n';
           
