@@ -715,14 +715,29 @@ $(".onchanges").on('keyup change', function (){
   if (tableDesign != "noStyle" && tableColor == "None"){document.getElementById("tableColor").selectedIndex = 0;}
  
   makeTableCode();
-       editor.setValue(newTableCode);
+  
+    var btncopy = document.getElementById("buttoncopy");
+
+
+
+
+
+  
+  document.getElementById('newTable').innerHTML = newTableCode.replace('<table','<table contenteditable="true"');
+  
+  newTableCode = document.getElementById('newTable').innerHTML;
+  newTableCode = newTableCode.replace('<table contenteditable="true"','<table');
+  
+  
+  
+  
+btncopy.setAttribute('data-clipboard-text' , newTableCode);
 
   var text = document.getElementById("newCode").value;
-  var btncopy = document.getElementById("buttoncopy");
 
- 
-  document.getElementById("newTable").innerHTML = newTableCode;
-btncopy.setAttribute('data-clipboard-text' , newTableCode);
+       editor.setValue(newTableCode);
+
+
   });  
  
  
