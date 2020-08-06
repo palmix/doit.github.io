@@ -724,7 +724,7 @@ test1 = test2.replace('<table contenteditable="true"','<table');
 
 
 
-	if (test1 !== ""){
+	if (test0 !== ""){
 		newTableCode = newTableCode
 	}else{
 		newTableCode = test1
