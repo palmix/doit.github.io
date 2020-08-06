@@ -717,31 +717,27 @@ $(".onchanges").on('keyup change', function (){
   
   
   
-  
-  
-  var newCodeedit = document.getElementById("newCodeedit");
-  
-  newCodeedit.value = newTableCode.replace('<table','<table contenteditable="true"');
-  
-  
-  if(newCodeedit.value == ""){
-	  newCodeedit.value = newTableCode
-  }else{
-	  newCodeedit.value =   newCodeedit.value
-  }
-  
-  
-  
-  
-  
-       editor.setValue(newCodeedit.value.replace('<table contenteditable="true"','<table'));
+  var test0 = document.getElementById("newCodeedit").value
+var test2 = document.getElementById("newTable").innerHTML;
 
-  var text = document.getElementById("newCode").value;
+test1 = test2.replace('<table contenteditable="true"','<table');
+
+
+
+	if (test1 !== ""){
+		newTableCode = newTableCode
+	}else{
+		newTableCode = test1
+	}
+
+
+
+editor.setValue(newTableCode);
   var btncopy = document.getElementById("buttoncopy");
 
  
-  document.getElementById("newTable").innerHTML = newCodeedit.value;
-btncopy.setAttribute('data-clipboard-text' , newCodeedit.value.replace('<table contenteditable="true"','<table'));
+  document.getElementById("newTable").innerHTML = newTableCode;
+btncopy.setAttribute('data-clipboard-text' , newTableCode);
   });  
  
  
