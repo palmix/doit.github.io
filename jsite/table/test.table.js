@@ -671,17 +671,14 @@ for(i = 0; i < awOldTextArr.length; i++){
    pageTableHTML = '<table class="awtable" border="1"><tbody><tr><th> </th><th> </th><th> </th><th> </th><th> </th></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr></tbody></table>';   
   }
   
+  tableEND = '';
   
 
   
   newTable = tableCSS + pageTableHTML;
-  newTableCode = tableCSS + tableHTML;
+  newTableCode = tableJS + tableCSS + tableHTML + tableEND;
   
-  document.getElementById('newTable').innerHTML = newTable.replace('<table','<table contenteditable="true"');
-  
-  newTableCode = document.getElementById('newTable').innerHTML;
-  newTableCode = newTableCode.replace('<table contenteditable="true"','<table');
-  
+  document.getElementById('newTable').innerHTML = newTable;
   document.getElementById('newCode').value = newTableCode;
   editor.setValue(newTableCode);
   var btncopy = document.getElementById("buttoncopy");
@@ -716,28 +713,35 @@ $(".onchanges").on('keyup change', function (){
  
   makeTableCode();
   
-    var btncopy = document.getElementById("buttoncopy");
-
-
-
-
-
-  
-  document.getElementById('newTable').innerHTML = newTableCode.replace('<table','<table contenteditable="true"');
-  
-  newTableCode = document.getElementById('newTable').innerHTML;
-  newTableCode = newTableCode.replace('<table contenteditable="true"','<table');
   
   
   
   
-btncopy.setAttribute('data-clipboard-text' , newTableCode);
+  
+  
+  var newCodeedit = document.getElementById("newCodeedit");
+  
+  newCodeedit.value = newTableCode.replace('<table','<table contenteditable="true"');
+  
+  
+  if(newCodeedit.value == ""){
+	  newCodeedit.value = newTableCode
+  }else{
+	  newCodeedit.value =   newCodeedit.value
+  }
+  
+  
+  
+  
+  
+       editor.setValue(newCodeedit.value.replace('<table contenteditable="true"','<table'));
 
   var text = document.getElementById("newCode").value;
+  var btncopy = document.getElementById("buttoncopy");
 
-       editor.setValue(newTableCode);
-
-
+ 
+  document.getElementById("newTable").innerHTML = newCodeedit.value;
+btncopy.setAttribute('data-clipboard-text' , newCodeedit.value.replace('<table contenteditable="true"','<table'));
   });  
  
  
