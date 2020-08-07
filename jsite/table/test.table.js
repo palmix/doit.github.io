@@ -815,7 +815,8 @@ $("#add_new_tr").click(function () {
         }
 	});
 var newCodeedit = document.getElementById("newCodeedit");
-  var newTable = document.getElementById("newTable").innerHTML;
+var newTable = document.getElementById("newTable").innerHTML;
+var btncopy = document.getElementById("buttoncopy");
 
 newCodeedit.value = newTable;
 btncopy.setAttribute('data-clipboard-text' , tableCSS + incode);
