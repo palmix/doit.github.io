@@ -34,9 +34,6 @@ $('#collapsavetable').collapse('show');
 }
 })
 
-function textforcells() {
-
-}
 
 
  document.getElementById("awClearText").addEventListener("click", function () {
@@ -206,15 +203,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
  function makeTableCode(){
   if (b64awsec == "ZG9pdGYuY29t"){
- var textforcellsshow = document.getElementById("textforcells");
-  if (textforcellsshow.checked == true){
-$('#textforcellscollapse').collapse('show');
-$('#awnumofcells').collapse('hide');
-  } else {
-$('#textforcellscollapse').collapse('hide');
-$('#awnumofcells').collapse('show');
-
-    }
           //Make variables
 var lineSep = document.getElementById("lineSep").value;
 var CustomSep = document.getElementById("CustomSep").value;
@@ -851,7 +839,23 @@ newCodeedit.value = newTable;
 
 
 
+document.addEventListener('input',(e)=>{
 
+if(e.target.getAttribute('name')=="textforcells"){
+	var txtfcel = e.target.value;
+	if(txtfcel == "textforcells"){
+$('#textforcellscollapse').collapse('show');
+$('#awnumofcells').collapse('hide');
+	}else if(txtfcel == "numofcells"){
+$('#textforcellscollapse').collapse('hide');
+$('#awnumofcells').collapse('show');
+	}else{
+$('#textforcellscollapse').collapse('hide');
+$('#awnumofcells').collapse('hide');
+	}
+ makeTableCode();
+
+}})
 
 
 
