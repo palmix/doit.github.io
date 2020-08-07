@@ -35,15 +35,7 @@ $('#collapsavetable').collapse('show');
 })
 
 function textforcells() {
-  var textforcellsshow = document.getElementById("textforcells");
-  if (textforcellsshow.checked == true){
-$('#textforcellscollapse').collapse('show');
-$('#awnumofcells').collapse('hide');
-  } else {
-$('#textforcellscollapse').collapse('hide');
-$('#awnumofcells').collapse('show');
 
-    }
 }
 
 
@@ -214,6 +206,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
  function makeTableCode(){
   if (b64awsec == "ZG9pdGYuY29t"){
+ var textforcellsshow = document.getElementById("textforcells");
+  if (textforcellsshow.checked == true){
+$('#textforcellscollapse').collapse('show');
+$('#awnumofcells').collapse('hide');
+  } else {
+$('#textforcellscollapse').collapse('hide');
+$('#awnumofcells').collapse('show');
+
+    }
           //Make variables
 var lineSep = document.getElementById("lineSep").value;
 var CustomSep = document.getElementById("CustomSep").value;
