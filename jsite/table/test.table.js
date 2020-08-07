@@ -819,8 +819,6 @@ var newTable = document.getElementById("newTable").innerHTML;
 var btncopy = document.getElementById("buttoncopy");
 
 newCodeedit.value = newTable;
-btncopy.setAttribute('data-clipboard-text' , tableCSS + incode);
-editor.setValue(tableCSS + incode);
  makeTableCode();
 });
 
