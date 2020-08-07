@@ -830,7 +830,7 @@ newCodeedit.value = newTable;
 
 $('#add_new_columns').click(function(){
    $('.awtable thead tr').each(function(){
-	   var lengthth = $('thead th', this).length;
+	   var lengthth = $('th', this).length;
       $(this).append('\t\t\t<th>Header '+(lengthth + 1)+'</th>\n');
    });
    $('.awtable tbody tr').each(function(){
