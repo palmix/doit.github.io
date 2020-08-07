@@ -1,3 +1,5 @@
+
+
 function alltablesave(){
 var texttablesave = document.getElementById('alltablesave').value;
 var setTextsave = document.getElementById(texttablesave).value;
@@ -840,23 +842,23 @@ newCodeedit.value = newTable;
 
 
 document.addEventListener('input',(e)=>{
-
 if(e.target.getAttribute('name')=="textforcells"){
 	var txtfcel = e.target.value;
 	if(txtfcel == "textforcells"){
 $('#textforcellscollapse').collapse('show');
 $('#awnumofcells').collapse('hide');
+$('#alerteditonline').collapse('hide');
 	}else if(txtfcel == "numofcells"){
 $('#textforcellscollapse').collapse('hide');
 $('#awnumofcells').collapse('show');
+$('#alerteditonline').collapse('hide');
 	}else{
 $('#textforcellscollapse').collapse('hide');
 $('#awnumofcells').collapse('hide');
+$('#alerteditonline').collapse('show');
 	}
  makeTableCode();
 
 }})
-
-
 
  });
