@@ -454,6 +454,7 @@ var editonline =   document.getElementById('editonline');
               html5color5.value = colorbox5.value;
               html5color6.value = colorbox6.value;
               html5color7.value = colorbox7.value;
+              html5color8.value = colorbox8.value;
             }
           
           
@@ -816,9 +817,9 @@ $("#add_new_tr").click(function () {
 	});
 var newCodeedit = document.getElementById("newCodeedit");
 var newTable = document.getElementById("newTable").innerHTML;
-var btncopy = document.getElementById("buttoncopy");
 
 newCodeedit.value = newTable;
+
  makeTableCode();
 });
 
