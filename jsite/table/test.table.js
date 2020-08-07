@@ -742,8 +742,8 @@ $("#add_new_tr").click(function () {
         } else {
             $(this).append(tds);
         }
+	});
 });
-
 
 
 }else{
