@@ -271,7 +271,7 @@ for(i = 0; i < awOldTextArr.length; i++){
   awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>"+comsc+"<td>" );
   awNewText = awNewText + awOldTextArr[i]+comsc;
 }
-var editonline =   document.getElementById('editonline');
+var editonline = document.getElementById('editonline');
   bordershow = document.getElementById("bordershow");
   textforcellsshow = document.getElementById("textforcells");
   awtablefontsize = document.getElementById('awtablefontsize').value;
@@ -802,7 +802,7 @@ newTable = newTable.replace(' contenteditable="true"','');
 btncopy.setAttribute('data-clipboard-text' , tableCSS+newTable);
 editor.setValue(tableCSS+newTable);
 });
-$("#add_new_tr").click(function () { 
+$("#add_new_rows").click(function () { 
     $(".awtable").each(function () {
         var tds = '\t\t<tr>\n';
         jQuery.each($('tr:last td', this), function () {
@@ -822,5 +822,34 @@ newCodeedit.value = newTable;
 
  makeTableCode();
 });
+
+
+
+
+
+
+$('#add_new_columns').click(function(){
+   $('.awtable thead tr').each(function(){
+      $(this).append('<th><br></th>');
+   });
+   $('.awtable tbody tr').each(function(){
+      $(this).append('<td><br></td>');
+   });
+   
+var newCodeedit = document.getElementById("newCodeedit");
+var newTable = document.getElementById("newTable").innerHTML;
+
+newCodeedit.value = newTable;
+
+ makeTableCode();
+});
+
+
+
+
+
+
+
+
 
  });
