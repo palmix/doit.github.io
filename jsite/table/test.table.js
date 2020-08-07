@@ -711,6 +711,7 @@ if(editonline.checked === true){
 
 
 var incode = newCodeedit.value;
+var incodec = newCodeedit.value;
 
  newTable.innerHTML = incode;
 
@@ -728,22 +729,7 @@ btncopy.setAttribute('data-clipboard-text' , tableCSS + incode);
 editor.setValue(tableCSS + incode);
 
 
-$("#add_new_tr").click(function () { 
 
-    $(".awtable").each(function () {
-       
-        var tds = '<tr>';
-        jQuery.each($('tr:last td', this), function () {
-            tds += '<td>' + $(this).html() + '</td>';
-        });
-        tds += '</tr>';
-        if ($('tbody', this).length > 0) {
-            $('tbody', this).append(tds);
-        } else {
-            $(this).append(tds);
-        }
-	});
-});
 
 
 }else{
@@ -815,6 +801,26 @@ newTable = newTable.replace(' contenteditable="true"','');
 btncopy.setAttribute('data-clipboard-text' , tableCSS+newTable);
 editor.setValue(tableCSS+newTable);
 });
+$("#add_new_tr").click(function () { 
+    $(".awtable").each(function () {
+        var tds = '\t\t<tr>\n';
+        jQuery.each($('tr:last td', this), function () {
+            tds += '\t\t\t<td>' + $(this).html() + '</td>\n';
+        });
+        tds += '\t\t</tr>\n';
+        if ($('tbody', this).length > 0) {
+            $('tbody', this).append(tds);
+        } else {
+            $(this).append(tds);
+        }
+	});
+var newCodeedit = document.getElementById("newCodeedit");
+  var newTable = document.getElementById("newTable").innerHTML;
 
+newCodeedit.value = newTable;
+btncopy.setAttribute('data-clipboard-text' , tableCSS + incode);
+editor.setValue(tableCSS + incode);
+ makeTableCode();
+});
 
  });
