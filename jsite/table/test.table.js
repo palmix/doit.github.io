@@ -728,7 +728,21 @@ btncopy.setAttribute('data-clipboard-text' , tableCSS + incode);
 editor.setValue(tableCSS + incode);
 
 
+$("#add_new_tr").click(function () { 
 
+    $(".awtable").each(function () {
+       
+        var tds = '<tr>';
+        jQuery.each($('tr:last td', this), function () {
+            tds += '<td>' + $(this).html() + '</td>';
+        });
+        tds += '</tr>';
+        if ($('tbody', this).length > 0) {
+            $('tbody', this).append(tds);
+        } else {
+            $(this).append(tds);
+        }
+});
 
 
 
