@@ -830,10 +830,10 @@ newCodeedit.value = newTable;
 
 $('#add_new_columns').click(function(){
    $('.awtable thead tr').each(function(){
-      $(this).append('<th><br></th>');
+      $(this).append('\t\t\t<th><br></th>\n'');
    });
    $('.awtable tbody tr').each(function(){
-      $(this).append('<td><br></td>');
+      $(this).append('\t\t\t<td><br></td>\n');
    });
    
 var newCodeedit = document.getElementById("newCodeedit");
