@@ -699,7 +699,7 @@ var editonline = document.getElementById('editonline');
    var text = document.getElementById("newCode").value;
 
 if(editonline.checked === true){
-
+ $('.btnadd').css('display','block');
 
 
  var comsc = document.getElementById("comsc");
@@ -734,6 +734,7 @@ editor.setValue(tableCSS + incode);
 
 
 }else{
+ $('.btnadd').css('display','none');
 
 document.getElementById("newTable").innerHTML = newTableCode;
 btncopy.setAttribute('data-clipboard-text' , newTableCode);
