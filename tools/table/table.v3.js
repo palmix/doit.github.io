@@ -444,6 +444,7 @@ for(i = 0; i < awOldTextArr.length; i++){
               html5color5.value = colorbox5.value;
               html5color6.value = colorbox6.value;
               html5color7.value = colorbox7.value;
+              html5color8.value = colorbox8.value;
             }
           
           
