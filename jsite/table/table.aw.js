@@ -575,12 +575,10 @@ for(i = 0; i < awOldTextArr.length; i++){
 					tableCSS += '.awtable tr:hover{background-color:'+backgroundtrhover+'}'+comscss;
 					}
 		}
-                    if (advdesign.checked == true){
-     if(tableColor != "None"){
-                    if (cellbacolor.checked == true){
+                    if (advdesign.checked == true && tableColor != "None" && cellbacolor.checked == true){
                       tableCSS += '.awtable tr td:hover{background-color:'+colorbox7.value+';}'+comscss;
                       
-                    }}}
+                    }
                 }
                     if (advdesign.checked == true){
                  if (backgroundrows2.checked == true){
