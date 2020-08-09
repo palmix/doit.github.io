@@ -574,10 +574,9 @@ var editonline = document.getElementById('editonline');
                       
                     }
                 }
-                    if (advdesign.checked == true){
-                 if (backgroundrows2.checked == true){
+                    if (advdesign.checked == true && backgroundrows2.checked == true){
                   tableCSS += '.awtable tr:nth-of-type(odd){background-color:'+colorbox8.value+';}'+comscss;
-                  }}
+                  }
     tableCSS += '</style>\n';
           
           if(tableColor == "None"){
