@@ -563,7 +563,7 @@ var editonline = document.getElementById('editonline');
     tableCSS += '}'+comscss;
     if (tableHighlight.checked == true){
      if(tableColor != "None"){
-					if (backgroundrows2.checked == true){
+					if (backgroundrows2.checked == true && advdesign.checked == true){
                       tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{background-color:'+backgroundtrhover+'}'+comscss;
                     }else{
 					tableCSS += '.awtable tr:hover{background-color:'+backgroundtrhover+'}'+comscss;
