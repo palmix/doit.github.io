@@ -723,8 +723,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 var incodec = newCodeedit.value;
 
                 newTable.innerHTML = incode;
-
-                newTableStyle.innerHTML = tableCSS;
+                newTableStyle.innerHTML = "";
+                newTableStyle.innerHTML += tableCSS;
                 incode = incode.replace(' contenteditable="true"', '');
 
                 if (comsc.checked === true) {
