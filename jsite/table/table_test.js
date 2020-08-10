@@ -43,6 +43,9 @@ document.getElementById("awClearText").addEventListener("click", function() {
 
 
 
+
+
+
 function displayCustomSep() {
     var lineSep = document.getElementById("lineSep").value;
     if (lineSep == "CustomSep") {
@@ -862,61 +865,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 $('#alerteditonline').collapse('show');
             }
             makeTableCode();
+
         }
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-    document.addEventListener('input', (b) => {
-if (b.target.getAttribute('name') == "advdesign") {
-            var design = b.target.value;
-            if (design == "custom") {
-alert(design);
+function showadvdesign() {
+    var checkBox = document.getElementById("advdesign");
+    if (checkBox.checked == true) {
         $('#collapseadvdesign').collapse('show');
         $('#tableDesign').attr("disabled", "disabled");
         $('#tableColor').attr("disabled", "disabled");
         $('#basicdesign').collapse('hide');
-
-            } else if (design == "simple") {
-alert(design);
+    } else {
         $('#basicdesign').collapse('show');
         $('#collapseadvdesign').collapse('hide');
         $('#tableDesign').removeAttr("disabled", "disabled");
         $('#tableColor').removeAttr("disabled", "disabled");
         $('#textforcellscollapse').collapse('hide');
         document.getElementById("textforcells").checked = false;
-            } else if (design == "advanced") {
-alert(design);
-                $('#textforcellscollapse').collapse('hide');
-                $('#awnumofcells').collapse('hide');
-                $('#alerteditonline').collapse('show');
-
-            }else{
-				alert("none");
-
-			}
-  makeTableCode();
-        }
-
-});
-
-
-
-
-
-
-
-
-
-
+    }
+	  makeTableCode();
+}
 });
