@@ -886,7 +886,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 $('#awnumofcells').collapse('hide');
                 $('#alerteditonline').collapse('show');
 
-            }
+            }else{
+				
+        $('#collapseadvdesign').collapse('show');
+        $('#tableDesign').attr("disabled", "disabled");
+        $('#tableColor').attr("disabled", "disabled");
+        $('#basicdesign').collapse('hide');
+				
+			}
   makeTableCode();
         }
     })
