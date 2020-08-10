@@ -41,22 +41,34 @@ document.getElementById("awClearText").addEventListener("click", function() {
     document.getElementById("awOldText").focus();
 });
 
-function showadvdesign() {
-    var checkBox = document.getElementById("advdesign");
-    if (checkBox.checked == true) {
+   document.addEventListener('input', (e) => {
+        if (e.target.getAttribute('name') == "advdesign") {
+            var design = e.target.value;
+            if (design == "custom") {
+
         $('#collapseadvdesign').collapse('show');
         $('#tableDesign').attr("disabled", "disabled");
         $('#tableColor').attr("disabled", "disabled");
         $('#basicdesign').collapse('hide');
-    } else {
+
+            } else if (design == "simple") {
+
         $('#basicdesign').collapse('show');
         $('#collapseadvdesign').collapse('hide');
         $('#tableDesign').removeAttr("disabled", "disabled");
         $('#tableColor').removeAttr("disabled", "disabled");
         $('#textforcellscollapse').collapse('hide');
         document.getElementById("textforcells").checked = false;
-    }
-}
+            } else if (design == "advanced") {
+
+                $('#textforcellscollapse').collapse('hide');
+                $('#awnumofcells').collapse('hide');
+                $('#alerteditonline').collapse('show');
+
+            }
+
+        }
+    })
 
 
 
