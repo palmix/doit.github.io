@@ -916,15 +916,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
  $(".desig").click(function(){
 $( document ).ready(function() {
-var desigsbtn = $(".desig.active");
-var desigbtn = $("input[name=desig]",desigsbtn).val();
-    if (desigbtn == 'custom') {
+var desigs = $(".desig.active");
+var desig = $("input[name=desig]",desigs).val();
+
+
+    if (desig == 'custom') {
         $('#collapseadvdesign').collapse('show');
         $('#tableDesign').attr("disabled", 'disabled');
         $('#tableColor').attr("disabled", "disabled");
         $('#basicdesign').collapse('hide');
 
-    } else if (desigbtn == 'simple'){
+    } else if (desig == 'simple'){
         $('#basicdesign').collapse('show');
         $('#collapseadvdesign').collapse('hide');
         $('#tableDesign').removeAttr('disabled', 'disabled');
@@ -932,14 +934,13 @@ var desigbtn = $("input[name=desig]",desigsbtn).val();
         $('#textforcellscollapse').collapse('hide');
         document.getElementById('textforcells').checked = false;
 
-   	} else if (desigbtn == 'advanced'){
+   	} else if (desig == 'advanced'){
 
 
     }else{
 
 
-}
-
+    }
 
 })
 makeTableCode();
