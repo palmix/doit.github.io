@@ -863,7 +863,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             makeTableCode();
 
-        } else if (e.target.getAttribute('name') == "advdesign") {
+        }if (e.target.getAttribute('name') == "advdesign") {
             var design = e.target.value;
             if (design == "custom") {
 alert(design);
