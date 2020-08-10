@@ -883,5 +883,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }
     })
+	
+ $(".minustable").click(function(){
+  var minutab1,minutab2,ids,ids1,enterct;
+  var idsc = $(this).attr("data-ids");
+  var idsnum = $(this).attr("data-idsnum");
+  ids      = '#'+idsc+idsnum+'.show';
+  ids1      = '#'+idsc+idsnum;
+  minutab1 = '.minustable'+idsnum;
+  minutab2 = '.minustables'+idsnum;
+
+ if($(ids).length > 0){
+	$(ids1).collapse('hide');
+  	$(minutab1).removeClass('fa-minus');
+	$(minutab1).addClass('fa-chevron-down ');
+	$(minutab2).removeClass('bg-secondary rounded-top');
+	$(minutab2).addClass('bg-info rounded');
+ }else{
+    $(ids1).collapse('show');
+  	$(minutab1).addClass('fa-minus');
+	$(minutab1).removeClass('fa-chevron-down');
+	$(minutab2).addClass('bg-secondary rounded-top');
+	$(minutab2).removeClass('bg-info rounded');
+
+  }
+});
 
 });
