@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tableCSS += 'font-family:' + selectfontfamily + ';';
             }
 
-            if (textaligntable != "none" && desig == 'custom') {
+            if (textaligntable != "none" && desig == "custom") {
                 tableCSS += 'text-align:' + textaligntable + ';';
             }
             tableCSS += 'width:' + awtablewidth + awtablewidthpercent;
