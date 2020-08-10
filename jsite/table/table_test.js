@@ -911,4 +911,40 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+
+
+
+function showadvdesigns() {
+$( document ).ready(function() {
+var desigs = $(".desig.active");
+var desig = $("input[name=desig]",desigs).val();
+    if (desig == 'custom') {
+        $('#collapseadvdesign').collapse('show');
+        $('#tableDesign').attr("disabled", 'disabled');
+        $('#tableColor').attr("disabled", "disabled");
+        $('#basicdesign').collapse('hide');
+
+    } else if (desig == 'simple'){
+        $('#basicdesign').collapse('show');
+        $('#collapseadvdesign').collapse('hide');
+        $('#tableDesign').removeAttr('disabled', 'disabled');
+        $('#tableColor').removeAttr('disabled', 'disabled');
+        $('#textforcellscollapse').collapse('hide');
+        document.getElementById('textforcells').checked = false;
+
+   	} else if (desig == 'advanced'){
+
+
+    }else{
+
+
+}
+
+
+})
+
+}
+
+
+
 });
