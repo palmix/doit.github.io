@@ -517,7 +517,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (bordershow.checked == true) {
                     tableCSS += 'border-width:' + awtableborderwidth + 'px;';
                     tableCSS += 'border-color:' + borderawtable;
-                }
+                }else{
+                    tableCSS += 'border-width:0px;';
+				}
             } else {
                 tableCSS += 'border-width:' + awtableborderwidth + 'px;';
                 tableCSS += 'border-color:' + borderawtable;
