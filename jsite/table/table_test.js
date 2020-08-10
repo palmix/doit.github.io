@@ -723,8 +723,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var incodec = newCodeedit.value;
 
                 newTable.innerHTML = incode;
-                newTableStyle.innerHTML = "";
-                newTableStyle.innerHTML += tableCSS;
+                newTableStyle.innerHTML = tableCSS;
                 incode = incode.replace(' contenteditable="true"', '');
 
                 if (comsc.checked === true) {
@@ -742,7 +741,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             } else {
                 $('.btnadd').css('display', 'none');
-
+				document.getElementById("newTableStyle").innerHTML ='';
                 document.getElementById("newTable").innerHTML = newTableCode;
                 btncopy.setAttribute('data-clipboard-text', newTableCode);
                 document.getElementById('newCode').value = newTableCode;
