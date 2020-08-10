@@ -862,9 +862,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 $('#alerteditonline').collapse('show');
             }
             makeTableCode();
+        }
+    })
 
-        }if (e.target.getAttribute('name') == "advdesign") {
-            var design = e.target.value;
+
+
+
+
+
+
+
+
+
+
+
+
+    document.addEventListener('input', (b) => {
+if (b.target.getAttribute('name') == "advdesign") {
+            var design = b.target.value;
             if (design == "custom") {
 alert(design);
         $('#collapseadvdesign').collapse('show');
@@ -892,6 +907,16 @@ alert(design);
 			}
   makeTableCode();
         }
-    })
+
+});
+
+
+
+
+
+
+
+
+
 
 });
