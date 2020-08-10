@@ -176,6 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var tableInfo = "";
     var comsc = "";
     var tableHighlight = "";
+    var tabletrhover = "";
     var tableJS = "";
     var tableCSS = "";
     var tableHTML = "";
@@ -316,6 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             tableInfo = document.getElementById('tableInfo');
             tableHighlight = document.getElementById('tableHighlight');
+			tabletrhover = document.getElementById('tabletrhover');
             tableCSS = "";
 
             if (tableColor == "Blue") {
@@ -590,19 +592,21 @@ document.addEventListener('DOMContentLoaded', function() {
             tableCSS += 'padding:' + awtabletdpadding + 'px;';
             tableCSS += 'color:' + tdtablecolor;
             tableCSS += '}' + comscss;
-            if (tableHighlight.checked == true) {
-                if (tableColor != "None") {
-                    if (backgroundrows2.checked == true && advdesign.checked == true) {
-                        tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{background-color:' + backgroundtrhover + '}' + comscss;
-                    } else {
+            if (tableHighlight.checked == true && advdesign.checked == false && tableColor != "None") {
                         tableCSS += '.awtable tr:hover{background-color:' + backgroundtrhover + '}' + comscss;
-                    }
-                }
-                if (advdesign.checked == true && tableColor != "None" && cellbacolor.checked == true) {
+            }
+			if(advdesign.checked == true && tabletrhover.checked == true){
+             if (backgroundrows2.checked == true) {
+                        tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{background-color:' + backgroundtrhover + '}' + comscss;
+              }else{
+                        tableCSS += '.awtable tr:hover{background-color:' + backgroundtrhover + '}' + comscss;
+			  }
+			}
+			  
+             if (advdesign.checked == true && tableColor != "None" && cellbacolor.checked == true) {
                     tableCSS += '.awtable tr td:hover{background-color:' + colorbox7.value + ';}' + comscss;
 
-                }
-            }
+             }
             if (advdesign.checked == true && backgroundrows2.checked == true) {
                 tableCSS += '.awtable tr:nth-of-type(odd){background-color:' + colorbox8.value + ';}' + comscss;
             }
