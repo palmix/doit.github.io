@@ -941,9 +941,9 @@ var desig = $("input[name=desig]",desigs).val();
 
 
     }
-
-})
 makeTableCode();
+})
+
 })
 
 
