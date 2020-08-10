@@ -866,14 +866,14 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (e.target.getAttribute('name') == "advdesign") {
             var design = e.target.value;
             if (design == "custom") {
-
+alert(design);
         $('#collapseadvdesign').collapse('show');
         $('#tableDesign').attr("disabled", "disabled");
         $('#tableColor').attr("disabled", "disabled");
         $('#basicdesign').collapse('hide');
 
             } else if (design == "simple") {
-
+alert(design);
         $('#basicdesign').collapse('show');
         $('#collapseadvdesign').collapse('hide');
         $('#tableDesign').removeAttr("disabled", "disabled");
@@ -881,18 +881,14 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#textforcellscollapse').collapse('hide');
         document.getElementById("textforcells").checked = false;
             } else if (design == "advanced") {
-
+alert(design);
                 $('#textforcellscollapse').collapse('hide');
                 $('#awnumofcells').collapse('hide');
                 $('#alerteditonline').collapse('show');
 
             }else{
-				
-        $('#collapseadvdesign').collapse('show');
-        $('#tableDesign').attr("disabled", "disabled");
-        $('#tableColor').attr("disabled", "disabled");
-        $('#basicdesign').collapse('hide');
-				
+				alert("none");
+
 			}
   makeTableCode();
         }
