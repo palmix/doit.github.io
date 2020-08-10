@@ -914,7 +914,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-function showadvdesigns() {
+ $(".desig").click(function(){
 $( document ).ready(function() {
 var desigsbtn = $(".desig.active");
 var desigbtn = $("input[name=desig]",desigsbtn).val();
@@ -943,7 +943,7 @@ var desigbtn = $("input[name=desig]",desigsbtn).val();
 
 })
 makeTableCode();
-}
+})
 
 
 
