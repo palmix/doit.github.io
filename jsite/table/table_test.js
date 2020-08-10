@@ -53,7 +53,6 @@ function showadvdesign() {
         $('#collapseadvdesign').collapse('hide');
         $('#tableDesign').removeAttr("disabled", "disabled");
         $('#tableColor').removeAttr("disabled", "disabled");
-        $('#awnumofcells').collapse('show');
         $('#textforcellscollapse').collapse('hide');
         document.getElementById("textforcells").checked = false;
     }
