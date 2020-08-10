@@ -863,10 +863,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             makeTableCode();
 
-        }
-    })
-   document.addEventListener('input', (e) => {
-        if (e.target.getAttribute('name') == "advdesign") {
+        } else if (e.target.getAttribute('name') == "advdesign") {
             var design = e.target.value;
             if (design == "custom") {
 
@@ -893,4 +890,5 @@ document.addEventListener('DOMContentLoaded', function() {
   makeTableCode();
         }
     })
+
 });
