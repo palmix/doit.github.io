@@ -831,14 +831,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var lengthcollth = $('.awtable thead th').length;
 		if(lengthcollth > 1){
-			        $('.awtable tr').find('th:last-child , td:last-child').remove();
+			$('.awtable tr').find('th:last-child , td:last-child').remove();
+			makeTableCode();
     	}
     });
 
     $('#remove_rows').click(function() {
         var lengthrowtd = $('.awtable tr').length;
 		if(lengthrowtd > 1){
-			        $('.awtable').find('tr:last-child').remove();
+			$('.awtable tbody').find('tr:last-child').remove();
+			makeTableCode();
     	}
     });
 	
