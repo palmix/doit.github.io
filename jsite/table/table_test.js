@@ -862,7 +862,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     $('#remove_columns').click(function() {
+		alert('hi')
         var lengthcollth = $('.awtable thead th').length;
+		alert(lengthcollth)
 		if(lengthcollth > 1){
             $('.awtable th:last-child, .awtable td:last-child').remove();
     	}
