@@ -1,3 +1,18 @@
+    $('#remove_columns').click(function() {
+
+        var lengthcollth = $('.awtable thead th').length;
+		if(lengthcollth > 1){
+			        $('.awtable tr').find('th:last-child , td:last-child').remove();
+    	}
+    });
+
+    $('#remove_rows').click(function() {
+        var lengthrowtd = $('.awtable tbody tr').length;
+		if(lengthrowtd > 1){
+            $('.awtable tbody tr:last-child').remove();
+    	}
+    });
+
 function alltablesave() {
     var texttablesave = document.getElementById('alltablesave').value;
     var setTextsave = document.getElementById(texttablesave).value;
@@ -946,20 +961,5 @@ makeTableCode();
 })
 
 
-    $('#remove_columns').click(function() {
 
-        var lengthcollth = $('.awtable thead th').length;
-		if(lengthcollth > 1){
-			        $('.awtable tr').find('th:last-child , td:last-child').remove();
-    	}
-        makeTableCode();
-    });
-
-    $('#remove_rows').click(function() {
-        var lengthrowtd = $('.awtable tbody tr').length;
-		if(lengthrowtd > 1){
-            $('.awtable tbody tr:last-child').remove();
-    	}
-        makeTableCode();
-    });
 });
