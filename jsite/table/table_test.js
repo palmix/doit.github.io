@@ -861,23 +861,7 @@ document.addEventListener('DOMContentLoaded', function() {
         makeTableCode();
     });
 
-    $('#remove_columns').click(function() {
 
-        var lengthcollth = $('.awtable thead th').length;
-		if(lengthcollth > 1){
-			        $('.awtable tr').find('th:last-child').remove();
-			        $('.awtable tr').find('td:last-child').remove();
-    	}
-        makeTableCode();
-    });
-
-    $('#remove_rows').click(function() {
-        var lengthrowtd = $('.awtable tbody tr').length;
-		if(lengthrowtd > 1){
-            $('.awtable tbody tr:last-child').remove();
-    	}
-        makeTableCode();
-    });
 
 
     document.addEventListener('input', (e) => {
@@ -962,5 +946,20 @@ makeTableCode();
 })
 
 
+    $('#remove_columns').click(function() {
 
+        var lengthcollth = $('.awtable thead th').length;
+		if(lengthcollth > 1){
+			        $('.awtable tr').find('th:last-child , td:last-child').remove();
+    	}
+        makeTableCode();
+    });
+
+    $('#remove_rows').click(function() {
+        var lengthrowtd = $('.awtable tbody tr').length;
+		if(lengthrowtd > 1){
+            $('.awtable tbody tr:last-child').remove();
+    	}
+        makeTableCode();
+    });
 });
