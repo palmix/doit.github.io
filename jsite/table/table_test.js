@@ -1,17 +1,4 @@
-    $('#remove_columns').click(function() {
 
-        var lengthcollth = $('.awtable thead th').length;
-		if(lengthcollth > 1){
-			        $('.awtable tr').find('th:last-child , td:last-child').remove();
-    	}
-    });
-
-    $('#remove_rows').click(function() {
-        var lengthrowtd = $('.awtable tbody tr').length;
-		if(lengthrowtd > 1){
-            $('.awtable tbody tr:last-child').remove();
-    	}
-    });
 
 function alltablesave() {
     var texttablesave = document.getElementById('alltablesave').value;
@@ -835,6 +822,28 @@ document.addEventListener('DOMContentLoaded', function() {
         btncopy.setAttribute('data-clipboard-text', tableCSS + newTable);
         editor.setValue(tableCSS + newTable);
     });
+	
+	
+	
+	
+	
+	    $('#remove_columns').click(function() {
+
+        var lengthcollth = $('.awtable thead th').length;
+		if(lengthcollth > 1){
+			        $('.awtable tr').find('th:last-child , td:last-child').remove();
+    	}
+    });
+
+    $('#remove_rows').click(function() {
+        var lengthrowtd = $('.awtable tr').length;
+		if(lengthrowtd > 1){
+			        $('.awtable').find('tr:last-child').remove();
+    	}
+    });
+	
+	
+	
     $("#add_new_rows").click(function() {
         $(".awtable").each(function() {
             var tds = '\t\t<tr>\n';
