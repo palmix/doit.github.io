@@ -832,16 +832,22 @@ document.addEventListener('DOMContentLoaded', function() {
         var lengthcollth = $('.awtable thead th').length;
 		if(lengthcollth > 1){
 			$('.awtable tr').find('th:last-child , td:last-child').remove();
-			makeTableCode();
     	}
+        var newCodeedit = document.getElementById("newCodeedit");
+        var newTable = document.getElementById("newTable").innerHTML;
+        newCodeedit.value = newTable;
+        makeTableCode();
     });
 
     $('#remove_rows').click(function() {
         var lengthrowtd = $('.awtable tr').length;
 		if(lengthrowtd > 1){
 			$('.awtable tbody').find('tr:last-child').remove();
-			makeTableCode();
     	}
+        var newCodeedit = document.getElementById("newCodeedit");
+        var newTable = document.getElementById("newTable").innerHTML;
+        newCodeedit.value = newTable;
+        makeTableCode();
     });
 	
 	
