@@ -864,7 +864,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#remove_columns').click(function() {
         var lengthcollth = $('.awtable thead th').length;
 		if(lengthcollth > 1){
-            $(".awtable th:last-child, .awtable td:last-child").remove();
+            $('.awtable th:last-child, .awtable td:last-child').remove();
     	}
         makeTableCode();
     });
@@ -872,7 +872,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#remove_rows').click(function() {
         var lengthrowtd = $('.awtable tbody tr').length;
 		if(lengthrowtd > 1){
-            $(".awtable tbody tr:last-child").remove();
+            $('.awtable tbody tr:last-child').remove();
     	}
         makeTableCode();
     });
