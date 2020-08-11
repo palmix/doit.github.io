@@ -865,9 +865,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var lengthcollth = $('.awtable thead th').length;
 		if(lengthcollth > 1){
-					alert(lengthcollth)
-            $('.awtable th:last-child, .awtable td:last-child').remove();
-					alert('hi')
+			        $('.awtable').find('th:last-child').remove();
+			        $('.awtable').find('td:last-child').remove();
     	}
         makeTableCode();
     });
