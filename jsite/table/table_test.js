@@ -840,7 +840,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     $('#remove_rows').click(function() {
-        var lengthrowtd = $('.awtable tr').length;
+        var lengthrowtd = $('.awtable tbody tr').length;
 		if(lengthrowtd > 1){
 			$('.awtable tbody').find('tr:last-child').remove();
     	}
