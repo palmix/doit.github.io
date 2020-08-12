@@ -134,7 +134,17 @@ var text = document.getElementById("textareaCode").value;
 
 
 var gets = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts/";
-numcode.replace('code','');
+numcode = numcode;
+numcode = numcode.replace(/a/ig,0);
+numcode = numcode.replace(/b/ig,1);
+numcode = numcode.replace(/c/ig,2);
+numcode = numcode.replace(/d/ig,3);
+numcode = numcode.replace(/e/ig,4);
+numcode = numcode.replace(/f/ig,5);
+numcode = numcode.replace(/g/ig,6);
+numcode = numcode.replace(/h/ig,7);
+numcode = numcode.replace(/i/ig,8);
+numcode = numcode.replace(/j/ig,9);
 var key="?key=AIzaSyC741P-a8wIzhICwqzEJ-UB1su2JiDOIco";
 var getcode = gets + numcode + key;
 
