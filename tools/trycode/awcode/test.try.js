@@ -40,15 +40,15 @@ function saveandgo() {
 
 
  if (title == ""){
-	 title.addClass('is-invalid');
+	 $("#inputtexttitle").addClass('is-invalid');
        result.text("يجب إخال العنوان أولاً");
  }else{
-title.removeClass('is-invalid');
-title.addClass('is-valid');
+$("#inputtexttitle").removeClass('is-invalid');
+$("#inputtexttitle").addClass('is-valid');
 
   if (validateEmail(email)) {
-email.removeClass('is-invalid');
-email.addClass('is-valid');
+$("#inputemail").removeClass('is-invalid');
+$("#inputemail").addClass('is-valid');
 
  var codesave = editor.getValue();
  codesave = codesave.replace(/&/ig, "&amp;");
@@ -63,8 +63,8 @@ email.addClass('is-valid');
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  $("#input_2").trigger('click');
   } else {
-email.addClass('is-invalid');
-email.removeClass('is-valid');
+$("#inputemail").addClass('is-invalid');
+$("#inputemail").removeClass('is-valid');
   if (email == ""){
       result.text("يجب إدخال البريد الإلكتروني!");
   }else{
