@@ -14,7 +14,7 @@ var codesave = editor.getValue();
  codesave = codesave.replace(/ya'll/ig, "ya'll");
 var inputtexttitle = $( "#inputtexttitle" ).val();
 var inputemail = $( "#inputemail" ).val();
- $( "#input_5" ).val("<textarea id='getthiscode'>"+codesave+"</textarea>");
+ $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  $( "#input_6" ).val(inputtexttitle);
  $( "#input_8" ).val(inputemail);
 });
@@ -33,7 +33,7 @@ var codesave = editor.getValue();
  codesave = codesave.replace(/©/ig, "&copy;");
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
- $( "#input_5" ).val("<textarea id='getthiscode'>"+codesave+"</textarea>");
+ $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
 $("#input_2").trigger('click');
 });
 function submitTryit(n) {
