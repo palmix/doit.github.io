@@ -81,9 +81,9 @@ $("#saveandgo").on("click", saveandgo);
 
 
 var gets = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts/";
-var codeid = "2106897108355407766";
+numcode.replace('code','');
 var key="?key=AIzaSyC741P-a8wIzhICwqzEJ-UB1su2JiDOIco";
-var getcode = gets + codeid + key;
+var getcode = gets + numcode + key;
 
 $.getJSON(getcode, function(code) {
 var ip = code.content;
@@ -101,6 +101,7 @@ var codecs = $('#getthiscode').html();
 
 var regex = /<br\s*[\/]?>/gi;
 $("#textareaCode").val(codecs.replace(regex, "\n"));
+editor.setValue(codecs.replace(regex, "\n"));
 });
 
 
