@@ -5,7 +5,7 @@ $(".onchanges").on('keyup', function (){
 var codesave = editor.getValue();
 var inputtexttitle = $( "#inputtexttitle" ).val();
 var inputemail = $( "#inputemail" ).val();
- $( "#input_5" ).val(codesave);
+ $( "#input_5" ).val("<textarea id='getthiscode'>"+codesave+"</textarea>");
  $( "#input_6" ).val(inputtexttitle);
  $( "#input_8" ).val(inputemail);
 });
