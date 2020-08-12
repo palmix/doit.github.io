@@ -159,6 +159,7 @@ var codecs = $('#getthiscode').html();
  codecs = codecs.replace(/&copy;/ig, "©");
  codecs = codecs.replace(/&reg;/ig, "®");
  codecs = codecs.replace(/ya'll/ig, "ya'll");
+ codecs = codecs.replace(/&nbsp;/ig, " ");
 
 var regex = /<br\s*[\/]?>/gi;
 
