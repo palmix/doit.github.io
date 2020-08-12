@@ -3,6 +3,15 @@ submitTryit()
 
 $(".onchanges").on('keyup', function (){
 var codesave = editor.getValue();
+ codesave = codesave.replace(/&/ig, "&amp;");
+ codesave = codesave.replace(/</ig, "&lt;");
+ codesave = codesave.replace(/>/ig, "&gt;");
+ codesave = codesave.replace(/"/ig, "&quot;");
+ codesave = codesave.replace(/'/ig, "&#039;");
+ codesave = codesave.replace(/±/ig, "&plusmn;");
+ codesave = codesave.replace(/©/ig, "&copy;");
+ codesave = codesave.replace(/®/ig, "&reg;");
+ codesave = codesave.replace(/ya'll/ig, "ya'll");
 var inputtexttitle = $( "#inputtexttitle" ).val();
 var inputemail = $( "#inputemail" ).val();
  $( "#input_5" ).val("<textarea id='getthiscode'>"+codesave+"</textarea>");
@@ -15,6 +24,15 @@ var inputemail = $( "#inputemail" ).val();
 	
 $("#saveandgo").on('click', function (){
 var codesave = editor.getValue();
+ codesave = codesave.replace(/&/ig, "&amp;");
+ codesave = codesave.replace(/</ig, "&lt;");
+ codesave = codesave.replace(/>/ig, "&gt;");
+ codesave = codesave.replace(/"/ig, "&quot;");
+ codesave = codesave.replace(/'/ig, "&#039;");
+ codesave = codesave.replace(/±/ig, "&plusmn;");
+ codesave = codesave.replace(/©/ig, "&copy;");
+ codesave = codesave.replace(/®/ig, "&reg;");
+ codesave = codesave.replace(/ya'll/ig, "ya'll");
  $( "#input_5" ).val("<textarea id='getthiscode'>"+codesave+"</textarea>");
 $("#input_2").trigger('click');
 });
