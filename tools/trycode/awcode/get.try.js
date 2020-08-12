@@ -180,6 +180,7 @@ var regex = /<br\s*[\/]?>/gi;
 
 $("#textareaCode").val(codecs.replace(regex, "\n"));
 editor.setValue(codecs.replace(regex, "\n"));
+submitTryit()
 });
 
 
