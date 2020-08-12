@@ -22,7 +22,6 @@ var inputemail = $( "#inputemail" ).val();
 
 
 	
-
 function validateEmail(email) {
   var remail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return remail.test(email);
@@ -35,13 +34,14 @@ function saveandgo() {
   var result = $("#result");
   var email = $("#inputemail").val();
   var title = $("#inputtexttitle").val();
-  result.text("");
+  result.html("");
 
 
 
  if (title == ""){
 	 $("#inputtexttitle").addClass('is-invalid');
        result.text("يجب إخال العنوان أولاً");
+       result.css("color", "red");
  }else{
 $("#inputtexttitle").removeClass('is-invalid');
 $("#inputtexttitle").addClass('is-valid');
@@ -68,7 +68,6 @@ $("#inputemail").removeClass('is-valid');
   if (email == ""){
       result.text("يجب إدخال البريد الإلكتروني!");
   }else{
-	 email.addClass('is-invalid')
     result.html("<span class='font-weight-bold'>البريد الإلكتروني: </span>" + email + " غير صالح");
     }
     result.css("color", "red");
@@ -77,6 +76,7 @@ $("#inputemail").removeClass('is-valid');
 }
 }
 $("#saveandgo").on("click", saveandgo); 
+
 
 
 function submitTryit(n) {
