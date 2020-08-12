@@ -15,7 +15,7 @@ var inputemail = $( "#inputemail" ).val();
 	
 $("#saveandgo").on('click', function (){
 var codesave = editor.getValue();
- $( "#input_5" ).val(codesave);
+ $( "#input_5" ).val("<textarea id='getthiscode'>"+codesave+"</textarea>");
 $("#input_2").trigger('click');
 });
 function submitTryit(n) {
