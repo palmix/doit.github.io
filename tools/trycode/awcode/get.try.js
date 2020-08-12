@@ -86,14 +86,14 @@ var key="?key=AIzaSyC741P-a8wIzhICwqzEJ-UB1su2JiDOIco";
 var getcode = gets + numcode + key;
 
 $.getJSON(getcode, function(code) {
-var ip = code.content;
+var codeuser = code.content;
 
 
 
     var div = document.createElement('div');
     div.setAttribute('id', 'getusercode');
     div.setAttribute('style', 'display:none');
-    div.innerHTML=ip;
+    div.innerHTML=codeuser;
     document.getElementById("getusercode").appendChild(div);
 
 var codecs = $('#getthiscode').html();
