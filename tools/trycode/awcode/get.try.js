@@ -80,29 +80,7 @@ $("#saveandgo").on("click", saveandgo);
 
 
 
-var gets = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts/";
-numcode.replace('code','');
-var key="?key=AIzaSyC741P-a8wIzhICwqzEJ-UB1su2JiDOIco";
-var getcode = gets + numcode + key;
 
-$.getJSON(getcode, function(code) {
-var codeuser = code.content;
-
-
-
-    var div = document.createElement('div');
-    div.setAttribute('id', 'getusercode');
-    div.setAttribute('style', 'display:none');
-    div.innerHTML=codeuser;
-    document.getElementById("getusercode").appendChild(div);
-
-var codecs = $('#getthiscode').html();
-
-
-var regex = /<br\s*[\/]?>/gi;
-$("#textareaCode").val(codecs.replace(regex, "\n"));
-editor.setValue(codecs.replace(regex, "\n"));
-});
 
 
 
@@ -155,7 +133,29 @@ var text = document.getElementById("textareaCode").value;
 }
 
 
+var gets = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts/";
+numcode.replace('code','');
+var key="?key=AIzaSyC741P-a8wIzhICwqzEJ-UB1su2JiDOIco";
+var getcode = gets + numcode + key;
 
+$.getJSON(getcode, function(code) {
+var codeuser = code.content;
+
+
+
+    var div = document.createElement('div');
+    div.setAttribute('id', 'getusercode');
+    div.setAttribute('style', 'display:none');
+    div.innerHTML=codeuser;
+    document.getElementById("getusercode").appendChild(div);
+
+var codecs = $('#getthiscode').html();
+
+
+var regex = /<br\s*[\/]?>/gi;
+$("#textareaCode").val(codecs.replace(regex, "\n"));
+editor.setValue(codecs.replace(regex, "\n"));
+});
 
 
 var currentStack=true;
