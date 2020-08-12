@@ -150,9 +150,23 @@ var codeuser = code.content;
     document.getElementById("getusercode").appendChild(div);
 
 var codecs = $('#getthiscode').html();
-
+ codecs = codecs.replace(/&amp;/ig, "&");
+ codecs = codecs.replace(/&lt;/ig, "<");
+ codecs = codecs.replace(/&gt;/ig, ">");
+ codecs = codecs.replace(/&quot;/ig, '"');
+ codecs = codecs.replace(/&#039;/ig, "'");
+ codecs = codecs.replace(/&plusmn;/ig, "±");
+ codecs = codecs.replace(/&copy;/ig, "©");
+ codecs = codecs.replace(/&reg;/ig, "®");
+ codecs = codecs.replace(/ya'll/ig, "ya'll");
 
 var regex = /<br\s*[\/]?>/gi;
+
+
+
+
+
+
 $("#textareaCode").val(codecs.replace(regex, "\n"));
 editor.setValue(codecs.replace(regex, "\n"));
 });
