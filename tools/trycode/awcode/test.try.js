@@ -22,6 +22,7 @@ var inputemail = $( "#inputemail" ).val();
 
 
 	
+
 function validateEmail(email) {
   var remail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return remail.test(email);
@@ -36,8 +37,19 @@ function saveandgo() {
   var title = $("#inputtexttitle").val();
   result.text("");
 
+
+
+ if (title == ""){
+	 title.addClass('is-invalid');
+       result.text("يجب إخال العنوان أولاً");
+ }else{
+title.removeClass('is-invalid');
+title.addClass('is-valid');
+
   if (validateEmail(email)) {
-    
+email.removeClass('is-invalid');
+email.addClass('is-valid');
+
  var codesave = editor.getValue();
  codesave = codesave.replace(/&/ig, "&amp;");
  codesave = codesave.replace(/</ig, "&lt;");
@@ -50,24 +62,20 @@ function saveandgo() {
  codesave = codesave.replace(/ya'll/ig, "ya'll");
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  $("#input_2").trigger('click');
-
-    
-    
   } else {
- if (title == ""){
-       result.text("يجب إخال العنوان أولاً");
- }else{
+email.addClass('is-invalid');
+email.removeClass('is-valid');
   if (email == ""){
       result.text("يجب إدخال البريد الإلكتروني!");
   }else{
+	 email.addClass('is-invalid')
     result.html("<span class='font-weight-bold'>البريد الإلكتروني: </span>" + email + " غير صالح");
-    }
     }
     result.css("color", "red");
   }
   return false;
 }
-
+}
 $("#saveandgo").on("click", saveandgo); 
 
 
