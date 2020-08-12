@@ -10,6 +10,14 @@ var inputemail = $( "#inputemail" ).val();
  $( "#input_8" ).val(inputemail);
 });
 
+
+
+	
+$("#saveandgo").on('click', function (){
+var codesave = editor.getValue();
+ $( "#input_5" ).val(codesave);
+$("#input_2").trigger('click');
+});
 function submitTryit(n) {
   if (window.editor) {
     window.editor.save();
