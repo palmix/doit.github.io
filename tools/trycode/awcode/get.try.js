@@ -54,7 +54,7 @@ $("#inputemail").addClass('is-valid');
  codesave = codesave.replace(/&/ig, "&amp;");
  codesave = codesave.replace(/</ig, "&lt;");
  codesave = codesave.replace(/>/ig, "&gt;");
- codesave = codesave.replace(/"/ig, "&quot;");
+ codesave = codesave.replace(/"/ig, '&quot;');
  codesave = codesave.replace(/'/ig, "&#039;");
  codesave = codesave.replace(/±/ig, "&plusmn;");
  codesave = codesave.replace(/©/ig, "&copy;");
@@ -145,7 +145,7 @@ numcode = numcode.replace(/g/ig,6);
 numcode = numcode.replace(/h/ig,7);
 numcode = numcode.replace(/i/ig,8);
 numcode = numcode.replace(/j/ig,9);
-var key="?key=AIzaSyC741P-a8wIzhICwqzEJ-UB1su2JiDOIco";
+var key="?key=AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c";
 var getcode = gets + numcode + key;
 
 $.getJSON(getcode, function(code) {
