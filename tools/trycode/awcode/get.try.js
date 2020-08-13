@@ -162,6 +162,9 @@ var codeuser = code.content;
     document.getElementById("getusercode").appendChild(div);
 
 var codecs = $('#getthiscode').html();
+var regex = /<br\s*[\/]?>/gi;
+codecs = codecs.replace(regex, "\n");
+
  codecs = codecs.replace(/&amp;/ig, "&");
  codecs = codecs.replace(/&lt;/ig, "<");
  codecs = codecs.replace(/&gt;/ig, ">");
@@ -174,15 +177,9 @@ var codecs = $('#getthiscode').html();
  codecs = codecs.replace(/&nbsp;/ig, " ");
  codecs = codecs.replace(/setonthiscodesdoit/ig, "on");
 
-var regex = /<br\s*[\/]?>/gi;
 
-
-
-
-
-
-$("#textareaCode").val(codecs.replace(regex, "\n"));
-editor.setValue(codecs.replace(regex, "\n"));
+$("#textareaCode").val(codecs);
+editor.setValue(codecs);
 submitTryit()
 });
 
