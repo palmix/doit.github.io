@@ -13,8 +13,10 @@ var codesave = editor.getValue();
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
  codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+ codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
+ codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
  
- 
+
  
 var inputtexttitle = $( "#inputtexttitle" ).val();
 var inputemail = $( "#inputemail" ).val();
@@ -65,6 +67,8 @@ $("#inputemail").addClass('is-valid');
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
 codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+ codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
+ codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  $("#input_2").trigger('click');
   } else {
