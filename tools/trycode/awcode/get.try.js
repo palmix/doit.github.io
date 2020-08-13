@@ -12,6 +12,7 @@ var codesave = editor.getValue();
  codesave = codesave.replace(/©/ig, "&copy;");
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
+ codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
 var inputtexttitle = $( "#inputtexttitle" ).val();
 var inputemail = $( "#inputemail" ).val();
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
@@ -60,6 +61,7 @@ $("#inputemail").addClass('is-valid');
  codesave = codesave.replace(/©/ig, "&copy;");
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
+ codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  $("#input_2").trigger('click');
   } else {
@@ -170,6 +172,7 @@ var codecs = $('#getthiscode').html();
  codecs = codecs.replace(/&reg;/ig, "®");
  codecs = codecs.replace(/ya'll/ig, "ya'll");
  codecs = codecs.replace(/&nbsp;/ig, " ");
+ codecs = codecs.replace(/setonthiscodesdoit/ig, "on");
 
 var regex = /<br\s*[\/]?>/gi;
 
