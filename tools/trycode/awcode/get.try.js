@@ -181,8 +181,8 @@ codecs = codecs.replace(regex, "\n");
  codecs = codecs.replace(/ya'll/ig, "ya'll");
  codecs = codecs.replace(/&nbsp;/ig, " ");
  codecs = codecs.replace(/setonthiscodesdoit/ig, "on");
- codesave = codesave.replace(/setspacethiscodesdoit/ig, "");
- codesave = codesave.replace(/settapethiscodesdoit/ig, "	");
+ codecs = codecs.replace(/setspacethiscodesdoit/ig, " ");
+ codecs = codecs.replace(/settapethiscodesdoit/ig, "	");
 
 
 $("#textareaCode").val(codecs);
