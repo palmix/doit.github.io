@@ -54,7 +54,7 @@ $("#inputemail").addClass('is-valid');
  codesave = codesave.replace(/&/ig, "&amp;");
  codesave = codesave.replace(/</ig, "&lt;");
  codesave = codesave.replace(/>/ig, "&gt;");
- codesave = codesave.replace(/"/ig, "&quot;");
+ codesave = codesave.replace(/"/ig, '&quot;');
  codesave = codesave.replace(/'/ig, "&#039;");
  codesave = codesave.replace(/±/ig, "&plusmn;");
  codesave = codesave.replace(/©/ig, "&copy;");
