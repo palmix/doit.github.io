@@ -25,12 +25,6 @@ var inputemail = $( "#inputemail" ).val();
 
 
 
- 
-$('#getdcodes').on('shown.bs.modal', function (e) {
-  datas();
-})
- 
- 
 $('#getdcodes').on('shown.bs.modal', function (e) {
   datas();
 })
@@ -140,9 +134,8 @@ $("#inputemail").addClass('is-valid');
  $("#input_2").trigger('click');
 
 
- $('#savedcodes').modal('hide');
- $('#getdcodes').modal('show');
- datas();
+ 
+
   
   
   
