@@ -49,7 +49,7 @@ var id,published;
     key: "AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c",
     fields: "items(title,url,id,published)",
     alt: "json",
-    maxResults: 500
+    maxResults: 30
   })
     .done(function( data ) {
       $.each(data.items,function( i, item ) {

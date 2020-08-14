@@ -47,7 +47,7 @@ var id,published;
     key: "AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c",
     fields: "items(title,url,id,published)",
     alt: "json",
-    maxResults: 500
+    maxResults: 30
   })
     .done(function( data ) {
       $.each(data.items,function( i, item ) {
@@ -104,6 +104,8 @@ if($('#saveandgo').hasClass('showseve')){
  $( "#showcodenow" ).css('display','none');
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
+}else if($('#saveandgo').hasClass('loding')){
+
 }else{
   var result = $("#result");
   var email = $("#inputemail").val();
@@ -138,7 +140,16 @@ codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
- $("#input_2").trigger('click');
+	$('#saveandgo').addClass('loding');
+	$("#saveandgo").attr('disabled','disabled');
+	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+	$("#input_2").trigger('click');
+	setTimeout(function(){
+	$("#getdcodes").trigger('click');
+	$("#saveandgo").removeAttr('disabled');
+	$("#saveandgo").html('حفظ');
+	$('#saveandgo').removeClass('loding');
+	},5000);
   } else {
 $("#inputemail").addClass('is-invalid');
 $("#inputemail").removeClass('is-valid');
