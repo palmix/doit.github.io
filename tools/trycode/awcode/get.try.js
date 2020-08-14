@@ -117,6 +117,7 @@ function validateEmail(email) {
 
 function saveandgo() {
 if($('#saveandgo').hasClass('showseve')){
+$( "#getdcodes" ).css('display','block');
  $( "#showcodenow" ).css('display','none');
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
