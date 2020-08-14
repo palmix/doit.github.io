@@ -31,7 +31,11 @@ $('#getdcodes').on('shown.bs.modal', function (e) {
 })
  
  
- function datas() {
+$('#getdcodes').on('shown.bs.modal', function (e) {
+  datas();
+})
+
+function datas() {
 var id,published;
  $("#listusercode").html("");
   $('#loding').css('display','block');
@@ -74,6 +78,7 @@ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").att
       });
     });
 }
+
  
  
  
