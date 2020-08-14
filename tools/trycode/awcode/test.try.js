@@ -49,6 +49,7 @@ $('#savedcodes').on('hidden.bs.modal', function (e) {
 
 
 function dataget() {
+$('#refreshbtnlink').addClass('disabled');
 var id,published;
  $("#listusercode").html("");
   $('#loding').css('display','block');
@@ -81,8 +82,9 @@ var id,published;
 $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
       });
 $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode active").attr("target","_blank").attr("href","https://try.doitf.com/p/user-code.html").html("عرض جميع المحفوظات").appendTo( "#listusercode" );
+ $('#refreshbtnlink').removeClass('disabled');
  $('#loding').css('display','none');
-   $('#activepublished').removeClass('badge-primary').addClass('badge-success');
+ $('#activepublished').removeClass('badge-primary').addClass('badge-success');
   $("#listSearchcode").on("keyup", function() {
     var valueSearchs = $(this).val().toLowerCase();
     $("#listusercode .Searchcode").filter(function() {
