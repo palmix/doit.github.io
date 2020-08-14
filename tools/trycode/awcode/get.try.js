@@ -25,9 +25,16 @@ var inputemail = $( "#inputemail" ).val();
 
 
 
-$('#getdcodes').on('shown.bs.modal', function (e) {
+$('#getdcodes').on('click', function (e) {
+ $( "#showcodenow" ).css('display','block');
+ $( "#savecodenow" ).css('display','none');
+ $( "#saveandgo" ).addClass('showseve');
   dataget();
-})
+});
+
+
+
+
 
 function dataget() {
 var id,published;
@@ -98,6 +105,12 @@ function validateEmail(email) {
 
 
 function saveandgo() {
+if($('#saveandgo').hasClass('showseve')){
+ $( "#showcodenow" ).css('display','none');
+ $( "#savecodenow" ).css('display','block');
+ $( "#saveandgo" ).removeClass('showseve');
+}else{
+	
   var result = $("#result");
   var email = $("#inputemail").val();
   var title = $("#inputtexttitle").val();
@@ -151,7 +164,16 @@ $("#inputemail").removeClass('is-valid');
   }
   return false;
 }
+
+
+
+
 }
+}
+
+
+
+
 $("#saveandgo").on("click", saveandgo); 
 
 
