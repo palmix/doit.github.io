@@ -13,6 +13,7 @@ var codesave = editor.getValue();
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
  codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+ codesave = codesave.replace(/alert/ig, "setalertthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
 var inputtexttitle = $( "#inputtexttitle" ).val();
