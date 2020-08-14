@@ -40,7 +40,7 @@ $('#savedcodes').on('hidden.bs.modal', function (e) {
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
 });
-$('#savedcodes').on('click', function () {
+$('#savedcodesbtn').on('click', function () {
  $( "#inputtexttitle" ).val('');
 });
 
