@@ -75,9 +75,10 @@ var id,published;
  id = id.replace(/7/ig,"h");
  id = id.replace(/8/ig,"i");
  id = id.replace(/9/ig,"j");
-        
 
 $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
+      });
+$( "<a class='bg-success'>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/user-code.html").html("عرض جميع المحفوظات").appendTo( "#listusercode" );
  $('#loding').css('display','none');
    $('#activepublished').removeClass('badge-primary').addClass('badge-success');
   $("#listSearchcode").on("keyup", function() {
@@ -87,7 +88,6 @@ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").att
     });
   });
 
-      });
     });
 }
 
