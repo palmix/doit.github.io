@@ -113,8 +113,9 @@ if($('#saveandgo').hasClass('showseve')){
  $( "#showcodenow" ).css('display','none');
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
+}else if($('#saveandgo').hasClass('loding')){
+
 }else{
-	
   var result = $("#result");
   var email = $("#inputemail").val();
   var title = $("#inputtexttitle").val();
@@ -150,15 +151,14 @@ $("#inputemail").addClass('is-valid');
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  
  
-  $("#saveandgo").attr('disabled');
-$("#saveandgo").html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>إنتظر...');
-   $("#input_2").trigger('click');
-   
-   setTimeout(function(){
-$("#getdcodes").trigger('click');
-$("#saveandgo").html('حفظ');
-$("#saveandgo").removeAttr('disabled');
-},5000);
+	$("#saveandgo").attr('disabled','disabled');
+	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+	$("#input_2").trigger('click');
+	setTimeout(function(){
+	$("#getdcodes").trigger('click');
+	$("#saveandgo").html('حفظ');
+	$("#saveandgo").removeAttr('disabled');
+	},5000);
 
 
 	 
