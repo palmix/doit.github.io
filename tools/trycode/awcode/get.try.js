@@ -150,7 +150,7 @@ $("#inputemail").addClass('is-valid');
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  
- 
+	$('#saveandgo').addClass('loding');
 	$("#saveandgo").attr('disabled','disabled');
 	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 	$("#input_2").trigger('click');
@@ -158,6 +158,7 @@ $("#inputemail").addClass('is-valid');
 	$("#getdcodes").trigger('click');
 	$("#saveandgo").html('حفظ');
 	$("#saveandgo").removeAttr('disabled');
+	$('#saveandgo').removeClass('loding');
 	},5000);
 
 
