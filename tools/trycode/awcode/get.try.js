@@ -26,10 +26,10 @@ var inputemail = $( "#inputemail" ).val();
 
 
 $('#getdcodes').on('shown.bs.modal', function (e) {
-  datas();
+  dataget();
 })
 
-function datas() {
+function dataget() {
 var id,published;
  $("#listusercode").html("");
   $('#loding').css('display','block');
