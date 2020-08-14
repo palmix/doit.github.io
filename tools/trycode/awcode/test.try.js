@@ -24,6 +24,9 @@ var inputemail = $( "#inputemail" ).val();
 
 
 $('#getdcodes').on('click', function () {
+var awh = window.innerHeight;
+awh = (awh - 100)+"px";
+ $( "#showcodenow" ).css('max-height',awh);
  $( "#showcodenow" ).css('display','block');
  $( "#savecodenow" ).css('display','none');
  $( "#saveandgo" ).addClass('showseve');
