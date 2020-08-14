@@ -13,6 +13,7 @@ var codesave = editor.getValue();
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
  codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+ codesave = codesave.replace(/alert/ig, "setalertthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
 var inputtexttitle = $( "#inputtexttitle" ).val();
@@ -40,8 +41,8 @@ $('#savedcodes').on('hidden.bs.modal', function (e) {
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
  $( "#inputtexttitle" ).val('');
- $( "#saveandgo" ).removeClass('is-invalid');
- $( "#saveandgo" ).removeClass('is-valid ');
+ $( "#inputtexttitle" ).removeClass('is-invalid');
+ $( "#inputtexttitle" ).removeClass('is-valid ');
 });
 
 
@@ -148,6 +149,7 @@ $("#inputemail").addClass('is-valid');
  codesave = codesave.replace(/®/ig, "&reg;");
  codesave = codesave.replace(/ya'll/ig, "ya'll");
 codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+ codesave = codesave.replace(/alert/ig, "setalertthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
