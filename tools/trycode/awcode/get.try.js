@@ -148,14 +148,20 @@ $("#inputemail").addClass('is-valid');
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
- $("#input_2").trigger('click');
-
-
  
+ 
+  $("#saveandgo").attr('disabled');
+$("#saveandgo").html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>إنتظر...');
+   $("#input_2").trigger('click');
+   
+   setTimeout(function(){
+$("#getdcodes").trigger('click');
+$("#saveandgo").html('حفظ');
+$("#saveandgo").removeAttr('disabled');
+},5000);
 
-  
-  
-  
+	 
+	 
   } else {
 $("#inputemail").addClass('is-invalid');
 $("#inputemail").removeClass('is-valid');
