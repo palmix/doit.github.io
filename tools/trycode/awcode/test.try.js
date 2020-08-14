@@ -26,6 +26,7 @@ var inputemail = $( "#inputemail" ).val();
 $('#getdcodes').on('click', function () {
 var awh = window.innerHeight;
 awh = (awh - 250)+"px";
+ $( "#getdcodes" ).css('display','none');
  $( "#showcodenow" ).css('max-height',awh);
  $( "#showcodenow" ).css('overflow','overlay');
  $( "#showcodenow" ).css('display','block');
@@ -34,6 +35,7 @@ awh = (awh - 250)+"px";
   dataget();
 });
 $('#savedcodes').on('hidden.bs.modal', function (e) {
+ $( "#getdcodes" ).css('display','block');
  $( "#showcodenow" ).css('display','none');
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
