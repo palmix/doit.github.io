@@ -24,14 +24,11 @@ var inputemail = $( "#inputemail" ).val();
 
 
 
-$("#showcodesave").on('click', function (){
 
- $('#savedcodes').modal('hide');
- $('#getdcodes').modal('show');
- datas();
-});
  
- 
+$('#getdcodes').on('shown.bs.modal', function (e) {
+  datas();
+})
  
  
  function datas() {
