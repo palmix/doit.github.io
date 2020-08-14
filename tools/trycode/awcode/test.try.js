@@ -15,9 +15,6 @@ var codesave = editor.getValue();
  codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
- 
-
- 
 var inputtexttitle = $( "#inputtexttitle" ).val();
 var inputemail = $( "#inputemail" ).val();
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
@@ -26,8 +23,74 @@ var inputemail = $( "#inputemail" ).val();
 });
 
 
+$('#getdcodes').on('click', function () {
+ $( "#showcodenow" ).css('display','block');
+ $( "#savecodenow" ).css('display','none');
+ $( "#saveandgo" ).addClass('showseve');
+  dataget();
+});
+$('#savedcodes').on('hidden.bs.modal', function (e) {
+ $( "#showcodenow" ).css('display','none');
+ $( "#savecodenow" ).css('display','block');
+ $( "#saveandgo" ).removeClass('showseve');
+});
 
-	
+
+
+
+function dataget() {
+var id,published;
+ $("#listusercode").html("");
+  $('#loding').css('display','block');
+  var getusercode = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts?";
+  $.getJSON(getusercode, {
+    key: "AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c",
+    fields: "items(title,url,id,published)",
+    alt: "json",
+    maxResults: 500
+  })
+    .done(function( data ) {
+      $.each(data.items,function( i, item ) {
+       id = item.id;
+       published = item.published;
+       published = published.substring(0,10);
+
+       title = item.title;
+ id = id.replace(/0/ig,"a");
+ id = id.replace(/1/ig,"b");
+ id = id.replace(/2/ig,"c");
+ id = id.replace(/3/ig,"d");
+ id = id.replace(/4/ig,"e");
+ id = id.replace(/5/ig,"f");
+ id = id.replace(/6/ig,"g");
+ id = id.replace(/7/ig,"h");
+ id = id.replace(/8/ig,"i");
+ id = id.replace(/9/ig,"j");
+        
+
+$( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
+ $('#loding').css('display','none');
+   $('#activepublished').removeClass('badge-primary').addClass('badge-success');
+  $("#listSearchcode").on("keyup", function() {
+    var valueSearchs = $(this).val().toLowerCase();
+    $("#listusercode .Searchcode").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(valueSearchs) > -1)
+    });
+  });
+
+      });
+    });
+}
+
+ 
+ 
+
+
+
+
+
+
+
 function validateEmail(email) {
   var remail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return remail.test(email);
@@ -37,6 +100,11 @@ function validateEmail(email) {
 
 
 function saveandgo() {
+if($('#saveandgo').hasClass('showseve')){
+ $( "#showcodenow" ).css('display','none');
+ $( "#savecodenow" ).css('display','block');
+ $( "#saveandgo" ).removeClass('showseve');
+}else{
   var result = $("#result");
   var email = $("#inputemail").val();
   var title = $("#inputtexttitle").val();
@@ -82,6 +150,7 @@ $("#inputemail").removeClass('is-valid');
     result.css("color", "red");
   }
   return false;
+}
 }
 }
 $("#saveandgo").on("click", saveandgo); 

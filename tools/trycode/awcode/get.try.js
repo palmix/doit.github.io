@@ -25,13 +25,17 @@ var inputemail = $( "#inputemail" ).val();
 
 
 
-$('#getdcodes').on('click', function (e) {
+$('#getdcodes').on('click', function () {
  $( "#showcodenow" ).css('display','block');
  $( "#savecodenow" ).css('display','none');
  $( "#saveandgo" ).addClass('showseve');
   dataget();
 });
-
+$('#savedcodes').on('hidden.bs.modal', function (e) {
+ $( "#showcodenow" ).css('display','none');
+ $( "#savecodenow" ).css('display','block');
+ $( "#saveandgo" ).removeClass('showseve');
+});
 
 
 
@@ -164,10 +168,6 @@ $("#inputemail").removeClass('is-valid');
   }
   return false;
 }
-
-
-
-
 }
 }
 
