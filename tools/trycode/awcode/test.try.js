@@ -39,10 +39,11 @@ $('#savedcodes').on('hidden.bs.modal', function (e) {
  $( "#showcodenow" ).css('display','none');
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
-});
-$('#savedcodesbtn').on('click', function () {
  $( "#inputtexttitle" ).val('');
+ $( "#saveandgo" ).removeClass('is-invalid');
+ $( "#saveandgo" ).removeClass('is-valid ');
 });
+
 
 
 
@@ -159,6 +160,7 @@ codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
 	$("#saveandgo").removeAttr('disabled');
 	$("#saveandgo").html('حفظ');
 	$('#saveandgo').removeClass('loding');
+	$( "#inputtexttitle" ).val('');
 	},5000);
   } else {
 $("#inputemail").addClass('is-invalid');

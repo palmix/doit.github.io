@@ -41,10 +41,9 @@ $('#savedcodes').on('hidden.bs.modal', function (e) {
  $( "#showcodenow" ).css('display','none');
  $( "#savecodenow" ).css('display','block');
  $( "#saveandgo" ).removeClass('showseve');
-});
-
-$('#savedcodesbtn').on('click', function () {
  $( "#inputtexttitle" ).val('');
+ $( "#saveandgo" ).removeClass('is-invalid');
+ $( "#saveandgo" ).removeClass('is-valid ');
 });
 
 
@@ -169,6 +168,7 @@ $("#inputemail").addClass('is-valid');
 	$("#saveandgo").html('حفظ');
 	$("#saveandgo").removeAttr('disabled');
 	$('#saveandgo').removeClass('loding');
+	$( "#inputtexttitle" ).val('');
 	},5000);
 
 
