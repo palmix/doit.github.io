@@ -316,16 +316,16 @@ document.addEventListener('DOMContentLoaded', function() {
             cellbacolor = document.getElementById('cellbacolor');
             placetitle = document.getElementById('placetitle');
 			
-			if(bordercells.checked == true && bordertables.checked == false && bordershow.checked == false){
-				bordertables.checked = false;
-				bordershow.checked = false;
-			}
-			if(bordertables.checked == true){
-				bordercells.checked = false;
-			}
-			if(bordershow.checked == true){
-				bordercells.checked = false;
-			}
+function bordercellf() {
+document.getElementById("bordertables").checked = false;
+document.getElementById("bordershow").checked = false;
+}
+function bordertablef() {
+document.getElementById("bordercells").checked = false;
+}
+function bordershowf() {
+document.getElementById("bordercells").checked = false;
+}
 
 		
 				
