@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 awOldTextArr[i] = awOldTextArr[i].replace(/^\"/, "");
                 awOldTextArr[i] = awOldTextArr[i].replace(/"$/, "");
                 awOldTextArr[i] = awOldTextArr[i].replace(/'$/, "");
-                awOldTextArr[i] = "<tr>" + comsc + "<td>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
+				awOldTextArr[i] = "<tr>" + comsc + "<td>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
             }
             //Separators
             if (lineSep == "comma") {
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (lineSep == "commaar") {
                 var linesep = "،";
             } else if (lineSep == "tab") {
-                var linesep = " ";
+                var linesep = "	";
             } else if (lineSep == "CustomSep") {
                 if (CustomSep == "") {
                     linesep = ",";
@@ -535,31 +535,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             tableCSS += '<style type="text/css">' + comscss;
-            tableCSS += '.awtable{';
-            tableCSS += 'color:' + awtablecolor;
+            tableCSS += '.awtable{'+comscss;
+            tableCSS += 'color:' + awtablecolor + comscss;
             if (desig == 'custom' && selectfontfamily != "none") {
-                    tableCSS += 'font-family:' + selectfontfamily + ';';
+                    tableCSS += 'font-family:' + selectfontfamily + ';'+ comscss;
             }
             if (desig == 'custom' && bordertables.checked == true) {
-                    tableCSS += 'border-radius:' + bordertable + 'px;';
-                    tableCSS += 'overflow:hidden;';
+                    tableCSS += 'border-radius:' + bordertable + 'px;'+ comscss;
+                    tableCSS += 'overflow:hidden;'+ comscss;
             }
             if (textaligntable != "none" && desig == "custom") {
-                tableCSS += 'text-align:' + textaligntable + ';';
+                tableCSS += 'text-align:' + textaligntable + ';'+ comscss;
             }
-            tableCSS += 'width:' + awtablewidth + awtablewidthpercent;
+            tableCSS += 'width:' + awtablewidth + awtablewidthpercent + comscss;
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
-                    tableCSS += 'border-width:' + awtableborderwidth + 'px;';
-                    tableCSS += 'border-color:' + borderawtable;
+                    tableCSS += 'border-width:' + awtableborderwidth + 'px;'+ comscss;
+                    tableCSS += 'border-color:' + borderawtable + comscss;
                 }else{
                     tableCSS += 'border-width:0px;';
 				}
             } else if(desig == 'simple'){
-                tableCSS += 'border-width:' + awtableborderwidth + 'px;';
-                tableCSS += 'border-color:' + borderawtable;
+                tableCSS += 'border-width:' + awtableborderwidth + 'px;'+ comscss;
+                tableCSS += 'border-color:' + borderawtable + comscss;
             }
-            tableCSS += 'border-collapse:collapse;';
+            tableCSS += 'border-collapse:collapse;'+ comscss;
             tableCSS += '}' + comscss;
 
 
@@ -567,40 +567,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (textforcellsshow.checked == true) {
                 if (editonline.checked == true) {
-                    tableCSS += '.awtable thead th{'
+                    tableCSS += '.awtable thead th{'+ comscss;
                 } else if (placetitle.value == 'titletop') {
-                    tableCSS += '.awtable tr:first-child td{';
-                    tableCSS += 'font-weight:600;';
+                    tableCSS += '.awtable tr:first-child td{'+ comscss;
+                    tableCSS += 'font-weight:600;'+ comscss;
                 } else if (placetitle.value == 'titleside') {
-                    tableCSS += '.awtable tr td:first-child{';
-                    tableCSS += 'font-weight:600;';
+                    tableCSS += '.awtable tr td:first-child{'+ comscss;
+                    tableCSS += 'font-weight:600;'+ comscss;
                 } else {
-                    tableCSS += '.awtable tr:first-child td{';
+                    tableCSS += '.awtable tr:first-child td{'+ comscss;
                 }
 
             } else {
-                tableCSS += '.awtable th{';
+                tableCSS += '.awtable th{'+ comscss;
             }
             if (desig == 'custom' && bordercells.checked == true) {
-                    tableCSS += 'border-radius:' + bordercell + 'px;';
-                    tableCSS += 'overflow:hidden;';
+                    tableCSS += 'border-radius:' + bordercell + 'px;'+ comscss;
+                    tableCSS += 'overflow:hidden;'+ comscss;
             }
             if (textforcellsshow.checked == true && placetitle.value == 'none') {} else {
-                tableCSS += 'color:' + awtablecolor;
-                tableCSS += 'font-size:' + thfontsize + 'px;';
-                tableCSS += 'background-color:' + backgroundtable;
+                tableCSS += 'color:' + awtablecolor + comscss;
+                tableCSS += 'font-size:' + thfontsize + 'px;'+ comscss;
+                tableCSS += 'background-color:' + backgroundtable+ comscss;
                 if (desig == 'custom') {
                     if (bordershow.checked == true) {
-                        tableCSS += 'border-width:' + BorderWidth + 'px;';
-                        tableCSS += 'border-style:'+BorderStyle+';';
-                        tableCSS += 'border-color:' + borderth;
+                        tableCSS += 'border-width:' + BorderWidth + 'px;'+ comscss;
+                        tableCSS += 'border-style:'+BorderStyle+';'+ comscss;
+                        tableCSS += 'border-color:' + borderth+ comscss;
                     }
                 } else if(desig == 'simple'){
-                    tableCSS += 'border-width:' + thawtableborderwidth + 'px;';
-                    tableCSS += 'border-style: solid;';
-                    tableCSS += 'border-color:' + borderth;
+                    tableCSS += 'border-width:' + thawtableborderwidth + 'px;'+ comscss;
+                    tableCSS += 'border-style: solid;'+ comscss;
+                    tableCSS += 'border-color:' + borderth+ comscss;
                 }
-                tableCSS += 'padding: ' + awtablethpadding + 'px;';
+                tableCSS += 'padding: ' + awtablethpadding + 'px;'+ comscss;
             }
 
 
@@ -609,47 +609,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-            tableCSS += '.awtable tr{';
-            tableCSS += 'background-color:' + backgroundtr;
+            tableCSS += '.awtable tr{'+ comscss;
+            tableCSS += 'background-color:' + backgroundtr+ comscss;
             tableCSS += '}' + comscss;
 
-            tableCSS += '.awtable td{';
-            tableCSS += 'font-size:' + tdfontsize + 'px;';
+            tableCSS += '.awtable td{'+ comscss;
+            tableCSS += 'font-size:' + tdfontsize + 'px;'+ comscss;
             if (desig == 'custom' && bordercells.checked == true) {
-                    tableCSS += 'border-radius:' + bordercell + 'px;';
-                    tableCSS += 'overflow:hidden;';
+                    tableCSS += 'border-radius:' + bordercell + 'px;'+ comscss;
+                    tableCSS += 'overflow:hidden;'+ comscss;
             }
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
-                        tableCSS += 'border-width:' + BorderWidth + 'px;';
-                        tableCSS += 'border-style:'+BorderStyle+';';
-                        tableCSS += 'border-color:' + borderth;
+                        tableCSS += 'border-width:' + BorderWidth + 'px;'+ comscss;
+                        tableCSS += 'border-style:'+BorderStyle+';'+ comscss;
+                        tableCSS += 'border-color:' + borderth+ comscss;
                 }
             } else if(desig == 'simple'){
-                tableCSS += 'border-width:' + tdawtableborderwidth + 'px;';
-                tableCSS += 'border-style:solid;';
-                tableCSS += 'border-color:' + bordertd;
+                tableCSS += 'border-width:' + tdawtableborderwidth + 'px;'+ comscss;
+                tableCSS += 'border-style:solid;'+ comscss;
+                tableCSS += 'border-color:' + bordertd+ comscss;
             }
-            tableCSS += 'padding:' + awtabletdpadding + 'px;';
-            tableCSS += 'color:' + tdtablecolor;
+            tableCSS += 'padding:' + awtabletdpadding + 'px;'+ comscss;
+            tableCSS += 'color:' + tdtablecolor+ comscss;
             tableCSS += '}' + comscss;
             if (tableHighlight.checked == true && desig == 'simple' && tableColor != "None") {
-                        tableCSS += '.awtable tr:hover{background-color:' + backgroundtrhover + '}' + comscss;
+                        tableCSS += '.awtable tr:hover{'+comscss;
+						tableCSS += 'background-color:' + backgroundtrhover + comscss;
+						tableCSS += '}' + comscss;
             }
 			if(desig == 'custom' && tabletrhover.checked == true){
              if (backgroundrows2.checked == true) {
-                        tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{background-color:' + backgroundtrhover + '}' + comscss;
+                        tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{'+ comscss;
+						tableCSS += 'background-color:' + backgroundtrhover + comscss;
+						tableCSS += '}' + comscss;
               }else{
-                        tableCSS += '.awtable tr:hover{background-color:' + backgroundtrhover + '}' + comscss;
+                        tableCSS += '.awtable tr:hover{' + comscss;
+                        tableCSS += 'background-color:' + backgroundtrhover + comscss;
+                        tableCSS += '}' + comscss;
 			  }
 			}
 			  
              if (desig == 'custom' && tableColor != "None" && cellbacolor.checked == true) {
-                    tableCSS += '.awtable tr td:hover{background-color:' + colorbox7.value + ';}' + comscss;
-
+                    tableCSS += '.awtable tr td:hover{'+ comscss;
+                    tableCSS += 'background-color:' + colorbox7.value + comscss;
+                    tableCSS += ';}' + comscss;
              }
             if (desig == 'custom' && backgroundrows2.checked == true) {
-                tableCSS += '.awtable tr:nth-of-type(odd){background-color:' + colorbox8.value + ';}' + comscss;
+                tableCSS += '.awtable tr:nth-of-type(odd){' + comscss;
+                tableCSS += 'background-color:' + colorbox8.value + comscss;
+                tableCSS += ';}' + comscss;
             }
             tableCSS += '</style>\n';
 
