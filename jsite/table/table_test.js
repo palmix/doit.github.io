@@ -5,11 +5,9 @@ document.getElementById("bordershow").checked = false;
 }
 function bordertablef() {
 document.getElementById("bordercells").checked = false;
-document.getElementById("bordershow").checked = false;
 }
 function bordershowf() {
 document.getElementById("bordercells").checked = false;
-document.getElementById("bordertables").checked = false;
 }
 
 
