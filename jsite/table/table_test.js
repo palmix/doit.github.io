@@ -238,6 +238,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var bordercells;
     var bordertable;
     var bordertables;
+    var BorderStyle;
+    var BorderWidth;	
 
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
@@ -310,6 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
             bordertable = document.getElementById('bordertable').value;
             backgroundrows2 = document.getElementById('backgroundrows2');
             awtdfontsize = document.getElementById('awtdfontsize').value;
+            BorderWidth = document.getElementById('BorderWidth').value;
             selectfontfamily = document.getElementById('selectfontfamily').value;
             tableColor = document.getElementById('tableColor').value;
             tableDesign = document.getElementById('tableDesign').value;
@@ -317,6 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sizeRows = document.getElementById('sizeRows').value;
             textaligntable = document.getElementById('textaligntable').value;
             dirtable = document.getElementById('dirtable').value;
+            BorderStyle = document.getElementById('BorderStyle').value;
             cellbacolor = document.getElementById('cellbacolor');
             placetitle = document.getElementById('placetitle');
             if (sizeCols <= 0) {
@@ -587,8 +591,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 tableCSS += 'background-color:' + backgroundtable;
                 if (desig == 'custom') {
                     if (bordershow.checked == true) {
-                        tableCSS += 'border-width:' + thawtableborderwidth + 'px;';
-                        tableCSS += 'border-style: solid;';
+                        tableCSS += 'border-width:' + BorderWidth + 'px;';
+                        tableCSS += 'border-style:'+BorderStyle+';';
                         tableCSS += 'border-color:' + borderth;
                     }
                 } else if(desig == 'simple'){
