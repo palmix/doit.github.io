@@ -658,7 +658,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (desig == 'custom' && backgroundrows2.checked == true) {
                 tableCSS += '.awtable tr:nth-of-type(odd){' + comscss;
                 tableCSS += 'background-color:' + colorbox8.value + comscss;
-                tableCSS += ';}' + comscss;
+                tableCSS += '}' + comscss;
             }
             tableCSS += '</style>\n';
 
