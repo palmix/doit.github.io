@@ -1,4 +1,14 @@
 
+function bordercellf() {
+document.getElementById("bordertables").checked = false;
+document.getElementById("bordershow").checked = false;
+}
+function bordertablef() {
+document.getElementById("bordercells").checked = false;
+}
+function bordershowf() {
+document.getElementById("bordercells").checked = false;
+}
 
 
 function alltablesave() {
@@ -315,21 +325,6 @@ document.addEventListener('DOMContentLoaded', function() {
             BorderStyle = document.getElementById('BorderStyle').value;
             cellbacolor = document.getElementById('cellbacolor');
             placetitle = document.getElementById('placetitle');
-			
-function bordercellf() {
-document.getElementById("bordertables").checked = false;
-document.getElementById("bordershow").checked = false;
-}
-function bordertablef() {
-document.getElementById("bordercells").checked = false;
-}
-function bordershowf() {
-document.getElementById("bordercells").checked = false;
-}
-
-		
-				
-			
             if (sizeCols <= 0) {
                 sizeCols = "1";
                 document.getElementById('sizeCols').value = "1";
