@@ -319,9 +319,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			if(bordercells.checked == true){
 				bordertables.checked = false;
 				bordershow.checked = false;
-			}else if(bordertables.checked == true){
+			}
+			if(bordertables.checked == true){
 				bordercells.checked = false;
-			}else if(bordershow.checked == true){
+			}
+			if(bordershow.checked == true){
 				bordercells.checked = false;
 			}
 
