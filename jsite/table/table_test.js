@@ -1,5 +1,26 @@
 
 
+
+            if (desig == 'custom' && bordercells.checked == true) {
+                    tableCSS += 'border-radius:' + bordercell + 'px;';
+                    tableCSS += 'overflow:hidden;';
+            }
+
+
+function bordercellf() {
+document.getElementById("bordertables").checked = false;
+document.getElementById("bordershow").checked = false;
+}
+function bordertablef() {
+document.getElementById("bordercells").checked = false;
+document.getElementById("bordershow").checked = false;
+}
+function bordershowf() {
+document.getElementById("bordercells").checked = false;
+document.getElementById("bordertables").checked = false;
+}
+
+
 function alltablesave() {
     var texttablesave = document.getElementById('alltablesave').value;
     var setTextsave = document.getElementById(texttablesave).value;
@@ -223,6 +244,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var textforcellsshow;
     var comscss;
 
+    var bordercell;
+    var bordercells;
+    var bordertable;
+    var bordertables;
+
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
 			var desigs = $(".desig.active");
@@ -286,8 +312,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             var editonline = document.getElementById('editonline');
             bordershow = document.getElementById("bordershow");
+            bordercells = document.getElementById("bordercells");
+            bordertables = document.getElementById("bordertables");
             textforcellsshow = document.getElementById("textforcells");
             awtablefontsize = document.getElementById('awtablefontsize').value;
+            bordercell = document.getElementById('bordercell').value;
+            bordertable = document.getElementById('bordertable').value;
             backgroundrows2 = document.getElementById('backgroundrows2');
             awtdfontsize = document.getElementById('awtdfontsize').value;
             selectfontfamily = document.getElementById('selectfontfamily').value;
@@ -516,7 +546,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (desig == 'custom' && selectfontfamily != "none") {
                     tableCSS += 'font-family:' + selectfontfamily + ';';
             }
-
+            if (desig == 'custom' && bordertables.checked == true) {
+                    tableCSS += 'border-radius:' + bordertable + 'px;';
+                    tableCSS += 'overflow:hidden;';
+            }
             if (textaligntable != "none" && desig == "custom") {
                 tableCSS += 'text-align:' + textaligntable + ';';
             }
@@ -554,6 +587,10 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 tableCSS += '.awtable th{';
             }
+            if (desig == 'custom' && bordercells.checked == true) {
+                    tableCSS += 'border-radius:' + bordercell + 'px;';
+                    tableCSS += 'overflow:hidden;';
+            }
             if (textforcellsshow.checked == true && placetitle.value == 'none') {} else {
                 tableCSS += 'color:' + awtablecolor;
                 tableCSS += 'font-size:' + thfontsize + 'px;';
@@ -584,6 +621,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             tableCSS += '.awtable td{';
             tableCSS += 'font-size:' + tdfontsize + 'px;';
+            if (desig == 'custom' && bordercells.checked == true) {
+                    tableCSS += 'border-radius:' + bordercell + 'px;';
+                    tableCSS += 'overflow:hidden;';
+            }
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
                     tableCSS += 'border-width:' + tdawtableborderwidth + 'px;';
