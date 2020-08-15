@@ -262,8 +262,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (comscss.checked === true) {
                 comscss = '';
+                var tapcss = '';
             } else {
                 comscss = '\n';
+                var tapcss = '\t';
             }
             //Get rid of quotes at beginning and end
             for (i = 0; i < awOldTextArr.length; i++) {
@@ -535,130 +537,130 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             tableCSS += '<style type="text/css">' + comscss;
-            tableCSS += '.awtable{'+comscss;
-            tableCSS += 'color:' + awtablecolor + comscss;
+            tableCSS += tapcss +'.awtable{'+comscss;
+            tableCSS += tapcss+tapcss+'color:' + awtablecolor + comscss;
             if (desig == 'custom' && selectfontfamily != "none") {
-                    tableCSS += 'font-family:' + selectfontfamily + ';'+ comscss;
+                    tableCSS += tapcss+tapcss+'font-family:' + selectfontfamily + ';'+ comscss;
             }
             if (desig == 'custom' && bordertables.checked == true) {
-                    tableCSS += 'border-radius:' + bordertable + 'px;'+ comscss;
-                    tableCSS += 'overflow:hidden;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-radius:' + bordertable + 'px;'+ comscss;
+                    tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
             }
             if (textaligntable != "none" && desig == "custom") {
-                tableCSS += 'text-align:' + textaligntable + ';'+ comscss;
+                tableCSS += tapcss+tapcss+'text-align:' + textaligntable + ';'+ comscss;
             }
-            tableCSS += 'width:' + awtablewidth + awtablewidthpercent + comscss;
+            tableCSS += tapcss+tapcss+'width:' + awtablewidth + awtablewidthpercent + comscss;
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
-                    tableCSS += 'border-width:' + awtableborderwidth + 'px;'+ comscss;
-                    tableCSS += 'border-color:' + borderawtable + comscss;
+                    tableCSS += tapcss+tapcss+'border-width:' + awtableborderwidth + 'px;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-color:' + borderawtable + comscss;
                 }else{
-                    tableCSS += 'border-width:0px;';
+                    tableCSS += tapcss+tapcss+'border-width:0px;';
 				}
             } else if(desig == 'simple'){
-                tableCSS += 'border-width:' + awtableborderwidth + 'px;'+ comscss;
-                tableCSS += 'border-color:' + borderawtable + comscss;
+                tableCSS += tapcss+tapcss+'border-width:' + awtableborderwidth + 'px;'+ comscss;
+                tableCSS += tapcss+tapcss+'border-color:' + borderawtable + comscss;
             }
-            tableCSS += 'border-collapse:collapse;'+ comscss;
-            tableCSS += '}' + comscss;
+            tableCSS += tapcss+tapcss+'border-collapse:collapse;'+ comscss;
+            tableCSS += tapcss+'}' + comscss;
 
 
 
 
             if (textforcellsshow.checked == true) {
                 if (editonline.checked == true) {
-                    tableCSS += '.awtable thead th{'+ comscss;
+                    tableCSS += tapcss+'.awtable thead th{'+ comscss;
                 } else if (placetitle.value == 'titletop') {
-                    tableCSS += '.awtable tr:first-child td{'+ comscss;
-                    tableCSS += 'font-weight:600;'+ comscss;
+                    tableCSS += tapcss+'.awtable tr:first-child td{'+ comscss;
+                    tableCSS += tapcss+'font-weight:600;'+ comscss;
                 } else if (placetitle.value == 'titleside') {
-                    tableCSS += '.awtable tr td:first-child{'+ comscss;
-                    tableCSS += 'font-weight:600;'+ comscss;
+                    tableCSS += tapcss+'.awtable tr td:first-child{'+ comscss;
+                    tableCSS += tapcss+tapcss+'font-weight:600;'+ comscss;
                 } else {
-                    tableCSS += '.awtable tr:first-child td{'+ comscss;
+                    tableCSS += tapcss+'.awtable tr:first-child td{'+ comscss;
                 }
 
             } else {
-                tableCSS += '.awtable th{'+ comscss;
+                tableCSS += tapcss+'.awtable th{'+ comscss;
             }
             if (desig == 'custom' && bordercells.checked == true) {
-                    tableCSS += 'border-radius:' + bordercell + 'px;'+ comscss;
-                    tableCSS += 'overflow:hidden;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-radius:' + bordercell + 'px;'+ comscss;
+                    tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
             }
             if (textforcellsshow.checked == true && placetitle.value == 'none') {} else {
-                tableCSS += 'color:' + awtablecolor + comscss;
-                tableCSS += 'font-size:' + thfontsize + 'px;'+ comscss;
-                tableCSS += 'background-color:' + backgroundtable+ comscss;
+                tableCSS += tapcss+tapcss+'color:' + awtablecolor + comscss;
+                tableCSS += tapcss+tapcss+'font-size:' + thfontsize + 'px;'+ comscss;
+                tableCSS += tapcss+tapcss+'background-color:' + backgroundtable+ comscss;
                 if (desig == 'custom') {
                     if (bordershow.checked == true) {
-                        tableCSS += 'border-width:' + BorderWidth + 'px;'+ comscss;
-                        tableCSS += 'border-style:'+BorderStyle+';'+ comscss;
-                        tableCSS += 'border-color:' + borderth+ comscss;
+                        tableCSS += tapcss+tapcss+'border-width:' + BorderWidth + 'px;'+ comscss;
+                        tableCSS += tapcss+tapcss+'border-style:'+BorderStyle+';'+ comscss;
+                        tableCSS += tapcss+tapcss+'border-color:' + borderth+ comscss;
                     }
                 } else if(desig == 'simple'){
-                    tableCSS += 'border-width:' + thawtableborderwidth + 'px;'+ comscss;
-                    tableCSS += 'border-style: solid;'+ comscss;
-                    tableCSS += 'border-color:' + borderth+ comscss;
+                    tableCSS += tapcss+tapcss+'border-width:' + thawtableborderwidth + 'px;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-style: solid;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-color:' + borderth+ comscss;
                 }
-                tableCSS += 'padding: ' + awtablethpadding + 'px;'+ comscss;
+                tableCSS += tapcss+tapcss+'padding: ' + awtablethpadding + 'px;'+ comscss;
             }
 
 
-            tableCSS += '}' + comscss;
+            tableCSS += tapcss+'}' + comscss;
 
 
 
 
-            tableCSS += '.awtable tr{'+ comscss;
-            tableCSS += 'background-color:' + backgroundtr+ comscss;
-            tableCSS += '}' + comscss;
+            tableCSS += tapcss+'.awtable tr{'+ comscss;
+            tableCSS += tapcss+tapcss+'background-color:' + backgroundtr+ comscss;
+            tableCSS += tapcss+'}' + comscss;
 
-            tableCSS += '.awtable td{'+ comscss;
-            tableCSS += 'font-size:' + tdfontsize + 'px;'+ comscss;
+            tableCSS += tapcss+'.awtable td{'+ comscss;
+            tableCSS += tapcss+tapcss+'font-size:' + tdfontsize + 'px;'+ comscss;
             if (desig == 'custom' && bordercells.checked == true) {
-                    tableCSS += 'border-radius:' + bordercell + 'px;'+ comscss;
-                    tableCSS += 'overflow:hidden;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-radius:' + bordercell + 'px;'+ comscss;
+                    tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
             }
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
-                        tableCSS += 'border-width:' + BorderWidth + 'px;'+ comscss;
-                        tableCSS += 'border-style:'+BorderStyle+';'+ comscss;
-                        tableCSS += 'border-color:' + borderth+ comscss;
+                        tableCSS += tapcss+tapcss+'border-width:' + BorderWidth + 'px;'+ comscss;
+                        tableCSS += tapcss+tapcss+'border-style:'+BorderStyle+';'+ comscss;
+                        tableCSS += tapcss+tapcss+'border-color:' + borderth+ comscss;
                 }
             } else if(desig == 'simple'){
-                tableCSS += 'border-width:' + tdawtableborderwidth + 'px;'+ comscss;
-                tableCSS += 'border-style:solid;'+ comscss;
-                tableCSS += 'border-color:' + bordertd+ comscss;
+                tableCSS += tapcss+tapcss+'border-width:' + tdawtableborderwidth + 'px;'+ comscss;
+                tableCSS += tapcss+tapcss+'border-style:solid;'+ comscss;
+                tableCSS += tapcss+tapcss+'border-color:' + bordertd+ comscss;
             }
-            tableCSS += 'padding:' + awtabletdpadding + 'px;'+ comscss;
-            tableCSS += 'color:' + tdtablecolor+ comscss;
-            tableCSS += '}' + comscss;
+            tableCSS += tapcss+tapcss+'padding:' + awtabletdpadding + 'px;'+ comscss;
+            tableCSS += tapcss+tapcss+'color:' + tdtablecolor+ comscss;
+            tableCSS += tapcss+'}' + comscss;
             if (tableHighlight.checked == true && desig == 'simple' && tableColor != "None") {
-                        tableCSS += '.awtable tr:hover{'+comscss;
-						tableCSS += 'background-color:' + backgroundtrhover + comscss;
-						tableCSS += '}' + comscss;
+                        tableCSS += tapcss+'.awtable tr:hover{'+comscss;
+						tableCSS += tapcss+tapcss+'background-color:' + backgroundtrhover + comscss;
+						tableCSS += tapcss+'}' + comscss;
             }
 			if(desig == 'custom' && tabletrhover.checked == true){
              if (backgroundrows2.checked == true) {
-                        tableCSS += '.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{'+ comscss;
-						tableCSS += 'background-color:' + backgroundtrhover + comscss;
-						tableCSS += '}' + comscss;
+                        tableCSS += tapcss+'.awtable tr:hover,.awtable tr:nth-of-type(odd):hover{'+ comscss;
+						tableCSS += tapcss+tapcss+'background-color:' + backgroundtrhover + comscss;
+						tableCSS += tapcss+'}' + comscss;
               }else{
-                        tableCSS += '.awtable tr:hover{' + comscss;
-                        tableCSS += 'background-color:' + backgroundtrhover + comscss;
-                        tableCSS += '}' + comscss;
+                        tableCSS += tapcss+'.awtable tr:hover{' + comscss;
+                        tableCSS += tapcss+tapcss+'background-color:' + backgroundtrhover + comscss;
+                        tableCSS += tapcss+'}' + comscss;
 			  }
 			}
 			  
              if (desig == 'custom' && tableColor != "None" && cellbacolor.checked == true) {
-                    tableCSS += '.awtable tr td:hover{'+ comscss;
-                    tableCSS += 'background-color:' + colorbox7.value + comscss;
-                    tableCSS += ';}' + comscss;
+                    tableCSS += tapcss+'.awtable tr td:hover{'+ comscss;
+                    tableCSS += tapcss+tapcss+'background-color:' + colorbox7.value + comscss;
+                    tableCSS += tapcss+'}' + comscss;
              }
             if (desig == 'custom' && backgroundrows2.checked == true) {
-                tableCSS += '.awtable tr:nth-of-type(odd){' + comscss;
-                tableCSS += 'background-color:' + colorbox8.value + comscss;
-                tableCSS += '}' + comscss;
+                tableCSS += tapcss+'.awtable tr:nth-of-type(odd){' + comscss;
+                tableCSS += tapcss+tapcss+'background-color:' + colorbox8.value + comscss;
+                tableCSS += tapcss+'}' + comscss;
             }
             tableCSS += '</style>\n';
 
