@@ -1,12 +1,4 @@
 
-
-
-            if (desig == 'custom' && bordercells.checked == true) {
-                    tableCSS += 'border-radius:' + bordercell + 'px;';
-                    tableCSS += 'overflow:hidden;';
-            }
-
-
 function bordercellf() {
 document.getElementById("bordertables").checked = false;
 document.getElementById("bordershow").checked = false;
