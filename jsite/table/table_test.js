@@ -621,9 +621,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
-                    tableCSS += 'border-width:' + tdawtableborderwidth + 'px;';
-                    tableCSS += 'border-style:solid;';
-                    tableCSS += 'border-color:' + bordertd;
+                        tableCSS += 'border-width:' + BorderWidth + 'px;';
+                        tableCSS += 'border-style:'+BorderStyle+';';
+                        tableCSS += 'border-color:' + borderth;
                 }
             } else if(desig == 'simple'){
                 tableCSS += 'border-width:' + tdawtableborderwidth + 'px;';
