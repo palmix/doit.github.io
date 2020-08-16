@@ -541,10 +541,14 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			if (desig == 'custom'){
             if (selectfontfamily == "Open Sans") {
-				tableCSS += "@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');" + comscss;
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');" + comscss;
 				selectfontfamily = "'Open Sans', sans-serif";
-			}else if(selectfontfamily == "Open Sans") {
-				
+			}else if(selectfontfamily == "Pangolin") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');" + comscss;
+				selectfontfamily = "'Pangolin', cursive;";
+			}else if(selectfontfamily == "Russo One") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');" + comscss;
+				selectfontfamily = "'Russo One', sans-serif;";
 			}
 			
 			}
