@@ -539,18 +539,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
             tableCSS += '<style type="text/css">' + comscss;
 			
-			if (desig == 'custom'){
+			if (desig == 'custom' && selectfontfamily != 'none'){
             if (selectfontfamily == "Open Sans") {
 				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');" + comscss;
 				selectfontfamily = "'Open Sans', sans-serif";
 			}else if(selectfontfamily == "Pangolin") {
 				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');" + comscss;
-				selectfontfamily = "'Pangolin', cursive;";
+				selectfontfamily = "'Pangolin', cursive";
 			}else if(selectfontfamily == "Russo One") {
 				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');" + comscss;
-				selectfontfamily = "'Russo One', sans-serif;";
+				selectfontfamily = "'Russo One', sans-serif";
+			}else if(selectfontfamily == "Lobster") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');" + comscss;
+				selectfontfamily = "'Lobster', cursive;";
+			}else if(selectfontfamily == "Antic Slab") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');" + comscss;
+				selectfontfamily = "'Antic Slab', serif";
+			}else if(selectfontfamily == "Bebas Neue") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');" + comscss;
+				selectfontfamily = "'Bebas Neue', cursive";
+			}else if(selectfontfamily == "Comfortaa") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');" + comscss;
+				selectfontfamily = "'Comfortaa', cursive";
+			}else if(selectfontfamily == "Exo 2") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');" + comscss;
+				selectfontfamily = "'Exo 2', sans-serif";
+			}else if(selectfontfamily == "Shadows Into Light") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');" + comscss;
+				selectfontfamily = "'Shadows Into Light', cursive";
+			}else if(selectfontfamily == "Do Hyeon") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');" + comscss;
+				selectfontfamily = "'Do Hyeon', sans-serif";
+			}else if(selectfontfamily == "Monda") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');" + comscss;
+				selectfontfamily = "'Monda', sans-serif";
 			}
-			
+
 			}
 			
 			
