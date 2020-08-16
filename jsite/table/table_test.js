@@ -541,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			if (desig == 'custom'){
             if (selectfontfamily == "Open Sans") {
-				tableCSS = "@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');" + comscss;
+				tableCSS += "@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');" + comscss;
 				selectfontfamily = "'Open Sans', sans-serif";
 			}else if(selectfontfamily == "Open Sans") {
 				
