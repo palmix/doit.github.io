@@ -654,12 +654,12 @@ document.addEventListener('DOMContentLoaded', function() {
 			  
              if (desig == 'custom' && tableColor != "None" && cellbacolor.checked == true) {
                     tableCSS += tapcss+'.awtable tr td:hover{'+ comscss;
-                    tableCSS += tapcss+tapcss+'background-color:' + colorbox7.value + comscss;
+                    tableCSS += tapcss+tapcss+'background-color:' + colorbox7.value +';'+ comscss;
                     tableCSS += tapcss+'}' + comscss;
              }
             if (desig == 'custom' && backgroundrows2.checked == true) {
                 tableCSS += tapcss+'.awtable tr:nth-of-type(odd){' + comscss;
-                tableCSS += tapcss+tapcss+'background-color:' + colorbox8.value + comscss;
+                tableCSS += tapcss+tapcss+'background-color:' + colorbox8.value +';'+ comscss;
                 tableCSS += tapcss+'}' + comscss;
             }
             tableCSS += '</style>\n';
