@@ -555,7 +555,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tableCSS += tapcss+tapcss+'border-width:' + awtableborderwidth + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'border-color:' + borderawtable + comscss;
                 }else{
-                    tableCSS += tapcss+tapcss+'border-width:0px;';
+                    tableCSS += tapcss+tapcss+'border-width:0px;'+ comscss;
 				}
             } else if(desig == 'simple'){
                 tableCSS += tapcss+tapcss+'border-width:' + awtableborderwidth + 'px;'+ comscss;
