@@ -536,16 +536,23 @@ document.addEventListener('DOMContentLoaded', function() {
             awtabletdpadding = 8;
 
 
+
+            tableCSS += '<style type="text/css">' + comscss;
+			
 			if (desig == 'custom'){
             if (selectfontfamily == "Open Sans") {
-				tableCSS = "<link href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap' rel='stylesheet'/>" + comscss;
-				selectfontfamily = "'Open Sans', sans-serif" + comscss;
+				tableCSS = "@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');" + comscss;
+				selectfontfamily = "'Open Sans', sans-serif";
 			}else if(selectfontfamily == "Open Sans") {
 				
 			}
 			
 			}
-            tableCSS += '<style type="text/css">' + comscss;
+			
+			
+			
+			
+			
             tableCSS += tapcss +'.awtable{'+comscss;
             tableCSS += tapcss+tapcss+'color:' + awtablecolor + comscss;
             if (desig == 'custom' && selectfontfamily != "none") {
