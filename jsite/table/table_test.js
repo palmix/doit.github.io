@@ -586,7 +586,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');" + comscss;
 				selectfontfamily = "'Maven Pro', sans-serif";
 			}else if(selectfontfamily == "Rajdhani") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');" + comscss;
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');" + comscss;
 				selectfontfamily = "'Rajdhani', sans-serif";
 			}else if(selectfontfamily == "Bangers") {
 				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');" + comscss;
