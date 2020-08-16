@@ -573,6 +573,36 @@ document.addEventListener('DOMContentLoaded', function() {
 			}else if(selectfontfamily == "Monda") {
 				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');" + comscss;
 				selectfontfamily = "'Monda', sans-serif";
+			}else if(selectfontfamily == "Fredoka One") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');" + comscss;
+				selectfontfamily = "'Fredoka One', cursive";
+			}else if(selectfontfamily == "Righteous") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');" + comscss;
+				selectfontfamily = "'Righteous', cursive";
+			}else if(selectfontfamily == "Caveat") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');" + comscss;
+				selectfontfamily = "'Caveat', cursive";
+			}else if(selectfontfamily == "Maven Pro") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');" + comscss;
+				selectfontfamily = "'Maven Pro', sans-serif";
+			}else if(selectfontfamily == "Rajdhani") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');" + comscss;
+				selectfontfamily = "'Rajdhani', sans-serif";
+			}else if(selectfontfamily == "Bangers") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');" + comscss;
+				selectfontfamily = "'Bangers', cursive";
+			}else if(selectfontfamily == "Architects Daughter") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');" + comscss;
+				selectfontfamily = "'Architects Daughter', cursive";
+			}else if(selectfontfamily == "Kalam") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');" + comscss;
+				selectfontfamily = "'Kalam', cursive";
+			}else if(selectfontfamily == "Great Vibes") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');" + comscss;
+				selectfontfamily = "'Great Vibes', cursive";
+			}else if(selectfontfamily == "Patrick Hand") {
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');" + comscss;
+				selectfontfamily = "'Patrick Hand', cursive";
 			}
 
 			}
