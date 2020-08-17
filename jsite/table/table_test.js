@@ -875,13 +875,7 @@ if(ffhtf == true || ffctf == true){
                 tableHTML += document.getElementById('newCodeedit').value;
 
             } else {
-                if (dirtable == "right") {
-                    tableHTML = '<table dir="rtl" class="awtable">' + comsc;
-                } else if (dirtable == "left") {
-                    tableHTML = '<table dir="ltr" class="awtable">' + comsc;
-                } else {
                     tableHTML = '<table class="awtable">' + comsc;
-                }
 
                 //make rows
 
