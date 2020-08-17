@@ -687,6 +687,12 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+tapcss+'border-radius:' + bordertable + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
             }
+            if (dirtable == "right") {
+                 tableCSS = 'direction:rtl;'+comscss;
+             } else if (dirtable == "left") {
+				  tableCSS = 'direction:ltr;'+comscss;
+             }
+
             tableCSS += tapcss+tapcss+'width:' + awtablewidth + awtablewidthpercent + comscss;
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
@@ -826,13 +832,7 @@ if(ffhtf == true || ffctf == true){
             //Start table
 
             if (textforcellsshow.checked == false) {
-                if (dirtable == "right") {
-                    tableHTML = '<table dir="rtl" class="awtable">' + comsc + '<tr>';
-                } else if (dirtable == "left") {
-                    tableHTML = '<table dir="ltr" class="awtable">' + comsc + '<tr>';
-                } else {
-                    tableHTML = '<table class="awtable">' + comsc + '<tr>';
-                }
+               tableHTML = '<table class="awtable">' + comsc + '<tr>';
                 //Make header
                 var ii = 0;
                 var iii = 0;
