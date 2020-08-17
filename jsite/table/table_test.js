@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var awtablecolor;
     var tdtablecolor;
     var selectfontfamily;
+    var selectfontfamilycells;
     var awtablefontsize;
     var awtdfontsize;
     var backgroundrows2;
@@ -234,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var placetitle;
     var textforcellsshow;
     var comscss;
-
+	var tapcss = '';
     var bordercell;
     var bordercells;
     var bordertable;
@@ -263,10 +264,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (comscss.checked === true) {
                 comscss = '';
-                var tapcss = '';
+                tapcss = '';
             } else {
                 comscss = '\n';
-                var tapcss = '\t';
+                tapcss = '\t';
             }
             //Get rid of quotes at beginning and end
             for (i = 0; i < awOldTextArr.length; i++) {
@@ -317,6 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
             awtdfontsize = document.getElementById('awtdfontsize').value;
             BorderWidth = document.getElementById('BorderWidth').value;
             selectfontfamily = document.getElementById('selectfontfamily').value;
+            selectfontfamilycells = document.getElementById('selectfontfamilycells').value;
             tableColor = document.getElementById('tableColor').value;
             tableDesign = document.getElementById('tableDesign').value;
             sizeCols = document.getElementById('sizeCols').value;
@@ -538,72 +540,105 @@ document.addEventListener('DOMContentLoaded', function() {
             awtabletdpadding = 8;
 
 
+var allfonts = '';
+var ffctf,ffhtf;
+var ffh = selectfontfamily;
+var ffc = selectfontfamilycells;
+
+
+
+if (ffh == "Open Sans" || ffh == "Russo One" || ffh == "Antic Slab" || ffh == "Comfortaa" || ffh == "Shadows Into Light" || ffh == "Monda" || ffh == "Righteous" || ffh == "Maven Pro" || ffh == "Bangers" || ffh == "Architects Daughter" || ffh == "Kalam" || ffh == "Great Vibes" || ffh == "Patrick Hand" || ffh == "Pangolin" || ffh == "Lobster" || ffh == "Bebas Neue" || ffh == "Exo 2" || ffh == "Do Hyeon" || ffh == "Fredoka One" || ffh == "Caveat" || ffh == "Rajdhani"){
+ffhtf = true;
+}else{
+ffhtf = false;
+}
+if (ffc == "Open Sans" || ffc == "Russo One" || ffc == "Antic Slab" || ffc == "Comfortaa" || ffc == "Shadows Into Light" || ffc == "Monda" || ffc == "Righteous" || ffc == "Maven Pro" || ffc == "Bangers" || ffc == "Architects Daughter" || ffc == "Kalam" || ffc == "Great Vibes" || ffc == "Patrick Hand" || ffc == "Pangolin" || ffc == "Lobster" || ffc == "Bebas Neue" || ffc == "Exo 2" || ffc == "Do Hyeon" || ffc == "Fredoka One" || ffc == "Caveat" || ffc == "Rajdhani"){
+ffctf = true;
+}else{
+ffctf = false;
+}
+
+
+
+
+
+if(ffhtf == true || ffctf == true){
+	ffh = selectfontfamily.replace(' ','+')
+	ffc = selectfontfamily.replace(' ','+')
+
+
+	if(selectfontfamily == selectfontfamilycells){
+		allfonts = ffh;
+	}else if(ffhtf == true && ffctf == false || ffhtf == false && ffctf == true ){
+		allfonts = ffh;
+	}else{
+		allfonts = ffh + "|" + ffc;
+	}
+		
+	
+	
+	
+	
+	
+	
+}
+
+
 
             tableCSS += '<style type="text/css">' + comscss;
 			
 			if (desig == 'custom' && selectfontfamily != 'none'){
+            if (ffhtf == true || ffctf == true) {
+				
+							tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=" + allfonts + "&display=swap');" + comscss;
+			}
+			}
+			
+			
+			
+			
+			if (desig == 'custom' && selectfontfamily != 'none'){
             if (selectfontfamily == "Open Sans") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');" + comscss;
 				selectfontfamily = "'Open Sans', sans-serif";
 			}else if(selectfontfamily == "Pangolin") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');" + comscss;
 				selectfontfamily = "'Pangolin', cursive";
 			}else if(selectfontfamily == "Russo One") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');" + comscss;
 				selectfontfamily = "'Russo One', sans-serif";
 			}else if(selectfontfamily == "Lobster") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');" + comscss;
 				selectfontfamily = "'Lobster', cursive;";
 			}else if(selectfontfamily == "Antic Slab") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');" + comscss;
 				selectfontfamily = "'Antic Slab', serif";
 			}else if(selectfontfamily == "Bebas Neue") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');" + comscss;
 				selectfontfamily = "'Bebas Neue', cursive";
 			}else if(selectfontfamily == "Comfortaa") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');" + comscss;
 				selectfontfamily = "'Comfortaa', cursive";
 			}else if(selectfontfamily == "Exo 2") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');" + comscss;
 				selectfontfamily = "'Exo 2', sans-serif";
 			}else if(selectfontfamily == "Shadows Into Light") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');" + comscss;
 				selectfontfamily = "'Shadows Into Light', cursive";
 			}else if(selectfontfamily == "Do Hyeon") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');" + comscss;
 				selectfontfamily = "'Do Hyeon', sans-serif";
 			}else if(selectfontfamily == "Monda") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');" + comscss;
 				selectfontfamily = "'Monda', sans-serif";
 			}else if(selectfontfamily == "Fredoka One") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');" + comscss;
 				selectfontfamily = "'Fredoka One', cursive";
 			}else if(selectfontfamily == "Righteous") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');" + comscss;
 				selectfontfamily = "'Righteous', cursive";
 			}else if(selectfontfamily == "Caveat") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');" + comscss;
 				selectfontfamily = "'Caveat', cursive";
 			}else if(selectfontfamily == "Maven Pro") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');" + comscss;
 				selectfontfamily = "'Maven Pro', sans-serif";
 			}else if(selectfontfamily == "Rajdhani") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');" + comscss;
 				selectfontfamily = "'Rajdhani', sans-serif";
 			}else if(selectfontfamily == "Bangers") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');" + comscss;
 				selectfontfamily = "'Bangers', cursive";
 			}else if(selectfontfamily == "Architects Daughter") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');" + comscss;
 				selectfontfamily = "'Architects Daughter', cursive";
 			}else if(selectfontfamily == "Kalam") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');" + comscss;
 				selectfontfamily = "'Kalam', cursive";
 			}else if(selectfontfamily == "Great Vibes") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');" + comscss;
 				selectfontfamily = "'Great Vibes', cursive";
 			}else if(selectfontfamily == "Patrick Hand") {
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');" + comscss;
 				selectfontfamily = "'Patrick Hand', cursive";
 			}
 
