@@ -563,10 +563,9 @@ ffctf = false;
 
 
 if(ffhtf == true || ffctf == true){
-	ffh = selectfontfamily.replace(' ','+')
-	ffc = selectfontfamilycells.replace(' ','+')
-
-
+ ffh = selectfontfamily.replace(/ /ig, "+");
+ ffc = selectfontfamilycells.replace(/ /ig, "+");
+ 
 	if(selectfontfamily == selectfontfamilycells){
 		allfonts = "family="+ffh;
 	}else if(ffhtf == true && ffctf == false){
@@ -576,28 +575,11 @@ if(ffhtf == true || ffctf == true){
 	}else {
 		allfonts = "family="+ ffh + "&family=" + ffc;
 	}
-		
-	
-	
-	
-	
-	
-	
 }
 
 
 
-            tableCSS += '<style type="text/css">' + comscss;
-			
-			if (desig == 'custom' && (ffhtf == true || ffctf == true)){
-				
-				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?" + allfonts + "&display=swap');" + comscss;
-			}
-			
-			
-			
-			
-			if (desig == 'custom' && selectfontfamily != 'none'){
+			if (desig == 'custom' && ffhtf == true){
             if (selectfontfamily == "Open Sans") {
 				selectfontfamily = "'Open Sans', sans-serif";
 			}else if(selectfontfamily == "Pangolin") {
@@ -643,16 +625,64 @@ if(ffhtf == true || ffctf == true){
 			}
 
 			}
+	
+			if (desig == 'custom' && ffctf == true){
+            if (selectfontfamilycells == "Open Sans") {
+				selectfontfamilycells = "'Open Sans', sans-serif";
+			}else if(selectfontfamilycells == "Pangolin") {
+				selectfontfamilycells = "'Pangolin', cursive";
+			}else if(selectfontfamilycells == "Russo One") {
+				selectfontfamilycells = "'Russo One', sans-serif";
+			}else if(selectfontfamilycells == "Lobster") {
+				selectfontfamilycells = "'Lobster', cursive;";
+			}else if(selectfontfamilycells == "Antic Slab") {
+				selectfontfamilycells = "'Antic Slab', serif";
+			}else if(selectfontfamilycells == "Bebas Neue") {
+				selectfontfamilycells = "'Bebas Neue', cursive";
+			}else if(selectfontfamilycells == "Comfortaa") {
+				selectfontfamilycells = "'Comfortaa', cursive";
+			}else if(selectfontfamilycells == "Exo 2") {
+				selectfontfamilycells = "'Exo 2', sans-serif";
+			}else if(selectfontfamilycells == "Shadows Into Light") {
+				selectfontfamilycells = "'Shadows Into Light', cursive";
+			}else if(selectfontfamilycells == "Do Hyeon") {
+				selectfontfamilycells = "'Do Hyeon', sans-serif";
+			}else if(selectfontfamilycells == "Monda") {
+				selectfontfamilycells = "'Monda', sans-serif";
+			}else if(selectfontfamilycells == "Fredoka One") {
+				selectfontfamilycells = "'Fredoka One', cursive";
+			}else if(selectfontfamilycells == "Righteous") {
+				selectfontfamilycells = "'Righteous', cursive";
+			}else if(selectfontfamilycells == "Caveat") {
+				selectfontfamilycells = "'Caveat', cursive";
+			}else if(selectfontfamilycells == "Maven Pro") {
+				selectfontfamilycells = "'Maven Pro', sans-serif";
+			}else if(selectfontfamilycells == "Rajdhani") {
+				selectfontfamilycells = "'Rajdhani', sans-serif";
+			}else if(selectfontfamilycells == "Bangers") {
+				selectfontfamilycells = "'Bangers', cursive";
+			}else if(selectfontfamilycells == "Architects Daughter") {
+				selectfontfamilycells = "'Architects Daughter', cursive";
+			}else if(selectfontfamilycells == "Kalam") {
+				selectfontfamilycells = "'Kalam', cursive";
+			}else if(selectfontfamilycells == "Great Vibes") {
+				selectfontfamilycells = "'Great Vibes', cursive";
+			}else if(selectfontfamilycells == "Patrick Hand") {
+				selectfontfamilycells = "'Patrick Hand', cursive";
+			}
+
+			}	
+	
+	
+
+            tableCSS += '<style type="text/css">' + comscss;
 			
-			
-			
-			
-			
+			if (desig == 'custom' && (ffhtf == true || ffctf == true)){
+				
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?" + allfonts + "&display=swap');" + comscss;
+			}
             tableCSS += tapcss +'.awtable{'+comscss;
             tableCSS += tapcss+tapcss+'color:' + awtablecolor + comscss;
-            if (desig == 'custom' && selectfontfamily != "none") {
-                    tableCSS += tapcss+tapcss+'font-family:' + selectfontfamily + ';'+ comscss;
-            }
             if (desig == 'custom' && bordertables.checked == true) {
                     tableCSS += tapcss+tapcss+'border-radius:' + bordertable + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
@@ -691,6 +721,9 @@ if(ffhtf == true || ffctf == true){
             } else {
                 tableCSS += tapcss+'.awtable th{'+ comscss;
             }
+            if (desig == 'custom' && selectfontfamily != "none") {
+                    tableCSS += tapcss+tapcss+'font-family:' + selectfontfamily + ';'+ comscss;
+            }
 			if (textaligntable != "none" && desig == "custom") {
                 tableCSS += tapcss+tapcss+'text-align:' + textaligntable + ';'+ comscss;
             }
@@ -727,6 +760,9 @@ if(ffhtf == true || ffctf == true){
 
             tableCSS += tapcss+'.awtable td{'+ comscss;
             tableCSS += tapcss+tapcss+'font-size:' + tdfontsize + 'px;'+ comscss;
+            if (desig == 'custom' && selectfontfamilycells != "none") {
+                    tableCSS += tapcss+tapcss+'font-family:' + selectfontfamilycells + ';'+ comscss;
+            }
             if (desig == 'custom' && bordercells.checked == true) {
                     tableCSS += tapcss+tapcss+'border-radius:' + bordercell + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
