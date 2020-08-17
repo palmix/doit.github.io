@@ -690,7 +690,7 @@ if(ffhtf == true || ffctf == true){
             if (dirtable == "right") {
                  tableCSS += 'direction:rtl;'+comscss;
              } else if (dirtable == "left") {
-				  tableCSS += 'direction:ltr;'+comscss;
+				 tableCSS += 'direction:ltr;'+comscss;
              }
 
             tableCSS += tapcss+tapcss+'width:' + awtablewidth + awtablewidthpercent + comscss;
