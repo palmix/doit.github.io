@@ -688,9 +688,9 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
             }
             if (dirtable == "right") {
-                 tableCSS = 'direction:rtl;'+comscss;
+                 tableCSS += 'direction:rtl;'+comscss;
              } else if (dirtable == "left") {
-				  tableCSS = 'direction:ltr;'+comscss;
+				  tableCSS += 'direction:ltr;'+comscss;
              }
 
             tableCSS += tapcss+tapcss+'width:' + awtablewidth + awtablewidthpercent + comscss;
