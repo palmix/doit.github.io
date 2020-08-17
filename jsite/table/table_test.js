@@ -723,7 +723,9 @@ if(ffhtf == true || ffctf == true){
             }
             if (desig == 'custom' && selectfontfamily != "none") {
                     tableCSS += tapcss+tapcss+'font-family:' + selectfontfamily + ';'+ comscss;
-            }
+            }else{
+			        tableCSS += tapcss+tapcss+'font-family:initial;'+ comscss;
+			}
 			if (textaligntable != "none" && desig == "custom") {
                 tableCSS += tapcss+tapcss+'text-align:' + textaligntable + ';'+ comscss;
             }
@@ -762,7 +764,9 @@ if(ffhtf == true || ffctf == true){
             tableCSS += tapcss+tapcss+'font-size:' + tdfontsize + 'px;'+ comscss;
             if (desig == 'custom' && selectfontfamilycells != "none") {
                     tableCSS += tapcss+tapcss+'font-family:' + selectfontfamilycells + ';'+ comscss;
-            }
+            }else{
+			        tableCSS += tapcss+tapcss+'font-family:initial;'+ comscss;
+			}
             if (desig == 'custom' && bordercells.checked == true) {
                     tableCSS += tapcss+tapcss+'border-radius:' + bordercell + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
