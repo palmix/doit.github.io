@@ -205,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var awHighlightb = "";
 
     var textaligntable;
+    var textaligncells;
     var borderawtable;
     var backgroundtable;
     var borderth;
@@ -321,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sizeCols = document.getElementById('sizeCols').value;
             sizeRows = document.getElementById('sizeRows').value;
             textaligntable = document.getElementById('textaligntable').value;
+            textaligncells = document.getElementById('textaligncells').value;
             dirtable = document.getElementById('dirtable').value;
             BorderStyle = document.getElementById('BorderStyle').value;
             cellbacolor = document.getElementById('cellbacolor');
@@ -620,9 +622,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     tableCSS += tapcss+tapcss+'border-radius:' + bordertable + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
             }
-            if (textaligntable != "none" && desig == "custom") {
-                tableCSS += tapcss+tapcss+'text-align:' + textaligntable + ';'+ comscss;
-            }
             tableCSS += tapcss+tapcss+'width:' + awtablewidth + awtablewidthpercent + comscss;
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
@@ -657,6 +656,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 tableCSS += tapcss+'.awtable th{'+ comscss;
             }
+			if (textaligntable != "none" && desig == "custom") {
+                tableCSS += tapcss+tapcss+'text-align:' + textaligntable + ';'+ comscss;
+            }
             if (desig == 'custom' && bordercells.checked == true) {
                     tableCSS += tapcss+tapcss+'border-radius:' + bordercell + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
@@ -684,7 +686,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
             tableCSS += tapcss+'.awtable tr{'+ comscss;
             tableCSS += tapcss+tapcss+'background-color:' + backgroundtr+ comscss;
             tableCSS += tapcss+'}' + comscss;
@@ -694,6 +695,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (desig == 'custom' && bordercells.checked == true) {
                     tableCSS += tapcss+tapcss+'border-radius:' + bordercell + 'px;'+ comscss;
                     tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
+            }
+			if (textaligncells != "none" && desig == "custom") {
+                tableCSS += tapcss+tapcss+'text-align:' + textaligncells + ';'+ comscss;
             }
             if (desig == 'custom') {
                 if (bordershow.checked == true) {
