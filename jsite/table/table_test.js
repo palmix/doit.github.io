@@ -568,11 +568,11 @@ if(ffhtf == true || ffctf == true){
 
 
 	if(selectfontfamily == selectfontfamilycells){
-		allfonts = ffh;
+		allfonts = "family="+ffh;
 	}else if(ffhtf == true && ffctf == false || ffhtf == false && ffctf == true ){
-		allfonts = ffh;
+		allfonts = "family="+ffh;
 	}else{
-		allfonts = ffh + "|" + ffc;
+		allfonts = "family="ffh + "&family=" + ffc;
 	}
 		
 	
