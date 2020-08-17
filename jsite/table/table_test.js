@@ -572,6 +572,7 @@ if(ffhtf == true || ffctf == true){
 	}else if(ffhtf == true && ffctf == false){
 		allfonts = "family="+ffh;
 	}else if(ffhtf == false && ffctf == true ){
+		allfonts = "family="+ffc;
 	}else {
 		allfonts = "family="+ ffh + "&family=" + ffc;
 	}
