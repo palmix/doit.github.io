@@ -572,7 +572,7 @@ if(ffhtf == true || ffctf == true){
 	}else if(ffhtf == true && ffctf == false || ffhtf == false && ffctf == true ){
 		allfonts = "family="+ffh;
 	}else{
-		allfonts = "family="ffh + "&family=" + ffc;
+		allfonts = "family="+ ffh + "&family=" + ffc;
 	}
 		
 	
