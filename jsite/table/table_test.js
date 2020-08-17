@@ -569,9 +569,10 @@ if(ffhtf == true || ffctf == true){
 
 	if(selectfontfamily == selectfontfamilycells){
 		allfonts = "family="+ffh;
-	}else if(ffhtf == true && ffctf == false || ffhtf == false && ffctf == true ){
+	}else if(ffhtf == true && ffctf == false){
 		allfonts = "family="+ffh;
-	}else{
+	}else if(ffhtf == false && ffctf == true ){
+	}else {
 		allfonts = "family="+ ffh + "&family=" + ffc;
 	}
 		
@@ -587,11 +588,9 @@ if(ffhtf == true || ffctf == true){
 
             tableCSS += '<style type="text/css">' + comscss;
 			
-			if (desig == 'custom' && selectfontfamily != 'none'){
-            if (ffhtf == true || ffctf == true) {
+			if (desig == 'custom' && (ffhtf == true || ffctf == true)){
 				
-							tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?family=" + allfonts + "&display=swap');" + comscss;
-			}
+				tableCSS += tapcss +"@import url('https://fonts.googleapis.com/css2?" + allfonts + "&display=swap');" + comscss;
 			}
 			
 			
