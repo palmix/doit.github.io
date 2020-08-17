@@ -564,7 +564,7 @@ ffctf = false;
 
 if(ffhtf == true || ffctf == true){
 	ffh = selectfontfamily.replace(' ','+')
-	ffc = selectfontfamily.replace(' ','+')
+	ffc = selectfontfamilycells.replace(' ','+')
 
 
 	if(selectfontfamily == selectfontfamilycells){
