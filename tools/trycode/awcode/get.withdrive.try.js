@@ -56,13 +56,31 @@ var id,published;
  $("#listusercode").html("");
   $('#loding').css('display','block');
   var getusercode = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts?";
+  var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/?";
+  
+    $.getJSON(getusercodedrive, {
+    key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+    alt: "json",
+    fields: "sheets(data.rowData.values.formattedValue)"
+
+}).done(function(recost) {
+
+$.each(recost.sheets[0].data[0].rowData,function( i, item ) {
+var published = item.values[0].formattedValue;
+var id = item.values[1].formattedValue;
+var title = item.values[2].formattedValue;
+$( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
+});
+});
+
+
+
   $.getJSON(getusercode, {
     key: "AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c",
     fields: "items(title,url,id,published)",
     alt: "json",
     maxResults: 30
-  })
-    .done(function( data ) {
+  }).done(function( data ) {
       $.each(data.items,function( i, item ) {
        id = item.id;
        published = item.published;
