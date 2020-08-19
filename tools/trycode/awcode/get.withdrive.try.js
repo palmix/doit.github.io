@@ -71,6 +71,7 @@ $.each(recost.sheets[0].data[0].rowData.reverse(),function( i, item ) {
 var published = item.values[0].formattedValue;
 var id = item.values[1].formattedValue;
 var title = item.values[2].formattedValue;
+published = published.substring(30,10);
 
 if(item.values[0].formattedValue === "published"){
 
