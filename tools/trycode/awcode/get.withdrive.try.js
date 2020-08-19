@@ -54,6 +54,8 @@ function dataget() {
 $('#refreshbtnlink').addClass('disabled');
 var id,published;
  $("#listusercode").html("");
+ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode active").attr("target","_blank").attr("href","https://try.doitf.com/p/user-code.html").html("عرض جميع المحفوظات").appendTo( "#listusercode" );
+
   $('#loding').css('display','block');
   var getusercode = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts?";
   var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/?";
@@ -113,7 +115,6 @@ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").att
 
 $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
       });
-$( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode active").attr("target","_blank").attr("href","https://try.doitf.com/p/user-code.html").html("عرض جميع المحفوظات").appendTo( "#listusercode" );
  $('#refreshbtnlink').removeClass('disabled');
  $('#loding').css('display','none');
  $('#activepublished').removeClass('badge-primary').addClass('badge-success');
