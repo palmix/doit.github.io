@@ -73,7 +73,7 @@ var published = item.values[0].formattedValue;
 var id = item.values[1].formattedValue;
 var title = item.values[2].formattedValue;
 published = published.substring(30,10);
-published = published.replace(\/\gi,"-");
+published = published.replace(///gi,"-");
 
 if(item.values[0].formattedValue === "published"){
 
