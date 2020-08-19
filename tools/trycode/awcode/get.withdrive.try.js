@@ -25,6 +25,8 @@ var inputemail = $( "#inputemail" ).val();
 });
 
 
+
+
 $('#getdcodes').on('click', function () {
 var awh = window.innerHeight;
 awh = (awh - 250)+"px";
@@ -45,7 +47,6 @@ $('#savedcodes').on('hidden.bs.modal', function (e) {
  $( "#inputtexttitle" ).removeClass('is-invalid');
  $( "#inputtexttitle" ).removeClass('is-valid ');
 });
-
 
 
 
@@ -78,7 +79,6 @@ var id,published;
  id = id.replace(/7/ig,"h");
  id = id.replace(/8/ig,"i");
  id = id.replace(/9/ig,"j");
-        
 
 $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
       });
@@ -98,13 +98,20 @@ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode activ
 
  
  
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
 function validateEmail(email) {
   var remail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return remail.test(email);
@@ -141,159 +148,37 @@ $("#inputtexttitle").addClass('is-valid');
 $("#inputemail").removeClass('is-invalid');
 $("#inputemail").addClass('is-valid');
 
- var codesaved = editor.getValue();
- codesaved = codesaved.replace(/&/ig, "&amp;");
- codesaved = codesaved.replace(/</ig, "&lt;");
- codesaved = codesaved.replace(/>/ig, "&gt;");
- codesaved = codesaved.replace(/"/ig, '&quot;');
- codesaved = codesaved.replace(/'/ig, "&#039;");
- codesaved = codesaved.replace(/±/ig, "&plusmn;");
- codesaved = codesaved.replace(/©/ig, "&copy;");
- codesaved = codesaved.replace(/®/ig, "&reg;");
- codesave = codesaved.replace(/ya'll/ig, "ya'll");
-codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+ var codesave = editor.getValue();
+ codesave = codesave.replace(/&/ig, "&amp;");
+ codesave = codesave.replace(/</ig, "&lt;");
+ codesave = codesave.replace(/>/ig, "&gt;");
+ codesave = codesave.replace(/"/ig, '&quot;');
+ codesave = codesave.replace(/'/ig, "&#039;");
+ codesave = codesave.replace(/±/ig, "&plusmn;");
+ codesave = codesave.replace(/©/ig, "&copy;");
+ codesave = codesave.replace(/®/ig, "&reg;");
+ codesave = codesave.replace(/ya'll/ig, "ya'll");
+ codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
 codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
  codesave = codesave.replace(/alert/ig, "setalertthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
- 
- 
- 
- 
- if (codesaved.length > 20000){
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
+ 
 	$('#saveandgo').addClass('loding');
 	$("#saveandgo").attr('disabled','disabled');
 	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 	$("#input_2").trigger('click');
 	setTimeout(function(){
 	$("#getdcodes").trigger('click');
-	$("#saveandgo").removeAttr('disabled');
 	$("#saveandgo").html('حفظ');
+	$("#saveandgo").removeAttr('disabled');
 	$('#saveandgo').removeClass('loding');
 	$( "#inputtexttitle" ).val('');
 	},5000);
- }else{
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-var getusercode = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/?";
 
-$.getJSON(getusercode, {
-        key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
-        alt: "json",
-        fields: "sheets(properties.gridProperties.rowCount)"
-    })
-    .done(function(data) {
-	$('#saveandgo').addClass('loding');
-	$("#saveandgo").attr('disabled','disabled');
-	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 
-        var published = data.sheets[0].properties.gridProperties.rowCount;
-  		var id = "CodeId"+(published + 1);
-        
- id = id.replace(/0/ig,"a");
- id = id.replace(/1/ig,"b");
- id = id.replace(/2/ig,"c");
- id = id.replace(/3/ig,"d");
- id = id.replace(/4/ig,"e");
- id = id.replace(/5/ig,"f");
- id = id.replace(/6/ig,"g");
- id = id.replace(/7/ig,"h");
- id = id.replace(/8/ig,"i");
- id = id.replace(/9/ig,"j");
- 
- codesaved = codesaved.replace(/\t/ig,"tiscmlfe");
- codesaved = codesaved.replace(/\n/ig,"eiscmlfe");
- codesaved = codesaved.replace(/ /ig,"siscmlfe");
-
-   var field1 = id;
-   var field2 = $("#inputtexttitle").val();
-   var field3 = $("#inputemail").val();
-   var field4 = codesaved;
-   var field5 = $("[name='feed5']").val();
-   var field6 = $("[name='feed6']").val();
-   var field7 = $("[name='feed7']").val();
-   var field8 = $("[name='feed8']").val();
-   var field9 = $("[name='feed9']").val();
-   var field10 = $("[name='feed10']").val();
-
-   $.ajax({
-     url: "https://docs.google.com/forms/d/e/1FAIpQLSdohTaYGAteI2Wb-Mb7mjlZhNnyld_WrM67_t0gRISmJ2ESVw/formResponse",
-     data: {
-"entry.1507922907": field1,
-"entry.384328720": field2,
-"entry.466200654": field3,
-"entry.2044048574": field4,
-"entry.1752317683": field5,
-"entry.315002448": field6,
-"entry.1068170276": field7,
-"entry.2076143418": field8,
-"entry.195791928": field9,
-"entry.874030111": field10
-     },
-     type: "POST",
-     dataType: "xml",
-     statusCode: {
-       0: function() {
-         //Success message
-		 	$("#saveandgo").removeAttr('disabled');
-			$("#saveandgo").html('حفظ');
-			$('#saveandgo').removeClass('loding');
-			$( "#inputtexttitle" ).val('');
-			$("#getdcodes").trigger('click');
-
-       },
-       200: function() {
-         //Success Message
-		 	$("#saveandgo").removeAttr('disabled');
-			$("#saveandgo").html('حفظ');
-			$('#saveandgo').removeClass('loding');
-			$( "#inputtexttitle" ).val('');
-			$("#getdcodes").trigger('click');
-       }
-     }
-   });
-  });
 	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
- }
-	
-	
-	
-	
-	
-	
-	
   } else {
 $("#inputemail").addClass('is-invalid');
 $("#inputemail").removeClass('is-valid');
@@ -308,11 +193,25 @@ $("#inputemail").removeClass('is-valid');
 }
 }
 }
+
+
+
+
 $("#saveandgo").on("click", saveandgo); 
 
 
 
+
+
+
+
+
+
+
+
+
 function submitTryit(n) {
+
   if (window.editor) {
     window.editor.save();
   }
@@ -357,6 +256,104 @@ var text = document.getElementById("textareaCode").value;
 
 
 
+
+
+
+var IdCode = numcode.substring(0,6);
+if (IdCode == "CodeId"){
+numcode = numcode.replace("CodeId","");
+numcode = numcode.replace(/a/ig,0);
+numcode = numcode.replace(/b/ig,1);
+numcode = numcode.replace(/c/ig,2);
+numcode = numcode.replace(/d/ig,3);
+numcode = numcode.replace(/e/ig,4);
+numcode = numcode.replace(/f/ig,5);
+numcode = numcode.replace(/g/ig,6);
+numcode = numcode.replace(/h/ig,7);
+numcode = numcode.replace(/i/ig,8);
+numcode = numcode.replace(/j/ig,9);
+var gets = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/values/sheet1?majorDimension=COLUMNS";
+var key="&key=AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ";
+var range = "&range=A"+numcode+":E"+numcode;
+var getcode = gets + key + range;
+
+}else{
+
+var gets = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts/";
+numcode = numcode.replace(/a/ig,0);
+numcode = numcode.replace(/b/ig,1);
+numcode = numcode.replace(/c/ig,2);
+numcode = numcode.replace(/d/ig,3);
+numcode = numcode.replace(/e/ig,4);
+numcode = numcode.replace(/f/ig,5);
+numcode = numcode.replace(/g/ig,6);
+numcode = numcode.replace(/h/ig,7);
+numcode = numcode.replace(/i/ig,8);
+numcode = numcode.replace(/j/ig,9);
+var key="?key=AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c";
+var getcode = gets + numcode + key;
+}
+
+
+
+
+
+
+$.getJSON(getcode, function(code) {
+	
+	
+if (IdCode == "CodeId"){
+	$("#getusercode").html("");
+	var codeuser = code.values[4];
+	var div = document.createElement('div');
+    div.setAttribute('id', 'gethtmlusercode');
+    div.innerHTML=codeuser;
+    document.getElementById("getusercode").appendChild(div);
+	var codecs = $("#gethtmlusercode").html();
+	codecs = codecs.replace(/&amp;/ig, "&");
+	codecs = codecs.replace(/&lt;/ig, "<");
+	codecs = codecs.replace(/&gt;/ig, ">");
+	codecs = codecs.replace(/&quot;/ig, '"');
+	codecs = codecs.replace(/&#039;/ig, "'");
+	codecs = codecs.replace(/&plusmn;/ig, "±");
+	codecs = codecs.replace(/&copy;/ig, "©");
+	codecs = codecs.replace(/&reg;/ig, "®");
+	codecs = codecs.replace(/tiscmlfe/ig,"\t");
+	codecs = codecs.replace(/eiscmlfe/ig,"\n");
+	codecs = codecs.replace(/siscmlfe/ig," ");
+}else{
+	var codeuser = code.content;
+	var div = document.createElement('div');
+    div.setAttribute('id', 'getusercode');
+    div.setAttribute('style', 'display:none');
+    div.innerHTML=codeuser;
+    document.getElementById("getusercode").appendChild(div);
+
+	var codecs = $('#getthiscode').html();
+	var regex = /<br\s*[\/]?>/gi;
+	codecs = codecs.replace(regex, "\n");
+	codecs = codecs.replace(/ /ig, "");
+	codecs = codecs.replace(/&amp;/ig, "&");
+	codecs = codecs.replace(/&lt;/ig, "<");
+	codecs = codecs.replace(/&gt;/ig, ">");
+	codecs = codecs.replace(/&quot;/ig, '"');
+	codecs = codecs.replace(/&#039;/ig, "'");
+	codecs = codecs.replace(/&plusmn;/ig, "±");
+	codecs = codecs.replace(/&copy;/ig, "©");
+	codecs = codecs.replace(/&reg;/ig, "®");
+	codecs = codecs.replace(/ya'll/ig, "ya'll");
+	codecs = codecs.replace(/&nbsp;/ig, " ");
+	codecs = codecs.replace(/setonthiscodesdoit/ig, "on");
+	codecs = codecs.replace(/setjava_scriptthiscodesdoit/ig, "javascript");
+	codecs = codecs.replace(/setalertthiscodesdoit/ig, "alert");
+	codecs = codecs.replace(/setspacethiscodesdoit/ig, " ");
+	codecs = codecs.replace(/settapethiscodesdoit/ig, "	");
+}
+
+$("#textareaCode").val(codecs);
+editor.setValue(codecs);
+submitTryit()
+});
 
 
 var currentStack=true;
