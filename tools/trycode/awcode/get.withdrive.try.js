@@ -91,7 +91,7 @@ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").att
     key: "AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c",
     fields: "items(title,url,id,published)",
     alt: "json",
-    maxResults: 30
+    maxResults: 5
   }).done(function( data ) {
       $.each(data.items,function( i, item ) {
        id = item.id;

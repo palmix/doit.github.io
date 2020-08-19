@@ -3,17 +3,17 @@ submitTryit()
 
 $(".onchanges").on('keyup', function (){
 var codesave = editor.getValue();
- codesave = codesave.replace(/&/ig, "&amp;");
- codesave = codesave.replace(/</ig, "&lt;");
- codesave = codesave.replace(/>/ig, "&gt;");
- codesave = codesave.replace(/"/ig, '&quot;');
- codesave = codesave.replace(/'/ig, "&#039;");
- codesave = codesave.replace(/±/ig, "&plusmn;");
- codesave = codesave.replace(/©/ig, "&copy;");
- codesave = codesave.replace(/®/ig, "&reg;");
- codesave = codesave.replace(/ya'll/ig, "ya'll");
- codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
- codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
+ codesaved = codesaved.replace(/&/ig, "&amp;");
+ codesaved = codesaved.replace(/</ig, "&lt;");
+ codesaved = codesaved.replace(/>/ig, "&gt;");
+ codesaved = codesaved.replace(/"/ig, '&quot;');
+ codesaved = codesaved.replace(/'/ig, "&#039;");
+ codesaved = codesaved.replace(/±/ig, "&plusmn;");
+ codesaved = codesaved.replace(/©/ig, "&copy;");
+ codesaved = codesaved.replace(/®/ig, "&reg;");
+ codesave = codesaved.replace(/ya'll/ig, "ya'll");
+codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
  codesave = codesave.replace(/alert/ig, "setalertthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
@@ -55,13 +55,43 @@ var id,published;
  $("#listusercode").html("");
   $('#loding').css('display','block');
   var getusercode = "https://www.googleapis.com/blogger/v3/blogs/552728391948484058/posts?";
+  var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/?";
+  
+   $.getJSON(getusercodedrive, {
+    key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+    alt: "json",
+    fields: "sheets(data.rowData.values.formattedValue)"
+
+  }).done(function(recost) {
+  
+
+$.each(recost.sheets[0].data[0].rowData.reverse(),function( i, item ) {
+
+var published = item.values[0].formattedValue;
+var id = item.values[1].formattedValue;
+var title = item.values[2].formattedValue;
+
+if(item.values[0].formattedValue === "published"){
+
+}else if( i < 5){
+$( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
+
+}
+
+});
+
+
+});
+
+
+
+
   $.getJSON(getusercode, {
     key: "AIzaSyAUS8nJSagIa4TIbSTwzyj10ENDD92sm4c",
     fields: "items(title,url,id,published)",
     alt: "json",
-    maxResults: 30
-  })
-    .done(function( data ) {
+    maxResults: 5
+  }).done(function( data ) {
       $.each(data.items,function( i, item ) {
        id = item.id;
        published = item.published;
@@ -78,7 +108,6 @@ var id,published;
  id = id.replace(/7/ig,"h");
  id = id.replace(/8/ig,"i");
  id = id.replace(/9/ig,"j");
-        
 
 $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
       });
@@ -96,6 +125,7 @@ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode activ
     });
 }
 
+ 
  
  
 
