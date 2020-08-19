@@ -187,7 +187,7 @@ codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
 	 
 	 
 	 
-	  var getusercode = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/?";
+var getusercode = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/?";
 
 $.getJSON(getusercode, {
         key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
@@ -195,6 +195,9 @@ $.getJSON(getusercode, {
         fields: "sheets(properties.gridProperties.rowCount)"
     })
     .done(function(data) {
+	$('#saveandgo').addClass('loding');
+	$("#saveandgo").attr('disabled','disabled');
+	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 
         var published = data.sheets[0].properties.gridProperties.rowCount;
   		var id = "CodeId"+(published + 1);
@@ -241,11 +244,20 @@ $.getJSON(getusercode, {
      statusCode: {
        0: function() {
          //Success message
-         alert("Success!");
+		 	$("#saveandgo").removeAttr('disabled');
+			$("#saveandgo").html('حفظ');
+			$('#saveandgo').removeClass('loding');
+			$( "#inputtexttitle" ).val('');
+			$("#getdcodes").trigger('click');
+
        },
        200: function() {
          //Success Message
-         alert("Success!");
+		 	$("#saveandgo").removeAttr('disabled');
+			$("#saveandgo").html('حفظ');
+			$('#saveandgo').removeClass('loding');
+			$( "#inputtexttitle" ).val('');
+			$("#getdcodes").trigger('click');
        }
      }
    });
