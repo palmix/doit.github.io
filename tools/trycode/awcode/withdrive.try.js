@@ -164,9 +164,9 @@ $( "#getdcodes" ).css('display','block');
   result.html("");
 
 var codesvalue = editor.getValue();
-codesvalue = codesvalue.replace(/\n/gi,"");
-codesvalue = codesvalue.replace(/\t/gi,"");
-codesvalue = codesvalue.replace(/ /gi,"");
+codesvalue = codesvalue.replace(/\n/ig,"");
+codesvalue = codesvalue.replace(/\t/ig,"");
+codesvalue = codesvalue.replace(/ /ig,"");
 
  if (codesvalue == ""){
        result.text("لا يوجد محتوى لحفظه!");
