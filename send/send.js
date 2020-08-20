@@ -20,9 +20,6 @@ function send() {
                 200: function() {}
             }
         });
-
-        var blockip = ip.substring(0, 6);
-
     });
 };
 $("document").ready(function() {
