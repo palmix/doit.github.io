@@ -170,7 +170,12 @@ $( "#getdcodes" ).css('display','block');
 
 
 
- if (editor.getValue() == ""){
+var codesvalue = editor.getValue();
+codesvalue = codesvalue.replace(/\n/ig,"");
+codesvalue = codesvalue.replace(/\t/ig,"");
+codesvalue = codesvalue.replace(/ /ig,"");
+
+ if (codesvalue == ""){
        result.text("لا يوجد محتوى لحفظه!");
        result.css("color", "red");
  }else if (title == ""){
