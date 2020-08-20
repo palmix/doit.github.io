@@ -78,7 +78,7 @@ published = published.replace(/\//gi,"-");
 if(item.values[0].formattedValue === "published"){
 
 }else if( i < 5){
-$( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-primary badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
+$( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").attr("target","_blank").attr("href","https://try.doitf.com/p/try.html?view="+id).html(title+"<span id='activepublished' class='badge badge-success badge-pill' style='float:left'>"+published+"</span>").appendTo( "#listusercode" );
 
 }
 
@@ -118,7 +118,6 @@ $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode").att
  $( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode active").attr("target","_blank").attr("href","https://try.doitf.com/p/user-code.html").html("عرض جميع المحفوظات").appendTo( "#listusercode" );
  $('#refreshbtnlink').removeClass('disabled');
  $('#loding').css('display','none');
- $('#activepublished').removeClass('badge-primary').addClass('badge-success');
   $("#listSearchcode").on("keyup", function() {
     var valueSearchs = $(this).val().toLowerCase();
     $("#listusercode .Searchcode").filter(function() {
