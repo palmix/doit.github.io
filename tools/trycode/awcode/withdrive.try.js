@@ -163,8 +163,12 @@ $( "#getdcodes" ).css('display','block');
   var title = $("#inputtexttitle").val();
   result.html("");
 
+var codesvalue = editor.getValue();
+codesvalue = codesvalue.replace(/\n/gi,"");
+codesvalue = codesvalue.replace(/\t/gi,"");
+codesvalue = codesvalue.replace(/ /gi,"");
 
- if (editor.getValue() == ""){
+ if (codesvalue == ""){
        result.text("لا يوجد محتوى لحفظه!");
        result.css("color", "red");
  }else if (title == ""){
