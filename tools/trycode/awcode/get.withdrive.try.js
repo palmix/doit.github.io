@@ -3,17 +3,17 @@ submitTryit()
 
 $(".onchanges").on('keyup', function (){
 var codesave = editor.getValue();
- codesave = codesave.replace(/&/ig, "&amp;");
- codesave = codesave.replace(/</ig, "&lt;");
- codesave = codesave.replace(/>/ig, "&gt;");
- codesave = codesave.replace(/"/ig, '&quot;');
- codesave = codesave.replace(/'/ig, "&#039;");
- codesave = codesave.replace(/±/ig, "&plusmn;");
- codesave = codesave.replace(/©/ig, "&copy;");
- codesave = codesave.replace(/®/ig, "&reg;");
- codesave = codesave.replace(/ya'll/ig, "ya'll");
- codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
- codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
+ codesaved = codesaved.replace(/&/ig, "&amp;");
+ codesaved = codesaved.replace(/</ig, "&lt;");
+ codesaved = codesaved.replace(/>/ig, "&gt;");
+ codesaved = codesaved.replace(/"/ig, '&quot;');
+ codesaved = codesaved.replace(/'/ig, "&#039;");
+ codesaved = codesaved.replace(/±/ig, "&plusmn;");
+ codesaved = codesaved.replace(/©/ig, "&copy;");
+ codesaved = codesaved.replace(/®/ig, "&reg;");
+ codesave = codesaved.replace(/ya'll/ig, "ya'll");
+codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
  codesave = codesave.replace(/alert/ig, "setalertthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
