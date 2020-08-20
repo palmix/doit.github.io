@@ -153,6 +153,7 @@ function validateEmail(email) {
 
 
 
+
 function saveandgo() {
 if($('#saveandgo').hasClass('showseve')){
 $( "#getdcodes" ).css('display','block');
@@ -181,37 +182,159 @@ $("#inputtexttitle").addClass('is-valid');
 $("#inputemail").removeClass('is-invalid');
 $("#inputemail").addClass('is-valid');
 
- var codesave = editor.getValue();
- codesave = codesave.replace(/&/ig, "&amp;");
- codesave = codesave.replace(/</ig, "&lt;");
- codesave = codesave.replace(/>/ig, "&gt;");
- codesave = codesave.replace(/"/ig, '&quot;');
- codesave = codesave.replace(/'/ig, "&#039;");
- codesave = codesave.replace(/±/ig, "&plusmn;");
- codesave = codesave.replace(/©/ig, "&copy;");
- codesave = codesave.replace(/®/ig, "&reg;");
- codesave = codesave.replace(/ya'll/ig, "ya'll");
- codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
+ var codesaved = editor.getValue();
+ codesaved = codesaved.replace(/&/ig, "&amp;");
+ codesaved = codesaved.replace(/</ig, "&lt;");
+ codesaved = codesaved.replace(/>/ig, "&gt;");
+ codesaved = codesaved.replace(/"/ig, '&quot;');
+ codesaved = codesaved.replace(/'/ig, "&#039;");
+ codesaved = codesaved.replace(/±/ig, "&plusmn;");
+ codesaved = codesaved.replace(/©/ig, "&copy;");
+ codesaved = codesaved.replace(/®/ig, "&reg;");
+ codesave = codesaved.replace(/ya'll/ig, "ya'll");
+codesave = codesave.replace(/on/ig, "setonthiscodesdoit");
 codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
  codesave = codesave.replace(/alert/ig, "setalertthiscodesdoit");
  codesave = codesave.replace(/ /ig, "setspacethiscodesdoit");
  codesave = codesave.replace(/	/ig, "settapethiscodesdoit");
- $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
  
+ 
+ 
+ 
+ if (codesaved.length > 50000){
+ $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
 	$('#saveandgo').addClass('loding');
 	$("#saveandgo").attr('disabled','disabled');
 	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 	$("#input_2").trigger('click');
 	setTimeout(function(){
 	$("#getdcodes").trigger('click');
-	$("#saveandgo").html('حفظ');
 	$("#saveandgo").removeAttr('disabled');
+	$("#saveandgo").html('حفظ');
 	$('#saveandgo').removeClass('loding');
 	$( "#inputtexttitle" ).val('');
 	},5000);
-
-
+ }else{
 	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+var getusercode = "https://sheets.googleapis.com/v4/spreadsheets/1txowoNcM4bX0V0CSM8ImcAY-4zn6PmymHKDJHX82Ex0/?";
+
+$.getJSON(getusercode, {
+        key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+        alt: "json",
+        fields: "sheets(properties.gridProperties.rowCount)"
+    })
+    .done(function(data) {
+	$('#saveandgo').addClass('loding');
+	$("#saveandgo").attr('disabled','disabled');
+	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+
+        var published = data.sheets[0].properties.gridProperties.rowCount;
+  		var id = "CodeId"+(published + 1);
+        
+ id = id.replace(/0/ig,"a");
+ id = id.replace(/1/ig,"b");
+ id = id.replace(/2/ig,"c");
+ id = id.replace(/3/ig,"d");
+ id = id.replace(/4/ig,"e");
+ id = id.replace(/5/ig,"f");
+ id = id.replace(/6/ig,"g");
+ id = id.replace(/7/ig,"h");
+ id = id.replace(/8/ig,"i");
+ id = id.replace(/9/ig,"j");
+ 
+ codesaved = codesaved.replace(/\t/ig,"tiscmlfe");
+ codesaved = codesaved.replace(/\n/ig,"eiscmlfe");
+ codesaved = codesaved.replace(/ /ig,"siscmlfe");
+
+   var field1 = id;
+   var field2 = $("#inputtexttitle").val();
+   var field3 = $("#inputemail").val();
+   var field4 = codesaved;
+   var field5 = $("[name='feed5']").val();
+   var field6 = $("[name='feed6']").val();
+   var field7 = $("[name='feed7']").val();
+   var field8 = $("[name='feed8']").val();
+   var field9 = $("[name='feed9']").val();
+   var field10 = $("[name='feed10']").val();
+
+   $.ajax({
+     url: "https://docs.google.com/forms/d/e/1FAIpQLSdohTaYGAteI2Wb-Mb7mjlZhNnyld_WrM67_t0gRISmJ2ESVw/formResponse",
+     data: {
+"entry.1507922907": field1,
+"entry.384328720": field2,
+"entry.466200654": field3,
+"entry.2044048574": field4,
+"entry.1752317683": field5,
+"entry.315002448": field6,
+"entry.1068170276": field7,
+"entry.2076143418": field8,
+"entry.195791928": field9,
+"entry.874030111": field10
+     },
+     type: "POST",
+     dataType: "xml",
+     statusCode: {
+       0: function() {
+         //Success message
+		 	$("#saveandgo").removeAttr('disabled');
+			$("#saveandgo").html('حفظ');
+			$('#saveandgo').removeClass('loding');
+			$( "#inputtexttitle" ).val('');
+			$("#getdcodes").trigger('click');
+
+       },
+       200: function() {
+         //Success Message
+		 	$("#saveandgo").removeAttr('disabled');
+			$("#saveandgo").html('حفظ');
+			$('#saveandgo').removeClass('loding');
+			$( "#inputtexttitle" ).val('');
+			$("#getdcodes").trigger('click');
+       }
+     }
+   });
+  });
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+ }
+	
+	
+	
+	
+	
+	
+	
   } else {
 $("#inputemail").addClass('is-invalid');
 $("#inputemail").removeClass('is-valid');
@@ -226,10 +349,6 @@ $("#inputemail").removeClass('is-valid');
 }
 }
 }
-
-
-
-
 $("#saveandgo").on("click", saveandgo); 
 
 
