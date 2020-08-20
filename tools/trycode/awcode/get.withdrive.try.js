@@ -170,7 +170,10 @@ $( "#getdcodes" ).css('display','block');
 
 
 
- if (title == ""){
+ if (editor.getValue() == ""){
+       result.text("لا يوجد محتوى لحفظه!");
+       result.css("color", "red");
+ }else if (title == ""){
 	 $("#inputtexttitle").addClass('is-invalid');
        result.text("يجب إخال العنوان أولاً");
        result.css("color", "red");
