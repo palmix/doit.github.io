@@ -201,7 +201,7 @@ codesave = codesave.replace(/javascript/ig, "setjava_scriptthiscodesdoit");
  
  
  
- if (codesaved.length > 50000){
+ if (codesaved.length > 20000){
  $( "#input_5" ).val("<pre id='getthiscode'>"+codesave+"</pre>");
 	$('#saveandgo').addClass('loding');
 	$("#saveandgo").attr('disabled','disabled');
