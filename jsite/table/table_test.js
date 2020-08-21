@@ -1165,14 +1165,6 @@ if(ffhtf == true || ffctf == true){
 
 
 
-
-
-
-
-
-
-
-
 function setthisstyle(current) {
 
 
@@ -1207,8 +1199,14 @@ var cellbacolor = item.values[7].formattedValue;
 var bordershow = item.values[8].formattedValue;
 var bordertables = item.values[9].formattedValue;
 var bordercells = item.values[10].formattedValue;
-"تمكين خط العنوان عند مرور المؤشر";
-"تمكين خط الصفوف عند مرور المؤشر";
+//"تمكين خط العنوان عند مرور المؤشر";
+//"تمكين خط الصفوف عند مرور المؤشر";
+
+
+
+
+
+
 var tablecolor1 = item.values[13].formattedValue;
 var tablecolor2 = item.values[14].formattedValue;
 var tablecolor8 = item.values[15].formattedValue;
@@ -1224,16 +1222,51 @@ var selectfontfamily = item.values[24].formattedValue;
 var awtablefontsize = item.values[25].formattedValue;
 var textaligntable = item.values[26].formattedValue;
 var tablecolor4 = item.values[27].formattedValue;
-"لون خط العنوان عند مرور المؤشر";
+//"لون خط العنوان عند مرور المؤشر";
 var selectfontfamilycells = item.values[29].formattedValue;
 var awtdfontsize = item.values[30].formattedValue;
 var textaligncells = item.values[31].formattedValue;
 var tablecolor5 = item.values[32].formattedValue;
 
+              if(backgroundrows2 == "TRUE"){
+				backgroundrows2 = true
+      	      }else{
+				backgroundrows2 = false
+    		  }
 
+              if(tabletrhover == "TRUE"){
+				tabletrhover = true
+      	      }else{
+				tabletrhover = false
+    		  }
 
+              if(cellbacolor == "TRUE"){
+				cellbacolor = true
+      	      }else{
+				cellbacolor = false
+    		  }
 
+              if(bordershow == "TRUE"){
+				bordershow = true
+      	      }else{
+				bordershow = false
+    		  }
 
+              if(bordertables == "TRUE"){
+				bordertables = true
+      	      }else{
+				bordertables = false
+    		  }
+
+              if(bordercells == "TRUE"){
+				bordercells = true
+      	      }else{
+				bordercells = false
+    		  }
+
+$('#inputtexttitle').val(inputtexttitle);
+$('#inputemail').val(inputemail);
+$('#inputstyle').val(inputstyle);
 
 $("#backgroundrows2").prop("checked", backgroundrows2);
 $("#tabletrhover").prop("checked", tabletrhover);
@@ -1241,6 +1274,9 @@ $("#cellbacolor").prop("checked", cellbacolor);
 $("#bordershow").prop("checked", bordershow);
 $("#bordertables").prop("checked", bordertables);
 $("#bordercells").prop("checked", bordercells);
+
+
+
 
 
 //"entry.314005932": "تمكين خط العنوان عند مرور المؤشر";
@@ -1441,48 +1477,7 @@ $.getJSON(getusercode, {
         var numid = data.sheets[0].properties.gridProperties.rowCount;
 		numid = numid + 1;
   		var id = "ID1100"+numid;
-var backgroundrows2 = document.getElementById("backgroundrows2");
-var tabletrhover = document.getElementById("tabletrhover");
-var cellbacolor = document.getElementById("cellbacolor");
-var bordershow = document.getElementById("bordershow");
-var bordertables = document.getElementById("bordertables");
-var bordercells = document.getElementById("bordercells");
 
-              if(backgroundrows2.checked == true){
-				backgroundrows2 = 1
-      	      }else{
-				backgroundrows2 = 0
-    		  }
-
-              if(tabletrhover.checked == true){
-				tabletrhover = 1
-      	      }else{
-				tabletrhover = 0
-    		  }
-
-              if(cellbacolor.checked == true){
-				cellbacolor = 1
-      	      }else{
-				cellbacolor = 0
-    		  }
-
-              if(bordershow.checked == true){
-				bordershow = 1
-      	      }else{
-				bordershow = 0
-    		  }
-
-              if(bordertables.checked == true){
-				bordertables = 1
-      	      }else{
-				bordertables = 0
-    		  }
-
-              if(bordercells.checked == true){
-				bordercells = 1
-      	      }else{
-				bordercells = 0
-    		  }
       $.getJSON("https://freegeoip.app/json/", function(json) {
       
         $.ajax({
@@ -1493,12 +1488,12 @@ var bordercells = document.getElementById("bordercells");
 "entry.519005996": $('#inputtexttitle').val(),
 "entry.454263723": $('#inputemail').val(),
 "entry.1318269339": $('#inputstyle').val(),
-"entry.273882000": backgroundrows2,
-"entry.2030031866": tabletrhover,
-"entry.781406924": cellbacolor,
-"entry.1471467993": bordershow,
-"entry.553705740": bordertables,
-"entry.400237991": bordercells,
+"entry.273882000": $("#backgroundrows2").is(':checked'),
+"entry.2030031866": $("#tabletrhover").is(':checked'),
+"entry.781406924": $("#cellbacolor").is(':checked'),
+"entry.1471467993": $("#bordershow").is(':checked'),
+"entry.553705740": $("#bordertables").is(':checked'),
+"entry.400237991": $("#bordercells").is(':checked'),
 "entry.314005932": "تمكين خط العنوان عند مرور المؤشر",
 "entry.1086098567": "تمكين خط الصفوف عند مرور المؤشر",
 "entry.401994189": $('#tablecolor1').val(),
@@ -1580,6 +1575,8 @@ $("#inputemail").removeClass('is-valid');
 
 
 
+
+
 $('#getdcodes').on('click', function () {
 var awh = window.innerHeight;
 awh = (awh - 250)+"px";
@@ -1592,28 +1589,7 @@ awh = (awh - 250)+"px";
   dataget();
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $("#saveandgo").on("click", saveandgo); 
-
-
-
-
-
-
 
 
 
