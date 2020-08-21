@@ -1,4 +1,3 @@
-
 function bordercellf() {
 document.getElementById("bordertables").checked = false;
 document.getElementById("bordershow").checked = false;
@@ -1138,6 +1137,544 @@ if(ffhtf == true || ffctf == true){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function setthisstyle(current) {
+
+
+
+  var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
+  
+   $.getJSON(getusercodedrive, {
+    key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+    alt: "json",
+    fields: "sheets(data.rowData.values.formattedValue)"
+
+  }).done(function(recosts) {
+  
+
+current = $(current).attr("data-id") -1;
+
+var item = recosts.sheets[0].data[0].rowData[current];
+
+var published = item.values[0].formattedValue;
+var id = item.values[1].formattedValue;
+
+published = published.substring(30,10);
+published = published.replace(/\//gi,"-");
+
+
+var inputtexttitle = item.values[2].formattedValue;
+var inputemail = item.values[3].formattedValue;
+var inputstyle = item.values[4].formattedValue;
+var backgroundrows2 = item.values[5].formattedValue;
+var tabletrhover = item.values[6].formattedValue;
+var cellbacolor = item.values[7].formattedValue;
+var bordershow = item.values[8].formattedValue;
+var bordertables = item.values[9].formattedValue;
+var bordercells = item.values[10].formattedValue;
+"تمكين خط العنوان عند مرور المؤشر";
+"تمكين خط الصفوف عند مرور المؤشر";
+
+ inputtexttitle = inputtexttitle.replace("TRUE",true);
+ inputtexttitle = inputtexttitle.replace("FALSE",false);
+ inputemail = inputemail.replace("TRUE",true);
+ inputemail = inputemail.replace("FALSE",false);
+ inputstyle = inputstyle.replace("TRUE",true);
+ inputstyle = inputstyle.replace("FALSE",false);
+ backgroundrows2 = backgroundrows2.replace("TRUE",true);
+ backgroundrows2 = backgroundrows2.replace("FALSE",false);
+ tabletrhover = tabletrhover.replace("TRUE",true);
+ tabletrhover = tabletrhover.replace("FALSE",false);
+ cellbacolor = cellbacolor.replace("TRUE",true);
+ cellbacolor = cellbacolor.replace("FALSE",false);
+ bordershow = bordershow.replace("TRUE",true);
+ bordershow = bordershow.replace("FALSE",false);
+ bordertables = bordertables.replace("TRUE",true);
+ bordertables = bordertables.replace("FALSE",false);
+ bordercells = bordercells.replace("TRUE",true);
+ bordercells = bordercells.replace("FALSE",false);
+
+
+
+
+
+
+
+
+var tablecolor1 = item.values[13].formattedValue;
+var tablecolor2 = item.values[14].formattedValue;
+var tablecolor8 = item.values[15].formattedValue;
+var tablecolor6 = item.values[16].formattedValue;
+var tablecolor7 = item.values[17].formattedValue;
+var tablecolor3 = item.values[18].formattedValue;
+var BorderStyle = item.values[19].formattedValue;
+var BorderWidth = item.values[20].formattedValue;
+var bordertable = item.values[21].formattedValue;
+var bordercell = item.values[22].formattedValue;
+var dirtable = item.values[23].formattedValue;
+var selectfontfamily = item.values[24].formattedValue;
+var awtablefontsize = item.values[25].formattedValue;
+var textaligntable = item.values[26].formattedValue;
+var tablecolor4 = item.values[27].formattedValue;
+"لون خط العنوان عند مرور المؤشر";
+var selectfontfamilycells = item.values[29].formattedValue;
+var awtdfontsize = item.values[30].formattedValue;
+var textaligncells = item.values[31].formattedValue;
+var tablecolor5 = item.values[32].formattedValue;
+
+
+
+
+
+$('#inputtexttitle').val(inputtexttitle);
+$('#inputemail').val(inputemail);
+$('#inputstyle').val(inputstyle);
+
+$("#backgroundrows2").prop("checked", backgroundrows2);
+$("#tabletrhover").prop("checked", tabletrhover);
+$("#cellbacolor").prop("checked", cellbacolor);
+$("#bordershow").prop("checked", bordershow);
+$("#bordertables").prop("checked", bordertables);
+$("#bordercells").prop("checked", bordercells);
+
+
+//"entry.314005932": "تمكين خط العنوان عند مرور المؤشر";
+//"entry.1086098567": "تمكين خط الصفوف عند مرور المؤشر";
+$('#tablecolor1').val(tablecolor1);
+$('#tablecolor2').val(tablecolor2);
+$('#tablecolor8').val(tablecolor8);
+$('#tablecolor6').val(tablecolor6);
+$('#tablecolor7').val(tablecolor7);
+$('#tablecolor3').val(tablecolor3);
+$('#BorderStyle').val(BorderStyle);
+$('#BorderWidth').val(BorderWidth);
+$('#bordertable').val(bordertable);
+$('#bordercell').val(bordercell);
+$('#dirtable').val(dirtable);
+$('#selectfontfamily').val(selectfontfamily);
+$('#awtablefontsize').val(awtablefontsize);
+$('#textaligntable').val(textaligntable);
+$('#tablecolor4').val(tablecolor4);
+//"لون خط العنوان عند مرور المؤشر";
+$('#selectfontfamilycells').val(selectfontfamilycells);
+$('#awtdfontsize').val(awtdfontsize);
+$('#textaligncells').val(textaligncells);
+$('#tablecolor5').val(tablecolor5);
+
+
+})
+}
+
+
+
+function dataget() {
+$('#refreshbtnlink').addClass('disabled');
+ $("#listusercode").html("");
+
+  $('#loding').css('display','block');
+  var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
+  
+   $.getJSON(getusercodedrive, {
+    key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+    alt: "json",
+    fields: "sheets(data.rowData.values.formattedValue)"
+
+  }).done(function(recost) {
+  
+
+$.each(recost.sheets[0].data[0].rowData.reverse(),function( i, item ) {
+
+var published = item.values[0].formattedValue;
+var title = item.values[2].formattedValue;
+published = published.substring(30,10);
+published = published.replace(/\//gi,"-");
+var id = item.values[1].formattedValue;
+var idrep = id.replace('ID1100','');
+
+
+if(item.values[1].formattedValue === "ID"){
+
+}else{
+$( "<a>" ).attr("class","list-group-item list-group-item-action Searchcode setstyle").attr("data-id",+idrep).attr("href","javascript:void(0);").html(title+"<span class='badge badge-success badge-pill' style='float:right'>"+published+"</span>").appendTo( "#listusercode" );
+
+}
+
+
+
+
+
+
+var setstyle = document.querySelectorAll(".setstyle");
+for (var x in setstyle) { 
+  setstyle[x].onclick = function() {
+    setthisstyle(this);
+
+  };
+};
+
+
+ $('#refreshbtnlink').removeClass('disabled');
+ $('#loding').css('display','none');
+  $("#listSearchcode").on("keyup", function() {
+    var valueSearchs = $(this).val().toLowerCase();
+    $("#listusercode .Searchcode").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(valueSearchs) > -1)
+    });
+  });
+  
+});
+
+
+});
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ function saveandgo() {
+if($('#saveandgo').hasClass('showseve')){
+$( "#getdcodes" ).css('display','block');
+ $( "#showcodenow" ).css('display','none');
+ $( "#savecodenow" ).css('display','block');
+ $( "#saveandgo" ).removeClass('showseve');
+}else if($('#saveandgo').hasClass('loding')){
+
+}else{
+  var result = $("#result");
+  var Styletitle = $("#inputstyle").val();
+  var email = $("#inputemail").val();
+  var title = $("#inputtexttitle").val();
+  result.html("");
+
+
+
+	
+function validateEmail(email) {
+  var remail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return remail.test(email);
+}
+
+if (title == ""){
+ if (Styletitle !== ""){
+$("#inputstyle").removeClass('is-invalid');
+$("#inputstyle").addClass('is-valid');
+ }
+	 $("#inputtexttitle").addClass('is-invalid');
+       result.text("يجب إدخال الإسم أولاً");
+       result.css("color", "red");
+ }else if (Styletitle == ""){
+ if (title !== ""){
+$("#inputtexttitle").removeClass('is-invalid');
+$("#inputtexttitle").addClass('is-valid');
+ }
+ 	 $("#inputstyle").addClass('is-invalid');
+       result.text("يجب إدخال إسم للنمط");
+       result.css("color", "red");
+ }else{
+$("#inputtexttitle").removeClass('is-invalid');
+$("#inputtexttitle").addClass('is-valid');
+$("#inputstyle").removeClass('is-invalid');
+$("#inputstyle").addClass('is-valid');
+
+  if (validateEmail(email)) {
+$("#inputemail").removeClass('is-invalid');
+$("#inputemail").addClass('is-valid');
+
+
+	 
+	 
+	 
+	 
+
+
+
+
+var getusercode = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
+
+$.getJSON(getusercode, {
+        key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+        alt: "json",
+        fields: "sheets(properties.gridProperties.rowCount)"
+    })
+    .done(function(data) {
+	$('#saveandgo').addClass('loding');
+	$("#saveandgo").attr('disabled','disabled');
+	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+
+        var numid = data.sheets[0].properties.gridProperties.rowCount;
+		numid = numid + 1;
+  		var id = "ID1100"+numid;
+var backgroundrows2 = document.getElementById("backgroundrows2");
+var tabletrhover = document.getElementById("tabletrhover");
+var cellbacolor = document.getElementById("cellbacolor");
+var bordershow = document.getElementById("bordershow");
+var bordertables = document.getElementById("bordertables");
+var bordercells = document.getElementById("bordercells");
+
+              if(backgroundrows2.checked == true){
+				backgroundrows2 = 1
+      	      }else{
+				backgroundrows2 = 0
+    		  }
+
+              if(tabletrhover.checked == true){
+				tabletrhover = 1
+      	      }else{
+				tabletrhover = 0
+    		  }
+
+              if(cellbacolor.checked == true){
+				cellbacolor = 1
+      	      }else{
+				cellbacolor = 0
+    		  }
+
+              if(bordershow.checked == true){
+				bordershow = 1
+      	      }else{
+				bordershow = 0
+    		  }
+
+              if(bordertables.checked == true){
+				bordertables = 1
+      	      }else{
+				bordertables = 0
+    		  }
+
+              if(bordercells.checked == true){
+				bordercells = 1
+      	      }else{
+				bordercells = 0
+    		  }
+      $.getJSON("https://freegeoip.app/json/", function(json) {
+      
+        $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSdbZyf0SWyvmVImy8ta0R0CauE3Atih4-7uwp5KYIznu2-eeg/formResponse",
+            data: {
+
+"entry.1600173554": id,
+"entry.519005996": $('#inputtexttitle').val(),
+"entry.454263723": $('#inputemail').val(),
+"entry.1318269339": $('#inputstyle').val(),
+"entry.273882000": backgroundrows2,
+"entry.2030031866": tabletrhover,
+"entry.781406924": cellbacolor,
+"entry.1471467993": bordershow,
+"entry.553705740": bordertables,
+"entry.400237991": bordercells,
+"entry.314005932": "تمكين خط العنوان عند مرور المؤشر",
+"entry.1086098567": "تمكين خط الصفوف عند مرور المؤشر",
+"entry.401994189": $('#tablecolor1').val(),
+"entry.724099911": $('#tablecolor2').val(),
+"entry.2083001298": $('#tablecolor8').val(),
+"entry.2076685082": $('#tablecolor6').val(),
+"entry.610666615": $('#tablecolor7').val(),
+"entry.2017168059": $('#tablecolor3').val(),
+"entry.297185059": $('#BorderStyle').val(),
+"entry.151413402": $('#BorderWidth').val(),
+"entry.1119365421": $('#bordertable').val(),
+"entry.485889694": $('#bordercell').val(),
+"entry.138418547": $('#dirtable').val(),
+"entry.632484643": $('#selectfontfamily').val(),
+"entry.383470544": $('#awtablefontsize').val(),
+"entry.1818046043": $('#textaligntable').val(),
+"entry.1692062956": $('#tablecolor4').val(),
+"entry.944350230": "لون خط العنوان عند مرور المؤشر",
+"entry.1047390211": $('#selectfontfamilycells').val(),
+"entry.2072843825": $('#awtdfontsize').val(),
+"entry.2073943690": $('#textaligncells').val(),
+"entry.837843850": $('#tablecolor5').val(),
+"entry.745027113": "لون خط الصفوف عند مرور المؤشر",
+"entry.2127026219": document.title,
+"entry.1919730613": window.location.href,
+"entry.1824039781": json.country_name,
+"entry.1860649528": json.country_code,
+"entry.477348915": json.ip,
+"entry.500751544": window.innerWidth,
+"entry.1520143025": window.innerHeight,
+"entry.49885740": navigator.appVersion
+            },
+     type: "POST",
+     dataType: "xml",
+     statusCode: {
+       0: function() {
+         //Success message
+		 	$("#saveandgo").removeAttr('disabled');
+			$("#saveandgo").html('حفظ');
+			$('#saveandgo').removeClass('loding');
+			$( "#inputtexttitle" ).val('');
+			$("#getdcodes").trigger('click');
+
+       },
+       200: function() {
+         //Success Message
+		 	$("#saveandgo").removeAttr('disabled');
+			$("#saveandgo").html('حفظ');
+			$('#saveandgo').removeClass('loding');
+			$( "#inputtexttitle" ).val('');
+			$("#getdcodes").trigger('click');
+       }
+     }
+   });
+  });
+});
+	 
+	 
+	 
+	
+	
+  } else {
+$("#inputemail").addClass('is-invalid');
+$("#inputemail").removeClass('is-valid');
+  if (email == ""){
+      result.text("يجب إدخال البريد الإلكتروني!");
+  }else{
+    result.html("البريد الإلكتروني: <span class='font-weight-bold'>" + email + "</span> غير صالح");
+    }
+    result.css("color", "red");
+  }
+  return false;
+}
+}
+}
+
+
+
+
+
+
+$('#getdcodes').on('click', function () {
+var awh = window.innerHeight;
+awh = (awh - 250)+"px";
+ $( "#getdcodes" ).css('display','none');
+ $( "#showcodenow" ).css('max-height',awh);
+ $( "#showcodenow" ).css('overflow','overlay');
+ $( "#showcodenow" ).css('display','block');
+ $( "#savecodenow" ).css('display','none');
+ $( "#saveandgo" ).addClass('showseve');
+  dataget();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$("#saveandgo").on("click", saveandgo); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  $(".desig").click(function(){
 $( document ).ready(function() {
 var desigs = $(".desig.active");
@@ -1166,9 +1703,9 @@ var desig = $("input[name=desig]",desigs).val();
 
     }
 makeTableCode();
-})
+});
 
-})
+});
 
 
 
