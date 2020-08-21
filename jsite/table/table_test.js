@@ -1209,33 +1209,6 @@ var bordertables = item.values[9].formattedValue;
 var bordercells = item.values[10].formattedValue;
 "تمكين خط العنوان عند مرور المؤشر";
 "تمكين خط الصفوف عند مرور المؤشر";
-
- inputtexttitle = inputtexttitle.replace("TRUE",true);
- inputtexttitle = inputtexttitle.replace("FALSE",false);
- inputemail = inputemail.replace("TRUE",true);
- inputemail = inputemail.replace("FALSE",false);
- inputstyle = inputstyle.replace("TRUE",true);
- inputstyle = inputstyle.replace("FALSE",false);
- backgroundrows2 = backgroundrows2.replace("TRUE",true);
- backgroundrows2 = backgroundrows2.replace("FALSE",false);
- tabletrhover = tabletrhover.replace("TRUE",true);
- tabletrhover = tabletrhover.replace("FALSE",false);
- cellbacolor = cellbacolor.replace("TRUE",true);
- cellbacolor = cellbacolor.replace("FALSE",false);
- bordershow = bordershow.replace("TRUE",true);
- bordershow = bordershow.replace("FALSE",false);
- bordertables = bordertables.replace("TRUE",true);
- bordertables = bordertables.replace("FALSE",false);
- bordercells = bordercells.replace("TRUE",true);
- bordercells = bordercells.replace("FALSE",false);
-
-
-
-
-
-
-
-
 var tablecolor1 = item.values[13].formattedValue;
 var tablecolor2 = item.values[14].formattedValue;
 var tablecolor8 = item.values[15].formattedValue;
@@ -1261,9 +1234,6 @@ var tablecolor5 = item.values[32].formattedValue;
 
 
 
-$('#inputtexttitle').val(inputtexttitle);
-$('#inputemail').val(inputemail);
-$('#inputstyle').val(inputstyle);
 
 $("#backgroundrows2").prop("checked", backgroundrows2);
 $("#tabletrhover").prop("checked", tabletrhover);
@@ -1296,7 +1266,7 @@ $('#awtdfontsize').val(awtdfontsize);
 $('#textaligncells').val(textaligncells);
 $('#tablecolor5').val(tablecolor5);
 
-
+makeTableCode();
 })
 }
 
