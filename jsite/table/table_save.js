@@ -1385,7 +1385,6 @@ $('#textaligncells').val(textaligncells);
 $('#tablecolor5').val(tablecolor5);
 $('#tablecolor5hover').val(tablecolor5hover);
 
-$.scrollTo($("#basicdesign"), { duration: 0});
 makeTableCode();
 
 })
