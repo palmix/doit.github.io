@@ -167,7 +167,7 @@ function tablecolor4() {
     document.getElementById('tablecolor4').value = html5color4.value;
 }
 function tablecolor4hover() {
-    document.getElementById('tablecolor4hover').value = html5color4.value;
+    document.getElementById('tablecolor4hover').value = html5color4hover.value;
 }
 
 function tablecolor5() {
