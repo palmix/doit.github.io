@@ -824,11 +824,11 @@ if(ffhtf == true || ffctf == true){
 				if (textforcells.checked == true) {
 					if (placetitle.value == 'titletop') {
                     tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
-                    tableCSS += tapcss+'background-color:'+tablecolor1 + comscss;
+                    tableCSS += tapcss+'background-color:'+backgroundtable + comscss;
                     tableCSS += tapcss+'}'+ comscss;
                 } else if (placetitle.value == 'titleside') {
                     tableCSS += tapcss+'.awtable tr td:first-child:hover{'+ comscss;
-                    tableCSS += tapcss+'background-color:'+tablecolor1 + comscss;
+                    tableCSS += tapcss+'background-color:'+backgroundtable + comscss;
                     tableCSS += tapcss+'}'+ comscss;
                 }else{
 				}
