@@ -146,6 +146,7 @@ var colorbox3 = document.getElementById('tablecolor3');
 var colorbox4 = document.getElementById('tablecolor4');
 var colorbox4hover = document.getElementById('tablecolor4hover');
 var colorbox5 = document.getElementById('tablecolor5');
+var colorbox5hover = document.getElementById('tablecolor5hover');
 var colorbox6 = document.getElementById('tablecolor6');
 var colorbox7 = document.getElementById('tablecolor7');
 var colorbox8 = document.getElementById('tablecolor8');
@@ -172,6 +173,10 @@ function tablecolor4hover() {
 
 function tablecolor5() {
     document.getElementById('tablecolor5').value = html5color5.value;
+}
+
+function tablecolor5hover() {
+    document.getElementById('tablecolor5hover').value = html5color5hover.value;
 }
 
 function tablecolor6() {
@@ -229,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var awtablecolor;
     var awtablecolorhover;
     var tdtablecolor;
+    var tdtablecolorhover;
     var selectfontfamily;
     var selectfontfamilycells;
     var awtablefontsize;
@@ -512,6 +518,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 awtablecolor = colorbox4.value + ';';
                 awtablecolorhover = colorbox4hover.value + ';';
                 tdtablecolor = colorbox5.value + ';';
+                tdtablecolorhover = colorbox5hover.value + ';';
                 borderawtable = colorbox3.value + ';';
                 backgroundtable = colorbox1.value + ';';
                 borderth = colorbox3.value + ';';
@@ -524,6 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 html5color4.value = colorbox4.value;
                 html5color4hover.value = colorbox4hover.value;
                 html5color5.value = colorbox5.value;
+                html5color5hover.value = colorbox5hover.value;
                 html5color6.value = colorbox6.value;
                 html5color7.value = colorbox7.value;
                 html5color8.value = colorbox8.value;
@@ -827,6 +835,11 @@ if(ffhtf == true || ffctf == true){
             tableCSS += tapcss+tapcss+'padding:' + awtabletdpadding + 'px;'+ comscss;
             tableCSS += tapcss+tapcss+'color:' + tdtablecolor+ comscss;
             tableCSS += tapcss+'}' + comscss;
+            if (desig == 'custom' && switchtablecolor5hover.checked == true) {
+            tableCSS += tapcss+tapcss+'.awtable tr td:hover{'+ comscss;
+            tableCSS += tapcss+tapcss+'color:' + tdtablecolorhover+ comscss;
+            tableCSS += tapcss+'}' + comscss;
+			}
             if (tableHighlight.checked == true && desig == 'simple' && tableColor != "None") {
                         tableCSS += tapcss+'.awtable tr:hover{'+comscss;
 						tableCSS += tapcss+tapcss+'background-color:' + backgroundtrhover + comscss;
@@ -1261,6 +1274,7 @@ var selectfontfamilycells = item.values[29].formattedValue;
 var awtdfontsize = item.values[30].formattedValue;
 var textaligncells = item.values[31].formattedValue;
 var tablecolor5 = item.values[32].formattedValue;
+var tablecolor5hover = item.values[33].formattedValue;
 
               if(backgroundrows2 == "TRUE"){
 				backgroundrows2 = true
@@ -1335,6 +1349,7 @@ $('#selectfontfamilycells').val(selectfontfamilycells);
 $('#awtdfontsize').val(awtdfontsize);
 $('#textaligncells').val(textaligncells);
 $('#tablecolor5').val(tablecolor5);
+$('#tablecolor5hover').val(tablecolor5hover);
 
 makeTableCode();
 })
@@ -1550,7 +1565,7 @@ $.getJSON(getusercode, {
 "entry.2072843825": $('#awtdfontsize').val(),
 "entry.2073943690": $('#textaligncells').val(),
 "entry.837843850": $('#tablecolor5').val(),
-"entry.745027113": "لون خط الصفوف عند مرور المؤشر",
+"entry.745027113": $('#tablecolor5hover').val(),
 "entry.2127026219": document.title,
 "entry.1919730613": window.location.href,
 "entry.1824039781": json.country_name,
