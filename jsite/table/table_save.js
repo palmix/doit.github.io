@@ -1271,6 +1271,17 @@ published = published.substring(30,10);
 published = published.replace(/\//gi,"-");
 
 
+
+var valuelink = 'https://table.doitf.com/search?q='+current;
+var name =  item.values[2].formattedValue;
+var stylename = item.values[4].formattedValue;
+
+
+
+
+
+
+
 var inputtexttitle = item.values[2].formattedValue;
 var inputemail = item.values[3].formattedValue;
 var inputstyle = item.values[4].formattedValue;
@@ -1350,9 +1361,6 @@ var tablecolor5hover = item.values[33].formattedValue;
 				switchtablecolor5hovers = false
     		  }
 
-$('#inputtexttitle').val(inputtexttitle);
-$('#inputemail').val(inputemail);
-$('#inputstyle').val(inputstyle);
 
 $("#backgroundrows2").prop("checked", backgroundrows2);
 $("#tabletrhover").prop("checked", tabletrhover);
@@ -1384,6 +1392,12 @@ $('#awtdfontsize').val(awtdfontsize);
 $('#textaligncells').val(textaligncells);
 $('#tablecolor5').val(tablecolor5);
 $('#tablecolor5hover').val(tablecolor5hover);
+
+
+
+
+$('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class="alert-heading">'+stylename+'</h5><hr><div class="p-0 row"><div class="p-0 col-6">This design was created by <strong>'+name+'</strong> on <strong>'+published+'</strong></div><div class="p-0 col-6"><div class="input-group mb-3"><div class="input-group-prepend"><button class="btn btn-outline-secondary copy" data-clipboard-target="#urlstyle" type="button">Copy</button></div><input class="form-control" id="urlstyle" placeholder="" readonly value="'+valuelink+'"></div></div></div></div>');
+
 
 makeTableCode();
 
