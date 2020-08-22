@@ -777,7 +777,8 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+'.awtable thead th:hover{'+ comscss;
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
                     tableCSS += tapcss+'}'+ comscss;
-                } else if (placetitle.value == 'titletop') {
+                }else if (textforcells.checked == true) {
+					if (placetitle.value == 'titletop') {
                     tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
                     tableCSS += tapcss+'}'+ comscss;
@@ -785,8 +786,8 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+'.awtable tr td:first-child:hover{'+ comscss;
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
                     tableCSS += tapcss+'}'+ comscss;
-                }else if(placetitle.value == 'none'){
-
+                }else{
+				}
             } else {
                 tableCSS += tapcss+'.awtable th:hover{'+ comscss;
                 tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
