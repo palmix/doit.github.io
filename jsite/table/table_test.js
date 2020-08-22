@@ -1262,14 +1262,8 @@ var cellbacolor = item.values[7].formattedValue;
 var bordershow = item.values[8].formattedValue;
 var bordertables = item.values[9].formattedValue;
 var bordercells = item.values[10].formattedValue;
-//"تمكين خط العنوان عند مرور المؤشر";
-//"تمكين خط الصفوف عند مرور المؤشر";
-
-
-
-
-
-
+var switchtablecolor4hovers = item.values[11].formattedValue;
+var switchtablecolor5hovers = item.values[12].formattedValue;
 var tablecolor1 = item.values[13].formattedValue;
 var tablecolor2 = item.values[14].formattedValue;
 var tablecolor8 = item.values[15].formattedValue;
@@ -1327,6 +1321,16 @@ var tablecolor5hover = item.values[33].formattedValue;
       	      }else{
 				bordercells = false
     		  }
+              if(switchtablecolor4hovers == "TRUE"){
+				switchtablecolor4hovers = true
+      	      }else{
+				switchtablecolor4hovers = false
+    		  }
+              if(switchtablecolor5hovers == "TRUE"){
+				switchtablecolor5hovers = true
+      	      }else{
+				switchtablecolor5hovers = false
+    		  }
 
 $('#inputtexttitle').val(inputtexttitle);
 $('#inputemail').val(inputemail);
@@ -1338,13 +1342,9 @@ $("#cellbacolor").prop("checked", cellbacolor);
 $("#bordershow").prop("checked", bordershow);
 $("#bordertables").prop("checked", bordertables);
 $("#bordercells").prop("checked", bordercells);
+$("#switchtablecolor4hover").prop("checked", switchtablecolor4hovers);
+$("#switchtablecolor5hover").prop("checked", switchtablecolor5hovers);
 
-
-
-
-
-//"entry.314005932": "تمكين خط العنوان عند مرور المؤشر";
-//"entry.1086098567": "تمكين خط الصفوف عند مرور المؤشر";
 $('#tablecolor1').val(tablecolor1);
 $('#tablecolor2').val(tablecolor2);
 $('#tablecolor8').val(tablecolor8);
@@ -1559,8 +1559,8 @@ $.getJSON(getusercode, {
 "entry.1471467993": $("#bordershow").is(':checked'),
 "entry.553705740": $("#bordertables").is(':checked'),
 "entry.400237991": $("#bordercells").is(':checked'),
-"entry.314005932": "تمكين خط العنوان عند مرور المؤشر",
-"entry.1086098567": "تمكين خط الصفوف عند مرور المؤشر",
+"entry.314005932": $("#switchtablecolor4hover").is(':checked'),
+"entry.1086098567": $("#switchtablecolor5hover").is(':checked'),
 "entry.401994189": $('#tablecolor1').val(),
 "entry.724099911": $('#tablecolor2').val(),
 "entry.2083001298": $('#tablecolor8').val(),
