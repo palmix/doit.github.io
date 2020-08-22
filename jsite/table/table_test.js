@@ -819,6 +819,24 @@ if(ffhtf == true || ffctf == true){
 				}
 			}
 
+
+			if (desig == 'custom' && cellbacolor.checked == true) {
+				if (textforcells.checked == true) {
+					if (placetitle.value == 'titletop') {
+                    tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
+                    tableCSS += tapcss+'background-color:'+tablecolor1 + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                } else if (placetitle.value == 'titleside') {
+                    tableCSS += tapcss+'.awtable tr td:first-child:hover{'+ comscss;
+                    tableCSS += tapcss+'background-color:'+tablecolor1 + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                }else{
+				}
+				}
+			}
+
+
+
             tableCSS += tapcss+'.awtable tr{'+ comscss;
             tableCSS += tapcss+tapcss+'background-color:' + backgroundtr+ comscss;
             tableCSS += tapcss+'}' + comscss;
