@@ -773,7 +773,6 @@ if(ffhtf == true || ffctf == true){
 
 			if (desig == 'custom' && switchtablecolor4hover.checked == true) {
 
-            if (textforcellsshow.checked == true) {
                 if (editonline.checked == true) {
                     tableCSS += tapcss+'.awtable thead th:hover{'+ comscss;
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
@@ -786,11 +785,14 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+'.awtable tr td:first-child:hover{'+ comscss;
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
                     tableCSS += tapcss+'}'+ comscss;
-                }
-                }
+                }else if(placetitle.value == 'none'){
 
+            } else {
+                tableCSS += tapcss+'.awtable th:hover{'+ comscss;
+                tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
+                tableCSS += tapcss+'}'+ comscss;
             }
-
+			}
 
             tableCSS += tapcss+'.awtable tr{'+ comscss;
             tableCSS += tapcss+tapcss+'background-color:' + backgroundtr+ comscss;
