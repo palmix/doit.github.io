@@ -1246,7 +1246,8 @@ if(subidlink == "ID1100"){
 
   }).done(function(recosts) {
   
-idlink = idlink.substring(6,20)
+idlink = idlink.substring(6,20);
+idlink = (idlink - 1);
 
 var item = recosts.sheets[0].data[0].rowData[idlink];
 
