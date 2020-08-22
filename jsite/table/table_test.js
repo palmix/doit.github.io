@@ -786,6 +786,7 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
                     tableCSS += tapcss+'}'+ comscss;
                 }else if (textforcells.checked == true) {
+					
 					if (placetitle.value == 'titletop') {
                     tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
@@ -796,11 +797,26 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+'}'+ comscss;
                 }else{
 				}
+				
             } else {
                 tableCSS += tapcss+'.awtable th:hover{'+ comscss;
                 tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
                 tableCSS += tapcss+'}'+ comscss;
             }
+			}
+			if (desig == 'custom' && switchtablecolor4hover.checked == false) {
+				if (textforcells.checked == true) {
+					if (placetitle.value == 'titletop') {
+                    tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
+                    tableCSS += tapcss+'color:'+awtablecolor + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                } else if (placetitle.value == 'titleside') {
+                    tableCSS += tapcss+'.awtable tr td:first-child:hover{'+ comscss;
+                    tableCSS += tapcss+'color:'+awtablecolor + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                }else{
+				}
+				}
 			}
 
             tableCSS += tapcss+'.awtable tr{'+ comscss;
