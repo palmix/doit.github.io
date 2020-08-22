@@ -782,10 +782,7 @@ if(ffhtf == true || ffctf == true){
                     tableCSS += tapcss+'.awtable tr td:first-child:hover{'+ comscss;
                     tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
                     tableCSS += tapcss+'}'+ comscss;
-                } else {
-                    tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
-                    tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
-                    tableCSS += tapcss+'}'+ comscss;
+                }
                 }
 
             } else {
