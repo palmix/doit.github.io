@@ -1703,8 +1703,9 @@ $("#inputemail").removeClass('is-valid');
 
 
 
-
-
+$('#refreshbtnlink').on('click', function () {
+	  dataget();
+});
 
 $('#getdcodes').on('click', function () {
 var awh = window.innerHeight;
