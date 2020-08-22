@@ -247,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var bordertables;
     var BorderStyle;
     var BorderWidth;	
+    var switchtablecolor4hover;	
 
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
@@ -334,6 +335,9 @@ document.addEventListener('DOMContentLoaded', function() {
             BorderStyle = document.getElementById('BorderStyle').value;
             cellbacolor = document.getElementById('cellbacolor');
             placetitle = document.getElementById('placetitle');
+            switchtablecolor4hover = document.getElementById('switchtablecolor4hover');
+			
+			
             if (sizeCols <= 0) {
                 sizeCols = "1";
                 document.getElementById('sizeCols').value = "1";
@@ -767,7 +771,7 @@ if(ffhtf == true || ffctf == true){
 
             tableCSS += tapcss+'}' + comscss;
 
-			if (desig == 'custom' && selectfontfamily == "none") {
+			if (desig == 'custom' && switchtablecolor4hover.checked == true) {
 
             if (textforcellsshow.checked == true) {
                 if (editonline.checked == true) {
@@ -785,13 +789,8 @@ if(ffhtf == true || ffctf == true){
                 }
                 }
 
-            } else {
-                tableCSS += tapcss+'.awtable th:hover{'+ comscss;
-                tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
-                tableCSS += tapcss+'}'+ comscss;
             }
 
-			}
 
             tableCSS += tapcss+'.awtable tr{'+ comscss;
             tableCSS += tapcss+tapcss+'background-color:' + backgroundtr+ comscss;
