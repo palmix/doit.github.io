@@ -1272,7 +1272,7 @@ published = published.replace(/\//gi,"-");
 
 
 
-var valuelink = 'https://table.doitf.com/search?q='+current;
+var valuelink = 'https://table.doitf.com/search?q=ID1100'+current;
 var name =  item.values[2].formattedValue;
 var stylename = item.values[4].formattedValue;
 
