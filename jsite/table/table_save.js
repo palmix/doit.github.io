@@ -1385,7 +1385,9 @@ $('#textaligncells').val(textaligncells);
 $('#tablecolor5').val(tablecolor5);
 $('#tablecolor5hover').val(tablecolor5hover);
 
+$.scrollTo($("#basicdesign"), { duration: 0});
 makeTableCode();
+
 })
 }
 
@@ -1414,12 +1416,15 @@ var backgroundth = item.values[13].formattedValue;
 var backgroundtr = item.values[14].formattedValue;
 var backgroundtr2 = item.values[16].formattedValue;
 var StyleName = item.values[4].formattedValue;
+var subStyleName = StyleName.substring(0,27);
 var name =  item.values[2].formattedValue;
 var subname =  name.substring(0,7);
 if(name.length > 7){
 subname = subname +"..";
 }
-
+if(StyleName.length > 30){
+subStyleName = subStyleName +"...";
+}
 
 
 var coll2 = item.values[5].formattedValue;
@@ -1444,7 +1449,7 @@ listusercode +='<div class="input-group p-1 Searchcode">';
 
 
 
-listusercode +='<div class="card-body input-group-prepend p-0"><span class="card-body bg-white input-group-text px-1 py-1" title="'+published+'">'+StyleName+'</span></div>';
+listusercode +='<div class="card-body input-group-prepend p-0"><span class="card-body bg-white input-group-text px-1 py-1" title="'+published+'">'+subStyleName+'</span></div>';
 
 listusercode +='<div class="input-group-append"><span class="badge-secondary input-group-text px-1 py-1">by</span></div>';
 
@@ -1452,10 +1457,9 @@ listusercode +='<div class="input-group-append" style="min-width:75px;margin-rig
 
 listusercode +='<div class="input-group-prepend"><span class="px-0 py-0"><table style="width:10px;border-collapse:collapse"><tr style="background-color:'+backgroundth+'"><th style="padding:3px 7px"></th><th style="padding:3px"></th><th style="padding:3px"></th><th style="padding:3px"></th><th style="padding:3px"></th></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr2+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr2+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr></table></span></div>';
 
-listusercode +='<div class="input-group-append"><button class="btn btn-primary px-1 py-1 setstyle"data-id="'+idrep+'"type="button">Set Style</button></div>';
+listusercode +='<div class="input-group-append"><button class="btn btn-primary px-1 py-1 setstyle"data-id="'+idrep+'"type="button" aria-label="Close" data-dismiss="modal">Set Style</button></div>';
 
 listusercode +='</div>';
-
 
 
 
