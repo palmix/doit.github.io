@@ -134,6 +134,7 @@ var html5color1 = document.getElementById('html5color1');
 var html5color2 = document.getElementById('html5color2');
 var html5color3 = document.getElementById('html5color3');
 var html5color4 = document.getElementById('html5color4');
+var html5color4hover = document.getElementById('html5color4hover');
 var html5color5 = document.getElementById('html5color5');
 var html5color6 = document.getElementById('html5color6');
 var html5color7 = document.getElementById('html5color7');
@@ -143,6 +144,7 @@ var colorbox1 = document.getElementById('tablecolor1');
 var colorbox2 = document.getElementById('tablecolor2');
 var colorbox3 = document.getElementById('tablecolor3');
 var colorbox4 = document.getElementById('tablecolor4');
+var colorbox4hover = document.getElementById('tablecolor4hover');
 var colorbox5 = document.getElementById('tablecolor5');
 var colorbox6 = document.getElementById('tablecolor6');
 var colorbox7 = document.getElementById('tablecolor7');
@@ -163,6 +165,9 @@ function tablecolor3() {
 
 function tablecolor4() {
     document.getElementById('tablecolor4').value = html5color4.value;
+}
+function tablecolor4hover() {
+    document.getElementById('tablecolor4hover').value = html5color4.value;
 }
 
 function tablecolor5() {
@@ -222,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var awtablethpadding;
     var awtabletdpadding;
     var awtablecolor;
+    var awtablecolorhover;
     var tdtablecolor;
     var selectfontfamily;
     var selectfontfamilycells;
@@ -500,6 +506,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (desig == 'custom') {
                 awtablecolor = colorbox4.value + ';';
+                awtablecolorhover = colorbox4hover.value + ';';
                 tdtablecolor = colorbox5.value + ';';
                 borderawtable = colorbox3.value + ';';
                 backgroundtable = colorbox1.value + ';';
@@ -511,6 +518,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 html5color2.value = colorbox2.value;
                 html5color3.value = colorbox3.value;
                 html5color4.value = colorbox4.value;
+                html5color4hover.value = colorbox4hover.value;
                 html5color5.value = colorbox5.value;
                 html5color6.value = colorbox6.value;
                 html5color7.value = colorbox7.value;
@@ -759,7 +767,34 @@ if(ffhtf == true || ffctf == true){
 
             tableCSS += tapcss+'}' + comscss;
 
+			if (desig == 'custom' && selectfontfamily == "none") {
 
+            if (textforcellsshow.checked == true) {
+                if (editonline.checked == true) {
+                    tableCSS += tapcss+'.awtable thead th:hover{'+ comscss;
+                    tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                } else if (placetitle.value == 'titletop') {
+                    tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
+                    tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                } else if (placetitle.value == 'titleside') {
+                    tableCSS += tapcss+'.awtable tr td:first-child:hover{'+ comscss;
+                    tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                } else {
+                    tableCSS += tapcss+'.awtable tr:first-child td:hover{'+ comscss;
+                    tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
+                    tableCSS += tapcss+'}'+ comscss;
+                }
+
+            } else {
+                tableCSS += tapcss+'.awtable th:hover{'+ comscss;
+                tableCSS += tapcss+'color:'+awtablecolorhover + comscss;
+                tableCSS += tapcss+'}'+ comscss;
+            }
+
+			}
 
             tableCSS += tapcss+'.awtable tr{'+ comscss;
             tableCSS += tapcss+tapcss+'background-color:' + backgroundtr+ comscss;
@@ -1222,7 +1257,7 @@ var selectfontfamily = item.values[24].formattedValue;
 var awtablefontsize = item.values[25].formattedValue;
 var textaligntable = item.values[26].formattedValue;
 var tablecolor4 = item.values[27].formattedValue;
-//"لون خط العنوان عند مرور المؤشر";
+var tablecolor4hover = item.values[28].formattedValue;
 var selectfontfamilycells = item.values[29].formattedValue;
 var awtdfontsize = item.values[30].formattedValue;
 var textaligncells = item.values[31].formattedValue;
@@ -1296,7 +1331,7 @@ $('#selectfontfamily').val(selectfontfamily);
 $('#awtablefontsize').val(awtablefontsize);
 $('#textaligntable').val(textaligntable);
 $('#tablecolor4').val(tablecolor4);
-//"لون خط العنوان عند مرور المؤشر";
+$('#tablecolor4hover').val(tablecolor4hover);
 $('#selectfontfamilycells').val(selectfontfamilycells);
 $('#awtdfontsize').val(awtdfontsize);
 $('#textaligncells').val(textaligncells);
@@ -1511,7 +1546,7 @@ $.getJSON(getusercode, {
 "entry.383470544": $('#awtablefontsize').val(),
 "entry.1818046043": $('#textaligntable').val(),
 "entry.1692062956": $('#tablecolor4').val(),
-"entry.944350230": "لون خط العنوان عند مرور المؤشر",
+"entry.944350230": $('#tablecolor4hover').val(),
 "entry.1047390211": $('#selectfontfamilycells').val(),
 "entry.2072843825": $('#awtdfontsize').val(),
 "entry.2073943690": $('#textaligncells').val(),
