@@ -1229,13 +1229,161 @@ if(ffhtf == true || ffctf == true){
 
 
 
+ $("#randomstyle").click(function(){
+	var randomid = Math.floor(Math.random() * 5) + 1;
+	var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
+  
+   $.getJSON(getusercodedrive, {
+    key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+    alt: "json",
+    fields: "sheets(data.rowData.values.formattedValue)"
+
+  }).done(function(recosts) {
+if(randomid == 1){randomid = 2;}
+
+var item = recosts.sheets[0].data[0].rowData[randomid];
+
+var published = item.values[0].formattedValue;
+var id = item.values[1].formattedValue;
+
+published = published.substring(30,10);
+published = published.replace(/\//gi,"-");
+
+
+
+var valuelink = 'https://table.doitf.com/search?q='+id;
+var name =  item.values[2].formattedValue;
+var stylename = item.values[4].formattedValue;
+
+var inputtexttitle = item.values[2].formattedValue;
+var inputemail = item.values[3].formattedValue;
+var inputstyle = item.values[4].formattedValue;
+var backgroundrows2 = item.values[5].formattedValue;
+var tabletrhover = item.values[6].formattedValue;
+var cellbacolor = item.values[7].formattedValue;
+var bordershow = item.values[8].formattedValue;
+var bordertables = item.values[9].formattedValue;
+var bordercells = item.values[10].formattedValue;
+var switchtablecolor4hovers = item.values[11].formattedValue;
+var switchtablecolor5hovers = item.values[12].formattedValue;
+var tablecolor1 = item.values[13].formattedValue;
+var tablecolor2 = item.values[14].formattedValue;
+var tablecolor8 = item.values[15].formattedValue;
+var tablecolor6 = item.values[16].formattedValue;
+var tablecolor7 = item.values[17].formattedValue;
+var tablecolor3 = item.values[18].formattedValue;
+var BorderStyle = item.values[19].formattedValue;
+var BorderWidth = item.values[20].formattedValue;
+var bordertable = item.values[21].formattedValue;
+var bordercell = item.values[22].formattedValue;
+var dirtable = item.values[23].formattedValue;
+var selectfontfamily = item.values[24].formattedValue;
+var awtablefontsize = item.values[25].formattedValue;
+var textaligntable = item.values[26].formattedValue;
+var tablecolor4 = item.values[27].formattedValue;
+var tablecolor4hover = item.values[28].formattedValue;
+var selectfontfamilycells = item.values[29].formattedValue;
+var awtdfontsize = item.values[30].formattedValue;
+var textaligncells = item.values[31].formattedValue;
+var tablecolor5 = item.values[32].formattedValue;
+var tablecolor5hover = item.values[33].formattedValue;
+
+              if(backgroundrows2 == "TRUE"){
+				backgroundrows2 = true;
+      	      }else{
+				backgroundrows2 = false;
+    		  }
+
+              if(tabletrhover == "TRUE"){
+				tabletrhover = true;
+      	      }else{
+				tabletrhover = false;
+    		  }
+
+              if(cellbacolor == "TRUE"){
+				cellbacolor = true;
+      	      }else{
+				cellbacolor = false;
+    		  }
+
+              if(bordershow == "TRUE"){
+				bordershow = true;
+      	      }else{
+				bordershow = false;
+    		  }
+
+              if(bordertables == "TRUE"){
+				bordertables = true;
+      	      }else{
+				bordertables = false;
+    		  }
+
+              if(bordercells == "TRUE"){
+				bordercells = true;
+      	      }else{
+				bordercells = false;
+    		  }
+              if(switchtablecolor4hovers == "TRUE"){
+				switchtablecolor4hovers = true;
+      	      }else{
+				switchtablecolor4hovers = false;
+    		  }
+              if(switchtablecolor5hovers == "TRUE"){
+				switchtablecolor5hovers = true;
+      	      }else{
+				switchtablecolor5hovers = false;
+    		  }
+
+
+$("#backgroundrows2").prop("checked", backgroundrows2);
+$("#tabletrhover").prop("checked", tabletrhover);
+$("#cellbacolor").prop("checked", cellbacolor);
+$("#bordershow").prop("checked", bordershow);
+$("#bordertables").prop("checked", bordertables);
+$("#bordercells").prop("checked", bordercells);
+$("#switchtablecolor4hover").prop("checked", switchtablecolor4hovers);
+$("#switchtablecolor5hover").prop("checked", switchtablecolor5hovers);
+
+$('#tablecolor1').val(tablecolor1);
+$('#tablecolor2').val(tablecolor2);
+$('#tablecolor8').val(tablecolor8);
+$('#tablecolor6').val(tablecolor6);
+$('#tablecolor7').val(tablecolor7);
+$('#tablecolor3').val(tablecolor3);
+$('#BorderStyle').val(BorderStyle);
+$('#BorderWidth').val(BorderWidth);
+$('#bordertable').val(bordertable);
+$('#bordercell').val(bordercell);
+$('#dirtable').val(dirtable);
+$('#selectfontfamily').val(selectfontfamily);
+$('#awtablefontsize').val(awtablefontsize);
+$('#textaligntable').val(textaligntable);
+$('#tablecolor4').val(tablecolor4);
+$('#tablecolor4hover').val(tablecolor4hover);
+$('#selectfontfamilycells').val(selectfontfamilycells);
+$('#awtdfontsize').val(awtdfontsize);
+$('#textaligncells').val(textaligncells);
+$('#tablecolor5').val(tablecolor5);
+$('#tablecolor5hover').val(tablecolor5hover);
+
+
+
+
+$('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class="alert-heading">'+stylename+'</h5><hr><div class="p-0 row"><div class="p-0 mb-2 col-sm-6 col-md-6 col-auto mr-auto">This design was created by <strong>'+name+'</strong> on <strong>'+published+'</strong></div><div class="p-0 col-sm-6 col-md-6 mr-auto"><div class="input-group input-group-sm mb-3"><div class="input-group-prepend"><button class="btn btn-primary copy" data-clipboard-target="#urlstyle" type="button">Copy</button></div><input class="form-control" id="urlstyle" placeholder="" readonly value="'+valuelink+'"></div></div></div></div>');
+
+
+makeTableCode();
+
+});
+});
+
 
 
 
 
 
 var subidlink = idlink.substring(0,6);
-if(subidlink == "ID1100"){
+if(subidlink == "ID1100" && idlink !== "ID11001"){
 
   var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
   
