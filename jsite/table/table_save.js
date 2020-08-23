@@ -1230,6 +1230,11 @@ if(ffhtf == true || ffctf == true){
 
 
  $("#randomstyle").click(function(){
+ 
+ 	$('#randomstyle').addClass('loding');
+	$("#randomstyle").attr('disabled','disabled');
+	$("#randomstyle").html('Random Style <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+    
 	var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
   
    $.getJSON(getusercodedrive, {
@@ -1374,10 +1379,11 @@ $('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class
 
 
 makeTableCode();
-
+		 	$("#randomstyle").removeAttr('disabled');
+			$("#randomstyle").html('Random Style');
+			$('#randomstyle').removeClass('loding');
 });
 });
-
 
 
 
