@@ -1230,7 +1230,6 @@ if(ffhtf == true || ffctf == true){
 
 
  $("#randomstyle").click(function(){
-	var randomid = Math.floor(Math.random() * 5) + 1;
 	var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
   
    $.getJSON(getusercodedrive, {
@@ -1239,8 +1238,10 @@ if(ffhtf == true || ffctf == true){
     fields: "sheets(data.rowData.values.formattedValue)"
 
   }).done(function(recosts) {
-if(randomid == 1){randomid = 2;}
 
+var randomidlenght = recosts.sheets[0].data[0].rowData.length;
+var randomid = Math.floor(Math.random() * randomidlenght) + 1;
+if(randomid == 1){randomid = 2;}
 var item = recosts.sheets[0].data[0].rowData[randomid];
 
 var published = item.values[0].formattedValue;
