@@ -1571,7 +1571,7 @@ function setthisstyle(current) {
   }).done(function(recosts) {
   
 
-current = $(current).attr("data-id") -1;
+current = ($(current).attr("data-id") -1);
 
 var item = recosts.sheets[0].data[0].rowData[current];
 
