@@ -1232,6 +1232,7 @@ if(ffhtf == true || ffctf == true){
  $("#randomstyle").click(function(){
  
  	$('#randomstyle').addClass('loding');
+	$("#randomstyle").attr('disabled','disabled');
 	$("#randomstyle").html('Random Style <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
     
 	var getusercodedrive = "https://sheets.googleapis.com/v4/spreadsheets/1NUFImF8vi4_lzTDrfO4tbGp9jfS4PciiG-gg8vYVXUE/?";
@@ -1245,7 +1246,7 @@ if(ffhtf == true || ffctf == true){
 
 var randomidlenght = recosts.sheets[0].data[0].rowData.length;
 var randomid = Math.floor(Math.random() * randomidlenght) + 1;
-if(randomid == 1){randomid = 2;}
+if(randomid == 1){randomid = 2;}else if(randomid == randomidlenght){randomid = randomidlenght-1}
 var item = recosts.sheets[0].data[0].rowData[randomid];
 
 var published = item.values[0].formattedValue;
@@ -1378,6 +1379,7 @@ $('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class
 
 
 makeTableCode();
+		 	$("#randomstyle").removeAttr('disabled');
 			$("#randomstyle").html('Random Style');
 			$('#randomstyle').removeClass('loding');
 });
