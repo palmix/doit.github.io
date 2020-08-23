@@ -1572,7 +1572,7 @@ function setthisstyle(current) {
   
 
 current = ($(current).attr("data-id") -1);
-
+alert(current)
 var item = recosts.sheets[0].data[0].rowData[current];
 
 var published = item.values[0].formattedValue;
@@ -1587,7 +1587,7 @@ var valuelink = 'https://table.doitf.com/search?q=ID1100'+current;
 var name =  item.values[2].formattedValue;
 var stylename = item.values[4].formattedValue;
 
-
+alert(current)
 
 
 
