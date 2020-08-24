@@ -55,9 +55,9 @@ document.getElementById("awClearText").addEventListener("click", function() {
 
 function showadvdesign() {
     var collapsbasicd = document.getElementById("basicdesign");
-    var collapseadvdesign = document.getElementById("advdesign");
+    var collapseadvdesign1 = document.getElementById("advdesign");
     var collapsadvanced = document.getElementById("advanced");
-    if (collapseadvdesign.checked == true) {
+    if (collapseadvdesign1.checked == true) {
         $('#collapseadvdesign').collapse('show');
         $('#basicdesign').collapse('hide');
         $('#advanceddesign').collapse('hide');
