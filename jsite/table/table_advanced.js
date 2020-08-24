@@ -1275,9 +1275,18 @@ if(ffhtf == true || ffctf == true){
 	
 	
 	
-	
 	    $('#remove_columns').click(function() {
-
+    var desigs = $(".desig.active");
+	var desig = $("input[name=desig]",desigs).val();
+        if (desig == 'advanced'){
+        var lengthcollth = $('.table100 thead th').length;
+		if(lengthcollth > 1){
+			$('.table100 tr').find('th:last-child , td:last-child').remove();
+    	}
+        var newCodeedit = document.getElementById("newCodeeditadv");
+        var newTable = document.getElementById("newTable").innerHTML;
+        newCodeedit.value = newTable;
+        }else{
         var lengthcollth = $('.awtable thead th').length;
 		if(lengthcollth > 1){
 			$('.awtable tr').find('th:last-child , td:last-child').remove();
@@ -1285,10 +1294,24 @@ if(ffhtf == true || ffctf == true){
         var newCodeedit = document.getElementById("newCodeedit");
         var newTable = document.getElementById("newTable").innerHTML;
         newCodeedit.value = newTable;
+        }
+        
+        
         makeTableCode();
     });
 
     $('#remove_rows').click(function() {
+    var desigs = $(".desig.active");
+	var desig = $("input[name=desig]",desigs).val();
+        if (desig == 'advanced'){
+        var lengthrowtd = $('.table100 tbody tr').length;
+		if(lengthrowtd > 1){
+			$('.table100 tbody').find('tr:last-child').remove();
+    	}
+        var newCodeedit = document.getElementById("newCodeeditadv");
+        var newTable = document.getElementById("newTable").innerHTML;
+        newCodeedit.value = newTable;
+        }else{
         var lengthrowtd = $('.awtable tbody tr').length;
 		if(lengthrowtd > 1){
 			$('.awtable tbody').find('tr:last-child').remove();
@@ -1296,17 +1319,22 @@ if(ffhtf == true || ffctf == true){
         var newCodeedit = document.getElementById("newCodeedit");
         var newTable = document.getElementById("newTable").innerHTML;
         newCodeedit.value = newTable;
+        }
+        
+
         makeTableCode();
     });
 	
 	
 	
     $("#add_new_rows").click(function() {
+    var desigs = $(".desig.active");
+	var desig = $("input[name=desig]",desigs).val();
        if (desig == 'advanced'){
         $(".table100").each(function() {
-            var tds = '\t\t<tr>\n';
-            jQuery.each($('tr:last td', this), function() {
-                tds += '\t\t\t<td>' + $(this).html() + '</td>\n';
+            var tds = '\t\t<tr class="row100 body">\n';
+            jQuery.each($('tr:last', this), function() {
+                tds += $(this).html();
             });
             tds += '\t\t</tr>\n';
             if ($('tbody', this).length > 0) {
@@ -1315,6 +1343,9 @@ if(ffhtf == true || ffctf == true){
                 $(this).append(tds);
             }
         });
+        var newCodeedit = document.getElementById("newCodeeditadv");
+        var newTable = document.getElementById("newTable").innerHTML;
+        newCodeedit.value = newTable;
        }else{
         $(".awtable").each(function() {
             var tds = '\t\t<tr>\n';
@@ -1328,11 +1359,11 @@ if(ffhtf == true || ffctf == true){
                 $(this).append(tds);
             }
         });
-      }
+        
         var newCodeedit = document.getElementById("newCodeedit");
         var newTable = document.getElementById("newTable").innerHTML;
-
         newCodeedit.value = newTable;
+      }
 
         makeTableCode();
     });
@@ -1343,16 +1374,18 @@ if(ffhtf == true || ffctf == true){
     $('#add_new_columns').click(function() {
 	var desigs = $(".desig.active");
 	var desig = $("input[name=desig]",desigs).val();
+    
       if (desig == 'advanced'){
+        var lengthth = $('.table100 thead tr th').length;
         $('.table100 thead tr').each(function() {
-            var lengthth = $('th', this).length;
             $(this).append('\t\t\t<th class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
         });
-        $('.table100-body tbody tr').each(function() {
-            var lengthths = $('.table100 thead tr th').length;
-            $(this).append('\t\t\t<td class="cell100 column' + (lengthths + 1) + '"><br></td>\n');
+        $('.table100 tbody tr').each(function() {
+            $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
         });
-        
+        var newCodeedit = document.getElementById("newCodeeditadv");
+        var newTable = document.getElementById("newTable").innerHTML;
+        newCodeedit.value = newTable;
        }else{
         $('.awtable thead tr').each(function() {
             var lengthth = $('th', this).length;
@@ -1361,11 +1394,11 @@ if(ffhtf == true || ffctf == true){
         $('.awtable tbody tr').each(function() {
             $(this).append('\t\t\t<td><br></td>\n');
         });
-      }
         var newCodeedit = document.getElementById("newCodeedit");
         var newTable = document.getElementById("newTable").innerHTML;
-
         newCodeedit.value = newTable;
+      }
+
 
         makeTableCode();
     });
