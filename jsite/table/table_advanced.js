@@ -1100,6 +1100,9 @@ if(ffhtf == true || ffctf == true){
 
           if(desig == 'advanced'){
             if (editonline.checked === true) {
+        document.getElementById('newTable').style.display = 'block';
+        document.getElementById('previewidiv').style.display = 'block';
+        document.getElementById('PreviewTable').innerHTML = 'Edite';
                 $('.btnadd').css('display', 'block');
                 var comsc = document.getElementById("comsc");
                 var newTable = document.getElementById("newTable");
@@ -1129,24 +1132,13 @@ if(ffhtf == true || ffctf == true){
 
       function updatePreview() {
         var previewFrame = document.getElementById('previewiframe');
-        document.getElementById('newTable').style.display = 'block';
-        document.getElementById('previewidiv').style.display = 'block';
-        document.getElementById('PreviewTable').innerHTML = 'Edite';
+
 		var setifrscr = ''
 		setifrscr += '<script '
 		setifrscr += 'type="text/javascript" '
 		setifrscr += 'src="https://get.doitf.com/iframe-resizer/iframeResizer-contentWindow.min.js" '
 		setifrscr += 'defer'
 		setifrscr += '><\/script>'
-		
-		
-		
-      
-      
-      
-      
-    
-		
 		
 		
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
