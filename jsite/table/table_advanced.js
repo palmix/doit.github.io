@@ -2113,21 +2113,29 @@ var desig = $("input[name=desig]",desigs).val();
 
 
     if (desig == 'custom') {
+        $('#basicdesign').collapse('hide');
+        $('#advanceddesign').collapse('hide');
         $('#collapseadvdesign').collapse('show');
+
         $('#tableDesign').attr("disabled", 'disabled');
         $('#tableColor').attr("disabled", "disabled");
-        $('#basicdesign').collapse('hide');
 
     } else if (desig == 'simple'){
-        $('#basicdesign').collapse('show');
         $('#collapseadvdesign').collapse('hide');
+        $('#advanceddesign').collapse('hide');
+        $('#basicdesign').collapse('show');
+
         $('#tableDesign').removeAttr('disabled', 'disabled');
         $('#tableColor').removeAttr('disabled', 'disabled');
         $('#textforcellscollapse').collapse('hide');
         document.getElementById('textforcells').checked = false;
 
    	} else if (desig == 'advanced'){
-
+        $('#collapseadvdesign').collapse('hide');
+        $('#basicdesign').collapse('hide');
+        $('#advanceddesign').collapse('show');
+        $('#tableDesign').attr("disabled", 'disabled');
+        $('#tableColor').attr("disabled", "disabled");
 
     }else{
 
