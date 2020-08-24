@@ -1341,7 +1341,8 @@ if(ffhtf == true || ffctf == true){
 
 
     $('#add_new_columns').click(function() {
-      
+	var desigs = $(".desig.active");
+	var desig = $("input[name=desig]",desigs).val();
       if (desig == 'advanced'){
         $('.table100 thead tr').each(function() {
             var lengthth = $('th', this).length;
