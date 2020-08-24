@@ -905,12 +905,70 @@ if(ffhtf == true || ffctf == true){
 
 
             if (desig == 'advanced') {
-                    tableCSS = "";
-					
+                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css">'+ comscss;
+                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css">'+ comscss;
+                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/util.css">'+ comscss;
+                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css">'+ comscss;
+                    tableCSS = ''+ comscss;					
             }
 
             //Start table
+            if (desig == 'advanced') {
+            if (textforcellsshow.checked == false) {
+               tableHTML = '<div class="wrap-table100"><div class="table100 ver1 m-b-110"><div class="table100-head"><table><thead>' + comsc + '<tr class="row100 head">';
+                //Make header
+                var ii = 0;
+                var iii = 0;
+                var iiii = 0;
+                while (ii < sizeCols) {
+                    iii = ii + 1;
+                    if (tableInfo.checked == true) {
+                        tableHTML += '<th class="cell100 column' + iii + '">عنوان ' + iii + '</th>' + comsc;
+                    } else {
+                        tableHTML += '<th class="cell100 column' + iii + '"> </th>' + comsc;
+                    }
+                    ii++;
+                }
+                tableHTML += '</tr></thead></table></div>' + comsc;
+                //make rows
+                tableHTML += '<div class="table100-body js-pscroll"> <table> <tbody>' + comsc;
+                var i = 0;
+                while (i < sizeRows - 1) {
+                    tableHTML = tableHTML + "<tr class="row100 body">" + comsc;
+                    var ii = 0;
+                    while (ii < sizeCols) {
+                        iii = i + 1;
+                        iiii = ii + 1;
 
+
+
+                        if (tableInfo.checked == true) {
+                            tableHTML = tableHTML + '<td class="cell100 column1'+iii+'">صف:' + iii + ' عمود:' + iiii + '</td>' + comsc;
+                        } else {
+                            tableHTML = tableHTML + "<td class="cell100 column1'+iii+'"> </td>" + comsc;
+                        }
+                        ii++;
+                    }
+                    tableHTML = tableHTML + "</tr>" + comsc;
+                    i++;
+                }
+                tableHTML += "</tbody></table></div></div>" + comsc;
+            } else if (editonline.checked == true) {
+
+                tableHTML = "";
+                tableHTML += document.getElementById('newCodeedit').value;
+
+            } else {
+                    tableHTML = '<table class="awtable">' + comsc;
+
+                //make rows
+
+                tableHTML += awNewText + comsc;
+                tableHTML += "</table>" + comsc;
+
+            }
+
+			}else{
             if (textforcellsshow.checked == false) {
                tableHTML = '<table class="awtable">' + comsc + '<tr>';
                 //Make header
@@ -963,14 +1021,39 @@ if(ffhtf == true || ffctf == true){
                 tableHTML += "</table>" + comsc;
 
             }
+			}
 
+            tableJS = '';
+            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/jquery/jquery-3.2.1.min.js"></script>' + comsc;
+            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>' + comsc;
+            tableJS += '<script>' + comsc;
+            tableJS += tapcss+'$(".js-pscroll").each(function(){' + comsc;
+            tableJS += tapcss+tapcss+'var ps = new PerfectScrollbar(this);' + comsc;
+            tableJS += tapcss+tapcss+'$(window).on("resize", function(){' + comsc;
+            tableJS += tapcss+tapcss+tapcss+'ps.update();' + comsc;
+            tableJS += tapcss+tapcss+'})' + comsc;
+            tableJS += tapcss+'});' + comsc;
+            tableJS += '</script>' + comsc;
+            tableJS += '' + comsc;
+			
+			
+				
+		
+			
 
-
+			
+				
+			
+		
+	
+			
+			
+			
             tableEND = '';
 
 
 
-            newTableCode = tableJS + tableCSS + tableHTML + tableEND;
+            newTableCode =  tableCSS + tableHTML + tableJS + tableEND;
 
 
 
