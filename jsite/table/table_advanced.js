@@ -904,16 +904,20 @@ if(ffhtf == true || ffctf == true){
             }
 
 
-            if (desig == 'advanced') {
-                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css">'+ comscss;
-                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css">'+ comscss;
-                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/util.css">'+ comscss;
-                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css">'+ comscss;
-                    tableCSS = ''+ comscss;					
-            }
 
-            //Start table
             if (desig == 'advanced') {
+            
+ 			//Start css
+                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
+                    tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
+                    tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/util.css"/>'+ comscss;
+                    tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
+                    tableCSS += ''+ comscss;					
+
+            
+            
+            
+             //Start table
             if (textforcellsshow.checked == false) {
                tableHTML = '<div class="wrap-table100"><div class="table100 ver1 m-b-110"><div class="table100-head"><table><thead>' + comsc + '<tr class="row100 head">';
                 //Make header
@@ -934,7 +938,7 @@ if(ffhtf == true || ffctf == true){
                 tableHTML += '<div class="table100-body js-pscroll"> <table> <tbody>' + comsc;
                 var i = 0;
                 while (i < sizeRows - 1) {
-                    tableHTML = tableHTML + "<tr class="row100 body">" + comsc;
+                    tableHTML = tableHTML + '<tr class="row100 body">' + comsc;
                     var ii = 0;
                     while (ii < sizeCols) {
                         iii = i + 1;
@@ -943,9 +947,9 @@ if(ffhtf == true || ffctf == true){
 
 
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + '<td class="cell100 column1'+iii+'">صف:' + iii + ' عمود:' + iiii + '</td>' + comsc;
+                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'">صف:' + iii + ' عمود:' + iiii + '</td>' + comsc;
                         } else {
-                            tableHTML = tableHTML + "<td class="cell100 column1'+iii+'"> </td>" + comsc;
+                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'"> </td>' + comsc;
                         }
                         ii++;
                     }
@@ -953,6 +957,20 @@ if(ffhtf == true || ffctf == true){
                     i++;
                 }
                 tableHTML += "</tbody></table></div></div>" + comsc;
+                
+            tableJS = '';
+            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/jquery/jquery-3.2.1.min.js"><\/script>' + comsc;
+            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js"><\/script>' + comsc;
+            tableJS += '<\script>' + comsc;
+            tableJS += tapcss+'$(".js-pscroll").each(function(){' + comsc;
+            tableJS += tapcss+tapcss+'var ps = new PerfectScrollbar(this);' + comsc;
+            tableJS += tapcss+tapcss+'$(window).on("resize", function(){' + comsc;
+            tableJS += tapcss+tapcss+tapcss+'ps.update();' + comsc;
+            tableJS += tapcss+tapcss+'})' + comsc;
+            tableJS += tapcss+'});' + comsc;
+            tableJS += '<\/script>' + comsc;
+            tableJS += '' + comsc;
+                
             } else if (editonline.checked == true) {
 
                 tableHTML = "";
@@ -1023,18 +1041,7 @@ if(ffhtf == true || ffctf == true){
             }
 			}
 
-            tableJS = '';
-            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/jquery/jquery-3.2.1.min.js"></script>' + comsc;
-            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>' + comsc;
-            tableJS += '<script>' + comsc;
-            tableJS += tapcss+'$(".js-pscroll").each(function(){' + comsc;
-            tableJS += tapcss+tapcss+'var ps = new PerfectScrollbar(this);' + comsc;
-            tableJS += tapcss+tapcss+'$(window).on("resize", function(){' + comsc;
-            tableJS += tapcss+tapcss+tapcss+'ps.update();' + comsc;
-            tableJS += tapcss+tapcss+'})' + comsc;
-            tableJS += tapcss+'});' + comsc;
-            tableJS += '</script>' + comsc;
-            tableJS += '' + comsc;
+
 			
 			
 				
@@ -1057,12 +1064,7 @@ if(ffhtf == true || ffctf == true){
 
 
 
-
             var btncopy = document.getElementById("buttoncopy");
-
-
-
-
             var text = document.getElementById("newCode").value;
 
             if (editonline.checked === true) {
@@ -1104,7 +1106,6 @@ if(ffhtf == true || ffctf == true){
                 btncopy.setAttribute('data-clipboard-text', newTableCode);
                 document.getElementById('newCode').value = newTableCode;
                 editor.setValue(newTableCode);
-
             }
 
 
@@ -1863,7 +1864,7 @@ listusercode +='<div class="input-group-append" style="min-width:75px;margin-rig
 
 listusercode +='<div class="input-group-prepend"><span class="px-0 py-0"><table style="width:10px;border-collapse:collapse"><tr style="background-color:'+backgroundth+'"><th style="padding:3px 7px"></th><th style="padding:3px"></th><th style="padding:3px"></th><th style="padding:3px"></th><th style="padding:3px"></th></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr2+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr2+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr></table></span></div>';
 
-listusercode +='<div class="input-group-append"><button class="btn btn-primary px-1 py-1 setstyle"data-id="'+idrep+'"type="button" aria-label="Close" data-dismiss="modal">Set Style</button></div>';
+listusercode +='<div class="input-group-append"><button class="btn btn-primary px-1 py-1 setstyle"data-id="'+idrep+'" type="button" aria-label="Close" data-dismiss="modal">Set Style</button></div>';
 
 listusercode +='</div>';
 
