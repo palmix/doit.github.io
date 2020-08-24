@@ -723,6 +723,58 @@ if(ffhtf == true || ffctf == true){
             tableCSS += tapcss+tapcss+'border-collapse:collapse;'+ comscss;
             tableCSS += tapcss+'}' + comscss;
 
+
+
+
+            if (textforcellsshow.checked == true) {
+                if (editonline.checked == true) {
+                    tableCSS += tapcss+'.awtable thead th{'+ comscss;
+                } else if (placetitle.value == 'titletop') {
+                    tableCSS += tapcss+'.awtable tr:first-child td{'+ comscss;
+                    tableCSS += tapcss+'font-weight:600;'+ comscss;
+                } else if (placetitle.value == 'titleside') {
+                    tableCSS += tapcss+'.awtable tr td:first-child{'+ comscss;
+                    tableCSS += tapcss+tapcss+'font-weight:600;'+ comscss;
+                } else {
+                    tableCSS += tapcss+'.awtable tr:first-child td{'+ comscss;
+                }
+
+            } else {
+                tableCSS += tapcss+'.awtable th{'+ comscss;
+            }
+            if (desig == 'custom' && selectfontfamily != "none") {
+                    tableCSS += tapcss+tapcss+'font-family:' + selectfontfamily + ';'+ comscss;
+            }else{
+			        tableCSS += tapcss+tapcss+'font-family:initial;'+ comscss;
+			}
+			if (textaligntable != "none" && desig == "custom") {
+                tableCSS += tapcss+tapcss+'text-align:' + textaligntable + ';'+ comscss;
+            }
+            if (desig == 'custom' && bordercells.checked == true) {
+                    tableCSS += tapcss+tapcss+'border-radius:' + bordercell + 'px;'+ comscss;
+                    tableCSS += tapcss+tapcss+'overflow:hidden;'+ comscss;
+            }
+            if (textforcellsshow.checked == true && placetitle.value == 'none') {} else {
+                tableCSS += tapcss+tapcss+'color:' + awtablecolor + comscss;
+                tableCSS += tapcss+tapcss+'font-size:' + thfontsize + 'px;'+ comscss;
+                tableCSS += tapcss+tapcss+'background-color:' + backgroundtable+ comscss;
+                if (desig == 'custom') {
+                    if (bordershow.checked == true) {
+                        tableCSS += tapcss+tapcss+'border-width:' + BorderWidth + 'px;'+ comscss;
+                        tableCSS += tapcss+tapcss+'border-style:'+BorderStyle+';'+ comscss;
+                        tableCSS += tapcss+tapcss+'border-color:' + borderth+ comscss;
+                    }
+                } else if(desig == 'simple'){
+                    tableCSS += tapcss+tapcss+'border-width:' + thawtableborderwidth + 'px;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-style: solid;'+ comscss;
+                    tableCSS += tapcss+tapcss+'border-color:' + borderth+ comscss;
+                }
+                tableCSS += tapcss+tapcss+'padding: ' + awtablethpadding + 'px;'+ comscss;
+            }
+
+
+            tableCSS += tapcss+'}' + comscss;
+
 			if (desig == 'custom' && switchtablecolor4hover.checked == true) {
 
                 if (editonline.checked == true) {
@@ -851,10 +903,7 @@ if(ffhtf == true || ffctf == true){
                     tableCSS = "";
             }
 
-            if (desig == 'advanced') {
-                    tableCSS = "";
-					
-            }
+
 
             //Start table
 
@@ -2057,7 +2106,7 @@ var desig = $("input[name=desig]",desigs).val();
        $('#basicdesign').collapse('hide');
         $('#collapseadvdesign').collapse('hide');
         $('#advanceddesign').collapse('hide');
-		alert("error")
+		alert("error");
 
     }
 makeTableCode();
