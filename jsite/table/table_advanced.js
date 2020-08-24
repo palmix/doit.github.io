@@ -53,41 +53,6 @@ document.getElementById("awClearText").addEventListener("click", function() {
     document.getElementById("awOldText").focus();
 });
 
-function showadvdesign() {
-    var collapsbasicd = document.getElementById("basicdesign");
-    var collapseadvdesign1 = document.getElementById("advdesign");
-    var collapsadvanced = document.getElementById("advanced");
-    if (collapseadvdesign1.checked == true) {
-        $('#collapseadvdesign').collapse('show');
-        $('#basicdesign').collapse('hide');
-        $('#advanceddesign').collapse('hide');
-		
-        $('#tableDesign').attr("disabled", "disabled");
-        $('#tableColor').attr("disabled", "disabled");
-		
-    } else if(collapsadvanced.checked == true){
-        $('#basicdesign').collapse('hide');
-        $('#collapseadvdesign').collapse('hide');
-        $('#advanceddesign').collapse('show');
-        $('#tableDesign').attr("disabled", "disabled");
-        $('#tableColor').attr("disabled", "disabled");
-        $('#textforcellscollapse').collapse('hide');
-		
-    } else if(collapsbasicd.checked == true) {
-        $('#basicdesign').collapse('show');
-        $('#collapseadvdesign').collapse('hide');
-        $('#advanceddesign').collapse('hide');
-        $('#tableDesign').removeAttr("disabled", "disabled");
-        $('#tableColor').removeAttr("disabled", "disabled");
-        $('#textforcellscollapse').collapse('hide');
-        document.getElementById("textforcells").checked = false;
-    }else{
-        $('#basicdesign').collapse('hide');
-        $('#collapseadvdesign').collapse('hide');
-        $('#advanceddesign').collapse('hide');
-		alert("error")
-	}
-}
 
 
 
@@ -2138,7 +2103,10 @@ var desig = $("input[name=desig]",desigs).val();
         $('#tableColor').attr("disabled", "disabled");
 
     }else{
-
+       $('#basicdesign').collapse('hide');
+        $('#collapseadvdesign').collapse('hide');
+        $('#advanceddesign').collapse('hide');
+		alert("error")
 
     }
 makeTableCode();
