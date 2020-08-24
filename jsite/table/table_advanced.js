@@ -1348,12 +1348,10 @@ if(ffhtf == true || ffctf == true){
             var lengthth = $('th', this).length;
             $(this).append('\t\t\t<th class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
         });
-        $('.table100 tbody tr').each(function() {
+        $('.table100-body tbody tr').each(function() {
             var lengthths = $('.table100 thead tr th').length;
             $(this).append('\t\t\t<td class="cell100 column' + (lengthths + 1) + '"><br></td>\n');
         });
- 
-        
         
        }else{
         $('.awtable thead tr').each(function() {
