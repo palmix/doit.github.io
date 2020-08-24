@@ -1150,7 +1150,7 @@ if(ffhtf == true || ffctf == true){
 
 
 
-  iFrameResize({ log: true }, '#previewiframe');
+
 
 
 
