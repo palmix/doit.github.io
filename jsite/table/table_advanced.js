@@ -1348,7 +1348,7 @@ if(ffhtf == true || ffctf == true){
             $(this).append('\t\t\t<th class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.table100 tbody tr').each(function() {
-            $(this).append('\t\t\t<td><br></td>\n');
+            $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
         });
  
         
@@ -1359,7 +1359,7 @@ if(ffhtf == true || ffctf == true){
             $(this).append('\t\t\t<th>Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.awtable tbody tr').each(function() {
-            $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
+            $(this).append('\t\t\t<td><br></td>\n');
         });
       }
         var newCodeedit = document.getElementById("newCodeedit");
