@@ -1105,7 +1105,7 @@ if(ffhtf == true || ffctf == true){
                 var newTable = document.getElementById("newTable");
                 var newCodeedit = document.getElementById("newCodeeditadv");
                 var newTableStyle = document.getElementById("newTableStyle");
-                var newTableJS = document.getElementById("newTableJS");
+                var previewiframe = document.getElementById("previewiframe");
 
 
 
@@ -1113,8 +1113,7 @@ if(ffhtf == true || ffctf == true){
                 var incode = newCodeedit.value;
 
                 newTable.innerHTML = incode;
-                newTableStyle.innerHTML = tableCSS;
-                newTableJS.innerHTML = tableJS;
+                newTableStyle.innerHTML = '<style type="text/css">.table100 table{color:#EFEFEF;width:100%;border-width:1px;border-color:#A1A1A1;border-collapse:collapse;}.table100 th{font-family:initial;color:#EFEFEF;font-size:13px;background-color:#5F5F5F;border-width:1px;border-style:solid;border-color:#A1A1A1;padding: 8px;}.awtable tr{background-color:#F5F5F5;}.table100 td{font-size:12px;font-family:initial;border-width:1px;border-style:solid;border-color:#A1A1A1;padding:8px;color:#3E3E3E;}.table100 tr:hover,.table100 tr:nth-of-type(odd):hover{background-color:#A3A3A3;}.table100 tr:nth-of-type(odd){background-color:#CACACA;}</style>';
                 incode = incode.replace(' contenteditable="true"', '');
 
                 if (comsc.checked === true) {
@@ -1124,8 +1123,31 @@ if(ffhtf == true || ffctf == true){
                     incode = incode;
                 }
 
+
+
+
+
+      function updatePreview() {
+        var previewFrame = document.getElementById('previewiframe');
+        previewFrame.style.display = "block";
+        var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+        preview.open();
+        preview.write(editor.getValue());
+        preview.close();
+      }
+      setTimeout(updatePreview, 300);
+      
+      
+
+
+
                 btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
                 editor.setValue(tablebsCSS + tableCSS + incode + tableJS);
+
+
+
+
+
 
 
 
@@ -1162,7 +1184,8 @@ if(ffhtf == true || ffctf == true){
           
           
           }else{
-                        if (editonline.checked === true) {
+			document.getElementById('previewiframe').style.display = 'none';
+               if (editonline.checked === true) {
                 $('.btnadd').css('display', 'block');
                 var comsc = document.getElementById("comsc");
                 var newTable = document.getElementById("newTable");
@@ -2360,3 +2383,6 @@ makeTableCode();
 
 
 });
+
+
+
