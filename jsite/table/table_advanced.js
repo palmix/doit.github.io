@@ -315,6 +315,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td>");
                 awNewText = awNewText + awOldTextArr[i] + comsc;
             }
+			var desigs = $(".desig.active");
+			var desig = $("input[name=desig]",desigs).val();
             var editonline = document.getElementById('editonline');
             bordershow = document.getElementById("bordershow");
             bordercells = document.getElementById("bordercells");
