@@ -73,7 +73,7 @@ function showadvdesign() {
         $('#tableColor').attr("disabled", "disabled");
         $('#textforcellscollapse').collapse('hide');
 		
-    } else {
+    } else if(collapsbasicd.checked == true) {
         $('#basicdesign').collapse('show');
         $('#collapseadvdesign').collapse('hide');
         $('#advanceddesign').collapse('hide');
@@ -81,7 +81,12 @@ function showadvdesign() {
         $('#tableColor').removeAttr("disabled", "disabled");
         $('#textforcellscollapse').collapse('hide');
         document.getElementById("textforcells").checked = false;
-    }
+    }else{
+        $('#basicdesign').collapse('hide');
+        $('#collapseadvdesign').collapse('hide');
+        $('#advanceddesign').collapse('hide');
+		alert("error")
+	}
 }
 
 
