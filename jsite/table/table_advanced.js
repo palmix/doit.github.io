@@ -1132,6 +1132,21 @@ if(ffhtf == true || ffctf == true){
         document.getElementById('newTable').style.display = 'block';
         document.getElementById('previewidiv').style.display = 'block';
         document.getElementById('PreviewTable').innerHTML = 'Edite';
+		var setifrscr = ''
+		setifrscr += '<script'
+		setifrscr += 'type="text/javascript"'
+		setifrscr += 'src="https://get.doitf.com/iframe-resizer/iframeResizer-contentWindow.min.js"'
+		setifrscr += 'defer'
+		setifrscr += '><\/script>'
+		
+		
+		
+      
+      
+      
+      
+    
+		
 		
 		
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
@@ -1140,7 +1155,7 @@ if(ffhtf == true || ffctf == true){
 		
         var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
         preview.open();
-        preview.write(editor.getValue());
+        preview.write(editor.getValue()+setifrscr);
         preview.close();
       }
       setTimeout(updatePreview, 300);
