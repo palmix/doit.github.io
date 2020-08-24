@@ -1166,8 +1166,8 @@ if(ffhtf == true || ffctf == true){
 
 
             } else {
-			document.getElementById('previewidiv').style.display = 'block';
-			document.getElementById('newTable').style.display = 'none';
+			document.getElementById('previewidiv').style.display = 'none';
+			document.getElementById('newTable').style.display = 'block';
 			document.getElementById('PreviewTable').innerHTML = 'Preview';
                 $('.btnadd').css('display', 'none');
 				document.getElementById("newTableStyle").innerHTML ='';
