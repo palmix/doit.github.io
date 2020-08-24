@@ -1105,14 +1105,16 @@ if(ffhtf == true || ffctf == true){
                 var newTable = document.getElementById("newTable");
                 var newCodeedit = document.getElementById("newCodeeditadv");
                 var newTableStyle = document.getElementById("newTableStyle");
+                var newTableJS = document.getElementById("newTableJS");
 
 
 
 
                 var incode = newCodeedit.value;
 
-                newTable.innerHTML = incode + tableJS;
+                newTable.innerHTML = incode;
                 newTableStyle.innerHTML = tableCSS;
+                newTableJS.innerHTML = tableJS;
                 incode = incode.replace(' contenteditable="true"', '');
 
                 if (comsc.checked === true) {
