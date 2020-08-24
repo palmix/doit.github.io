@@ -1133,9 +1133,9 @@ if(ffhtf == true || ffctf == true){
         document.getElementById('previewidiv').style.display = 'block';
         document.getElementById('PreviewTable').innerHTML = 'Edite';
 		var setifrscr = ''
-		setifrscr += '<script'
-		setifrscr += 'type="text/javascript"'
-		setifrscr += 'src="https://get.doitf.com/iframe-resizer/iframeResizer-contentWindow.min.js"'
+		setifrscr += '<script '
+		setifrscr += 'type="text/javascript" '
+		setifrscr += 'src="https://get.doitf.com/iframe-resizer/iframeResizer-contentWindow.min.js" '
 		setifrscr += 'defer'
 		setifrscr += '><\/script>'
 		
