@@ -1300,6 +1300,20 @@ if(ffhtf == true || ffctf == true){
 	
 	
     $("#add_new_rows").click(function() {
+       if (desig == 'advanced'){
+        $(".table100").each(function() {
+            var tds = '\t\t<tr>\n';
+            jQuery.each($('tr:last td', this), function() {
+                tds += '\t\t\t<td>' + $(this).html() + '</td>\n';
+            });
+            tds += '\t\t</tr>\n';
+            if ($('tbody', this).length > 0) {
+                $('tbody', this).append(tds);
+            } else {
+                $(this).append(tds);
+            }
+        });
+       }else{
         $(".awtable").each(function() {
             var tds = '\t\t<tr>\n';
             jQuery.each($('tr:last td', this), function() {
@@ -1312,6 +1326,7 @@ if(ffhtf == true || ffctf == true){
                 $(this).append(tds);
             }
         });
+      }
         var newCodeedit = document.getElementById("newCodeedit");
         var newTable = document.getElementById("newTable").innerHTML;
 
@@ -1324,14 +1339,27 @@ if(ffhtf == true || ffctf == true){
 
 
     $('#add_new_columns').click(function() {
+      
+      if (desig == 'advanced'){
+        $('.table100 thead tr').each(function() {
+            var lengthth = $('th', this).length;
+            $(this).append('\t\t\t<th class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
+        });
+        $('.table100 tbody tr').each(function() {
+            $(this).append('\t\t\t<td><br></td>\n');
+        });
+ 
+        
+        
+       }else{
         $('.awtable thead tr').each(function() {
             var lengthth = $('th', this).length;
             $(this).append('\t\t\t<th>Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.awtable tbody tr').each(function() {
-            $(this).append('\t\t\t<td><br></td>\n');
+            $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
         });
-
+      }
         var newCodeedit = document.getElementById("newCodeedit");
         var newTable = document.getElementById("newTable").innerHTML;
 
