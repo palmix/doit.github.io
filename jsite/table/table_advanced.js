@@ -1130,7 +1130,7 @@ if(ffhtf == true || ffctf == true){
       function updatePreview() {
         var previewFrame = document.getElementById('previewiframe');
         document.getElementById('newTable').style.display = 'block';
-        previewFrame.style.display = "block";
+        document.getElementById('previewidiv').style.display = 'block';
         
         var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
         preview.open();
@@ -1155,7 +1155,7 @@ if(ffhtf == true || ffctf == true){
 
 
             } else {
-			document.getElementById('previewiframe').style.display = 'block';
+			document.getElementById('previewidiv').style.display = 'block';
 			document.getElementById('newTable').style.display = 'none';
 
                 $('.btnadd').css('display', 'none');
@@ -1189,7 +1189,7 @@ if(ffhtf == true || ffctf == true){
           
           
           }else{
-			document.getElementById('previewiframe').style.display = 'none';
+			document.getElementById('previewidiv').style.display = 'none';
 			document.getElementById('newTable').style.display = 'block';
                if (editonline.checked === true) {
                 $('.btnadd').css('display', 'block');
