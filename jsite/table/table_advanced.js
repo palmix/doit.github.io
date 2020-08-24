@@ -904,6 +904,10 @@ if(ffhtf == true || ffctf == true){
             }
 
 
+            if (desig == 'advanced') {
+                    tableCSS = "";
+					
+            }
 
             //Start table
 
