@@ -208,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var newTableCode = "";
     var awHighlight = "";
     var awHighlightb = "";
+    var tablebsCSS = "";
 
     var textaligntable;
     var textaligncells;
@@ -689,7 +690,17 @@ if(ffhtf == true || ffctf == true){
 			}	
 	
 	
+             if (desig == 'advanced') {
+           
+ 			//Start css
+               tablebsCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
+               tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
+               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/util.css"/>'+ comscss;
+               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
+               tableCSS += ''+ comscss;					
 
+           
+             }else{
             tableCSS += '<style type="text/css">' + comscss;
 			
 			if (desig == 'custom' && (ffhtf == true || ffctf == true)){
@@ -898,7 +909,7 @@ if(ffhtf == true || ffctf == true){
                 tableCSS += tapcss+'}' + comscss;
             }
             tableCSS += '</style>\n';
-
+             }
             if (tableColor == "None" && desig == 'simple') {
                     tableCSS = "";
             }
@@ -906,15 +917,7 @@ if(ffhtf == true || ffctf == true){
 
 
             if (desig == 'advanced') {
-            
- 			//Start css
-                    tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
-                    tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
-                    tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/util.css"/>'+ comscss;
-                    tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
-                    tableCSS += ''+ comscss;					
-
-            
+  
             
             
              //Start table
@@ -974,7 +977,7 @@ if(ffhtf == true || ffctf == true){
             } else if (editonline.checked == true) {
 
                 tableHTML = "";
-                tableHTML += document.getElementById('newCodeedit').value;
+                tableHTML += document.getElementById('newCodeeditadv').value;
 
             } else {
                     tableHTML = '<table class="awtable">' + comsc;
@@ -986,7 +989,33 @@ if(ffhtf == true || ffctf == true){
 
             }
 
-			}else{
+			
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            }else{
             if (textforcellsshow.checked == false) {
                tableHTML = '<table class="awtable">' + comsc + '<tr>';
                 //Make header
@@ -1067,10 +1096,70 @@ if(ffhtf == true || ffctf == true){
             var btncopy = document.getElementById("buttoncopy");
             var text = document.getElementById("newCode").value;
 
+          if(desig == 'advanced'){
             if (editonline.checked === true) {
                 $('.btnadd').css('display', 'block');
+                var comsc = document.getElementById("comsc");
+                var newTable = document.getElementById("newTable");
+                var newCodeedit = document.getElementById("newCodeeditadv");
+                var newTableStyle = document.getElementById("newTableStyle");
 
 
+
+
+                var incode = newCodeedit.value;
+
+                newTable.innerHTML = incode + tableJS;
+                newTableStyle.innerHTML = tableCSS;
+                incode = incode.replace(' contenteditable="true"', '');
+
+                if (comsc.checked === true) {
+                    incode = incode.replace(/\t/g, '');
+                    incode = incode.replace(/\n/g, '');
+                } else {
+                    incode = incode;
+                }
+
+                btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
+                editor.setValue(tablebsCSS + tableCSS + incode + tableJS);
+
+
+
+
+            } else {
+                $('.btnadd').css('display', 'none');
+				document.getElementById("newTableStyle").innerHTML ='';
+                document.getElementById("newTable").innerHTML = tableCSS + tableHTML + tableJS + tableEND;
+                btncopy.setAttribute('data-clipboard-text', tablebsCSS + newTableCode);
+                document.getElementById('newCode').value = tablebsCSS + newTableCode;
+                editor.setValue(tablebsCSS + newTableCode);
+            }
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          }else{
+                        if (editonline.checked === true) {
+                $('.btnadd').css('display', 'block');
                 var comsc = document.getElementById("comsc");
                 var newTable = document.getElementById("newTable");
                 var newCodeedit = document.getElementById("newCodeedit");
@@ -1107,6 +1196,7 @@ if(ffhtf == true || ffctf == true){
                 document.getElementById('newCode').value = newTableCode;
                 editor.setValue(newTableCode);
             }
+          }
 
 
 
