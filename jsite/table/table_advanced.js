@@ -1172,7 +1172,7 @@ if(ffhtf == true || ffctf == true){
                 }
 
 
-incode = incode.replace(' ver3 ', vertablestyle);
+				incode = incode.replace('table100 ver1', 'table100 ' + vertablestyle);
 
 
 	   
