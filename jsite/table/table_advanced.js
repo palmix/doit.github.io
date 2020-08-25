@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var BorderStyle;
     var BorderWidth;	
     var switchtablecolor4hover;	
-    var vertablestyle = '';
+    var vertablestyle = 'ver3';
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
             var editonline = document.getElementById('editonline');
@@ -706,11 +706,10 @@ if(ffhtf == true || ffctf == true){
 	
 	
              if (desig == 'advanced') {
-			var vertablestyle = 'ver3';
-			vertablestyle = $('#VersionNum').children("option:selected").val();
+			vertablestyle = $("#VersionNum").val();
 
 				 
-				 
+                          
            var maXwidth = $('#Widthtableadv').val();
            var maXheight = $('#Heighttableadv').val();
            var Typewidth = $('#WidthtableadvType').val();
@@ -1173,7 +1172,7 @@ if(ffhtf == true || ffctf == true){
                 }
 
 
-
+incode = incode.replace(' ver3 ', vertablestyle);
 
 
 	   
