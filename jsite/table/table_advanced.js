@@ -1343,13 +1343,11 @@ if(ffhtf == true || ffctf == true){
        editor.setValue(tablebsCSS + tableCSS + newTable1 + tableJS);
 	   
   
-$(this).on("keyup", function() {
 
   var xc = $(this);
   
 makeTableCode()
 xc.focus();
-    });
 	
 	
 			   
