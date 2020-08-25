@@ -294,7 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 while (ii < awOldTextArr.length) {
                     iii = ii + 1;
  				awOldTextArr[i] = "<tr class='row100 body'>" + comsc + "<td class='cell100 column"+i+"'>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
-                    ii++;
                 }
 
 
