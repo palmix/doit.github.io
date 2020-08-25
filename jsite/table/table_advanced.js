@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //make table
             for (i = 0; i < awOldTextArr.length; i++) {
 							if (desig == "advanced") {
-						var nums = 0;
+						var nums = 1;
 						nums = i + 1;
                 awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td class='cell100 column"+nums+"'>");
 
