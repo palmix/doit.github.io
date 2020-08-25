@@ -695,8 +695,8 @@ if(ffhtf == true || ffctf == true){
              if (desig == 'advanced') {
            
  			//Start css
-               tablebsCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
-               tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
+               tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
+               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
                tableCSS += ''+ comscss;					
 
@@ -1129,10 +1129,11 @@ if(ffhtf == true || ffctf == true){
 
 
 
-       btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
-       editor.setValue(tablebsCSS + newTableCode);
+
 	   
       function updatePreview() {
+		btncopy.setAttribute('data-clipboard-text',newTableCode);
+       editor.setValue(newTableCode);
         var pvframe = document.getElementById('pvframe');
         var preview =  pvframe.contentDocument ||  pvframe.contentWindow.document;
         preview.open();
