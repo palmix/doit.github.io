@@ -1132,8 +1132,8 @@ if(ffhtf == true || ffctf == true){
 
 	   
       function updatePreview() {
-		btncopy.setAttribute('data-clipboard-text',newTableCode);
-       editor.setValue(newTableCode);
+       btncopy.setAttribute('data-clipboard-text',tableCSS + incode + tableJS);
+       editor.setValue(tableCSS + incode + tableJS);
         var pvframe = document.getElementById('pvframe');
         var preview =  pvframe.contentDocument ||  pvframe.contentWindow.document;
         preview.open();
