@@ -286,9 +286,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 awOldTextArr[i] = awOldTextArr[i].replace(/^\"/, "");
                 awOldTextArr[i] = awOldTextArr[i].replace(/"$/, "");
                 awOldTextArr[i] = awOldTextArr[i].replace(/'$/, "");
-				
+
 			if (desig == "advanced") {
-				awOldTextArr[i] = "<tr class='row100 body'>" + comsc + "<td class='cell100 column"+awOldTextArr.length+"'>" + (i++) + "</td>" + comsc + "</tr>";
+				var ii = 0;
+                var iii = 0;
+                var iiii = 0;
+                while (ii < awOldTextArr.length) {
+                    iii = ii + 1;
+				awOldTextArr[i] = "<tr class='row100 body'>" + comsc + "<td class='cell100 column"+awOldTextArr.length+"'>" + iii + "</td>" + comsc + "</tr>";
+				}
 			}else{
 				awOldTextArr[i] = "<tr>" + comsc + "<td>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
 			}
@@ -319,7 +325,13 @@ document.addEventListener('DOMContentLoaded', function() {
             //make table
             for (i = 0; i < awOldTextArr.length; i++) {
 							if (desig == "advanced") {
-                awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td class='cell100 column"+(i++)+"'>");
+				var ii = 0;
+                var iii = 0;
+                var iiii = 0;
+                while (ii < awOldTextArr.length) {
+                    iii = ii + 1;
+                awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td class='cell100 column"+iii+"'>");
+				}
 							}else{
                 awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td>");
 							}
