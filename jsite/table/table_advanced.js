@@ -1108,7 +1108,6 @@ if(ffhtf == true || ffctf == true){
                 var newTable = document.getElementById("newTable");
                 var newCodeedit = document.getElementById("newCodeeditadv");
                 var newTableStyle = document.getElementById("newTableStyle");
-                var previewiframe = document.getElementById("previewiframe");
 
 
 
@@ -1131,7 +1130,7 @@ if(ffhtf == true || ffctf == true){
 
 
       function updatePreview() {
-        var previewFrame = document.getElementById('previewiframe');
+        var pvframe = document.getElementById('pvframe');
 
 		var setifrscr = ''
 		setifrscr += '<script '
@@ -1145,7 +1144,7 @@ if(ffhtf == true || ffctf == true){
        editor.setValue(tablebsCSS + tableCSS + incode + tableJS);
 
 		
-        var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+        var preview =  pvframe.contentDocument ||  pvframe.contentWindow.document;
         preview.open();
         preview.write(editor.getValue()+setifrscr);
         preview.close();
