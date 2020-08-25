@@ -1348,7 +1348,7 @@ if(ffhtf == true || ffctf == true){
 //setup before functions
 var typingTimer;                //timer identifier
 var doneTypingInterval = 5000;  //time in ms, 5 second for example
-var $input = $('#myInput');
+var $input = $('#newTable1');
 
 //on keyup, start the countdown
 $input.on('keyup', function () {
