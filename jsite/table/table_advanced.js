@@ -259,9 +259,12 @@ document.addEventListener('DOMContentLoaded', function() {
 			var desig = $("input[name=desig]",desigs).val();
 			
 			if (desig == 'advanced') {
-			$('#textforcells').attr("disabil", "disabil");			
+			$('#textforcells').attr("disabled", "disabled");		
+			if ($('#textforcells').is(':checked')){
+$("#editonline").prop("checked", true);
+			}
 			}else{
-			$('#textforcells').removeAttr("disabil", "disabil");
+			$('#textforcells').removeAttr("disabled", "disabled");
 			}
 
             //Make variables
