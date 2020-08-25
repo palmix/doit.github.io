@@ -321,8 +321,22 @@ document.addEventListener('DOMContentLoaded', function() {
             //make table
             for (i = 0; i < awOldTextArr.length; i++) {
 							if (desig == "advanced") {
-								var ss = awOldTextArr.length;
-                awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td class='cell100 column"+(ss + 1)+"'>");
+function makeArray(count, content) {
+count = awOldTextArr.length+1;
+   var result = [];
+   if(typeof content == "function") {
+      for(var i = 1; i < count; i++) {
+         result.push(content(i));
+      }
+   } else {
+      for(var i = 0; i < count; i++) {
+         result.push(content);
+      }
+   }
+   return result;
+}
+								
+                awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td class='cell100 column"+makeArray(awOldTextArr.length, function(i) { return i; })+"'>");
 
 							}else{
                 awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td>");
