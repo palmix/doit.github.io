@@ -1342,14 +1342,33 @@ if(ffhtf == true || ffctf == true){
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + newTable1 + tableJS);
        editor.setValue(tablebsCSS + tableCSS + newTable1 + tableJS);
 	   
-  
+	   
+	   
+	   
+//setup before functions
+var typingTimer;                //timer identifier
+var doneTypingInterval = 5000;  //time in ms, 5 second for example
+var $input = $('#myInput');
 
-  var xc = $('td',this);
-  
-makeTableCode()
-xc.html().focus();
-alert(xc)	
-	
+//on keyup, start the countdown
+$input.on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown 
+$input.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+makeTableCode();
+}
+	   
+	   
+	   
+	   
 			   
     });
 	
