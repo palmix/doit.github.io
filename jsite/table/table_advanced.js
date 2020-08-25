@@ -1130,13 +1130,10 @@ if(ffhtf == true || ffctf == true){
 
 
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
-       editor.setValue(tablebsCSS + tableCSS + incode + tableJS);
+       editor.setValue(tablebsCSS + newTableCode);
 	   
       function updatePreview() {
         var pvframe = document.getElementById('pvframe');
-
-
-		
         var preview =  pvframe.contentDocument ||  pvframe.contentWindow.document;
         preview.open();
         preview.write('<div style="width:100%;max-width:1000px;margin:40px auto;">'+editor.getValue()+'</div>');
@@ -1166,8 +1163,9 @@ if(ffhtf == true || ffctf == true){
 			document.getElementById('PreviewTable').style.display = 'none';
                 $('.btnadd').css('display', 'none');
 				
-        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
-       editor.setValue(tablebsCSS + tableCSS + incode + tableJS);
+
+        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + tableHTML + tableJS);
+       editor.setValue(tablebsCSS + tableCSS + tableHTML + tableJS);
 	   
       function updatePreview() {
         var pvframe = document.getElementById('pvframe');
