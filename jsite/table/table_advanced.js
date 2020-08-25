@@ -1337,7 +1337,7 @@ if(ffhtf == true || ffctf == true){
 			$('.table100 tr').find('th:last-child , td:last-child').remove();
     	}
         var newCodeedit = document.getElementById("newCodeeditadv");
-        var newTable = document.getElementById("newTable").innerHTML;
+        var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
         }else{
         var lengthcollth = $('.awtable thead th').length;
@@ -1362,7 +1362,7 @@ if(ffhtf == true || ffctf == true){
 			$('.table100 tbody').find('tr:last-child').remove();
     	}
         var newCodeedit = document.getElementById("newCodeeditadv");
-        var newTable = document.getElementById("newTable").innerHTML;
+        var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
         }else{
         var lengthrowtd = $('.awtable tbody tr').length;
@@ -1397,7 +1397,7 @@ if(ffhtf == true || ffctf == true){
             }
         });
         var newCodeedit = document.getElementById("newCodeeditadv");
-        var newTable = document.getElementById("newTable").innerHTML;
+        var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
        }else{
         $(".awtable").each(function() {
@@ -1437,7 +1437,7 @@ if(ffhtf == true || ffctf == true){
             $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
         });
         var newCodeedit = document.getElementById("newCodeeditadv");
-        var newTable = document.getElementById("newTable").innerHTML;
+        var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
        }else{
         $('.awtable thead tr').each(function() {
