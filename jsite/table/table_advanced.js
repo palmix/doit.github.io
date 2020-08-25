@@ -1344,7 +1344,7 @@ if(ffhtf == true || ffctf == true){
 	   
   
 
-  var xc = $(this);
+  var xc = $('td',this);
   
 makeTableCode()
 xc.focus();
