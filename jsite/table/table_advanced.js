@@ -1348,7 +1348,7 @@ if(ffhtf == true || ffctf == true){
   
 makeTableCode()
 xc.focus();
-	
+alert(xc)	
 	
 			   
     });
