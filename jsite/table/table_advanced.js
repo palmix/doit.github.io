@@ -1156,16 +1156,28 @@ if(ffhtf == true || ffctf == true){
 
 
             } else {
-			document.getElementById('previewidiv').style.display = 'none';
-			document.getElementById('newTable').style.display = 'block';
+			document.getElementById('previewidiv').style.display = 'block';
+			document.getElementById('newTable').style.display = 'none';
 			document.getElementById('newTable1').style.display = 'none';
 			document.getElementById('PreviewTable').innerHTML = 'Preview';
                 $('.btnadd').css('display', 'none');
-				document.getElementById("newTableStyle").innerHTML ='';
-                document.getElementById("newTable").innerHTML = tableCSS + tableHTML + tableJS + tableEND;
-                btncopy.setAttribute('data-clipboard-text', tablebsCSS + newTableCode);
-                document.getElementById('newCode').value = tablebsCSS + newTableCode;
-                editor.setValue(tablebsCSS + newTableCode);
+				
+       var pvframe = document.getElementById('pvframe');
+       btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
+       editor.setValue(tablebsCSS + tableCSS + incode + tableJS);
+
+		btncopy.setAttribute('data-clipboard-text', tableCSS + tableHTML + tableJS + tableEND);
+        editor.setValue(tableCSS + tableHTML + tableJS + tableEND);
+				
+        var preview =  pvframe.contentDocument ||  pvframe.contentWindow.document;
+        preview.open();
+        preview.write('<div style="width:100%;max-width:1000px;margin:40px auto;">'+editor.getValue()+'</div>');
+        preview.close();
+      }
+      setTimeout(updatePreview, 300);
+				
+				
+
             }
           
           
