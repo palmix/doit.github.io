@@ -1341,7 +1341,17 @@ if(ffhtf == true || ffctf == true){
 
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + newTable1 + tableJS);
        editor.setValue(tablebsCSS + tableCSS + newTable1 + tableJS);
-      setTimeout(makeTableCode, 2000);
+	   
+  
+$(this).on("keyup", function() {
+
+  var xc = $(this);
+  
+makeTableCode()
+xc.focus();
+    });
+	
+	
 			   
     });
 	
