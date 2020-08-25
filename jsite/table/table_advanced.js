@@ -1325,6 +1325,7 @@ if(ffhtf == true || ffctf == true){
 
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + newTable1 + tableJS);
        editor.setValue(tablebsCSS + tableCSS + newTable1 + tableJS);
+	           makeTableCode();
     });
 	
 	
