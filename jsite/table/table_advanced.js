@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var BorderStyle;
     var BorderWidth;	
     var switchtablecolor4hover;	
-
+    var vertablestyle = '';
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
             var editonline = document.getElementById('editonline');
@@ -706,12 +706,43 @@ if(ffhtf == true || ffctf == true){
 	
 	
              if (desig == 'advanced') {
-           
+			var vertablestyle = 'ver3';
+			vertablestyle = $('#VersionNum').val();
+
+				 
+				 
+           var maXwidth = $('#Widthtableadv').val();
+           var maXheight = $('#Heighttableadv').val();
+           var Typewidth = $('#WidthtableadvType').val();
+
+             if (Typewidth == 'pixels') {
+				 Typewidth = 'px;';
+			 }else if (Typewidth == 'percent'){
+				 Typewidth = '%;';
+			 }
+				 
+				 
  			//Start css
                tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
-               tableCSS += ''+ comscss;					
+               tableCSS += '<style>'+ comscss;
+               tableCSS += '.wrap-table100 {'+ comscss;					
+               tableCSS += 'width:'maXwidth + Typewidth +'!important;'+ comscss;					
+               tableCSS += '}'+ comscss;					
+               tableCSS += '.table100-body {'+ comscss;					
+               tableCSS += 'max-height:' maXheight + 'px !important;'+ comscss;					
+               tableCSS += '}'+ comscss;					
+               tableCSS += '</style>'+ comscss;
+
+
+
+
+               tableCSS += ''+ comscss;
+
+
+
+
 
            
              }else{
@@ -936,7 +967,14 @@ if(ffhtf == true || ffctf == true){
             
              //Start table
             if (textforcellsshow.checked == false) {
-               tableHTML = '<div class="wrap-table100"><div class="table100 ver1 m-b-110"><div class="table100-head"><table><thead>' + comsc + '<tr class="row100 head">';
+				
+				
+               tableHTML = '<div class="wrap-table100">'+comsc;
+               tableHTML += '<div class="table100 '+vertablestyle+' m-b-110">'+comsc;
+               tableHTML += '<div class="table100-head">'+comsc;
+               tableHTML += '<table>'+comsc;
+               tableHTML += '<thead>' + comsc;
+               tableHTML += '<tr class="row100 head">'+comsc;
                 //Make header
                 var ii = 0;
                 var iii = 0;
