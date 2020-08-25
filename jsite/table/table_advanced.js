@@ -1308,7 +1308,24 @@ if(ffhtf == true || ffctf == true){
         editor.setValue(tableCSS + newTable);
     });
 	
-	
+    document.getElementById("newTable1").addEventListener("input", function() {
+        var comsc = document.getElementById("comsc");
+        var newTable1 = document.getElementById("newTable1").innerHTML;
+        var newCodeedit = document.getElementById("newCodeeditadv");
+        var btncopy = document.getElementById("buttoncopy");
+
+        newCodeedit.value = newTable1;
+        newTable1 = newTable1.replace('contenteditable="true"', '');
+        if (comsc.checked === true) {
+            newTable1 = newTable1.replace(/\t/g, '');
+            newTable1 = newTable1.replace(/\n/g, '');
+        } else {
+            newTable1 = newTable1;
+        }
+
+       btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + newTable1 + tableJS);
+       editor.setValue(tablebsCSS + tableCSS + newTable1 + tableJS);
+    });
 	
 	
 	    $('#remove_columns').click(function() {
