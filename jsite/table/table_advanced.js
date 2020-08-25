@@ -288,8 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 awOldTextArr[i] = awOldTextArr[i].replace(/'$/, "");
 
 			if (desig == "advanced") {
-                    iii = i + 1;
- 				awOldTextArr[i] = "<tr class='row100 body'>" + comsc + "<td class='cell100 column"+iii+"'>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
+ 				awOldTextArr[i] = "<tr class='row100 body'>" + comsc + "<td class='cell100 column"+i+1+"'>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
 
 
 			}else{
