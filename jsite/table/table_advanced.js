@@ -1137,7 +1137,7 @@ if(ffhtf == true || ffctf == true){
 		
         var preview =  pvframe.contentDocument ||  pvframe.contentWindow.document;
         preview.open();
-        preview.write(editor.getValue());
+        preview.write('<div style="width:100%;max-width:1000px;margin:40px auto;">'+editor.getValue()+'</div>');
         preview.close();
       }
       setTimeout(updatePreview, 300);
