@@ -1140,7 +1140,7 @@ if(ffhtf == true || ffctf == true){
         preview.write('<div style="width:100%;max-width:1000px;margin:40px auto;">'+editor.getValue()+'</div>');
         preview.close();
       }
-      setTimeout(updatePreview, 2000);
+      setTimeout(updatePreview, 300);
       
       
 
@@ -1341,7 +1341,8 @@ if(ffhtf == true || ffctf == true){
 
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + newTable1 + tableJS);
        editor.setValue(tablebsCSS + tableCSS + newTable1 + tableJS);
-	           makeTableCode();
+      setTimeout(makeTableCode, 2000);
+			   
     });
 	
 	
