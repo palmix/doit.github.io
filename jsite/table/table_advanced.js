@@ -707,7 +707,7 @@ if(ffhtf == true || ffctf == true){
 	
              if (desig == 'advanced') {
 			var vertablestyle = 'ver3';
-			vertablestyle = $('#VersionNum').val();
+			vertablestyle = $('#VersionNum').children("option:selected").val();
 
 				 
 				 
