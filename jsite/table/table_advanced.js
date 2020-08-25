@@ -1131,22 +1131,13 @@ if(ffhtf == true || ffctf == true){
 
       function updatePreview() {
         var pvframe = document.getElementById('pvframe');
-
-		var setifrscr = ''
-		setifrscr += '<script '
-		setifrscr += 'type="text/javascript" '
-		setifrscr += 'src="https://get.doitf.com/iframe-resizer/iframeResizer-contentWindow.min.js" '
-		setifrscr += 'defer'
-		setifrscr += '><\/script>'
-		
-		
        btncopy.setAttribute('data-clipboard-text',tablebsCSS + tableCSS + incode + tableJS);
        editor.setValue(tablebsCSS + tableCSS + incode + tableJS);
 
 		
         var preview =  pvframe.contentDocument ||  pvframe.contentWindow.document;
         preview.open();
-        preview.write(editor.getValue()+setifrscr);
+        preview.write(editor.getValue());
         preview.close();
       }
       setTimeout(updatePreview, 300);
