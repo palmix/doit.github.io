@@ -257,6 +257,13 @@ document.addEventListener('DOMContentLoaded', function() {
             var editonline = document.getElementById('editonline');
 			var desigs = $(".desig.active");
 			var desig = $("input[name=desig]",desigs).val();
+			
+			if (desig == 'advanced') {
+			$('#textforcells').attr("disabil", "disabil");			
+			}else{
+			$('#textforcells').removeAttr("disabil", "disabil");
+			}
+
             //Make variables
             var lineSep = document.getElementById("lineSep").value;
             var CustomSep = document.getElementById("CustomSep").value;
@@ -287,11 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 awOldTextArr[i] = awOldTextArr[i].replace(/"$/, "");
                 awOldTextArr[i] = awOldTextArr[i].replace(/'$/, "");
 
-			if (desig == "advanced") {
- 				awOldTextArr[i] = "<tr class='row100 body'>" + comsc + "<td class='cell100 column1'>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
-
-
-			}else{
+			if (desig !== "advanced") {
 				awOldTextArr[i] = "<tr>" + comsc + "<td>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
 			}
             }
@@ -320,14 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             //make table
             for (i = 0; i < awOldTextArr.length; i++) {
-							if (desig == "advanced") {
-for (var e = 1; e < awOldTextArr.length; e++)
-{
-   e = e +1;
-
-                awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td class='cell100 column"+e+"'>");
-}
-							}else{
+						if (desig !== "advanced") {
                 awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td>");
 							}
                 awNewText = awNewText + awOldTextArr[i] + comsc;
@@ -995,12 +991,7 @@ if(ffhtf == true || ffctf == true){
                 tableHTML += document.getElementById('newCodeeditadv').value;
 
             } else {
-                    tableHTML = '<table class="awtable">' + comsc;
 
-                //make rows
-
-                tableHTML += awNewText + comsc;
-                tableHTML += "</table>" + comsc;
 
             }
 
