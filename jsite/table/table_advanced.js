@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
+            var editonline = document.getElementById('editonline');
 			var desigs = $(".desig.active");
 			var desig = $("input[name=desig]",desigs).val();
             //Make variables
@@ -285,7 +286,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 awOldTextArr[i] = awOldTextArr[i].replace(/^\"/, "");
                 awOldTextArr[i] = awOldTextArr[i].replace(/"$/, "");
                 awOldTextArr[i] = awOldTextArr[i].replace(/'$/, "");
+				
+			if (desig == "advanced") {
+				awOldTextArr[i] = "<tr class='row100 body'>" + comsc + "<td class='cell100 column"+i+">" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
+			}else{
 				awOldTextArr[i] = "<tr>" + comsc + "<td>" + awOldTextArr[i] + "</td>" + comsc + "</tr>";
+			}
             }
             //Separators
             if (lineSep == "comma") {
@@ -312,12 +318,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             //make table
             for (i = 0; i < awOldTextArr.length; i++) {
+							if (desig == "advanced") {
+                awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td class='cell100 column"+i+">");
+							}else{
                 awOldTextArr[i] = awOldTextArr[i].replace(new RegExp(linesep, "gi"), "</td>" + comsc + "<td>");
+							}
                 awNewText = awNewText + awOldTextArr[i] + comsc;
             }
-			var desigs = $(".desig.active");
-			var desig = $("input[name=desig]",desigs).val();
-            var editonline = document.getElementById('editonline');
             bordershow = document.getElementById("bordershow");
             bordercells = document.getElementById("bordercells");
             bordertables = document.getElementById("bordertables");
@@ -1345,23 +1352,16 @@ if(ffhtf == true || ffctf == true){
 	   
 	   
 	   
-//setup before functions
-var typingTimer;                //timer identifier
-var doneTypingInterval = 5000;  //time in ms, 5 second for example
+var typingTimer; 
+var doneTypingInterval = 5000;
 var $input = $('#newTable1');
-
-//on keyup, start the countdown
 $input.on('keyup', function () {
   clearTimeout(typingTimer);
   typingTimer = setTimeout(doneTyping, doneTypingInterval);
 });
-
-//on keydown, clear the countdown 
 $input.on('keydown', function () {
   clearTimeout(typingTimer);
 });
-
-//user is "finished typing," do something
 function doneTyping () {
 makeTableCode();
 }
