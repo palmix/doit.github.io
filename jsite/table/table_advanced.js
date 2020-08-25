@@ -728,10 +728,10 @@ if(ffhtf == true || ffctf == true){
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
                tableCSS += '<style>'+ comscss;
                tableCSS += '.wrap-table100 {'+ comscss;					
-               tableCSS += 'width:'maXwidth + Typewidth +'!important;'+ comscss;					
+               tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;					
                tableCSS += '}'+ comscss;					
                tableCSS += '.table100-body {'+ comscss;					
-               tableCSS += 'max-height:' maXheight + 'px !important;'+ comscss;					
+               tableCSS += 'max-height:'+maXheight + 'px !important;'+ comscss;					
                tableCSS += '}'+ comscss;					
                tableCSS += '</style>'+ comscss;
 
