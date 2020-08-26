@@ -1020,9 +1020,9 @@ if(ffhtf == true || ffctf == true){
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
-                        tableHTML += '<th class="cell100 column' + iii + '" data-column="column' + iii + '">HEADER ' + iii + '</th>' + comsc;
+                        tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '">HEADER ' + iii + '</th>' + comsc;
                     } else {
-                        tableHTML += '<th class="cell100 column' + iii + '" data-column="column' + iii + '"> </th>' + comsc;
+                        tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '"> </th>' + comsc;
                     }
                     ii++;
                 }
@@ -1065,9 +1065,9 @@ if(ffhtf == true || ffctf == true){
                         iii = i + 1;
                         iiii = ii + 1;
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'" data-column="column'+iiii+'">Cell:' + iii + ' Row:' + iiii + '</td>' + comsc;
+                            tableHTML = tableHTML + '<td class="column100 column'+iiii+'" data-column="column'+iiii+'">Cell:' + iii + ' Row:' + iiii + '</td>' + comsc;
                         } else {
-                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'" data-column="column'+iiii+'"> </td>' + comsc;
+                            tableHTML = tableHTML + '<td class="column100 column'+iiii+'" data-column="column'+iiii+'"> </td>' + comsc;
                         }
                         ii++;
                     }
@@ -1630,20 +1630,32 @@ $('#remove_columns').click(function() {
     
       if (desig == 'advanced'){
         var lengthth = $('.table100 thead tr th').length;
+		
+		
+		
+			  if (StyleMode == 'FixedHeader') {
         $('.table100 thead tr').each(function() {
             $(this).append('\t\t\t<th class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.table100 tbody tr').each(function() {
             $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
         });
+		  var newCodeedit = document.getElementById("newCodeeditadv");
 
-			  if (StyleMode == 'FixedHeader') {
-        var newCodeedit = document.getElementById("newCodeeditadv");
 			  }else if(StyleMode == 'VAHHighlight'){
+        $('.table100 thead tr').each(function() {
+            $(this).append('\t\t\t<th class="column100 column' + (lengthth + 1) + '" data-column="column4' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
+        });
+        $('.table100 tbody tr').each(function() {
+            $(this).append('\t\t\t<td class="column100 column' + (lengthth + 1) + '" data-column="column4' + (lengthth + 1) + '"><br></td>\n');
+        });
+
         var newCodeedit = document.getElementById("newCodeeditadv2");
 				}
+
         var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
+		
        }else{
         $('.awtable thead tr').each(function() {
             var lengthth = $('th', this).length;
