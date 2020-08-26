@@ -709,7 +709,12 @@ if(ffhtf == true || ffctf == true){
              if (desig == 'advanced') {
 			vertablestyle = $("#VersionNum").val();
 			  if (StyleMode == 'FixedHeader') {
-			$("#VersionNum option[value='ver6']").each(function(){$(this).remove()});
+			if($("#VersionNum option[value='ver6']").length){
+			$("#VersionNum option[value='ver6']").each(function(){
+				$(this).remove()
+				});
+				$("#VersionNum").val('3');
+			}
 			$("#changetextinputgroupwh").html("Width & Height");
 			$("#changetextWidthtableadv").html("Width");
 			$("#changetextHeighttableadv").html("Height");
