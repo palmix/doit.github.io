@@ -1266,7 +1266,7 @@ if(ffhtf == true || ffctf == true){
 
 
 				incode = incode.replace('table100 ver3', 'table100 ' + vertablestyle);
-
+				incode = incode.replace('data-vertable="ver3"', 'data-vertable="'+vertablestyle+'"');
 
 	   
       function updatePreview() {
