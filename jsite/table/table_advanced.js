@@ -710,7 +710,7 @@ if(ffhtf == true || ffctf == true){
 			if (editonline.checked == true) {
 			var thlength = $('#newTable1 .table100-head th').length;
 			}else{
-			var thlength = $("#VersionNum").val();
+			var thlength = $("#sizeCols").val();
 			}
 			thlength = (100/thlength);
 			thlength = thlength.toFixed(0);
