@@ -708,8 +708,10 @@ if(ffhtf == true || ffctf == true){
              if (desig == 'advanced') {
 			vertablestyle = $("#VersionNum").val();
 
-				 
-                          
+			var thlength = $('#newTable1 .table100-head th').length;
+			thlength = (thlength/100);
+			var columnnum = '.cell100{width:'+thlength+'%!important;}'
+            thlength
            var maXwidth = $('#Widthtableadv').val();
            var maXheight = $('#Heighttableadv').val();
            var Typewidth = $('#WidthtableadvType').val();
@@ -719,8 +721,7 @@ if(ffhtf == true || ffctf == true){
 			 }else if (Typewidth == 'percent'){
 				 Typewidth = '%;';
 			 }
-				 
-				 
+
  			//Start css
                tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
@@ -731,7 +732,8 @@ if(ffhtf == true || ffctf == true){
                tableCSS += '}'+ comscss;					
                tableCSS += '.table100-body {'+ comscss;					
                tableCSS += 'max-height:'+maXheight + 'px !important;'+ comscss;					
-               tableCSS += '}'+ comscss;					
+               tableCSS += '}'+ comscss;
+               tableCSS += 'columnnum'+ comscss;				   
                tableCSS += '</style>'+ comscss;
 
 
