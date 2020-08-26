@@ -255,6 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
             var editonline = document.getElementById('editonline');
+			var StyleMode = $("#StyleMode").val();
 			var desigs = $(".desig.active");
 			var desig = $("input[name=desig]",desigs).val();
 			
@@ -707,6 +708,13 @@ if(ffhtf == true || ffctf == true){
 	
              if (desig == 'advanced') {
 			vertablestyle = $("#VersionNum").val();
+			
+			  if (StyleMode == 'FixedHeader') {
+				$("#VersionNum").val("ver6").addAttr('disabled');
+			  }else if(StyleMode == 'VAHHighlight'){
+				$("#VersionNum").val("ver6").removeAttr('disabled');
+			  }
+			
 			if (editonline.checked == true) {
 			var thlength = $('#newTable1 .table100-head th').length;
 			}else{
@@ -729,7 +737,12 @@ if(ffhtf == true || ffctf == true){
  			//Start css
                tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
+			 if (StyleMode == 'FixedHeader') {
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
+			 }else if(StyleMode == 'VAHHighlight'){
+               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/mainv2.css"/>'+ comscss;
+			 }
+			if (StyleMode == 'FixedHeader') {
                tableCSS += '<style>'+ comscss;
                tableCSS += '.wrap-table100 {'+ comscss;					
                tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;					
@@ -739,9 +752,9 @@ if(ffhtf == true || ffctf == true){
                tableCSS += '}'+ comscss;
                tableCSS += columnnum+ comscss;				   
                tableCSS += '</style>'+ comscss;
+			 }else if(StyleMode == 'VAHHighlight'){
 
-
-
+			 }
 
                tableCSS += ''+ comscss;
 
@@ -968,7 +981,7 @@ if(ffhtf == true || ffctf == true){
 
             if (desig == 'advanced') {
   
-            
+
             
              //Start table
             if (textforcellsshow.checked == false) {
@@ -976,14 +989,21 @@ if(ffhtf == true || ffctf == true){
 				
                tableHTML = '<div class="wrap-table100">'+comsc;
                tableHTML += '<div class="table100 '+vertablestyle+' mx-auto my-3">'+comsc;
+			  if (StyleMode == 'FixedHeader') {
                tableHTML += '<div class="table100-head">'+comsc;
                tableHTML += '<table>'+comsc;
+			  }else if(StyleMode == 'VAHHighlight'){
+               tableHTML += '<table data-vertable="'+vertablestyle+'">'+comsc;
+			  }
                tableHTML += '<thead>' + comsc;
                tableHTML += '<tr class="row100 head">'+comsc;
                 //Make header
                 var ii = 0;
                 var iii = 0;
                 var iiii = 0;
+				
+				
+			  if (StyleMode == 'FixedHeader') {
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
@@ -993,9 +1013,30 @@ if(ffhtf == true || ffctf == true){
                     }
                     ii++;
                 }
+
+			  }else if(StyleMode == 'VAHHighlight'){
+                while (ii < sizeCols) {
+                    iii = ii + 1;
+                    if (tableInfo.checked == true) {
+                        tableHTML += '<th class="cell100 column' + iii + '" data-column="column' + iii + '">HEADER ' + iii + '</th>' + comsc;
+                    } else {
+                        tableHTML += '<th class="cell100 column' + iii + '" data-column="column' + iii + '"> </th>' + comsc;
+                    }
+                    ii++;
+                }
+				}
+
+			  if (StyleMode == 'FixedHeader') {
                 tableHTML += '</tr></thead></table></div>' + comsc;
-                //make rows
                 tableHTML += '<div class="table100-body js-pscroll"> <table> <tbody>' + comsc;
+
+			  }else if(StyleMode == 'VAHHighlight'){
+                tableHTML += '</tr></thead>' + comsc;
+                tableHTML += '<tbody>' + comsc;
+				}
+
+
+			  if (StyleMode == 'FixedHeader') {
                 var i = 0;
                 while (i < sizeRows - 1) {
                     tableHTML = tableHTML + '<tr class="row100 body">' + comsc;
@@ -1003,9 +1044,6 @@ if(ffhtf == true || ffctf == true){
                     while (ii < sizeCols) {
                         iii = i + 1;
                         iiii = ii + 1;
-
-
-
                         if (tableInfo.checked == true) {
                             tableHTML = tableHTML + '<td class="cell100 column'+iiii+'">Cell:' + iii + ' Row:' + iiii + '</td>' + comsc;
                         } else {
@@ -1016,9 +1054,39 @@ if(ffhtf == true || ffctf == true){
                     tableHTML = tableHTML + "</tr>" + comsc;
                     i++;
                 }
+			  }else if(StyleMode == 'VAHHighlight'){
+                var i = 0;
+                while (i < sizeRows - 1) {
+                    tableHTML = tableHTML + '<tr class="row100">' + comsc;
+                    var ii = 0;
+                    while (ii < sizeCols) {
+                        iii = i + 1;
+                        iiii = ii + 1;
+                        if (tableInfo.checked == true) {
+                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'" data-column="column'+iiii+'">Cell:' + iii + ' Row:' + iiii + '</td>' + comsc;
+                        } else {
+                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'" data-column="column'+iiii+'"> </td>' + comsc;
+                        }
+                        ii++;
+                    }
+                    tableHTML = tableHTML + "</tr>" + comsc;
+                    i++;
+                }
+				}
+
+				
+				
+				
+				
+			  if (StyleMode == 'FixedHeader') {
                 tableHTML += "</tbody></table></div></div>" + comsc;
-                
+			  }else if(StyleMode == 'VAHHighlight'){
+                tableHTML += "</tbody></table></div></div>" + comsc;
+				}
+
+
             tableJS = '';
+			  if (StyleMode == 'FixedHeader') {
             tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/jquery/jquery-3.2.1.min.js"><\/script>' + comsc;
             tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js"><\/script>' + comsc;
             tableJS += '<\script>' + comsc;
@@ -1029,13 +1097,25 @@ if(ffhtf == true || ffctf == true){
             tableJS += tapcss+tapcss+'})' + comsc;
             tableJS += tapcss+'});' + comsc;
             tableJS += '<\/script>' + comsc;
+			  }else if(StyleMode == 'VAHHighlight'){
+            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/jquery/jquery-3.2.1.min.js"><\/script>' + comsc;
+            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/js/main.js"><\/script>' + comsc;
+				}
+				
+
+
             tableJS += '' + comsc;
                 
             } else if (editonline.checked == true) {
 
                 tableHTML = "";
+
+			  if (StyleMode == 'FixedHeader') {
                 tableHTML += document.getElementById('newCodeeditadv').value;
 
+			  }else if(StyleMode == 'VAHHighlight'){
+                tableHTML += document.getElementById('newCodeeditadv2').value;
+				}
             } else {
 
 
@@ -1158,7 +1238,12 @@ if(ffhtf == true || ffctf == true){
                 $('.btnadd').css('display', 'block');
                 var comsc = document.getElementById("comsc");
                 var newTable1 = document.getElementById("newTable1");
+
+			  if (StyleMode == 'FixedHeader') {
                 var newCodeedit = document.getElementById("newCodeeditadv");
+			  }else if(StyleMode == 'VAHHighlight'){
+                var newCodeedit = document.getElementById("newCodeeditadv2");
+				}
                 var newTableStyle = document.getElementById("newTableStyle");
 
 
@@ -1376,9 +1461,14 @@ if(ffhtf == true || ffctf == true){
     });
 	
     document.getElementById("newTable1").addEventListener("input", function() {
+			var StyleMode = $("#StyleMode").val();
         var comsc = document.getElementById("comsc");
         var newTable1 = document.getElementById("newTable1").innerHTML;
+			  if (StyleMode == 'FixedHeader') {
         var newCodeedit = document.getElementById("newCodeeditadv");
+			  }else if(StyleMode == 'VAHHighlight'){
+        var newCodeedit = document.getElementById("newCodeeditadv2");
+				}
         var btncopy = document.getElementById("buttoncopy");
 
         newCodeedit.value = newTable1;
@@ -1417,7 +1507,8 @@ makeTableCode();
     });
 	
 	
-	    $('#remove_columns').click(function() {
+$('#remove_columns').click(function() {
+	var StyleMode = $("#StyleMode").val();
     var desigs = $(".desig.active");
 	var desig = $("input[name=desig]",desigs).val();
         if (desig == 'advanced'){
@@ -1425,7 +1516,12 @@ makeTableCode();
 		if(lengthcollth > 1){
 			$('.table100 tr').find('th:last-child , td:last-child').remove();
     	}
+
+			  if (StyleMode == 'FixedHeader') {
         var newCodeedit = document.getElementById("newCodeeditadv");
+			  }else if(StyleMode == 'VAHHighlight'){
+        var newCodeedit = document.getElementById("newCodeeditadv2");
+				}
         var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
         }else{
@@ -1443,6 +1539,7 @@ makeTableCode();
     });
 
     $('#remove_rows').click(function() {
+	var StyleMode = $("#StyleMode").val();
     var desigs = $(".desig.active");
 	var desig = $("input[name=desig]",desigs).val();
         if (desig == 'advanced'){
@@ -1450,7 +1547,12 @@ makeTableCode();
 		if(lengthrowtd > 1){
 			$('.table100 tbody').find('tr:last-child').remove();
     	}
+			  if (StyleMode == 'FixedHeader') {
         var newCodeedit = document.getElementById("newCodeeditadv");
+			  }else if(StyleMode == 'VAHHighlight'){
+        var newCodeedit = document.getElementById("newCodeeditadv2");
+				}
+
         var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
         }else{
@@ -1470,6 +1572,7 @@ makeTableCode();
 	
 	
     $("#add_new_rows").click(function() {
+	var StyleMode = $("#StyleMode").val();
     var desigs = $(".desig.active");
 	var desig = $("input[name=desig]",desigs).val();
        if (desig == 'advanced'){
@@ -1485,7 +1588,12 @@ makeTableCode();
                 $(this).append(tds);
             }
         });
+			  if (StyleMode == 'FixedHeader') {
         var newCodeedit = document.getElementById("newCodeeditadv");
+			  }else if(StyleMode == 'VAHHighlight'){
+        var newCodeedit = document.getElementById("newCodeeditadv2");
+				}
+
         var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
        }else{
@@ -1514,6 +1622,7 @@ makeTableCode();
 
 
     $('#add_new_columns').click(function() {
+	var StyleMode = $("#StyleMode").val();
 	var desigs = $(".desig.active");
 	var desig = $("input[name=desig]",desigs).val();
     
@@ -1525,7 +1634,12 @@ makeTableCode();
         $('.table100 tbody tr').each(function() {
             $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
         });
+
+			  if (StyleMode == 'FixedHeader') {
         var newCodeedit = document.getElementById("newCodeeditadv");
+			  }else if(StyleMode == 'VAHHighlight'){
+        var newCodeedit = document.getElementById("newCodeeditadv2");
+				}
         var newTable = document.getElementById("newTable1").innerHTML;
         newCodeedit.value = newTable;
        }else{
