@@ -707,9 +707,11 @@ if(ffhtf == true || ffctf == true){
 	
              if (desig == 'advanced') {
 			vertablestyle = $("#VersionNum").val();
-
+			if (editonline.checked == true) {
 			var thlength = $('#newTable1 .table100-head th').length;
-			            alert(thlength);
+			}else{
+			var thlength = $("#VersionNum").val();
+			}
 			thlength = (100/thlength);
 			thlength = thlength.toFixed(0);
 			var columnnum = '.cell100{width:'+thlength+'%!important;}'
