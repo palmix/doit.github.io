@@ -1162,7 +1162,10 @@ if(ffhtf == true || ffctf == true){
 
 
                 var incode = newCodeedit.value;
-
+			var thlength = $('#newTable1 .table100-head th').length;
+			thlength = (100/thlength);
+			thlength = thlength.toFixed(0);
+			var columnnum = '.cell100{width:'+thlength+'%!important;}'
                 newTable1.innerHTML = incode;
                 newTableStyle.innerHTML = '<style type="text/css">.table100 table{color:#EFEFEF;width:100%;border-width:1px;border-color:#A1A1A1;border-collapse:collapse;}.table100 th{font-family:initial;color:#EFEFEF;font-size:13px;background-color:#5F5F5F;border-width:1px;border-style:solid;border-color:#A1A1A1;padding: 8px;}.awtable tr{background-color:#F5F5F5;}.table100 td{font-size:12px;font-family:initial;border-width:1px;border-style:solid;border-color:#A1A1A1;padding:8px;color:#3E3E3E;}.table100 tr:hover,.table100 tr:nth-of-type(odd):hover{background-color:#A3A3A3;}.table100 tr:nth-of-type(odd){background-color:#CACACA;}+'columnnum+'</style>';
                 incode = incode.replace(' contenteditable="true"', '');
