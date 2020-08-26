@@ -1644,10 +1644,10 @@ $('#remove_columns').click(function() {
 
 			  }else if(StyleMode == 'VAHHighlight'){
         $('.table100 thead tr').each(function() {
-            $(this).append('\t\t\t<th class="column100 column' + (lengthth + 1) + '" data-column="column4' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
+            $(this).append('\t\t\t<th class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.table100 tbody tr').each(function() {
-            $(this).append('\t\t\t<td class="column100 column' + (lengthth + 1) + '" data-column="column4' + (lengthth + 1) + '"><br></td>\n');
+            $(this).append('\t\t\t<td class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '"><br></td>\n');
         });
 
         var newCodeedit = document.getElementById("newCodeeditadv2");
