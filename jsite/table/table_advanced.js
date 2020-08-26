@@ -709,7 +709,8 @@ if(ffhtf == true || ffctf == true){
 			vertablestyle = $("#VersionNum").val();
 
 			var thlength = $('#newTable1 .table100-head th').length;
-			thlength = (thlength/100);
+			thlength = (100/thlength);
+			thlength = thlength.toFixed(0);
 			var columnnum = '.cell100{width:'+thlength+'%!important;}'
             thlength
            var maXwidth = $('#Widthtableadv').val();
