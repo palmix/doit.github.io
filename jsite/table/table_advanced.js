@@ -733,7 +733,7 @@ if(ffhtf == true || ffctf == true){
                tableCSS += '.table100-body {'+ comscss;					
                tableCSS += 'max-height:'+maXheight + 'px !important;'+ comscss;					
                tableCSS += '}'+ comscss;
-               tableCSS += 'columnnum'+ comscss;				   
+               tableCSS += columnnum+ comscss;				   
                tableCSS += '</style>'+ comscss;
 
 
@@ -1174,7 +1174,7 @@ if(ffhtf == true || ffctf == true){
                 }
 
 
-				incode = incode.replace('table100 ver1', 'table100 ' + vertablestyle);
+				incode = incode.replace('table100 ver3', 'table100 ' + vertablestyle);
 
 
 	   
