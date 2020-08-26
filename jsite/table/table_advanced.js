@@ -975,7 +975,7 @@ if(ffhtf == true || ffctf == true){
 				
 				
                tableHTML = '<div class="wrap-table100">'+comsc;
-               tableHTML += '<div class="table100 '+vertablestyle+' m-b-110">'+comsc;
+               tableHTML += '<div class="table100 '+vertablestyle+' mx-auto my-3">'+comsc;
                tableHTML += '<div class="table100-head">'+comsc;
                tableHTML += '<table>'+comsc;
                tableHTML += '<thead>' + comsc;
