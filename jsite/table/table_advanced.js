@@ -738,8 +738,8 @@ if(ffhtf == true || ffctf == true){
 
  			//Start css
                tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
-               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
 			 if (StyleMode == 'FixedHeader') {
+               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
 			 }else if(StyleMode == 'VAHHighlight'){
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/mainv2.css"/>'+ comscss;
