@@ -987,7 +987,7 @@ if(ffhtf == true || ffctf == true){
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
-                        tableHTML += '<th class="cell100 column' + iii + '">عنوان ' + iii + '</th>' + comsc;
+                        tableHTML += '<th class="cell100 column' + iii + '">HEADER ' + iii + '</th>' + comsc;
                     } else {
                         tableHTML += '<th class="cell100 column' + iii + '"> </th>' + comsc;
                     }
@@ -1007,7 +1007,7 @@ if(ffhtf == true || ffctf == true){
 
 
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'">صف:' + iii + ' عمود:' + iiii + '</td>' + comsc;
+                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'">Cell:' + iii + ' Row:' + iiii + '</td>' + comsc;
                         } else {
                             tableHTML = tableHTML + '<td class="cell100 column'+iiii+'"> </td>' + comsc;
                         }
@@ -1077,7 +1077,7 @@ if(ffhtf == true || ffctf == true){
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
-                        tableHTML += '<th>عنوان ' + iii + '</th>' + comsc;
+                        tableHTML += '<th>HEADER ' + iii + '</th>' + comsc;
                     } else {
                         tableHTML += '<th> </th>' + comsc;
                     }
@@ -1096,7 +1096,7 @@ if(ffhtf == true || ffctf == true){
 
 
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + "<td>صف:" + iii + " عمود:" + iiii + "</td>" + comsc;
+                            tableHTML = tableHTML + "<td>Cell:" + iii + " Row:" + iiii + "</td>" + comsc;
                         } else {
                             tableHTML = tableHTML + "<td> </td>" + comsc;
                         }
