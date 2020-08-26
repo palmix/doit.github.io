@@ -710,7 +710,13 @@ if(ffhtf == true || ffctf == true){
 			vertablestyle = $("#VersionNum").val();
 			  if (StyleMode == 'FixedHeader') {
 			$("#VersionNum option[value='ver6']").each(function(){$(this).remove()});
+			$("#changetextinputgroupwh").html("Width & Height");
+			$("#changetextWidthtableadv").html("Width");
+			$("#changetextHeighttableadv").html("Height");
 			  }else if(StyleMode == 'VAHHighlight'){
+			$("#changetextinputgroupwh").html("Width");
+			$("#changetextWidthtableadv").html("Table Width");
+			$("#changetextHeighttableadv").html("column 1");
 			if($("#VersionNum option[value='ver6']").length){}
 			else{
 				$('#VersionNum').append("<option value='ver6'>V 6.0</option>");
@@ -755,7 +761,14 @@ if(ffhtf == true || ffctf == true){
                tableCSS += columnnum+ comscss;				   
                tableCSS += '</style>'+ comscss;
 			 }else if(StyleMode == 'VAHHighlight'){
-
+               tableCSS += '<style>'+ comscss;
+               tableCSS += '.wrap-table100 {'+ comscss;					
+               tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;					
+               tableCSS += '}'+ comscss;					
+               tableCSS += '.column100.column1{'+ comscss;					
+               tableCSS += 'width:'+maXheight + 'px !important;'+ comscss;					
+               tableCSS += '}'+ comscss;
+               tableCSS += '</style>'+ comscss;
 			 }
 
                tableCSS += ''+ comscss;
