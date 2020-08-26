@@ -708,11 +708,10 @@ if(ffhtf == true || ffctf == true){
 	
              if (desig == 'advanced') {
 			vertablestyle = $("#VersionNum").val();
-			
 			  if (StyleMode == 'FixedHeader') {
-				$("#VersionNum").val("ver6").addAttr('disabled');
+			$("#VersionNum option[value='ver6']").each(function(){$(this).remove()});
 			  }else if(StyleMode == 'VAHHighlight'){
-				$("#VersionNum").val("ver6").removeAttr('disabled');
+			$('#VersionNum').append("<option value='ver6'>V 6.0</option>");
 			  }
 			
 			if (editonline.checked == true) {
