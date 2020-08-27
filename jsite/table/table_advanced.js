@@ -2687,7 +2687,7 @@ var desig = $("input[name=desig]",desigs).val();
         $('#advanceddesign').collapse('show');
         $('#tableDesign').attr("disabled", 'disabled');
         $('#tableColor').attr("disabled", "disabled");
-
+		document.getElementById('editonline').checked = true;
     }else{
        $('#basicdesign').collapse('hide');
         $('#collapseadvdesign').collapse('hide');
