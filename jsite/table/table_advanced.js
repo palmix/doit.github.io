@@ -2687,7 +2687,10 @@ var desig = $("input[name=desig]",desigs).val();
         $('#advanceddesign').collapse('show');
         $('#tableDesign').attr("disabled", 'disabled');
         $('#tableColor').attr("disabled", "disabled");
-		document.getElementById('numofcells').checked = true;
+		document.getElementById('editonline').checked = true;
+        $('#alerteditonline').collapse('show');
+        $('#textforcellscollapse').collapse('hide');
+
     }else{
        $('#basicdesign').collapse('hide');
         $('#collapseadvdesign').collapse('hide');
