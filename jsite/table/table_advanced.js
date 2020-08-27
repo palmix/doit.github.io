@@ -1149,7 +1149,7 @@ if(ffhtf == true || ffctf == true){
 
             tableJS = '';
 			  if (StyleMode == 'FixedHeader') {
-            tableJS += '<script src="https://code.jquery.com/jquery-3.5.1.min.js"><\/script>' + comsc;
+            tableJS += '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><\/script>' + comsc;
             tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js"><\/script>' + comsc;
             tableJS += '<\script>' + comsc;
             tableJS += tapcss+'$(".js-pscroll").each(function(){' + comsc;
@@ -1160,7 +1160,7 @@ if(ffhtf == true || ffctf == true){
             tableJS += tapcss+'});' + comsc;
             tableJS += '<\/script>' + comsc;
 			  }else if(StyleMode == 'VAHHighlight'){
-            tableJS += '<script src="https://code.jquery.com/jquery-3.5.1.min.js"><\/script>' + comsc;
+            tableJS += '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><\/script>' + comsc;
             tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/js/main.js"><\/script>' + comsc;
 				}
 				
