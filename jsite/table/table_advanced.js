@@ -771,16 +771,16 @@ if(ffhtf == true || ffctf == true){
              if (Typewidth == 'pixels') {
 				 Typewidth = 'px;';
 				 if(maXwidth > 1001){
-					 $('#previewsize').css('display','block');
+                $('#previewsize').collapse('show');
 				 }else{
-					 $('#previewsize').css('display','none');
+                $('#previewsize').collapse('hide');
 				 }
 			 }else if (Typewidth == 'percent'){
 				 Typewidth = '%;';
 				 if(maXwidth > 101){
-					 $('#previewsize').css('display','block');
+                $('#previewsize').collapse('show');
 				 }else{
-					 $('#previewsize').css('display','none');
+                $('#previewsize').collapse('hide');
 				 }
 			 }
 
