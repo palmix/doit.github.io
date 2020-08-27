@@ -10,6 +10,29 @@ document.getElementById("bordercells").checked = false;
 }
 
 
+
+
+
+
+
+function onchangeStyleMode() {
+var StyleMode = $("#StyleMode").val();
+	if (StyleMode == 'FixedHeader') {
+$("#Heighttableforadv").css("dipaly","block");
+$("#column1Width").css("dipaly","none");
+
+	 }else if(StyleMode == 'VAHHighlight'){
+$("#Heighttableforadv").css("dipaly","none");
+$("#column1Width").css("dipaly","block");
+	}
+
+
+
+
+
+}
+
+
 function alltablesave() {
     var texttablesave = document.getElementById('alltablesave').value;
     var setTextsave = document.getElementById(texttablesave).value;
@@ -717,11 +740,9 @@ if(ffhtf == true || ffctf == true){
 			}
 			$("#changetextinputgroupwh").html("Width & Height");
 			$("#changetextWidthtableadv").html("Width");
-			$("#changetextHeighttableadv").html("Height");
 			  }else if(StyleMode == 'VAHHighlight'){
 			$("#changetextinputgroupwh").html("Width");
 			$("#changetextWidthtableadv").html("Table Width");
-			$("#changetextHeighttableadv").html("column 1");
 			if($("#VersionNum option[value='ver6']").length){}
 			else{
 				$('#VersionNum').append("<option value='ver6'>V 6.0</option>");
@@ -769,9 +790,14 @@ if(ffhtf == true || ffctf == true){
                tableCSS += '<style>'+ comscss;
                tableCSS += '.wrap-table100 {'+ comscss;					
                tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;					
-               tableCSS += '}'+ comscss;					
-               tableCSS += '.column100.column1{'+ comscss;					
-               tableCSS += 'width:'+maXheight + 'px !important;'+ comscss;					
+               tableCSS += '}'+ comscss;
+
+               tableCSS += '.column100.column1{'+ comscss;	
+			   if($("#changetextHeighttableadv").is(":checked") == true){
+               tableCSS += 'width:'+maXheight + 'px !important;'+ comscss;
+			   }else{
+				tableCSS += 'width:auto!important;'+ comscss;
+			   }
                tableCSS += '}'+ comscss;
                tableCSS += '</style>'+ comscss;
 			 }
