@@ -770,12 +770,10 @@ if(ffhtf == true || ffctf == true){
 		   
 			  if (StyleMode == 'FixedHeader') {
 					var maxedhpvframe = parseInt(maXheight) + 150;
-					$('#pvframe').attr('height',maXheight);
-					$('#previewidiv').css('height',maxedhpvframe+'px');
+					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
 					$('#pvframe').attr('height','700');
-					$('#previewidiv').css('height','700px');
 			  }
 
              if (Typewidth == 'pixels') {
