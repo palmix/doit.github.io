@@ -767,6 +767,15 @@ if(ffhtf == true || ffctf == true){
            var maXwidth = $('#Widthtableadv').val();
            var maXheight = $('#Heighttableadv').val();
            var Typewidth = $('#WidthtableadvType').val();
+		   
+			  if (StyleMode == 'FixedHeader') {
+					var maxedhpvframe = (maXheight + 150)
+					$('#pvframe').attr('height','maXheight');
+					$('#previewidiv').css('height','maxedhpvframe');
+					
+			  }else if(StyleMode == 'VAHHighlight'){
+				  
+			  }
 
              if (Typewidth == 'pixels') {
 				 Typewidth = 'px';
