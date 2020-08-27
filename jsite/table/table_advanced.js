@@ -773,7 +773,9 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
-					$('#pvframe').attr('height','700');
+					$('#pvframe').attr('height',(parseInt(thlength) * 51));
+					
+					
 			  }
 
              if (Typewidth == 'pixels') {
