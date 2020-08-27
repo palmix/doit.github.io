@@ -26,6 +26,7 @@ $("#column1Width").css("display","none");
 			$("#VersionNum option[value='ver6']").each(function(){
 				$(this).remove()
 				});
+				$("#VersionNum").val('ver3');
 			}
 			$("#changetextinputgroupwh").html("Width & Height");
 			$("#changetextWidthtableadv").html("Width");
@@ -44,7 +45,7 @@ $("#column1Width").css("display","block");
 
 
 
-				$("#VersionNum").val('3');
+
 
 }
 
