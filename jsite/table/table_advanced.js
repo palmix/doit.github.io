@@ -777,7 +777,7 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
-				  var maxedhpvframe = parseInt(thlengtd) * 51)
+				  var maxedhpvframe = parseInt(thlengtd) * 51;
 				$('#pvframe').attr('height',maxedhpvframe + 50);
 					
 					
