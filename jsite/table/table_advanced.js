@@ -770,8 +770,18 @@ if(ffhtf == true || ffctf == true){
 
              if (Typewidth == 'pixels') {
 				 Typewidth = 'px;';
+				 if(maXwidth < 1001){
+					 $('#previewsize').css('display:none');
+				 }else{
+					 $('#previewsize').css('display:block');
+				 }
 			 }else if (Typewidth == 'percent'){
 				 Typewidth = '%;';
+				 if(maXwidth < 101){
+					 $('#previewsize').css('display:none');
+				 }else{
+					 $('#previewsize').css('display:block');
+				 }
 			 }
 
  			//Start css
