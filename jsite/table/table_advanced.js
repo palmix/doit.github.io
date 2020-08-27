@@ -796,7 +796,7 @@ if(ffhtf == true || ffctf == true){
 			   if($("#changetextHeighttableadv").is(":checked") == true){
                tableCSS += 'width:'+maXheight + 'px !important;'+ comscss;
 			   }else{
-				tableCSS += 'width:'+thlength+'px!important;'+ comscss;
+				tableCSS += 'width:'+thlength+'%!important;'+ comscss;
 			   }
                tableCSS += '}'+ comscss;
                tableCSS += '</style>'+ comscss;
