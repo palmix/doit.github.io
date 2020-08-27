@@ -2607,8 +2607,15 @@ $("#saveandgo").on("click", saveandgo);
 
 
 
+function PINW() {
+  var w = window.open();
+  var html = editor.getValue();
+	$(w.document.body).html(html);
+}
 
-
+$(function() {
+$("#pinw").on("click", PINW);
+});
 
 
 
