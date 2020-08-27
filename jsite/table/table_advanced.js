@@ -750,17 +750,15 @@ if(ffhtf == true || ffctf == true){
 			  }
 			
 			if (editonline.checked == true) {
-			var getlenth = document.getElementById("newTable1");
-			var thlength = getlenth.getElementsByTagName("th").length;
-
+			var thlength = $('#newTable1 .table100-head th').length;
 			}else{
 			var thlength = $("#sizeCols").val();
 			}
-			alert(thlength);
 			thlength = (100/thlength);
-			alert(thlength);
-			thlength = thlength.toFixed(1);
-			alert(thlength);
+			thlength = thlength.toFixed(0);
+			if(thlength == 0){
+			thlength = 400;
+			}
 			var columnnum = '.cell100{width:'+thlength+'%!important;}'
 
            var maXwidth = $('#Widthtableadv').val();
