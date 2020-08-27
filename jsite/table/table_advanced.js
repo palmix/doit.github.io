@@ -751,7 +751,7 @@ if(ffhtf == true || ffctf == true){
 			
 			if (editonline.checked == true) {
 			var thlength = $('#newTable1 .table100-head th').length;
-			if(thlength  == 0){
+			if(thlength === 0){
 			thlength = 5;
 			}
 			}else{
