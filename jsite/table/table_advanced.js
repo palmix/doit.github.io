@@ -769,14 +769,14 @@ if(ffhtf == true || ffctf == true){
            var Typewidth = $('#WidthtableadvType').val();
 
              if (Typewidth == 'pixels') {
-				 Typewidth = 'px;';
+				 Typewidth = 'px';
 				 if(maXwidth > 1001){
                 $('#previewsize').collapse('show');
 				 }else{
                 $('#previewsize').collapse('hide');
 				 }
 			 }else if (Typewidth == 'percent'){
-				 Typewidth = '%;';
+				 Typewidth = '%';
 				 if(maXwidth > 101){
                 $('#previewsize').collapse('show');
 				 }else{
