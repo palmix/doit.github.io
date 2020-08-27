@@ -756,8 +756,11 @@ if(ffhtf == true || ffctf == true){
 			}else{
 			var thlength = $("#sizeCols").val();
 			}
+			alert(thlength);
 			thlength = (100/thlength);
+			alert(thlength);
 			thlength = thlength.toFixed(1);
+			alert(thlength);
 			var columnnum = '.cell100{width:'+thlength+'%!important;}'
 
            var maXwidth = $('#Widthtableadv').val();
