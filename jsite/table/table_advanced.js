@@ -751,14 +751,17 @@ if(ffhtf == true || ffctf == true){
 			
 			if (editonline.checked == true) {
 			var thlength = $('#newTable1 .table100-head th').length;
+			if(thlength  == 0){
+			thlength = 5;
+			}
 			}else{
 			var thlength = $("#sizeCols").val();
 			}
+
+			var Heighttableadvs = $('#Heighttableadv').val();
 			thlength = (100/thlength);
 			thlength = thlength.toFixed(0);
-			if(thlength == 0){
-			thlength = 400;
-			}
+
 			var columnnum = '.cell100{width:'+thlength+'%!important;}'
 
            var maXwidth = $('#Widthtableadv').val();
