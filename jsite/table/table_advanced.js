@@ -760,19 +760,7 @@ if(ffhtf == true || ffctf == true){
 			var thlengtd = $("#sizeRows").val();
 			}
 			
-			
-			
-			if (editonline.checked == true) {
-				
-			var thlength = $('#newTable1 tr').length;
-			if(thlength < 1){
-			thlength = 5;
-			}
-			}else{
-			var thlength = $("#sizeCols").val();
-			}
-			
-			
+
 			
 			var Heighttableadvs = $('#Heighttableadv').val();
 			thlength = (100/thlength);
