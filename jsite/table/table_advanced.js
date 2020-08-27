@@ -2617,18 +2617,16 @@ $("#saveandgo").on("click", saveandgo);
 
 
 
-function PINW() {
-  var w = window.open();
-  var html = editor.getValue();
-	$(w.document.body).html(html);
+
+document.getElementById("pinw").onclick = function() { 
+var trycodewin = window.open("","_blank");
+var html = editor.getValue();
+with (trycodewin.document) {
+ open();
+ write(html);  
+ close();
+}}
 }
-
-$(function() {
-$("#pinw").on("click", PINW);
-});
-
-
-
 
 
 
