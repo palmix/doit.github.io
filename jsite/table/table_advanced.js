@@ -803,6 +803,7 @@ if(ffhtf == true || ffctf == true){
                tableCSS += '<style>'+ comscss;
                tableCSS += '.wrap-table100 {'+ comscss;					
                tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;					
+               tableCSS += 'margin:auto;'+ comscss;					
                tableCSS += '}'+ comscss;					
                tableCSS += '.table100-body {'+ comscss;					
                tableCSS += 'max-height:'+maXheight + 'px !important;'+ comscss;					
@@ -812,7 +813,8 @@ if(ffhtf == true || ffctf == true){
 			 }else if(StyleMode == 'VAHHighlight'){
                tableCSS += '<style>'+ comscss;
                tableCSS += '.wrap-table100 {'+ comscss;					
-               tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;					
+               tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;
+               tableCSS += 'margin:auto;'+ comscss;				   
                tableCSS += '}'+ comscss;
 
                tableCSS += '.column100.column1{'+ comscss;	
@@ -829,7 +831,7 @@ if(ffhtf == true || ffctf == true){
 
 
 
-
+    
 
            
              }else{
