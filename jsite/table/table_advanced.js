@@ -16,12 +16,10 @@ document.getElementById("bordercells").checked = false;
 
 
 function onchangeStyleMode() {
-	
-	
-	var StyleMode = $("#StyleMode").val();
-		if (StyleMode == 'FixedHeader') {
-$("#Heighttableforadv").css("display","block");
-$("#column1Width").css("display","none");
+var StyleMode = $("#StyleMode").val();
+if (StyleMode == 'FixedHeader') {
+		$("#Heighttableforadv").css("display","block");
+		$("#column1Width").css("display","none");
 			if($("#VersionNum option[value='ver6']").length){
 			$("#VersionNum option[value='ver6']").each(function(){
 				$(this).remove()
@@ -31,8 +29,8 @@ $("#column1Width").css("display","none");
 			$("#changetextinputgroupwh").html("Width & Height");
 			$("#changetextWidthtableadv").html("Width");
 			  }else if(StyleMode == 'VAHHighlight'){
-$("#Heighttableforadv").css("display","none");
-$("#column1Width").css("display","block");
+		$("#Heighttableforadv").css("display","none");
+		$("#column1Width").css("display","block");
 			$("#changetextinputgroupwh").html("Width");
 			$("#changetextWidthtableadv").html("Table Width");
 			if($("#VersionNum option[value='ver6']").length){}
@@ -40,12 +38,6 @@ $("#column1Width").css("display","block");
 				$('#VersionNum').append("<option value='ver6'>V 6.0</option>");
 				}
 			  }
-	
-	
-
-
-
-
 
 }
 
