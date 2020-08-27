@@ -769,7 +769,7 @@ if(ffhtf == true || ffctf == true){
            var Typewidth = $('#WidthtableadvType').val();
 		   
 			  if (StyleMode == 'FixedHeader') {
-					var maxedhpvframe = (maXheight + 150)
+					var maxedhpvframe = maXheight + 150;
 					$('#pvframe').attr('height',maXheight);
 					$('#previewidiv').css('height',maxedhpvframe+'px');
 					
