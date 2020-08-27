@@ -751,13 +751,29 @@ if(ffhtf == true || ffctf == true){
 			
 			if (editonline.checked == true) {
 			var thlength = $('#newTable1 th').length;
+			var thlengtd = $('#newTable1 td').length;
+			if(thlength < 1){
+			thlength = 5;
+			}
+			}else{
+			var thlength = $("#sizeCols").val();
+			var thlengtd = $("#sizeRows").val();
+			}
+			
+			
+			
+			if (editonline.checked == true) {
+				
+			var thlength = $('#newTable1 tr').length;
 			if(thlength < 1){
 			thlength = 5;
 			}
 			}else{
 			var thlength = $("#sizeCols").val();
 			}
-
+			
+			
+			
 			var Heighttableadvs = $('#Heighttableadv').val();
 			thlength = (100/thlength);
 			thlength = thlength.toFixed(0);
@@ -773,7 +789,8 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
-					$('#pvframe').attr('height',(parseInt(thlength) * 51));
+				  var maxedhpvframe = parseInt(thlengtd) * 51)
+				$('#pvframe').attr('height',maxedhpvframe + 50);
 					
 					
 			  }
