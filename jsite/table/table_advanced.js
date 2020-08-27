@@ -751,13 +751,13 @@ if(ffhtf == true || ffctf == true){
 			
 			if (editonline.checked == true) {
 			var thlength = $('#newTable1 th').length;
-			var thlengtd = $('#newTable1 td').length;
+			var thlengtr = $('#newTable1 tr').length;
 			if(thlength < 1){
 			thlength = 5;
 			}
 			}else{
 			var thlength = $("#sizeCols").val();
-			var thlengtd = $("#sizeRows").val();
+			var thlengtr = $("#sizeRows").val();
 			}
 			
 
@@ -777,7 +777,7 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
-				  var maxedhpvframe = parseInt(thlengtd) * 51;
+				  var maxedhpvframe = parseInt(thlengtr) * 51;
 				$('#pvframe').attr('height',maxedhpvframe + 50);
 					
 					
