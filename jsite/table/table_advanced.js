@@ -18,12 +18,12 @@ document.getElementById("bordercells").checked = false;
 function onchangeStyleMode() {
 var StyleMode = $("#StyleMode").val();
 	if (StyleMode == 'FixedHeader') {
-$("#Heighttableforadv").css("dipaly","block");
-$("#column1Width").css("dipaly","none");
+$("#Heighttableforadv").css("display","block");
+$("#column1Width").css("display","none");
 
 	 }else if(StyleMode == 'VAHHighlight'){
-$("#Heighttableforadv").css("dipaly","none");
-$("#column1Width").css("dipaly","block");
+$("#Heighttableforadv").css("display","none");
+$("#column1Width").css("display","block");
 	}
 
 
