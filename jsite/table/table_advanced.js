@@ -16,15 +16,32 @@ document.getElementById("bordercells").checked = false;
 
 
 function onchangeStyleMode() {
-var StyleMode = $("#StyleMode").val();
-	if (StyleMode == 'FixedHeader') {
+	
+	
+	var StyleMode = $("#StyleMode").val();
+		if (StyleMode == 'FixedHeader') {
 $("#Heighttableforadv").css("display","block");
 $("#column1Width").css("display","none");
-
-	 }else if(StyleMode == 'VAHHighlight'){
+			if($("#VersionNum option[value='ver6']").length){
+			$("#VersionNum option[value='ver6']").each(function(){
+				$(this).remove()
+				});
+				$("#VersionNum").val(3);
+			}
+			$("#changetextinputgroupwh").html("Width & Height");
+			$("#changetextWidthtableadv").html("Width");
+			  }else if(StyleMode == 'VAHHighlight'){
 $("#Heighttableforadv").css("display","none");
 $("#column1Width").css("display","block");
-	}
+			$("#changetextinputgroupwh").html("Width");
+			$("#changetextWidthtableadv").html("Table Width");
+			if($("#VersionNum option[value='ver6']").length){}
+			else{
+				$('#VersionNum').append("<option value='ver6'>V 6.0</option>");
+				}
+			  }
+	
+	
 
 
 
@@ -731,23 +748,6 @@ if(ffhtf == true || ffctf == true){
 	
              if (desig == 'advanced') {
 			vertablestyle = $("#VersionNum").val();
-			  if (StyleMode == 'FixedHeader') {
-			if($("#VersionNum option[value='ver6']").length){
-			$("#VersionNum option[value='ver6']").each(function(){
-				$(this).remove()
-				});
-				$("#VersionNum").val('3');
-			}
-			$("#changetextinputgroupwh").html("Width & Height");
-			$("#changetextWidthtableadv").html("Width");
-			  }else if(StyleMode == 'VAHHighlight'){
-			$("#changetextinputgroupwh").html("Width");
-			$("#changetextWidthtableadv").html("Table Width");
-			if($("#VersionNum option[value='ver6']").length){}
-			else{
-				$('#VersionNum').append("<option value='ver6'>V 6.0</option>");
-				}
-			  }
 			
 			if (editonline.checked == true) {
 			var thlength = $('#newTable1 th').length;
