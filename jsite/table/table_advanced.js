@@ -750,7 +750,9 @@ if(ffhtf == true || ffctf == true){
 			  }
 			
 			if (editonline.checked == true) {
-			var thlength = $('#newTable1 table th').length;
+			var getlenth = document.getElementById("newTable1");
+			var thlength = getlenth.getElementsByTagName("th").length;
+
 			}else{
 			var thlength = $("#sizeCols").val();
 			}
