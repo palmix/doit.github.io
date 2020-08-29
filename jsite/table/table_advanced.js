@@ -1798,7 +1798,9 @@ $('#remove_columns').click(function() {
 
 
 
-
+$('#removetextftbtn').on("click", function() {
+$('#newTable1 table td').html("<br/>");
+});
 
 
 
