@@ -1518,7 +1518,7 @@ $('#newCodeeditadv2').val(setcodeadv);
 
 makeTableCode()
 $(this).removeClass("loding");
-$("#randomstyle").removeAttribute('disabled');
+$(this).removeAttribute('disabled');
 });
     //Listener for sizeCols
 
