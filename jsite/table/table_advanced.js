@@ -1499,7 +1499,8 @@ if(ffhtf == true || ffctf == true){
 
 $('#removetextftbtn').on("click", function() {
 $('#newTable1 table td').html("<br/>");
-makeTableCode();
+setTimeout(makeTableCode, 1000);
+
 });
     //Listener for sizeCols
 
