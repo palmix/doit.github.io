@@ -1497,7 +1497,7 @@ if(ffhtf == true || ffctf == true){
 
 
 
-$('#removetextftbtn').on("click", function() {
+$('#removetextrftbtn').on("click", function() {
 var StyleMode = $("#StyleMode").val();
 $(this).addClass("loding");
 $(this).attr('disabled','disabled');
@@ -1514,14 +1514,36 @@ var setcodeadv = $('#newTable1').html();
 $('#newCodeeditadv2').val(setcodeadv);
 
 }
-				
-				
-
 makeTableCode()
 $(this).removeClass("loding");
 $(this).removeAttr('disabled');
-
+$('#removetexts').modal('hide')
 });
+
+$('#removetexthrftbtn').on("click", function() {
+var StyleMode = $("#StyleMode").val();
+$(this).addClass("loding");
+$(this).attr('disabled','disabled');
+
+if (StyleMode == 'FixedHeader') {
+	
+$('#newTable1 table td').html("<br/>");
+$('#newTable1 table th').html("<br/>");
+var setcodeadv = $('#newTable1').html();
+$('#newCodeeditadv').val(setcodeadv);
+
+}else if(StyleMode == 'VAHHighlight'){
+$('#newTable1 table td').html("<br/>");
+var setcodeadv = $('#newTable1').html();
+$('#newCodeeditadv2').val(setcodeadv);
+
+}
+makeTableCode()
+$(this).removeClass("loding");
+$(this).removeAttr('disabled');
+$('#removetexts').modal('hide')
+});
+
     //Listener for sizeCols
 
     $(".onchanges").on('keyup change', function() {
