@@ -1539,6 +1539,7 @@ $('#newCodeeditadv').val(setcodeadv);
 
 }else if(StyleMode == 'VAHHighlight'){
 $('#newTable1 table td').html("<br/>");
+$('#newTable1 table th').html("<br/>");
 var setcodeadv = $('#newTable1').html();
 $('#newCodeeditadv2').val(setcodeadv);
 
