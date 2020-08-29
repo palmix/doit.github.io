@@ -284,6 +284,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var vertablestyle = 'ver3';
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
+			var numofcellsval = $("#numofcells");
+			if (numofcellsval.checked == true){
+				$("#removetexttables").css('display','none');
+			}else{
+				$("#removetexttables").css('display','block');
+			}
             var editonline = document.getElementById('editonline');
 			var StyleMode = $("#StyleMode").val();
 			var desigs = $(".desig.active");
