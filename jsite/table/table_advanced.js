@@ -1722,7 +1722,7 @@ $('#remove_columns').click(function() {
         $(".awtable").each(function() {
             var tds = '\t\t<tr>\n';
             jQuery.each($('tr:last td', this), function() {
-                tds += '\t\t\t<td>' + $(this).html() + '</td>\n';
+                tds += '\t\t\t<td contenteditable="true">' + $(this).html() + '</td>\n';
             });
             tds += '\t\t</tr>\n';
             if ($('tbody', this).length > 0) {
@@ -1755,19 +1755,19 @@ $('#remove_columns').click(function() {
 		
 			  if (StyleMode == 'FixedHeader') {
         $('.table100 thead tr').each(function() {
-            $(this).append('\t\t\t<th class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
+            $(this).append('\t\t\t<th contenteditable="true" class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.table100 tbody tr').each(function() {
-            $(this).append('\t\t\t<td class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
+            $(this).append('\t\t\t<td contenteditable="true" class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
         });
 		  var newCodeedit = document.getElementById("newCodeeditadv");
 
 			  }else if(StyleMode == 'VAHHighlight'){
         $('.table100 thead tr').each(function() {
-            $(this).append('\t\t\t<th class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
+            $(this).append('\t\t\t<th contenteditable="true" class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.table100 tbody tr').each(function() {
-            $(this).append('\t\t\t<td class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '"> -- </td>\n');
+            $(this).append('\t\t\t<td contenteditable="true" class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '"> -- </td>\n');
         });
 
         var newCodeedit = document.getElementById("newCodeeditadv2");
@@ -1779,10 +1779,10 @@ $('#remove_columns').click(function() {
        }else{
         $('.awtable thead tr').each(function() {
             var lengthth = $('th', this).length;
-            $(this).append('\t\t\t<th>Header ' + (lengthth + 1) + '</th>\n');
+            $(this).append('\t\t\t<th contenteditable="true">Header ' + (lengthth + 1) + '</th>\n');
         });
         $('.awtable tbody tr').each(function() {
-            $(this).append('\t\t\t<td><br></td>\n');
+            $(this).append('\t\t\t<td contenteditable="true"><br></td>\n');
         });
         var newCodeedit = document.getElementById("newCodeedit");
         var newTable = document.getElementById("newTable").innerHTML;
