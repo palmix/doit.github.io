@@ -1327,7 +1327,7 @@ if(ffhtf == true || ffctf == true){
 
                 newTable1.innerHTML = incode;
                 newTableStyle.innerHTML = '<style type="text/css">.table100 table{color:#fff;width:100%;border-width:1px;border-color:#0e0e0e;border-collapse:collapse}.table100 table th{font-family:initial;color:#fff;font-size:13px;background-color:#565656;border-width:1px;border-style:solid;border-color:#0e0e0e;padding:8px}.table100 table tr{background-color:#fff}.table100 table td{font-size:12px;font-family:initial;border-width:1px;border-style:solid;border-color:#0e0e0e;padding:8px;color:#3e3e3e}.table100 table tr:hover{background-color:#d1edff}.table100 table tr td:hover{background-color:#a8d7ff}'+columnnum+'</style>';
-                incode = incode.replace(' contenteditable="true"', '');
+                incode = incode.replace(/ contenteditable="true"/g, '');
 
                 if (comsc.checked === true) {
                     incode = incode.replace(/\t/g, '');
@@ -1437,7 +1437,7 @@ if(ffhtf == true || ffctf == true){
 
                 newTable.innerHTML = incode;
                 newTableStyle.innerHTML = tableCSS;
-                incode = incode.replace(' contenteditable="true"', '');
+                incode = incode.replace(/ contenteditable="true"/g, '');
 
                 if (comsc.checked === true) {
                     incode = incode.replace(/\t/g, '');
@@ -1570,7 +1570,7 @@ $('#removetexts').modal('hide')
         var btncopy = document.getElementById("buttoncopy");
 
         newCodeedit.value = newTable;
-        newTable = newTable.replace(' contenteditable="true"', '');
+        newTable = newTable.replace(/ contenteditable="true"/g, '');
         if (comsc.checked === true) {
             newTable = newTable.replace(/\t/g, '');
             newTable = newTable.replace(/\n/g, '');
@@ -1594,7 +1594,7 @@ $('#removetexts').modal('hide')
         var btncopy = document.getElementById("buttoncopy");
 
         newCodeedit.value = newTable1;
-        newTable1 = newTable1.replace('contenteditable="true"', '');
+        newTable1 = newTable1.replace(/ contenteditable="true"/g, '');
         if (comsc.checked === true) {
             newTable1 = newTable1.replace(/\t/g, '');
             newTable1 = newTable1.replace(/\n/g, '');
