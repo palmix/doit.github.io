@@ -773,7 +773,9 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
+				  alert(tableclientHeight)
 				  var maxedhpvframe = parseInt(tableclientHeight) + (parseInt(thlengtr) * 16);
+				  alert(maxedhpvframe)
 				$('#pvframe').attr('height',maxedhpvframe + 50);
 					
 					
