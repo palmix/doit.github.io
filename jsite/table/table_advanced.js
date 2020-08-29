@@ -753,11 +753,10 @@ if(ffhtf == true || ffctf == true){
 			}else{
 			var thlength = $("#sizeCols").val();
 			var thlengtr = $("#sizeRows").val();
-			var tableclientHeight = document.getElementById('newTable1').clientHeight;
 			}
 			
 
-			
+			var tableclientHeight = document.getElementById('newTable1').clientHeight;
 			var Heighttableadvs = $('#Heighttableadv').val();
 			thlength = (100/thlength);
 			thlength = thlength.toFixed(0);
@@ -773,9 +772,7 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
-				  alert(tableclientHeight)
-				  var maxedhpvframe = parseInt(tableclientHeight) + (parseInt(thlengtr) * 16);
-				  alert(maxedhpvframe)
+				  var maxedhpvframe = tableclientHeight + (parseInt(thlengtr) * 16);
 				$('#pvframe').attr('height',maxedhpvframe + 50);
 					
 					
