@@ -1498,8 +1498,21 @@ if(ffhtf == true || ffctf == true){
 
 
 $('#removetextftbtn').on("click", function() {
+if (StyleMode == 'FixedHeader') {
+	
 $('#newTable1 table td').html("<br/>");
-setTimeout(makeTableCode, 1000);
+var setcodeadv = $('#newTable1').html();
+$('#newCodeeditadv').val(setcodeadv);
+
+}else if(StyleMode == 'VAHHighlight'){
+$('#newTable1 table td').html("<br/>");
+var setcodeadv = $('#newTable1').html();
+$('#newCodeeditadv2').val(setcodeadv);
+}
+				
+				
+
+makeTableCode()
 
 });
     //Listener for sizeCols
