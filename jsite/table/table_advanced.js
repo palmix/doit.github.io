@@ -753,6 +753,7 @@ if(ffhtf == true || ffctf == true){
 			}else{
 			var thlength = $("#sizeCols").val();
 			var thlengtr = $("#sizeRows").val();
+			var tableclientHeight = document.getElementById('newTable1').clientHeight;
 			}
 			
 
@@ -772,7 +773,7 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
-				  var maxedhpvframe = parseInt(thlengtr) * 51;
+				  var maxedhpvframe = tableclientHeight + (parseInt(thlengtr) * 16);
 				$('#pvframe').attr('height',maxedhpvframe + 50);
 					
 					
