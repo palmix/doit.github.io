@@ -1499,7 +1499,7 @@ if(ffhtf == true || ffctf == true){
 
 $('#removetextftbtn').on("click", function() {
 $(this).addClass("loding");
-$("#randomstyle").attr('disabled','disabled');
+$(this).attr('disabled','disabled');
 
 if (StyleMode == 'FixedHeader') {
 	
