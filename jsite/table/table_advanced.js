@@ -12,12 +12,6 @@ document.getElementById("bordercells").checked = false;
 
 
 
-$('#removetextftbtn').on("click", function() {
-$('#newTable1 table td').html("<br/>");
-});
-
-
-
 
 function onchangeStyleMode() {
 var StyleMode = $("#StyleMode").val();
@@ -1502,6 +1496,11 @@ if(ffhtf == true || ffctf == true){
     }
 
 
+
+$('#removetextftbtn').on("click", function() {
+$('#newTable1 table td').html("<br/>");
+makeTableCode();
+});
     //Listener for sizeCols
 
     $(".onchanges").on('keyup change', function() {
