@@ -1798,9 +1798,6 @@ $('#remove_columns').click(function() {
 
 
 
-$('#removetextftbtn').on("click", function() {
-$('#newTable1 table td').html("<br/>");
-});
 
 
 
@@ -2655,6 +2652,10 @@ with (trycodewin.document) {
 
 
 
+$('#removetextftbtn').on("click", function() {
+$('#newTable1 table td').html("<br/>");
+makeTableCode();
+});
 
 
 
