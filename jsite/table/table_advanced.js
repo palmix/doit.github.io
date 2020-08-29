@@ -773,7 +773,7 @@ if(ffhtf == true || ffctf == true){
 					
 			  }else if(StyleMode == 'VAHHighlight'){
 				  if(editonline.checked == true){
-					var maxedhpvframe = tableclientHeight + (parseInt(thlengtr) * 17);
+					var maxedhpvframe = tableclientHeight + (parseInt(thlengtr) * 17.4);
 				  }else{
 					var maxedhpvframe = parseInt(thlengtr) * 51;
 				  }
