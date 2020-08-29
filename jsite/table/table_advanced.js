@@ -2368,7 +2368,7 @@ var published = item.values[0].formattedValue;
 
 var backgroundth = item.values[13].formattedValue;
 var backgroundtr = item.values[14].formattedValue;
-var backgroundtr2 = item.values[16].formattedValue;
+var backgroundtr2 = item.values[15].formattedValue;
 var StyleName = item.values[4].formattedValue;
 var subStyleName = StyleName.substring(0,27);
 var name =  item.values[2].formattedValue;
