@@ -1498,6 +1498,9 @@ if(ffhtf == true || ffctf == true){
 
 
 $('#removetextftbtn').on("click", function() {
+$(this).addClass("loding");
+$("#randomstyle").attr('disabled','disabled');
+
 if (StyleMode == 'FixedHeader') {
 	
 $('#newTable1 table td').html("<br/>");
@@ -1508,12 +1511,14 @@ $('#newCodeeditadv').val(setcodeadv);
 $('#newTable1 table td').html("<br/>");
 var setcodeadv = $('#newTable1').html();
 $('#newCodeeditadv2').val(setcodeadv);
+
 }
 				
 				
 
 makeTableCode()
-
+$(this).removeClass("loding");
+$("#randomstyle").removeAttribute('disabled');
 });
     //Listener for sizeCols
 
