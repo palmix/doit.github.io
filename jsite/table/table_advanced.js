@@ -1498,6 +1498,7 @@ if(ffhtf == true || ffctf == true){
 
 
 $('#removetextftbtn').on("click", function() {
+var StyleMode = $("#StyleMode").val();
 $(this).addClass("loding");
 $(this).attr('disabled','disabled');
 
@@ -1519,7 +1520,7 @@ $('#newCodeeditadv2').val(setcodeadv);
 makeTableCode()
 $(this).removeClass("loding");
 $(this).removeAttr('disabled');
-$('#removetexts').modal('hide')
+
 });
     //Listener for sizeCols
 
