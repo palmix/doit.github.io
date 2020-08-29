@@ -772,7 +772,11 @@ if(ffhtf == true || ffctf == true){
 					$('#pvframe').attr('height',maxedhpvframe);
 					
 			  }else if(StyleMode == 'VAHHighlight'){
-				  var maxedhpvframe = tableclientHeight + (parseInt(thlengtr) * 16);
+				  if(editonline.checked == true){
+					var maxedhpvframe = tableclientHeight + (parseInt(thlengtr) * 16);
+				  }else{
+					var maxedhpvframe = parseInt(thlengtr) * 51;
+				  }
 				$('#pvframe').attr('height',maxedhpvframe + 50);
 					
 					
