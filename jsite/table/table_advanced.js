@@ -2407,13 +2407,13 @@ listusercode +='<div class="input-group p-1 Searchcode">';
 
 listusercode +='<div class="card-body input-group-prepend p-0"><span class="card-body bg-white input-group-text px-1 py-1" title="'+published+'">'+subStyleName+'</span></div>';
 
-listusercode +='<div class="input-group-append"><span class="badge-secondary input-group-text px-1 py-1">by</span></div>';
+listusercode +='<div class="input-group-append"><span class="badge-secondary input-group-text px-1 py-1">'+setby+'</span></div>';
 
 listusercode +='<div class="input-group-append" style="min-width:75px;margin-right:-1px;"><span class="input-group-text px-1 py-1" style="min-width:75px;">'+subname+'</span></div>';
 
 listusercode +='<div class="input-group-prepend"><span class="px-0 py-0"><table style="width:10px;border-collapse:collapse"><tr style="background-color:'+backgroundth+'"><th style="padding:3px 7px"></th><th style="padding:3px"></th><th style="padding:3px"></th><th style="padding:3px"></th><th style="padding:3px"></th></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr2+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr2+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr><tr style="background-color:'+backgroundtr+'"><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td><td style="border-width:0;padding:3px"></td></tr></table></span></div>';
 
-listusercode +='<div class="input-group-append"><button class="btn btn-primary px-1 py-1 setstyle"data-id="'+idrep+'" type="button" aria-label="Close" data-dismiss="modal">Set Style</button></div>';
+listusercode +='<div class="input-group-append"><button class="btn btn-primary px-1 py-1 setstyle"data-id="'+idrep+'" type="button" aria-label="Close" data-dismiss="modal">'+setUseitnow+'</button></div>';
 
 listusercode +='</div>';
 
