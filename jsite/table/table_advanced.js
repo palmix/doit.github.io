@@ -33,7 +33,7 @@ if (StyleMode == 'FixedHeader') {
 			  }else if(StyleMode == 'VAHHighlight'){
 		$("#Heighttableforadv").css("display","none");
 		$("#column1Width").css("display","block");
-			$("#changetextinputgroupwh").html(setchangetextinputgroupwh1);
+			$("#changetextinputgroupwh").html(setchangetextinputgroupwh2);
 			$("#changetextWidthtableadv").html(setchangetextWidthtableadv2);
 			if($("#VersionNum option[value='ver6']").length){}
 			else{
