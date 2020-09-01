@@ -1,3 +1,7 @@
+
+
+
+
 function bordercellf() {
 document.getElementById("bordertables").checked = false;
 document.getElementById("bordershow").checked = false;
@@ -120,12 +124,10 @@ function backgroundrows2() {
         if (backgroundrows2.checked == true) {
             $('#html5color8').removeAttr("disabled", "disabled");
             $('#tablecolor8').removeAttr("disabled", "disabled");
-            $('#backgroundrows1').html("خلفية الصفوف 1");
 
         } else {
             $('#html5color8').attr("disabled", "disabled");
             $('#tablecolor8').attr("disabled", "disabled");
-            $('#backgroundrows1').html("خلفية الصفوف");
         }
 
 
