@@ -28,13 +28,13 @@ if (StyleMode == 'FixedHeader') {
 				});
 				$("#VersionNum").val('ver3');
 			}
-			$("#changetextinputgroupwh").html("Width & Height");
-			$("#changetextWidthtableadv").html("Width");
+			$("#changetextinputgroupwh").html(setchangetextinputgroupwh1);
+			$("#changetextWidthtableadv").html(setchangetextWidthtableadv1);
 			  }else if(StyleMode == 'VAHHighlight'){
 		$("#Heighttableforadv").css("display","none");
 		$("#column1Width").css("display","block");
-			$("#changetextinputgroupwh").html("Width");
-			$("#changetextWidthtableadv").html("Table Width");
+			$("#changetextinputgroupwh").html(setchangetextinputgroupwh1);
+			$("#changetextWidthtableadv").html(setchangetextWidthtableadv2);
 			if($("#VersionNum option[value='ver6']").length){}
 			else{
 				$('#VersionNum').append("<option value='ver6'>V 6.0</option>");
