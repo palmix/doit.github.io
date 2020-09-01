@@ -1313,7 +1313,7 @@ if(ffhtf == true || ffctf == true){
         document.getElementById('newTable').style.display = 'none';
         document.getElementById('newTable1').style.display = 'block';
         document.getElementById('previewidiv').style.display = 'block';
-        document.getElementById('PreviewTable').innerHTML = 'Edite';
+        document.getElementById('PreviewTable').innerHTML = setEditeTable;
 		document.getElementById('PreviewTable').style.display = 'block';
                 $('.btnadd').css('display', 'block');
                 var comsc = document.getElementById("comsc");
@@ -1376,7 +1376,7 @@ if(ffhtf == true || ffctf == true){
 			document.getElementById('previewidiv').style.display = 'block';
 			document.getElementById('newTable').style.display = 'none';
 			document.getElementById('newTable1').style.display = 'none';
-			document.getElementById('PreviewTable').innerHTML = 'Preview';
+			document.getElementById('PreviewTable').innerHTML = setPreviewTable;
 			document.getElementById('PreviewTable').style.display = 'none';
                 $('.btnadd').css('display', 'none');
 				
@@ -1426,7 +1426,7 @@ if(ffhtf == true || ffctf == true){
 			document.getElementById('previewidiv').style.display = 'none';
 			document.getElementById('newTable').style.display = 'block';
 			document.getElementById('newTable1').style.display = 'none';
-			document.getElementById('PreviewTable').innerHTML = 'Preview';
+			document.getElementById('PreviewTable').innerHTML = setPreviewTable;
 			document.getElementById('PreviewTable').style.display = 'block';
 		if (editonline.checked === true) {
                 $('.btnadd').css('display', 'block');
