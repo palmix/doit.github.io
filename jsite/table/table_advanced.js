@@ -2171,7 +2171,7 @@ $('#tablecolor5hover').val(tablecolor5hover);
 
 
 
-$('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class="alert-heading">'+stylename+'</h5><hr><div class="p-0 row"><div class="p-0 mb-2 col-sm-6 col-md-6 col-auto mr-auto">This design was created by <strong>'+name+'</strong> on <strong>'+published+'</strong></div><div class="p-0 col-sm-6 col-md-6 mr-auto"><div class="input-group input-group-sm mb-3"><div class="input-group-prepend"><button class="btn btn-primary copy" data-clipboard-target="#urlstyle" type="button">Copy</button></div><input class="form-control" id="urlstyle" placeholder="" readonly value="'+valuelink+'"></div></div></div></div>');
+$('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class="alert-heading">'+stylename+'</h5><hr><div class="p-0 row"><div class="p-0 mb-2 col-sm-6 col-md-6 col-auto mr-auto">'+setdesigncreatedby+' <strong>'+name+'</strong> '+seton+' <strong>'+published+'</strong></div><div class="p-0 col-sm-6 col-md-6 mr-auto"><div class="input-group input-group-sm mb-3"><div class="input-group-prepend"><button class="btn btn-primary copy" data-clipboard-target="#urlstyle" type="button">Copy</button></div><input class="form-control" id="urlstyle" placeholder="" readonly value="'+valuelink+setview+'"></div></div></div></div>');
 
 
 makeTableCode();
@@ -2339,7 +2339,7 @@ $('#tablecolor5hover').val(tablecolor5hover);
 
 
 
-$('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class="alert-heading">'+stylename+'</h5><hr><div class="p-0 row"><div class="p-0 mb-2 col-sm-6 col-md-6 col-auto mr-auto">This design was created by <strong>'+name+'</strong> on <strong>'+published+'</strong></div><div class="p-0 col-sm-6 col-md-6 mr-auto"><div class="input-group input-group-sm mb-3"><div class="input-group-prepend"><button class="btn btn-primary copy" data-clipboard-target="#urlstyle" type="button">Copy</button></div><input class="form-control" id="urlstyle" placeholder="" readonly value="'+valuelink+'"></div></div></div></div>');
+$('#DesignInfo').html('<div class="alert alert-info mt-4" role="alert"><h5 class="alert-heading">'+stylename+'</h5><hr><div class="p-0 row"><div class="p-0 mb-2 col-sm-6 col-md-6 col-auto mr-auto">'+setdesigncreatedby+' <strong>'+name+'</strong> '+seton+' <strong>'+published+'</strong></div><div class="p-0 col-sm-6 col-md-6 mr-auto"><div class="input-group input-group-sm mb-3"><div class="input-group-prepend"><button class="btn btn-primary copy" data-clipboard-target="#urlstyle" type="button">Copy</button></div><input class="form-control" id="urlstyle" placeholder="" readonly value="'+valuelink+setview+'"></div></div></div></div>');
 
 
 makeTableCode();
