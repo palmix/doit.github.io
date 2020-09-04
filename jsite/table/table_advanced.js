@@ -1256,7 +1256,7 @@ if(ffhtf == true || ffctf == true){
 
 
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + "<td>Cell:" + iii + " "+setRow+":" + iiii + "</td>" + comsc;
+                            tableHTML = tableHTML + "<td>"+setCell+":" + iii + " "+setRow+":" + iiii + "</td>" + comsc;
                         } else {
                             tableHTML = tableHTML + "<td> </td>" + comsc;
                         }
