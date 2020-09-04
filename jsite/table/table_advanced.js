@@ -1087,7 +1087,7 @@ if(ffhtf == true || ffctf == true){
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
-                        tableHTML += '<th class="cell100 column' + iii + '">HEADER ' + iii + '</th>' + comsc;
+                        tableHTML += '<th class="cell100 column' + iii + '">'+setHEADER+ ' ' + iii + '</th>' + comsc;
                     } else {
                         tableHTML += '<th class="cell100 column' + iii + '"> </th>' + comsc;
                     }
@@ -1098,7 +1098,7 @@ if(ffhtf == true || ffctf == true){
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
-                        tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '">HEADER ' + iii + '</th>' + comsc;
+                        tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '">'+HEADER+' ' + iii + '</th>' + comsc;
                     } else {
                         tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '"> </th>' + comsc;
                     }
@@ -1125,7 +1125,7 @@ if(ffhtf == true || ffctf == true){
                         iii = i + 1;
                         iiii = ii + 1;
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'">Cell:' + iii + ' Row:' + iiii + '</td>' + comsc;
+                            tableHTML = tableHTML + '<td class="cell100 column'+iiii+'">'+setCell+':' + iii + ' '+setRow+':' + iiii + '</td>' + comsc;
                         } else {
                             tableHTML = tableHTML + '<td class="cell100 column'+iiii+'"> </td>' + comsc;
                         }
@@ -1143,7 +1143,7 @@ if(ffhtf == true || ffctf == true){
                         iii = i + 1;
                         iiii = ii + 1;
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + '<td class="column100 column'+iiii+'" data-column="column'+iiii+'">Cell:' + iii + ' Row:' + iiii + '</td>' + comsc;
+                            tableHTML = tableHTML + '<td class="column100 column'+iiii+'" data-column="column'+iiii+'">'+setCell+':' + iii + ' '+setRow+':' + iiii + '</td>' + comsc;
                         } else {
                             tableHTML = tableHTML + '<td class="column100 column'+iiii+'" data-column="column'+iiii+'"> </td>' + comsc;
                         }
@@ -1237,7 +1237,7 @@ if(ffhtf == true || ffctf == true){
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
-                        tableHTML += '<th>HEADER ' + iii + '</th>' + comsc;
+                        tableHTML += '<th>'+setHEADER+' ' + iii + '</th>' + comsc;
                     } else {
                         tableHTML += '<th> </th>' + comsc;
                     }
@@ -1256,7 +1256,7 @@ if(ffhtf == true || ffctf == true){
 
 
                         if (tableInfo.checked == true) {
-                            tableHTML = tableHTML + "<td>Cell:" + iii + " Row:" + iiii + "</td>" + comsc;
+                            tableHTML = tableHTML + "<td>Cell:" + iii + " "+setRow+":" + iiii + "</td>" + comsc;
                         } else {
                             tableHTML = tableHTML + "<td> </td>" + comsc;
                         }
@@ -1567,7 +1567,7 @@ $('#removetexts').modal('hide')
     //intialize on entry
     makeTableCode();
 
-    document.getElementById("awOldText").value = 'HEADER 1,HEADER 2,HEADER 3\nRow 1 - Cell 1,Row 1 - Cell 2,Row 1 - Cell 3\nRow 2 - Cell 1,Row 2 - Cell 2,Row 2 - Cell 3';
+    document.getElementById("awOldText").value = setHEADER +' 1,'+setHEADER+' 2,'+setHEADER+' 3\n'+setRow+' 1 - '+setCell+' 1,'+setRow+' 1 - '+setCell+' 2,'+setRow+' 1 - '+setCell+' 3\n'+setRow+' 2 - '+setCell+' 1,'+setRow+' 2 - '+setCell+' 2,'+setRow+' 2 - '+setCell+' 3';
 
 
     document.getElementById("newTable").addEventListener("input", function() {
@@ -1762,7 +1762,7 @@ $('#remove_columns').click(function() {
 		
 			  if (StyleMode == 'FixedHeader') {
         $('.table100 thead tr').each(function() {
-            $(this).append('\t\t\t<th contenteditable="true" class="cell100 column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
+            $(this).append('\t\t\t<th contenteditable="true" class="cell100 column' + (lengthth + 1) + '">'+setHEADER+' ' + (lengthth + 1) + '</th>\n');
         });
         $('.table100 tbody tr').each(function() {
             $(this).append('\t\t\t<td contenteditable="true" class="cell100 column' + (lengthth + 1) + '"><br></td>\n');
@@ -1771,7 +1771,7 @@ $('#remove_columns').click(function() {
 
 			  }else if(StyleMode == 'VAHHighlight'){
         $('.table100 thead tr').each(function() {
-            $(this).append('\t\t\t<th contenteditable="true" class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '">Header ' + (lengthth + 1) + '</th>\n');
+            $(this).append('\t\t\t<th contenteditable="true" class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '">'+setHEADER+' ' + (lengthth + 1) + '</th>\n');
         });
         $('.table100 tbody tr').each(function() {
             $(this).append('\t\t\t<td contenteditable="true" class="column100 column' + (lengthth + 1) + '" data-column="column' + (lengthth + 1) + '"> -- </td>\n');
@@ -1786,7 +1786,7 @@ $('#remove_columns').click(function() {
        }else{
         $('.awtable thead tr').each(function() {
             var lengthth = $('th', this).length;
-            $(this).append('\t\t\t<th contenteditable="true">Header ' + (lengthth + 1) + '</th>\n');
+            $(this).append('\t\t\t<th contenteditable="true">'+setHEADER+' ' + (lengthth + 1) + '</th>\n');
         });
         $('.awtable tbody tr').each(function() {
             $(this).append('\t\t\t<td contenteditable="true"><br></td>\n');
