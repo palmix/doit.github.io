@@ -1227,7 +1227,7 @@ if(getdir == 'ltr'){
 				}
 
             tableJS = '';
-			  if (desig == 'advanced' && StyleMode == 'FixedHeader') {
+			  if (StyleMode == 'FixedHeader') {
             tableJS += '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><\/script>' + comsc;
             tableJS += '<script src="'+perfectscrollbar+'"><\/script>' + comsc;
             tableJS += '<\script>' + comsc;
@@ -1247,7 +1247,7 @@ if(getdir == 'ltr'){
 
             tableJS += '' + comsc;
                 
-            } else if (desig == 'advanced' && editonline.checked == true) {
+            } else if (editonline.checked == true) {
 
                 tableHTML = "";
 
@@ -1361,9 +1361,11 @@ if(getdir == 'ltr'){
             tableEND = '';
 
 
-
+if (desig == 'advanced'){
             newTableCode =  tableCSS + tableHTML + tableJS + tableEND;
-
+}else{
+            newTableCode =  tableCSS + tableHTML  + tableEND;
+}
 
 
             var btncopy = document.getElementById("buttoncopy");
