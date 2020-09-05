@@ -310,16 +310,19 @@ if(getdir == 'ltr'){
  cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
  bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
  cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
+$('#newTable1').css('direction','ltr');
 }else if(getdir == 'rtl'){
  perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.min.js';
  cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.css';
  bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
  cssmain = 'https://get.doitf.com/jsite/table/tfh/css/rtl/main.css';
+ $('#newTable1').css('direction','rtl');
 }else{
  perfectscrollbar = perfectscrollbar;
  cssperfectscrollbar = cssperfectscrollbar;
  bootstrap = bootstrap;
  cssmain = cssmain;
+ $('#newTable1').css('direction',setDir);
 }
 
 			if ($('#numofcells').is(':checked') == true){
