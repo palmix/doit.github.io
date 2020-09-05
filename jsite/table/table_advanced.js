@@ -808,7 +808,7 @@ if(ffhtf == true || ffctf == true){
 			 }
 
  			//Start css
-               tableCSS = '<link rel="stylesheet" type="text/css" href="+'bootstrap+'"/>'+ comscss;
+               tableCSS = '<link rel="stylesheet" type="text/css" href="'+bootstrap+'"/>'+ comscss;
 			 if (StyleMode == 'FixedHeader') {
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
