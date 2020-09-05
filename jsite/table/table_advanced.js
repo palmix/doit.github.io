@@ -1341,6 +1341,7 @@ if(getdir == 'ltr'){
                 tableHTML += "</table>" + comsc;
 
             }
+		tableJS = '';
 			}
 
 
@@ -1361,11 +1362,9 @@ if(getdir == 'ltr'){
             tableEND = '';
 
 
-if (desig == 'advanced'){
+
             newTableCode =  tableCSS + tableHTML + tableJS + tableEND;
-}else{
-            newTableCode =  tableCSS + tableHTML  + tableEND;
-}
+
 
 
             var btncopy = document.getElementById("buttoncopy");
