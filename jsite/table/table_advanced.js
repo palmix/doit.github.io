@@ -303,6 +303,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var vertablestyle = 'ver3';
     function makeTableCode() {
         if (b64awsec == "ZG9pdGYuY29t") {
+
+var getdir = $('#dirid').val();
+if(getdir == 'ltr'){
+var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
+var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
+var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
+}else if(getdir == 'rtl'){
+var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.min.js';
+var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.css';
+var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
+var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/rtl/main.css';
+}
+
 			if ($('#numofcells').is(':checked') == true){
 				$("#removetexttables").css('display','none');
 			}else{
