@@ -93,7 +93,7 @@ document.getElementById("clicks").addEventListener("click", function() {
         document.getElementById("tablessaved").innerHTML += "<textarea style='display:none' class='awsavetable' id='awsave" + n + "' name='awOldText' rows='0' cols='0'>" + texttablesave + "</textarea>";
 
         var o = new Option("option text", "awsave" + n);
-        $(o).html("رقم الجدول " + (n + 1));
+        $(o).html(setTableNumber + (n + 1));
         $("#alltablesave").append(o);
         document.getElementById('alltablesave').selectedIndex = n;
         $('#collapsavetable').collapse('show');
@@ -2581,7 +2581,7 @@ $("#inputstyle").removeClass('is-invalid');
 $("#inputstyle").addClass('is-valid');
  }
 	 $("#inputtexttitle").addClass('is-invalid');
-       result.text("يجب إدخال الإسم أولاً");
+       result.text(setName);
        result.css("color", "red");
  }else if (Styletitle == ""){
  if (title !== ""){
@@ -2589,7 +2589,7 @@ $("#inputtexttitle").removeClass('is-invalid');
 $("#inputtexttitle").addClass('is-valid');
  }
  	 $("#inputstyle").addClass('is-invalid');
-       result.text("يجب إدخال إسم للنمط");
+       result.text(setNameStyle);
        result.css("color", "red");
  }else{
 $("#inputtexttitle").removeClass('is-invalid');
@@ -2620,7 +2620,7 @@ $.getJSON(getusercode, {
     .done(function(data) {
 	$('#saveandgo').addClass('loding');
 	$("#saveandgo").attr('disabled','disabled');
-	$("#saveandgo").html('حفظ <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+	$("#saveandgo").html(setSave+' <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 
         var numid = data.sheets[0].properties.gridProperties.rowCount;
 		numid = numid + 1;
@@ -2680,7 +2680,7 @@ $.getJSON(getusercode, {
        0: function() {
          //Success message
 		 	$("#saveandgo").removeAttr('disabled');
-			$("#saveandgo").html('حفظ');
+			$("#saveandgo").html(setSave);
 			$('#saveandgo').removeClass('loding');
 			$( "#inputtexttitle" ).val('');
 			$("#getdcodes").trigger('click');
@@ -2689,7 +2689,7 @@ $.getJSON(getusercode, {
        200: function() {
          //Success Message
 		 	$("#saveandgo").removeAttr('disabled');
-			$("#saveandgo").html('حفظ');
+			$("#saveandgo").html(setSave);
 			$('#saveandgo').removeClass('loding');
 			$( "#inputtexttitle" ).val('');
 			$("#getdcodes").trigger('click');
@@ -2707,9 +2707,9 @@ $.getJSON(getusercode, {
 $("#inputemail").addClass('is-invalid');
 $("#inputemail").removeClass('is-valid');
   if (email == ""){
-      result.text("يجب إدخال البريد الإلكتروني!");
+      result.text(setEmail);
   }else{
-    result.html("البريد الإلكتروني: <span class='font-weight-bold'>" + email + "</span> غير صالح");
+    result.html(setEmail1+" (<span class='font-weight-bold'>" + email + "</span>) "+setEmail2);
     }
     result.css("color", "red");
   }
