@@ -1,22 +1,22 @@
 
 if(setDir == 'ltr'){
-var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
-var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
-var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
-var mainv2 = 'https://get.doitf.com/jsite/table/tfh/css/mainv2.css';
-var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
+var perfectscrollbars = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
+var cssperfectscrollbars = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
+var bootstraps = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+var mainv2s = 'https://get.doitf.com/jsite/table/tfh/css/mainv2.css';
+var cssmains = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
 }else if(setDir == 'rtl'){
-var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.min.js';
-var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.css';
-var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
-var mainv2 = 'https://get.doitf.com/jsite/table/tfh/css/rtl/mainv2.css';
-var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/rtl/main.css';
+var perfectscrollbars = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.min.js';
+var cssperfectscrollbars = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.css';
+var bootstraps = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
+var mainv2s = 'https://get.doitf.com/jsite/table/tfh/css/rtl/mainv2.css';
+var cssmains = 'https://get.doitf.com/jsite/table/tfh/css/rtl/main.css';
 }else{
-var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
-var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
-var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
-var mainv2 = 'https://get.doitf.com/jsite/table/tfh/css/mainv2.css';
-var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
+var perfectscrollbars = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
+var cssperfectscrollbars = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
+var bootstraps = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+var mainv2s = 'https://get.doitf.com/jsite/table/tfh/css/mainv2.css';
+var cssmains = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
 }
 
 
@@ -309,25 +309,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var getdir = $('#dirid').val();
 if(getdir == 'ltr'){
- perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
- cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
- bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
- mainv2 = 'https://get.doitf.com/jsite/table/tfh/css/mainv2.css';
- cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
+ var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
+ var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
+ var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+ var mainv2 = 'https://get.doitf.com/jsite/table/tfh/css/mainv2.css';
+ var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
 $('#newTable1').css('direction','ltr');
 }else if(getdir == 'rtl'){
- perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.min.js';
- cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.css';
- bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
- mainv2 = 'https://get.doitf.com/jsite/table/tfh/css/rtl/mainv2.css';
- cssmain = 'https://get.doitf.com/jsite/table/tfh/css/rtl/main.css';
+ var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.min.js';
+ var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.css';
+ var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
+ var mainv2 = 'https://get.doitf.com/jsite/table/tfh/css/rtl/mainv2.css';
+ var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/rtl/main.css';
  $('#newTable1').css('direction','rtl');
 }else{
- perfectscrollbar = perfectscrollbar;
- cssperfectscrollbar = cssperfectscrollbar;
- bootstrap = bootstrap;
- cssmain = cssmain;
- mainv2 = mainv2;
+ var perfectscrollbar = perfectscrollbars;
+ var cssperfectscrollbar = cssperfectscrollbars;
+ var bootstrap = bootstraps;
+ var cssmain = cssmains;
+ var mainv2 = mainv2s;
  $('#newTable1').css('direction',setDir);
 }
 
