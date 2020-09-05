@@ -1098,7 +1098,7 @@ if(ffhtf == true || ffctf == true){
                 while (ii < sizeCols) {
                     iii = ii + 1;
                     if (tableInfo.checked == true) {
-                        tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '">'+HEADER+' ' + iii + '</th>' + comsc;
+                        tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '">'+setHEADER+' ' + iii + '</th>' + comsc;
                     } else {
                         tableHTML += '<th class="column100 column' + iii + '" data-column="column' + iii + '"> </th>' + comsc;
                     }
