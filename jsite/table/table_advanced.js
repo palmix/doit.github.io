@@ -846,7 +846,17 @@ if(ffhtf == true || ffctf == true){
 			 }
 			if (StyleMode == 'FixedHeader') {
                tableCSS += '<style>'+ comscss;
-               tableCSS += '.wrap-table100 {'+ comscss;					
+               tableCSS += '.wrap-table100 {'+ comscss;
+
+if(getdir == 'ltr'){
+               tableCSS += 'direction:ltr;'+ comscss;
+}else if(getdir == 'rtl'){
+               tableCSS += 'direction:rtl;'+ comscss;
+}else{
+               tableCSS += 'direction:'+setDir+';'+ comscss;
+}
+
+
                tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;					
                tableCSS += 'margin:auto;'+ comscss;					
                tableCSS += '}'+ comscss;					
@@ -857,7 +867,14 @@ if(ffhtf == true || ffctf == true){
                tableCSS += '</style>'+ comscss;
 			 }else if(StyleMode == 'VAHHighlight'){
                tableCSS += '<style>'+ comscss;
-               tableCSS += '.wrap-table100 {'+ comscss;					
+               tableCSS += '.wrap-table100 {'+ comscss;
+if(getdir == 'ltr'){
+               tableCSS += 'direction:ltr;'+ comscss;
+}else if(getdir == 'rtl'){
+               tableCSS += 'direction:rtl;'+ comscss;
+}else{
+               tableCSS += 'direction:'+setDir+';'+ comscss;
+}
                tableCSS += 'width:'+maXwidth + Typewidth +'!important;'+ comscss;
                tableCSS += 'margin:auto;'+ comscss;				   
                tableCSS += '}'+ comscss;
