@@ -1227,7 +1227,7 @@ if(getdir == 'ltr'){
 				}
 
             tableJS = '';
-			  if (StyleMode == 'FixedHeader') {
+			  if (desig == 'advanced' && StyleMode == 'FixedHeader') {
             tableJS += '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><\/script>' + comsc;
             tableJS += '<script src="'+perfectscrollbar+'"><\/script>' + comsc;
             tableJS += '<\script>' + comsc;
@@ -1247,7 +1247,7 @@ if(getdir == 'ltr'){
 
             tableJS += '' + comsc;
                 
-            } else if (editonline.checked == true) {
+            } else if (desig == 'advanced' && editonline.checked == true) {
 
                 tableHTML = "";
 
