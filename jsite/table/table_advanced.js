@@ -1,11 +1,21 @@
 
 if(setDir == 'ltr'){
+var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
+var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
 var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
 }else if(setDir == 'rtl'){
+var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.min.js';
+var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/rtl/perfect-scrollbar.css';
 var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
+var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/rtl/main.css';
 }else{
+var perfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
+var cssperfectscrollbar = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css';
 var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+var cssmain = 'https://get.doitf.com/jsite/table/tfh/css/main.css';
 }
+
 
 
 
@@ -810,8 +820,8 @@ if(ffhtf == true || ffctf == true){
  			//Start css
                tableCSS = '<link rel="stylesheet" type="text/css" href="'+bootstrap+'"/>'+ comscss;
 			 if (StyleMode == 'FixedHeader') {
-               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
-               tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
+               tableCSS += '<link rel="stylesheet" type="text/css" href="'+cssperfectscrollbar+'"/>'+ comscss;
+               tableCSS += '<link rel="stylesheet" type="text/css" href="'+cssmain+'"/>'+ comscss;
 			 }else if(StyleMode == 'VAHHighlight'){
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/mainv2.css"/>'+ comscss;
 			 }
@@ -1171,11 +1181,10 @@ if(ffhtf == true || ffctf == true){
                 tableHTML += "</tbody></table></div></div>" + comsc;
 				}
 
-
             tableJS = '';
 			  if (StyleMode == 'FixedHeader') {
             tableJS += '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><\/script>' + comsc;
-            tableJS += '<script src="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js"><\/script>' + comsc;
+            tableJS += '<script src="'+perfectscrollbar+'"><\/script>' + comsc;
             tableJS += '<\script>' + comsc;
             tableJS += tapcss+'$(".js-pscroll").each(function(){' + comsc;
             tableJS += tapcss+tapcss+'var ps = new PerfectScrollbar(this);' + comsc;
