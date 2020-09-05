@@ -1,4 +1,11 @@
 
+if(setDir == 'ltr'){
+var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+}else if(setDir == 'rtl'){
+var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/rtl/bootstrap.min.css';
+}else{
+var bootstrap = 'https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css';
+}
 
 
 
@@ -801,7 +808,7 @@ if(ffhtf == true || ffctf == true){
 			 }
 
  			//Start css
-               tableCSS = '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/bootstrap/css/bootstrap.min.css"/>'+ comscss;
+               tableCSS = '<link rel="stylesheet" type="text/css" href="+'bootstrap+'"/>'+ comscss;
 			 if (StyleMode == 'FixedHeader') {
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.css"/>'+ comscss;
                tableCSS += '<link rel="stylesheet" type="text/css" href="https://get.doitf.com/jsite/table/tfh/css/main.css"/>'+ comscss;
