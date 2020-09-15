@@ -5,10 +5,10 @@ var wsearchlang = wsearch.includes("view=");
 
 if (wsearch !== '') {
 	if (wsearchlang == false) {
-			window.location = wsearch + '&amp;view=' + setuserLang;
+			window.location = wsearch + '&view=' + setuserLang;
 	}else{
-    var replacedwsearch = wsearch.replace('?','&amp;');
-    var replacedwsearch = replacedwsearch.replace(/&amp;view=/g,'&amp;oldview=');
+    var replacedwsearch = wsearch.replace('?','&');
+    var replacedwsearch = replacedwsearch.replace(/&view=/g,'&oldview=');
 			window.location = '?view=' + setuserLang + replacedwsearch;
     }
 } else {
