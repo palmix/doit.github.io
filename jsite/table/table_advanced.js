@@ -1,3 +1,25 @@
+function setlang(){
+var setuserLang = $("#userLang").val();
+var wsearch = window.location.search;
+var wsearchlang = wsearch.includes("view=");
+
+if (wsearch !== '') {
+	if (wsearchlang == false) {
+			window.location = wsearch + '&amp;view=' + setuserLang;
+	}else{
+    var replacedwsearch = wsearch.replace('?','&amp;');
+    var replacedwsearch = replacedwsearch.replace(/&amp;view=/g,'&amp;oldview=');
+			window.location = '?view=' + setuserLang + replacedwsearch;
+    }
+} else {
+		window.location = '?view=' + setuserLang;
+}
+}
+if(getuserlang == 'en' || getuserlang == 'ar' || getuserlang == 'es' || getuserlang == 'ja' || getuserlang == 'de' || getuserlang == 'ru' || getuserlang == 'fr' || getuserlang == 'in' || getuserlang == 'pt' || getuserlang == 'tr'){
+$("#userLang").val(getuserlang);
+}else{
+$("#userLang").val('en'); 
+}
 
 if(setDir == 'ltr'){
 var perfectscrollbars = 'https://get.doitf.com/jsite/table/tfh/vendor/perfect-scrollbar/perfect-scrollbar.min.js';
