@@ -1,5 +1,4 @@
 function setlang(){
-var getuserlang = setview.replace("&view=","");
 var setuserLang = $("#userLang").val();
 var wsearch = window.location.search;
 var wsearchlang = wsearch.includes("view=");
@@ -16,6 +15,7 @@ if (wsearch !== '') {
 		window.location = '?view=' + setuserLang;
 }
 }
+var getuserlang = setview.replace("&view=","");
 if(getuserlang == 'en' || getuserlang == 'ar' || getuserlang == 'es' || getuserlang == 'ja' || getuserlang == 'de' || getuserlang == 'ru' || getuserlang == 'fr' || getuserlang == 'in' || getuserlang == 'pt' || getuserlang == 'tr'){
 $("#userLang").val(getuserlang);
 }else{
