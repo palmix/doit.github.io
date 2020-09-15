@@ -16,7 +16,7 @@ if (wsearch !== '') {
 }
 }
 var getuserlang = setview.replace("&view=","");
-if(getuserlang == 'en' || getuserlang == 'ar' || getuserlang == 'es' || getuserlang == 'ja' || getuserlang == 'de' || getuserlang == 'ru' || getuserlang == 'fr' || getuserlang == 'in' || getuserlang == 'pt' || getuserlang == 'tr'){
+if(getuserlang == 'en' || getuserlang == 'ar' || getuserlang == 'zh' || getuserlang == 'es' || getuserlang == 'ja' || getuserlang == 'de' || getuserlang == 'ru' || getuserlang == 'fr' || getuserlang == 'in' || getuserlang == 'pt' || getuserlang == 'tr'){
 $("#userLang").val(getuserlang);
 }else{
 $("#userLang").val('en'); 
