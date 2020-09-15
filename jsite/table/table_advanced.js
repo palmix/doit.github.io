@@ -1,4 +1,5 @@
 function setlang(){
+var getuserlang = setview.replace("&view=","");
 var setuserLang = $("#userLang").val();
 var wsearch = window.location.search;
 var wsearchlang = wsearch.includes("view=");
