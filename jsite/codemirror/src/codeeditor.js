@@ -115,9 +115,9 @@ function nodeContent(id) {
                        mode: "vbscript"}]
       };
 
-openBuffer("ملف HTML", nodeContent("testhtml"), mixedMode);
-openBuffer("ملف CSS", nodeContent("teststyle"), "css");
-openBuffer("ملف JS", nodeContent("testscript"), "javascript");
+openBuffer("HTML", nodeContent("testhtml"), mixedMode);
+openBuffer("CSS", nodeContent("teststyle"), "css");
+openBuffer("JS", nodeContent("testscript"), "javascript");
 
 
 
@@ -380,7 +380,7 @@ CodeMirror.autoLoadMode(editor, modefly);
 
   
   
-selectBuffer(editor, "ملف HTML");
+selectBuffer(editor, "HTML");
 
 
 
