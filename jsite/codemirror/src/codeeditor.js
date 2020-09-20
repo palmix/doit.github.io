@@ -143,13 +143,13 @@ var modeInput1 = document.getElementById("buffers");
 
   
 
-    if(modeflymode2 == "ملف HTML"){
+    if(modeflymode2 == "HTML"){
 modeInputs.selectedIndex = 1;
 fileextension = modeflymode1+".html";
-  }else if(modeflymode2 == "ملف CSS"){
+  }else if(modeflymode2 == "CSS"){
 fileextension = modeflymode1+".css";
 modeInputs.selectedIndex = 3;
-  }else if(modeflymode2 == "ملف JS"){
+  }else if(modeflymode2 == "JS"){
 fileextension = modeflymode1+".js";
 modeInputs.selectedIndex = 2;
   }else{
