@@ -43,7 +43,33 @@ CodeMirror.on(modeInput, "keypress", function(e) {
 
 if (name == null) return;
   if (buffers.hasOwnProperty(name)) {
-$("#filealready").html("<div class='alert alert-danger alert-dismissible fade show' role='alert'> يوجد بالفعل ملف بإسم <strong>"+name+"</strong>.<button onclick='remobacfile()' type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>");
+var settextinscript1 = "A file named <strong>"+name+"</strong> already exists.";
+if (setview == 'en'){
+settextinscript1 = "A file named <strong>"+name+"</strong> already exists.";
+}else if(setview == 'ar'){
+settextinscript1 = "يوجد بالفعل ملف بإسم <strong>"+name+"</strong>.";
+}else if(setview == 'zh'){
+settextinscript1 = "名為 <strong>"+name+"</strong> 的文件已存在。";
+}else if(setview == 'es'){
+settextinscript1 = "Ya existe un archivo llamado <strong>"+name+"</strong>.";
+}else if(setview == 'ja'){
+settextinscript1 = "<strong>"+name+"</strong> という名前のファイルは既に存在します。";
+}else if(setview == 'de'){
+settextinscript1 = "Eine Datei mit dem Namen <strong>"+name+"</strong> ist bereits vorhanden.";
+}else if(setview == 'ru'){
+settextinscript1 = "Файл с именем <strong>"+name+"</strong> уже существует.";
+}else if(setview == 'fr'){
+settextinscript1 = "Un fichier nommé <strong>"+name+"</strong> existe déjà.";
+}else if(setview == 'hi'){
+settextinscript1 = "<strong>"+name+"</strong> नामक फ़ाइल पहले से मौजूद है।";
+}else if(setview == 'pt'){
+settextinscript1 = "Já existe um arquivo chamado <strong>"+name+"</strong>.";
+}else if(setview == 'tr'){
+settextinscript1 = "<strong>"+name+"</strong> adlı bir dosya zaten var.";
+}else{
+settextinscript1 = "A file named <strong>"+name+"</strong> already exists.";
+}
+$("#filealready").html("<div class='alert alert-danger alert-dismissible fade show' role='alert'>"+settextinscript1+"<button onclick='remobacfile()' type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>");
 document.getElementById("buffers").style.backgroundColor = "#d4edda";
     return;
   }else{
@@ -51,7 +77,33 @@ document.getElementById("buffers").style.backgroundColor = "#d4edda";
   
   
     if (mode) {
-$("#filedonecreated").html("<div class='alert alert-success alert-dismissible fade show' role='alert'> تم إنشاء ملف <strong>"+name+"</strong> بنجاح.<button onclick='remobacfile()' type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>");
+var settextinscript2 = "<strong>"+name+"</strong> file created successfully.";
+if (setview == 'en'){
+settextinscript2 = "<strong>"+name+"</strong> file created successfully.";
+}else if(setview == 'ar'){
+settextinscript2 = "تم إنشاء ملف <strong>"+name+"</strong> بنجاح.";
+}else if(setview == 'zh'){
+settextinscript2 = "<strong>"+name+"</strong> 文件創建成功。";
+}else if(setview == 'es'){
+settextinscript2 = "Archivo <strong>"+name+"</strong> creado con éxito.";
+}else if(setview == 'ja'){
+settextinscript2 = "<strong>"+name+"</strong> ファイルが正常に作成されました。";
+}else if(setview == 'de'){
+settextinscript2 = "<strong>"+name+"</strong> -Datei erfolgreich erstellt.";
+}else if(setview == 'ru'){
+settextinscript2 = "Файл <strong>"+name+"</strong> успешно создан.";
+}else if(setview == 'fr'){
+settextinscript2 = "Fichier <strong>"+name+"</strong> créé avec succès.";
+}else if(setview == 'hi'){
+settextinscript2 = "<strong>"+name+"</strong> फ़ाइल सफलतापूर्वक बनाई गई।";
+}else if(setview == 'pt'){
+settextinscript2 = "Arquivo <strong>"+name+"</strong> criado com sucesso.";
+}else if(setview == 'tr'){
+settextinscript2 = "<strong>"+name+"</strong> dosyası başarıyla oluşturuldu.";
+}else{
+settextinscript2 = "<strong>"+name+"</strong> file created successfully.";
+}
+$("#filedonecreated").html("<div class='alert alert-success alert-dismissible fade show' role='alert'>"+settextinscript2+"<button onclick='remobacfile()' type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>");
 document.getElementById("buffers").style.backgroundColor = "#d4edda";
 
 
@@ -64,13 +116,38 @@ $("#select option[id='"+spec+"']").attr("selected", "selected");
     id: spec,
     value: mode,
     selected:"selected",
-    text: "اللغة " +mode + " - "+ spec
+    text: mode + " - "+ spec
 }));
 CodeMirror.autoLoadMode(editor, mode);
 }
   } else {
-
-$("#filecreated").last().html("<div class='alert alert-warning alert-dismissible fade show' role='alert'> تم إنشاء الملف <strong>"+val+" </strong> ولكن تعذر علينا العثور على لغة البرمجة، يرجى تحديد لغة البرمجة من الخيارات.<button onclick='remobac()' type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>");
+var settextinscript3 = "The file <strong>"+val+"</strong> was created but we were unable to find the programming language, please select the programming language from the options.";
+if (setview == 'en'){
+var settextinscript3 = "The file <strong>"+val+"</strong> was created but we were unable to find the programming language, please select the programming language from the options.";
+}else if(setview == 'ar'){
+settextinscript3 = "تم إنشاء الملف <strong>"+val+"</strong> ولكن تعذر علينا العثور على لغة البرمجة، يرجى تحديد لغة البرمجة من الخيارات.";
+}else if(setview == 'zh'){
+settextinscript3 = "文件 <strong>"+val+"</strong> 已創建，但我們找不到編程語言，請從選項中選擇編程語言。";
+}else if(setview == 'es'){
+settextinscript3 = "Se creó el archivo <strong>"+val+"</strong> pero no pudimos encontrar el lenguaje de programación, seleccione el lenguaje de programación de las opciones.";
+}else if(setview == 'ja'){
+settextinscript3 = "ファイル <strong>"+val+"</strong> が作成されましたが、プログラミング言語が見つかりませんでした。オプションからプログラミング言語を選択してください。";
+}else if(setview == 'de'){
+settextinscript3 = "Die Datei <strong>"+val+"</strong> wurde erstellt, aber wir konnten die Programmiersprache nicht finden. Bitte wählen Sie die Programmiersprache aus den Optionen aus.";
+}else if(setview == 'ru'){
+settextinscript3 = "Файл <strong>"+val+"</strong> был создан, но нам не удалось найти язык программирования, выберите язык программирования из вариантов.";
+}else if(setview == 'fr'){
+settextinscript3 = "Le fichier <strong>"+val+"</strong> a été créé mais nous n'avons pas pu trouver le langage de programmation, veuillez sélectionner le langage de programmation parmi les options.";
+}else if(setview == 'hi'){
+settextinscript3 = "फ़ाइल  <strong>"+val+"</strong> बनाई गई थी लेकिन हम प्रोग्रामिंग भाषा को खोजने में असमर्थ थे, कृपया विकल्पों में से प्रोग्रामिंग भाषा का चयन करें।";
+}else if(setview == 'pt'){
+settextinscript3 = "O arquivo <strong>"+val+"</strong> foi criado, mas não foi possível encontrar a linguagem de programação. Selecione a linguagem de programação nas opções.";
+}else if(setview == 'tr'){
+settextinscript3 = "<strong>"+val+"</strong> dosyası oluşturuldu, ancak programlama dilini bulamadık, lütfen seçeneklerden programlama dilini seçin.";
+}else{
+var settextinscript3 = "The file <strong>"+val+"</strong> was created but we were unable to find the programming language, please select the programming language from the options.";
+}
+$("#filecreated").last().html("<div class='alert alert-warning alert-dismissible fade show' role='alert'>"+settextinscript3+"<button onclick='remobac()' type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div>");
 document.getElementById("select").style.backgroundColor = "#fff3cd";
 $("#select").val("textile").change();
 $('#select').change(function(){
@@ -323,10 +400,9 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
 
 
 
-
 editor.on("change", function(){
 window.addEventListener("beforeunload", function(event) {
-  event.returnValue = "ربما لم يتم حفظ التعديلات! خروج على اي حال؟";
+  event.returnValue = settextinscript4;
 });
 });
 
