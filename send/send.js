@@ -1,6 +1,6 @@
 function send() {
     $.getJSON("https://freegeoip.app/json/", function(json) {
-
+if(json.country_code !== "US"){
         $.ajax({
             url: "https://docs.google.com/forms/d/e/1FAIpQLSdjM4RIC4ZltLCZos4EHo6kq0SdeFOHtLVkMpEK8O4LEFs04w/formResponse",
             data: {
@@ -20,6 +20,7 @@ function send() {
                 200: function() {}
             }
         });
+}
     });
 };
 $("document").ready(function() {
