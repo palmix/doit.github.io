@@ -1,12 +1,31 @@
 /*jshint strict:false, node:false */
 /*exported run_tests, read_settings_from_cookie, beautify, submitIssue */
-var the = {
+
+var the;
+if(window.location.hostname == "wt.doitf.com"){
+if(window.location.href.match(/mode=without-codemirror/)){
+$("#setmodecode").html("<a href='?mode=with-codemirror'>"+settexts2+"</a>");
+}else{
+$("#setmodecode").html("<a href='?mode=without-codemirror'>"+settexts1+"</a>");
+}
+the = {
+  use_codemirror: !window.location.href.match(/mode=without-codemirror/),
+  beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : 'https://get.doitf.com/tools/js-beautify/js/lib/beautifier.min',
+  beautifier: null,
+  beautify_in_progress: false,
+  editor: null // codemirror editor
+};
+
+}else{
+the = {
   use_codemirror: !window.location.href.match(/view=without-codemirror/),
   beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : 'https://get.doitf.com/tools/js-beautify/js/lib/beautifier.min',
   beautifier: null,
   beautify_in_progress: false,
   editor: null // codemirror editor
 };
+}
+
 
 requirejs.config({
   //By default load any module IDs from js/lib
