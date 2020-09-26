@@ -29,6 +29,9 @@ var default_text =$("#testscript").val();
     set_editor_mode();
     the.editor.focus();
 
+cmResize(the.editor, {
+resizableWidth: false,minHeight: 100,});
+
     $('.CodeMirror').click(function() {
 		  if (the.editor.getValue() === default_css){
 			the.editor.setValue('');
