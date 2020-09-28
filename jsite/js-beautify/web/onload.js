@@ -83,17 +83,3 @@ $.getJSON("https://get.doitf.com/tools/js-beautify/package.json", function(data)
 		}
 
 });
-
-
-document.getElementById('copy').onclick = function () {
-$(".copy").attr("data-clipboard-text", the.editor.getValue());
-    function selectAll() {
-  if (editor) {
-    the.editor.execCommand('selectAll');
-  } else {
-    $('#source').select();
-  }
-}
-}
-
-
