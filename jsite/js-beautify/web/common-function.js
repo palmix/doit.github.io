@@ -6,10 +6,8 @@ if(window.location.hostname == "wt.doitf.com"){
 $( document ).ready(function() {
 if(window.location.href.match(/mode=without-codemirror/)){
 $("#setmodecode").html("<a href='?mode=with-codemirror'>"+settexts2+"</a>");
-var codemode = "without_codemirror";
 }else{
 $("#setmodecode").html("<a href='?mode=without-codemirror'>"+settexts1+"</a>");
-var codemode = "with_codemirror";
 }
 });
 the = {
