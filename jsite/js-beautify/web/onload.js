@@ -113,7 +113,7 @@ if (codemode != "without_codemirror") {
   lineNumbers: true,
   styleActiveLine: true,
   lineWrapping: true,
-  smartIndent: false,
+  readOnly: true,
    direction: "ltr"
 });
 
