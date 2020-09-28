@@ -94,12 +94,13 @@ document.getElementById('copy').onclick = function () {
 }
 
   if (the.editor) {
+$(".copy").attr("data-clipboard-text", the.editor.getValue());
 the.editor.on("change", function(){
 $(".copy").attr("data-clipboard-text", the.editor.getValue());
 });
   }else{
 $(".copy").attr("data-clipboard-target", "#source");
-  }
+}
 
 
 
