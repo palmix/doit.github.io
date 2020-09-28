@@ -1,5 +1,6 @@
 /*jshint node:false, jquery:true, strict:false */
 $(function() {
+	
 if(window.location.href.match(/mode=without-codemirror/)){
 var codemode = "without_codemirror";
 }else{
