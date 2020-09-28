@@ -672,10 +672,5 @@ function remobacfile(){
 document.getElementById("buffers").style.backgroundColor = "";
 }
 $( document ).ready(function() {
-$('.CodeMirror').resizable({
-    minHeight: 150,
-  resize: function() {
-    editor.setSize("100%", $(this).height());
-  }
-});
+cmResize(editor);
 });
