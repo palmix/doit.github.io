@@ -1,6 +1,10 @@
 /*jshint node:false, jquery:true, strict:false */
 $(function() {
-
+if(window.location.href.match(/mode=without-codemirror/)){
+var codemode = "without_codemirror";
+}else{
+var codemode = "with_codemirror";
+}
   read_settings_from_cookie();
 function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}function b64DecodeUnicode(e){return decodeURIComponent(escape(atob(e)))}var awsec=window.location.hostname,awsecdom=awsec.substring(awsec.lastIndexOf(".",awsec.lastIndexOf(".")-1)+1),b64awsec=b64EncodeUnicode(awsecdom);
 
