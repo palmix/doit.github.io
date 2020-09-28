@@ -107,7 +107,7 @@ $(".copy").attr("data-clipboard-text", the.editor.getValue());
 $(".copy").attr("data-clipboard-target", "#source");
 }
 
-
+if (codemode != "without_codemirror") {
   var seteditor2 = CodeMirror.fromTextArea(document.getElementById("options-selected"), {
   mode: "application/json",
   lineNumbers: true,
@@ -122,7 +122,7 @@ setTimeout(function(){
 seteditor2.setValue($('#options-selected').val())
 }, 1000);
 });
-
+}
 
 
 });
