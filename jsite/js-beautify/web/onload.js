@@ -103,7 +103,7 @@ $(".copy").attr("data-clipboard-target", "#source");
 }
 
 
-  var seteditor = CodeMirror.fromTextArea(document.getElementById("options-selected"), {
+  var seteditor2 = CodeMirror.fromTextArea(document.getElementById("options-selected"), {
   mode: "application/json",
   lineNumbers: true,
   styleActiveLine: true,
@@ -114,7 +114,7 @@ $(".copy").attr("data-clipboard-target", "#source");
   
 $(".awsubjson").on("click", function(){
 setTimeout(function(){
-seteditor.setValue($('#options-selected').val())
+seteditor2.setValue($('#options-selected').val())
 }, 1000);
 });
 
