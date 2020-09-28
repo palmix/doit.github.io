@@ -103,6 +103,22 @@ $(".copy").attr("data-clipboard-target", "#source");
 }
 
 
+  var seteditor = CodeMirror.fromTextArea(document.getElementById("options-selected"), {
+  mode: "application/json",
+  lineNumbers: true,
+  styleActiveLine: true,
+  lineWrapping: true,
+   direction: "ltr"
+});
+
+  
+$(".awsubjson").on("click", function(){
+setTimeout(function(){
+seteditor.setValue($('#options-selected').val())
+}, 1000);
+});
+
+
 
 });
 
