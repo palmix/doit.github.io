@@ -83,7 +83,7 @@ $.getJSON("https://get.doitf.com/tools/js-beautify/package.json", function(data)
 		}
 
 });
-var getcodes = the.editor.getValue();
+
 
 document.getElementById('copy').onclick = function () {
 if (codemode != "without_codemirror") {
@@ -92,17 +92,17 @@ if (codemode != "without_codemirror") {
     $('#source').select();
   }
 }
-
+$(function() {
 if (codemode != "without_codemirror") {
-$(".copy").attr("data-clipboard-text", getcodes);
+$(".copy").attr("data-clipboard-text", the.editor.getValue());
 the.editor.on("change", function(){
-$(".copy").attr("data-clipboard-text", getcodes);
+$(".copy").attr("data-clipboard-text", the.editor.getValue());
 });
   }else{
 $(".copy").attr("data-clipboard-target", "#source");
 }
 
-
+});
 
 
 
