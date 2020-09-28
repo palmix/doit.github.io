@@ -86,14 +86,14 @@ $.getJSON("https://get.doitf.com/tools/js-beautify/package.json", function(data)
 
 
 document.getElementById('copy').onclick = function () {
-  if (codemode !== "without_codemirror") {
+if (codemode != "without_codemirror") {
     the.editor.execCommand('selectAll');
   } else {
     $('#source').select();
   }
 }
 
-  if (codemode !== "without_codemirror") {
+if (codemode != "without_codemirror") {
 $(".copy").attr("data-clipboard-text", the.editor.getValue());
 the.editor.on("change", function(){
 $(".copy").attr("data-clipboard-text", the.editor.getValue());
