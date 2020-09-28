@@ -202,6 +202,12 @@ openBuffer("JS", nodeContent("testscript"), "javascript");
  
 document.getElementById('copy').onclick = function () {
 $(".copy").attr("data-clipboard-text", editor.getValue());
+
+  if (editor) {
+    editor.execCommand('selectAll');
+  } else {
+    $('#source').select();
+  }
 }
 
 
