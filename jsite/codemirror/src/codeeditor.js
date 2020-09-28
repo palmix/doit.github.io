@@ -514,16 +514,16 @@ function sizecodes() {
   var checkBoxsize = document.getElementById("setsizecodes");
   if (checkBox.checked == true){
 document.getElementsByClassName("CodeMirror")[0].style.height = "auto";
+document.getElementsByClassName("CodeMirror")[0].style.resize = "none";
 checkBoxsize.setAttribute("disabled","disabled");
-checkBoxsize.style.display = "none"
+checkBoxsize.style.display = "none";
 } else{
-document.getElementsByClassName("CodeMirror")[0].style.height = checkBoxsize.value+"px";;
-checkBoxsize.style.display = "inline-block";
+document.getElementsByClassName("CodeMirror")[0].style.height = checkBoxsize.value+"px";
+document.getElementsByClassName("CodeMirror")[0].style.resize = "vertical";
+checkBoxsize.style.display = "none";
 checkBoxsize.removeAttribute("disabled");
     }
 }
-
-
 
 
 
