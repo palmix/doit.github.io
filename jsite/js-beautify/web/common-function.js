@@ -6,13 +6,15 @@ if(window.location.hostname == "wt.doitf.com"){
 $( document ).ready(function() {
 if(window.location.href.match(/mode=without-codemirror/)){
 $("#setmodecode").html("<a href='?mode=with-codemirror'>"+settexts2+"</a>");
+var codemode = "without_codemirror";
 }else{
 $("#setmodecode").html("<a href='?mode=without-codemirror'>"+settexts1+"</a>");
+var codemode = "with_codemirror";
 }
 });
 the = {
   use_codemirror: !window.location.href.match(/mode=without-codemirror/),
-  beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : 'https://get.doitf.com/tools/js-beautify/js/lib/beautifier.min',
+  beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : 'https://get.doitf.com/jsite/js-beautify/js/lib/beautifier.min',
   beautifier: null,
   beautify_in_progress: false,
   editor: null // codemirror editor
@@ -21,7 +23,7 @@ the = {
 }else{
 the = {
   use_codemirror: !window.location.href.match(/view=without-codemirror/),
-  beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : 'https://get.doitf.com/tools/js-beautify/js/lib/beautifier.min',
+  beautifier_file: window.location.href.match(/debug/) ? 'beautifier' : 'https://get.doitf.com/jsite/js-beautify/js/lib/beautifier.min',
   beautifier: null,
   beautify_in_progress: false,
   editor: null // codemirror editor
@@ -31,7 +33,7 @@ the = {
 
 requirejs.config({
   //By default load any module IDs from js/lib
-  baseUrl: 'https://get.doitf.com/tools/js-beautify/js/lib',
+  baseUrl: 'https://get.doitf.com/jsite/js-beautify/js/lib',
   paths: {
     'beautifier': the.beautifier_file
   }
@@ -63,10 +65,10 @@ function set_editor_mode() {
 }
 
 function run_tests() {
-  $.when($.getScript("https://get.doitf.com/tools/js-beautify/js/test/sanitytest.js"),
-      $.getScript("https://get.doitf.com/tools/js-beautify/js/test/generated/beautify-javascript-tests.js"),
-      $.getScript("https://get.doitf.com/tools/js-beautify/js/test/generated/beautify-css-tests.js"),
-      $.getScript("https://get.doitf.com/tools/js-beautify/js/test/generated/beautify-html-tests.js"))
+  $.when($.getScript("https://get.doitf.com/jsite/js-beautify/js/test/sanitytest.js"),
+      $.getScript("https://get.doitf.com/jsite/js-beautify/js/test/generated/beautify-javascript-tests.js"),
+      $.getScript("https://get.doitf.com/jsite/js-beautify/js/test/generated/beautify-css-tests.js"),
+      $.getScript("https://get.doitf.com/jsite/js-beautify/js/test/generated/beautify-html-tests.js"))
     .done(function() {
       var st = new SanityTest();
       run_javascript_tests(st, Urlencoded, the.beautifier.js, the.beautifier.html, the.beautifier.css);
