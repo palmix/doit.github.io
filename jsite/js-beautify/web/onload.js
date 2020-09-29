@@ -126,10 +126,26 @@ seteditor2.setValue($('#options-selected').val())
 }
 
 document.getElementById('saveDocument').onclick = function () {
+
+var modeflymodes = "text/html";
 var fileextension = $("#language").val();
+if(fileextension == "html"){
+modeflymodes = "text/html";
+fileextension = "html";
+}else if(modeflymode2 == "css"){
+modeflymodes = "text/css";
+fileextension = "css";	
+}else if(modeflymode2 == "js"){
+modeflymodes = "text/javascript";
+fileextension = "js";	
+}else{
+modeflymodes = "text/html";
+fileextension = "html";
+}
+
 var filename = $("#filename").val();
 var setfile = filename+"."+fileextension;
-var blob = new Blob([the.editor.getValue()], {type:+'text/html;charset=utf-8'});
+var blob = new Blob([the.editor.getValue()], {type: modeflymodes+';charset=utf-8'});
     saveAs(blob, setfile);
 }; 
 
