@@ -145,7 +145,15 @@ fileextension = "html";
 
 var filename = $("#filename").val();
 var setfile = filename+"."+fileextension;
-var blob = new Blob([the.editor.getValue()], {type: modeflymodes+';charset=utf-8'});
+var thiscode;
+if (codemode != "without_codemirror") {
+thiscode = the.editor.getValue();
+} else {
+thiscode = $('#source').val();
+}
+  
+  
+var blob = new Blob([thiscode], {type: modeflymodes+';charset=utf-8'});
     saveAs(blob, setfile);
 }; 
 
