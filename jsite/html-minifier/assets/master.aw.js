@@ -73,7 +73,7 @@ if (b64awsec == "ZG9pdGYuY29t"){
 
  
   editor.setValue(minifiedValue)
-      byId('stats').innerHTML = '<table class="table table-bordered table-hover table-sm my-4"><thead><tr><th scope="col">' + settext001 + '</th><th scope="col">' + settext002 + '</th><th scope="col">' + settext003 + '</th></tr></thead><tbody><tr><td class="bg-danger">' + commify(originalValue.length) + '</td><td class="bg-warning">' + commify(minifiedValue.length) + '</td><td class="bg-success">' + commify(diff) + ' (' + savings + '%)</td></tr></tbody></table>';
+      byId('stats').innerHTML = '<table class="table table-bordered table-hover table-sm my-4"><thead><tr><th scope="col">' + settext001 + '</th><th scope="col">' + settext002 + '</th><th scope="col">' + settext003 + '</th></tr></thead><tbody><tr><td class="bg-danger text-white">' + commify(originalValue.length) + '</td><td class="bg-warning text-dark">' + commify(minifiedValue.length) + '</td><td class="bg-success text-white">' + commify(diff) + ' (' + savings + '%)</td></tr></tbody></table>';
       byId('minify-btn').disabled = false;
     }, function(err) {
       byId('stats').innerHTML = '<span class="failure">' + escapeHTML(err) + '</span>';
