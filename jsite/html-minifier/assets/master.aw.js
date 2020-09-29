@@ -73,12 +73,7 @@ if (b64awsec == "ZG9pdGYuY29t"){
 
  
   editor.setValue(minifiedValue)
-      byId('stats').innerHTML =
-        '<span class="success">' +
-          'الحجم الأصلي: <strong>' + commify(originalValue.length) + '</strong>.<br/>' +
-          'الحجم المصغر: <strong>' + commify(minifiedValue.length) + '</strong>.<br/>' +
-          'التوفير: <strong>' + commify(diff) + ' (' + savings + '%)</strong>.' +
-        '</span>';
+      byId('stats').innerHTML = '<table class="table table-bordered table-hover table-sm"><thead><tr><th scope="col">' + settext001 + '</th><th scope="col">' + settext002 + '</th><th scope="col">' + settext003 + '</th></tr></thead><tbody><tr><td class="bg-danger">' + commify(originalValue.length) + '</td><td class="bg-warning">' + commify(minifiedValue.length) + '</td><td class="bg-success">' + commify(diff) + ' (' + savings + '%)</td></tr></tbody></table>';
       byId('minify-btn').disabled = false;
     }, function(err) {
       byId('stats').innerHTML = '<span class="failure">' + escapeHTML(err) + '</span>';
@@ -128,4 +123,3 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
 
   });
 
-    editor.setValue('');
