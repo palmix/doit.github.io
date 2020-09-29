@@ -129,7 +129,7 @@ document.getElementById('saveDocument').onclick = function () {
 var fileextension = $("#language").val();
 var filename = $("#filename").val();
 var setfile = filename+"."+fileextension;
-var blob = new Blob([editor.getValue()], {type:+'text/html;charset=utf-8'});
+var blob = new Blob([the.editor.getValue()], {type:+'text/html;charset=utf-8'});
     saveAs(blob, setfile);
 }; 
 
