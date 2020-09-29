@@ -132,10 +132,10 @@ var fileextension = $("#language").val();
 if(fileextension == "html"){
 modeflymodes = "text/html";
 fileextension = "html";
-}else if(modeflymode2 == "css"){
+}else if(fileextension == "css"){
 modeflymodes = "text/css";
 fileextension = "css";	
-}else if(modeflymode2 == "js"){
+}else if(fileextension == "js"){
 modeflymodes = "text/javascript";
 fileextension = "js";	
 }else{
