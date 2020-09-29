@@ -131,3 +131,11 @@ document.getElementById('copy').onclick = function () {
 $(".copy").attr("data-clipboard-text", editor.getValue());
 editor.execCommand('selectAll');
 }
+
+
+
+document.getElementById('saveDocument').onclick = function () {
+var fileextension = $("#filename").val()+".html";
+var blob = new Blob([editor.getValue()], {type:+'text/html;charset=utf-8'});
+    saveAs(blob, fileextension);
+}; 
