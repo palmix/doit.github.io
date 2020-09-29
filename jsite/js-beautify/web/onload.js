@@ -144,6 +144,9 @@ fileextension = "html";
 }
 
 var filename = $("#filename").val();
+if (filename == ""){
+filename = "myFile";
+}
 var setfile = filename+"."+fileextension;
 var thiscode;
 if (codemode != "without_codemirror") {
