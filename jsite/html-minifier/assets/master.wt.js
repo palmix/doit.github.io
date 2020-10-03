@@ -88,15 +88,7 @@ byId('minify-btn').onclick = function() {
         var diff = originalValue.length - minifiedValue.length;
         var savings = originalValue.length ? (100 * diff / originalValue.length).toFixed(2) : 0;
 
- if(minifybtn == "html"){
-	minifiedValue = minifiedValue;
- }else if(minifybtn == "css"){
-	minifiedValue = minifiedValue.replace(minifiedValue.slice(0,6),"");
-	minifiedValue = minifiedValue.replace(minifiedValue.slice(-6),"");
 
- }else if(minifybtn == "js"){
-	var originalValue = minifiedValue;
- }
  
  
         editor.setValue(minifiedValue);
