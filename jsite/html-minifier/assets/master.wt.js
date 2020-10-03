@@ -84,13 +84,10 @@ byId('minify-btn').onclick = function() {
 	
  if(minifybtn == "html"){
 	var originalValue = editor.getValue();
-	editor.setOption('mode', 'text/html');
  }else if(minifybtn == "css"){
 	var originalValue = "<style>"+editor.getValue()+"<\/style>";
-	editor.setOption('mode', 'text/css');
  }else if(minifybtn == "js"){
 	var originalValue = "<\script>"+editor.getValue()+"<\/script>";
-	editor.setOption('mode', 'javascript');
  }
 	
 	
