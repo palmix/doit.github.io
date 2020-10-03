@@ -91,12 +91,11 @@ byId('minify-btn').onclick = function() {
  if(minifybtn == "html"){
 	minifiedValue = minifiedValue;
  }else if(minifybtn == "css"){
-	minifiedValue = "<style>"+editor.getValue()+"</style>";
 	minifiedValue = minifiedValue.replace(minifiedValue.slice(0,6),"");
 	minifiedValue = minifiedValue.replace(minifiedValue.slice(-6),"");
 
  }else if(minifybtn == "js"){
-	var originalValue = "<\script>"+editor.getValue()+"<\/script>";
+	var originalValue = minifiedValue;
  }
  
  
