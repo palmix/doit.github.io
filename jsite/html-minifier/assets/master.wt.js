@@ -67,7 +67,7 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}functi
 if (b64awsec == "ZG9pdGYuY29t"){
 
 var minifybtn = $("#languageCode").val();
-function modeCode() {  
+function modeCode(){
  if(minifybtn == 'html'){
 	editor.setOption('mode', 'text/html');
  }else if(minifybtn == 'css'){
@@ -84,10 +84,13 @@ byId('minify-btn').onclick = function() {
 	
  if(minifybtn == "html"){
 	var originalValue = editor.getValue();
+	editor.setOption('mode', 'text/html');
  }else if(minifybtn == "css"){
 	var originalValue = "<style>"+editor.getValue()+"<\/style>";
+	editor.setOption('mode', 'text/css');
  }else if(minifybtn == "js"){
 	var originalValue = "<\script>"+editor.getValue()+"<\/script>";
+	editor.setOption('mode', 'javascript');
  }
 	
 	
