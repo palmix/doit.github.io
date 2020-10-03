@@ -77,7 +77,7 @@ byId('minify-btn').onclick = function() {
  if(minifybtn == "html"){
 	var originalValue = editor.getValue();
  }else if(minifybtn == "css"){
-	var originalValue = "<style>"+editor.getValue()+"</style>";
+	var originalValue = "<style>"+editor.getValue()+"<\/style>";
  }else if(minifybtn == "js"){
 	var originalValue = "<\script>"+editor.getValue()+"<\/script>";
  }
@@ -92,10 +92,12 @@ byId('minify-btn').onclick = function() {
   if(minifybtn == "html"){
 	editor.setValue(minifiedValue);
  }else if(minifybtn == "css"){
-	minifiedValue = minifiedValue.replace(minifiedValue.slice(0,6),"");
-	minifiedValue = minifiedValue.replace(minifiedValue.slice(-6),"");
+	minifiedValue = minifiedValue.replace(minifiedValue.slice(0,7),"");
+	minifiedValue = minifiedValue.replace(minifiedValue.slice(-8),"");
 	editor.setValue(minifiedValue);
  }else if(minifybtn == "js"){
+	minifiedValue = minifiedValue.replace(minifiedValue.slice(0,8),"");
+	minifiedValue = minifiedValue.replace(minifiedValue.slice(-9),"");
 	editor.setValue(minifiedValue);
  }
  
