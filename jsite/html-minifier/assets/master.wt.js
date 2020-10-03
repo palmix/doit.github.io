@@ -66,8 +66,9 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}functi
 
 if (b64awsec == "ZG9pdGYuY29t"){
 
-var minifybtn = $("#languageCode").val();
+
 function modeCode(){
+var minifybtn = $("#languageCode").val();
  if(minifybtn == 'html'){
 	editor.setOption('mode', 'text/html');
  }else if(minifybtn == 'css'){
@@ -80,6 +81,7 @@ function modeCode(){
 
 byId('minify-btn').onclick = function() {
     byId('minify-btn').disabled = true;
+	var minifybtn = $("#languageCode").val();
 	var originalValue = editor.getValue();
 	
  if(minifybtn == "html"){
