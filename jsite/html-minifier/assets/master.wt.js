@@ -66,12 +66,20 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}functi
 
 if (b64awsec == "ZG9pdGYuY29t"){
 
-
+var minifybtn = $("#languageCode").val();
+function modeCode() {  
+ if(minifybtn == 'html'){
+	editor.setOption('mode', 'text/html');
+ }else if(minifybtn == 'css'){
+	editor.setOption('mode', 'text/css');
+ }else if(minifybtn == 'js'){
+	editor.setOption('mode', 'javascript');
+ }
+}
 
 
 byId('minify-btn').onclick = function() {
     byId('minify-btn').disabled = true;
-	var minifybtn = $("#languageCode").val();
 	var originalValue = editor.getValue();
 	
  if(minifybtn == "html"){
@@ -100,9 +108,7 @@ byId('minify-btn').onclick = function() {
 	minifiedValue = minifiedValue.replace(minifiedValue.slice(-9),"");
 	editor.setValue(minifiedValue);
  }
- 
-        
-		
+
         byId('stats').innerHTML = '<table class="table table-bordered table-hover table-sm my-4"><thead><tr><th scope="col">' + settext001 + '</th><th scope="col">' + settext002 + '</th><th scope="col">' + settext003 + '</th></tr></thead><tbody><tr><td class="bg-danger text-white">' + commify(originalValue.length) + '</td><td class="bg-warning text-dark">' + commify(minifiedValue.length) + '</td><td class="bg-success text-white">' + commify(diff) + ' (' + savings + '%)</td></tr></tbody></table>';
         byId('minify-btn').disabled = false;
     }, function(err) {
