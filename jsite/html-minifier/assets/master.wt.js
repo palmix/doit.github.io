@@ -169,15 +169,7 @@ editor.execCommand('selectAll');
 
 
 
-document.getElementById('saveDocument').onclick = function () {
-var filename =  $("#filename").val();
-if (filename == ""){
-filename = "myFile";
-}
-var fileextension = filename+".html";
-var blob = new Blob([editor.getValue()], {type:+'text/html;charset=utf-8'});
-    saveAs(blob, fileextension);
-}; 
+
 
 
 function modeCode(){
@@ -190,3 +182,39 @@ var minifybtn = $("#languageCode").val();
 	editor.setOption('mode', 'javascript');
  }
 }
+
+
+
+
+
+
+document.getElementById('saveDocument').onclick = function () {
+
+var modeflymodes = "text/html";
+var fileextension = $("#languageCode").val();
+if(fileextension == "html"){
+modeflymodes = "text/html";
+fileextension = "html";
+}else if(fileextension == "css"){
+modeflymodes = "text/css";
+fileextension = "css";	
+}else if(fileextension == "js"){
+modeflymodes = "text/javascript";
+fileextension = "js";	
+}else{
+modeflymodes = "text/html";
+fileextension = "html";
+}
+
+var filename = $("#filename").val();
+if (filename == ""){
+filename = "myFile";
+}
+var setfile = filename+"."+fileextension;
+  
+  
+var blob = new Blob([editor.getValue()], {type: modeflymodes+';charset=utf-8'});
+    saveAs(blob, setfile);
+}; 
+
+});
