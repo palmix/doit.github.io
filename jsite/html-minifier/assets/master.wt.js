@@ -189,7 +189,6 @@ var minifybtn = $("#languageCode").val();
 
 
 document.getElementById('saveDocument').onclick = function () {
-
 var modeflymodes = "text/html";
 var fileextension = $("#languageCode").val();
 if(fileextension == "html"){
@@ -217,4 +216,3 @@ var blob = new Blob([editor.getValue()], {type: modeflymodes+';charset=utf-8'});
     saveAs(blob, setfile);
 }; 
 
-});
