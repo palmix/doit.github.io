@@ -67,16 +67,6 @@ function b64EncodeUnicode(e){return btoa(unescape(encodeURIComponent(e)))}functi
 if (b64awsec == "ZG9pdGYuY29t"){
 
 
-function modeCode(){
-var minifybtn = $("#languageCode").val();
- if(minifybtn == 'html'){
-	editor.setOption('mode', 'text/html');
- }else if(minifybtn == 'css'){
-	editor.setOption('mode', 'text/css');
- }else if(minifybtn == 'js'){
-	editor.setOption('mode', 'javascript');
- }
-}
 
 
 byId('minify-btn').onclick = function() {
@@ -188,3 +178,15 @@ var fileextension = filename+".html";
 var blob = new Blob([editor.getValue()], {type:+'text/html;charset=utf-8'});
     saveAs(blob, fileextension);
 }; 
+
+
+function modeCode(){
+var minifybtn = $("#languageCode").val();
+ if(minifybtn == 'html'){
+	editor.setOption('mode', 'text/html');
+ }else if(minifybtn == 'css'){
+	editor.setOption('mode', 'text/css');
+ }else if(minifybtn == 'js'){
+	editor.setOption('mode', 'javascript');
+ }
+}
