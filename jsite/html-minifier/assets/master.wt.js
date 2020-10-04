@@ -185,20 +185,27 @@ function modeCode(){
 var minifybtn = $("#languageCode").val();
  if(minifybtn == 'html'){
 	editor.setOption('mode', 'text/html');
-	editor.setValue($("#htmlcode").val())
+	editor.setValue($("#htmlcode").val());
+	$("#viewonline").removeAttr("disabled");
  }else if(minifybtn == 'css'){
 	editor.setOption('mode', 'text/css');
-	editor.setValue($("#csscode").val())
+	editor.setValue($("#csscode").val());
+	$("#viewonline").attr("disabled", "");
  }else if(minifybtn == 'js'){
 	editor.setOption('mode', 'javascript');
-	editor.setValue($("#jscode").val())
+	editor.setValue($("#jscode").val());
+	$("#viewonline").attr("disabled", "");
  }
 }
 
 
 
-
-
+document.getElementById('viewonline').onclick = function () {
+var wt = window.open();
+wt.document.open();
+wt.document.write(editor.getValue());
+wt.document.close();
+};
 
 document.getElementById('saveDocument').onclick = function () {
 var modeflymodes = "text/html";
