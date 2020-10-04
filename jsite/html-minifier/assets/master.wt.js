@@ -149,7 +149,9 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
     return false;
   };
 })();
-  var editor = CodeMirror.fromTextArea(document.getElementById('newCode'), {
+
+
+  var editor = CodeMirror.fromTextArea(document.getElementById('htmlcode'), {
     mode: 'text/html',
     htmlMode: true,
    lineNumbers: true,
@@ -159,16 +161,23 @@ var _0x871b=["\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6
 
   });
 $(".copy").attr("data-clipboard-text", editor.getValue());
-editor.on("change", function(){
-$(".copy").attr("data-clipboard-text", editor.getValue());
-});
 document.getElementById('copy').onclick = function () {
 $(".copy").attr("data-clipboard-text", editor.getValue());
 editor.execCommand('selectAll');
 }
 
 
-
+editor.on("change", function(){
+$(".copy").attr("data-clipboard-text", editor.getValue());
+var minifybtn = $("#languageCode").val();
+ if(minifybtn == 'html'){
+	 $("#htmlcode").val(editor.getValue())
+ }else if(minifybtn == 'css'){
+	$("#csscode").val(editor.getValue())
+ }else if(minifybtn == 'js'){
+	$("#jscode").val(editor.getValue())
+ }
+});
 
 
 
@@ -176,10 +185,13 @@ function modeCode(){
 var minifybtn = $("#languageCode").val();
  if(minifybtn == 'html'){
 	editor.setOption('mode', 'text/html');
+	editor.setValue($("#htmlcode").val())
  }else if(minifybtn == 'css'){
 	editor.setOption('mode', 'text/css');
+	editor.setValue($("#csscode").val())
  }else if(minifybtn == 'js'){
 	editor.setOption('mode', 'javascript');
+	editor.setValue($("#jscode").val())
  }
 }
 
