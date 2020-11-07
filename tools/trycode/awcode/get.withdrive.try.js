@@ -3,7 +3,7 @@ submitTryit()
 
 $(".onchanges").on('keyup', function (){
 var codesave = editor.getValue();
- codesaved = codesaved.replace(/&/ig, "&amp;");
+var codesaved = codesave.replace(/&/ig, "&amp;");
  codesaved = codesaved.replace(/</ig, "&lt;");
  codesaved = codesaved.replace(/>/ig, "&gt;");
  codesaved = codesaved.replace(/"/ig, '&quot;');
