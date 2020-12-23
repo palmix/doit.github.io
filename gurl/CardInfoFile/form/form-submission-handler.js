@@ -51,9 +51,6 @@
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
-$("#SetSummary").html("جاري نشر الملف...");
-$("#CreateData .progress-bar").css("width","100%");
-
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
@@ -63,7 +60,8 @@ $("#CreateData .progress-bar").css("width","100%");
     if (formData.honeypot) {
       return false;
     }
-
+$("#SetSummary").html("جاري نشر الملف...");
+$("#CreateData .progress-bar").css("width","100%");
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -72,6 +70,8 @@ $("#CreateData .progress-bar").css("width","100%");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
+        $("#SetSummary").html("");
+		$("#CreateData .progress").css("display","none");
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
@@ -100,9 +100,6 @@ $("#CreateData .progress-bar").css("width","100%");
   document.addEventListener("DOMContentLoaded", loaded, false);
 
   function disableAllButtons(form) {
-$("#SetSummary").html("");
-$("#CreateData .progress").css("display","none");
-
     var buttons = form.querySelectorAll("button");
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
