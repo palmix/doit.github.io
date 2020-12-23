@@ -63,7 +63,7 @@ function doPost(e) {
     if (sendEmailTo) {
       MailApp.sendEmail({
         to: String(sendEmailTo),
-        subject: "Contact form submitted",
+        subject: "إرسال بيانات إلى جيو عربي",
         // replyTo: String(mailData.email), // This is optional and reliant on your form actually collecting a field named `email`
         htmlBody: formatMailBody(mailData, dataOrder)
       });
