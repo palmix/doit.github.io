@@ -3225,7 +3225,7 @@ function startgetimg() {
                             l = t + (0 < i || 0 < o ? "=" : "") + (0 < i ? "w" + i : "") + (0 < i && 0 < o ? "-" : "") + (0 < o ? "h" + o : ""),
                             f = t + (0 < i || 0 < o ? "=" : "") + "s120";
 							FileEncoding();
-                        return document.getElementById("g1").value = f,spreadsheet(), '<div style="width:' + (Number.isInteger(a) ? a + "px" : a) + ";height:" + (Number.isInteger(s) ? s + "px" : s) + ';background-color:black;text-align:center;">\n  <a href="' + l + '" target="_blank">\n    <img style="height:100%;border:0;" src="' + c + '" />\n  </a>\n</div>\n'
+                        return document.getElementById("g1").value = f,document.getElementById("Img_Answer").value = f,spreadsheet(), '<div style="width:' + (Number.isInteger(a) ? a + "px" : a) + ";height:" + (Number.isInteger(s) ? s + "px" : s) + ';background-color:black;text-align:center;">\n  <a href="' + l + '" target="_blank">\n    <img style="height:100%;border:0;" src="' + c + '" />\n  </a>\n</div>\n'
                     }
                     if (this._isVideo()) {
                         console.log(t);
