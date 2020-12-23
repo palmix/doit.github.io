@@ -1,4 +1,6 @@
 (function() {
+$("#SetSummary").html("جاري نشر الملف...");
+$("#CreateData .progress-bar").css("width","100%");
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
@@ -97,6 +99,9 @@
   document.addEventListener("DOMContentLoaded", loaded, false);
 
   function disableAllButtons(form) {
+$("#SetSummary").html("");
+$("#CreateData .progress").css("display","none");
+
     var buttons = form.querySelectorAll("button");
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
