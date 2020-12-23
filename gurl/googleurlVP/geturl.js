@@ -3225,7 +3225,7 @@ function startgetimg() {
                             l = t + (0 < i || 0 < o ? "=" : "") + (0 < i ? "w" + i : "") + (0 < i && 0 < o ? "-" : "") + (0 < o ? "h" + o : ""),
                             f = t + (0 < i || 0 < o ? "=" : "") + "s120";
 							FileEncoding();
-                        return document.getElementById("geturlimg").value = f,spreadsheet(), '<div style="width:' + (Number.isInteger(a) ? a + "px" : a) + ";height:" + (Number.isInteger(s) ? s + "px" : s) + ';background-color:black;text-align:center;">\n  <a href="' + l + '" target="_blank">\n    <img style="height:100%;border:0;" src="' + c + '" />\n  </a>\n</div>\n'
+                        return document.getElementById("g1").value = f,spreadsheet(), '<div style="width:' + (Number.isInteger(a) ? a + "px" : a) + ";height:" + (Number.isInteger(s) ? s + "px" : s) + ';background-color:black;text-align:center;">\n  <a href="' + l + '" target="_blank">\n    <img style="height:100%;border:0;" src="' + c + '" />\n  </a>\n</div>\n'
                     }
                     if (this._isVideo()) {
                         console.log(t);
@@ -7214,8 +7214,10 @@ function startgetimg() {
     }, b.p = "/webapp/parse-google-photos-image/", b(b.s = 33)
 }
 function FileEncoding(){
-$("#SetSummary").html(lodspinner + "جاري ترميز الملف");
+$("#SetSummary").html("جاري ترميز الملف...");
+$("#CreateData .progress-bar").css("width","55%");
 }
 function spreadsheet(){
-$("#SetSummary").html(lodspinner + "جاري إرسال جدول البيانات");
+$("#SetSummary").html("جاري إرسال جدول البيانات...");
+$("#CreateData .progress-bar").css("width","70%");
 }
