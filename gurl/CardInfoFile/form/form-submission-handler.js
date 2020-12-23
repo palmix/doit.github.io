@@ -72,6 +72,8 @@ $("#CreateData .progress-bar").css("width","100%");
         if (xhr.readyState === 4 && xhr.status === 200) {
         $("#SetSummary").html("");
 		$("#CreateData .progress").css("display","none");
+		$("#sendToSheet .spinner-border").css("display","none");
+		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
