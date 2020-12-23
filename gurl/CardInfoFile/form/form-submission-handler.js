@@ -1,6 +1,4 @@
 (function() {
-$("#SetSummary").html("جاري نشر الملف...");
-$("#CreateData .progress-bar").css("width","100%");
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
@@ -53,6 +51,9 @@ $("#CreateData .progress-bar").css("width","100%");
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
+$("#SetSummary").html("جاري نشر الملف...");
+$("#CreateData .progress-bar").css("width","100%");
+
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
