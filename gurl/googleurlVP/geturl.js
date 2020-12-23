@@ -3138,7 +3138,7 @@ function startgetimg() {
             var e = new r.a;
             if (null === document.location.origin.match(/try\.doitf\.com/)) throw new Error("Invalid origin.");
             e.set(a.a, ["//www.publicalbum.org/api/v2/webapp/parse-google-photos-image/jsonrpc"]), e.set(s.a, [a.a]);
-            var t = $("#geturlimg").val();
+            var t = $("#ImgInDrive_Answer").val();
             return e.set(o.a, {
                 parseGooglePhotosImageService: s.a,
                 sharedLink: t
