@@ -60,8 +60,8 @@
     if (formData.honeypot) {
       return false;
     }
-$("#SetSummary").html("جاري نشر الملف...");
-$("#CreateData .progress-bar").css("width","100%");
+$("#SetSummary").html("يتم الآن إنشاء نسخة...");
+$("#CreateData .progress-bar").css("width","90%");
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -79,7 +79,7 @@ $("#CreateData .progress-bar").css("width","100%");
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
             formElements.style.display = "none"; // hide form
-			$("#sendToSheetHide1").click();
+			$("#UsersendToSheetHide1").click();
           }
           var thankYouMessage = form.querySelector(".thankyou_message");
           if (thankYouMessage) {
