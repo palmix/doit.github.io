@@ -75,7 +75,7 @@ $("#CreateData .progress-bar").css("width","100%");
 		$("#CreateData .progress").css("display","none");
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
-          
+          form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
             formElements.style.display = "none"; // hide form
@@ -99,12 +99,10 @@ $("#CreateData .progress-bar").css("width","100%");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
-  var action = "https://script.google.com/macros/s/AKfycbwu-TMnDzjmrXXiE5G1ZczKR-DtvO2CQdEud-ulgA/exec";
-  $("#formId").attr("action", action);
+    var forms = document.querySelectorAll("form.gformUser");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
-
   };
   document.addEventListener("DOMContentLoaded", loaded, false);
 
