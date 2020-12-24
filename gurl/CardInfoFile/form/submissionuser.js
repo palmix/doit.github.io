@@ -95,10 +95,6 @@ $("#CreateData .progress-bar").css("width","100%");
   
   function loaded() {
     // bind to the submit event of our form
-    var forms = document.querySelectorAll("form.gform");
-    for (var i = 0; i < forms.length; i++) {
-      forms[i].addEventListener("submit", handleFormSubmit, false);
-    }
     var forms = document.querySelectorAll("form.gformUser");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
