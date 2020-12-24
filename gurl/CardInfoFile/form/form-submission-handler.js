@@ -79,6 +79,7 @@ $("#CreateData .progress-bar").css("width","100%");
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
             formElements.style.display = "none"; // hide form
+			$("#sendToSheetHide1").click();
           }
           var thankYouMessage = form.querySelector(".thankyou_message");
           if (thankYouMessage) {

@@ -7221,5 +7221,4 @@ function spreadsheet(){
 $("#SetSummary").html("جاري إرسال جدول البيانات...");
 $("#CreateData .progress-bar").css("width","70%");
 $("#sendToSheetHide").click();
-$("#sendToSheetHide1").click();
 }
