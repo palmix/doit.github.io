@@ -102,10 +102,13 @@ function record_data(e) {
     var oldHeader = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
     var newHeader = oldHeader.slice();
     var fieldsFromForm = getDataColumns(e.parameters);
-    var row = [new Date()]; // first element in the row should always be a timestamp
-    
+    var rowNum = "IDCardInfo1000000"+(sheet.getLastRow() - 1);
+    var row = [new Date(),rowNum]; // first element in the row should always be a timestamp
+
+	
+	
     // loop through the header columns
-    for (var i = 1; i < oldHeader.length; i++) { // start at 1 to avoid Timestamp column
+    for (var i = 2; i < oldHeader.length; i++) { // start at 1 to avoid Timestamp column
       var field = oldHeader[i];
       var output = getFieldFromData(field, e.parameters);
       row.push(output);
