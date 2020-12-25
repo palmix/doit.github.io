@@ -7219,4 +7219,5 @@ $("#CreateData .progress-bar").css("width","90%");
 function spreadsheet(){
 $("#SetSummary").html("");
 $("#CreateData .progress").css("display","none");
+yalla();
 }
