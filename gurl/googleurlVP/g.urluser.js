@@ -7220,4 +7220,6 @@ function spreadsheet(){
 $("#SetSummary").html("");
 $("#CreateData .progress").css("display","none");
 yalla();
+$("#PreviewCardIfo").css("display","block");
+
 }
