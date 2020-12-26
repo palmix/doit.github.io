@@ -60,8 +60,8 @@
     if (formData.honeypot) {
       return false;
     }
-$("#SetSummary").html("يتم الآن إنشاء نسخة...");
-$("#CreateData .progress-bar").css("width","90%");
+$("#SetSummary").html("جاري إرسال الملف...");
+$("#CreateData .progress-bar").css("width","80%");
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -70,16 +70,11 @@ $("#CreateData .progress-bar").css("width","90%");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-		yalla();
+			$("#UsersendToSheetHide1").click();
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
             formElements.style.display = "none"; // hide form
-			$("#UsersendToSheetHide1").click();
-          }
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
           }
         }
     };

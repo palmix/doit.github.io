@@ -60,7 +60,7 @@
     if (formData.honeypot) {
       return false;
     }
-$("#SetSummary").html("جاري نشر الملف...");
+$("#SetSummary").html("يتم الإنهاء...");
 $("#CreateData .progress-bar").css("width","100%");
     disableAllButtons(form);
     var url = form.action;
@@ -70,15 +70,16 @@ $("#CreateData .progress-bar").css("width","100%");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-		yalla();
         $("#SetSummary").html("");
 		$("#CreateData .progress").css("display","none");
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
+		$("#CreateData .progress-bar").css("width","0%");
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
             formElements.style.display = "none"; // hide form
+			UploadfileJsonToDrive();
           }
           var thankYouMessage = form.querySelector(".thankyou_message");
           if (thankYouMessage) {
