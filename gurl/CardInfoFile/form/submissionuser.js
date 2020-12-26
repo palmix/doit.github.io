@@ -60,8 +60,16 @@
     if (formData.honeypot) {
       return false;
     }
-$("#SetSummary").html("يتم الإنهاء...");
+
 $("#CreateData .progress-bar").css("width","100%");
+$("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check" aria-hidden="true"></i>');
+$("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check" aria-hidden="true"></i>');
+$("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-grow spinner-grow-sm" role="status"><span class="sr-only">إنتظار...</span></div>');
+
+$("#SetSendSummary .SetSummary").html('جاري تحضير الملف <div class="spinner-border spinner-border-sm" role="status"><span class="sr-only">إنتظار...</span></div>');
+$("#SetSendSummary .progress-bar").css("width","100%");
+
+
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -70,11 +78,20 @@ $("#CreateData .progress-bar").css("width","100%");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-        $("#SetSummary").html("");
-		$("#CreateData .progress").css("display","none");
+
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
-		$("#CreateData .progress-bar").css("width","0%");
+		
+		
+$("#SetSendSummary .CreateAFile").html('');
+$("#SetSendSummary .SendAFile").html('');
+$("#SetSendSummary .SendAFile2").html('');
+
+$("#SetSendSummary .SetSummary").html('تم إنشاء الملف بنجاح <i class="fa fa-check" aria-hidden="true"></i>');
+$("#SetSendSummary .progress").css("display","none");
+$("#SetSendSummary .progress-bar").css("width","0%");
+		
+		
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
