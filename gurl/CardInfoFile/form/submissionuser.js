@@ -87,7 +87,7 @@ $("#SetSendSummary .CreateAFile").html('');
 $("#SetSendSummary .SendAFile").html('');
 $("#SetSendSummary .SendAFile2").html('');
 
-$("#SetSendSummary .SetSummary").html('تم إنشاء الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .SetSummary").html('تم إرسال الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .progress").css("display","none");
 $("#SetSendSummary .progress-bar").css("width","0%");
 $("#btnNewform").css("display","inline-block");
