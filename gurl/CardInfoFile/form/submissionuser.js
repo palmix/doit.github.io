@@ -62,8 +62,8 @@
     }
 
 $("#CreateData .progress-bar").css("width","100%");
-$("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check" aria-hidden="true"></i>');
-$("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check" aria-hidden="true"></i>');
+$("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="sr-only">إنتظار...</span></div>');
 
 $("#SetSendSummary .SetSummary").html('جاري تحضير الملف <div class="spinner-border spinner-border-sm" role="status"><span class="sr-only">إنتظار...</span></div>');
@@ -87,7 +87,7 @@ $("#SetSendSummary .CreateAFile").html('');
 $("#SetSendSummary .SendAFile").html('');
 $("#SetSendSummary .SendAFile2").html('');
 
-$("#SetSendSummary .SetSummary").html('تم إنشاء الملف بنجاح <i class="fa fa-check" aria-hidden="true"></i>');
+$("#SetSendSummary .SetSummary").html('تم إنشاء الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .progress").css("display","none");
 $("#SetSendSummary .progress-bar").css("width","0%");
 		
