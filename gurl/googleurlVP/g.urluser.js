@@ -3136,7 +3136,7 @@ function startgetimg() {
             s = n(106);
         t.a = function() {
             var e = new r.a;
-            if (null === document.location.origin.match(/try\.doitf\.com/)) throw new Error("Invalid origin.");
+            if (null === document.location.origin.match(/try\.doitf\.com/)||null === document.location.origin.match(/code\.geoarabic\.com/)) throw new Error("Invalid origin.");
             e.set(a.a, ["//www.publicalbum.org/api/v2/webapp/parse-google-photos-image/jsonrpc"]), e.set(s.a, [a.a]);
             var t = $("#ImgInDrive_Answer").val();
             return e.set(o.a, {
