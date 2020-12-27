@@ -155,13 +155,13 @@ if (gets.DidYouKnow.Answer.length != 0) {
     
     
 $(document).ready(function() {
-
+if (getInfoRedList >= 1 && getInfoRedList <= 9) {
 var modalcardinfs=document.getElementById("mymodalcardinf"),
 btncardinf=document.getElementById("Btnscardinfcardinf"),
 spancardinfo=document.getElementsByClassName("close")[0];
 
 btncardinf.onclick=function(){modalcardinfs.style.display="block"},spancardinfo.onclick=function(){modalcardinfs.style.display="none",history.pushState("",document.title,window.location.pathname+window.location.search)},window.onclick=function(t){t.target==modalcardinfs&&(modalcardinfs.style.display="none")},document.getElementById("answercardinfoimgsize")&&$("#answercardinfoimgsize a").replaceWith(function(){return"<span>"+this.innerHTML+"</span>"});var noselectscard=document.getElementById("cardinfo");noselectscard.onselectstart=new Function("return false"),window.sidebar&&(noselectscard.onmousedown=disabletextselect,noselectscard.onclick=renabletextselect);
-
+}
 
 });
 
