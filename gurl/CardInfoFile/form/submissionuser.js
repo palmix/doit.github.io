@@ -93,7 +93,7 @@ $("#SetSendSummary .progress-bar").css("width","0%");
 $("#btnNewform").css("display","inline-block");
 $("#btnModifyClose").removeAttr("disabled");
 $("#thankyou_message").css("display","block");
-
+$("#viewsender").html("مشاهدة البطاقة المرسلة");
 
           form.reset();
           var formElements = form.querySelector(".form-sheet")
