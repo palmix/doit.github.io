@@ -7220,7 +7220,5 @@ function spreadsheet(){
 $("#SetSummary").html("");
 $("#CreateData .progress").css("display","none");
 yalla();
-PreviewJson();
 ShowPreviewCardIfo();
-
 }
