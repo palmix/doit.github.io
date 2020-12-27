@@ -92,6 +92,9 @@ $("#SetSendSummary .progress").css("display","none");
 $("#SetSendSummary .progress-bar").css("width","0%");
 $("#btnNewform").css("display","inline-block");
 $("#btnModifyClose").removeAttr("disabled");
+$("#thankyou_message").css("display","block");
+
+
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
