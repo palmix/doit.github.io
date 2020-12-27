@@ -96,6 +96,7 @@ $("#thankyou_message").css("display","block");
 $("#viewsender").html("مشاهدة البطاقة المرسلة");
 $("#SendSettings").attr("onclick","javascript:SendOut()");
 $("#ModalCardInfoConfirmbtn").css("display","none");
+$("#sendToSheet").css("display","block");
 
           form.reset();
           var formElements = form.querySelector(".form-sheet")
