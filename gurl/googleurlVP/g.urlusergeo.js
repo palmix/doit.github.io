@@ -7214,10 +7214,11 @@ function startgetimg() {
 }
 function FileEncoding(){
 $("#SetSummary").html("جاري ترميز الملف...");
-$("#CreateData .progress-bar").css("width","90%");
+$("#uploadSummary .progress-bar").css("width","90%");
 }
 function spreadsheet(){
 $("#SetSummary").html("");
-$("#CreateData .progress").css("display","none");
+$("#uploadSummary .progress").css("display","none");
+$("#uploadSummary .progress-bar").css("width","0%");
 yalla();
 }
