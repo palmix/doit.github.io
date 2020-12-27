@@ -7218,7 +7218,7 @@ $("#uploadSummary .progress-bar").css("width","90%");
 }
 function spreadsheet(){
 $("#SetSummary").html("");
-$("#uploadSummary .progress").css("display","none");
+$("#uploadSummary").css("display","none");
 $("#uploadSummary .progress-bar").css("width","0%");
 yalla();
 }
