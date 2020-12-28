@@ -102,7 +102,7 @@ function record_data(e) {
     var oldHeader = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
     var newHeader = oldHeader.slice();
     var fieldsFromForm = getDataColumns(e.parameters);
-    var rowNum = "IDCardInfo1000000"+(sheet.getLastRow() - 1);
+    var rowNum = "ID1000000"+(sheet.getLastRow() - 1);
     var row = [new Date(),rowNum]; // first element in the row should always be a timestamp
 
 	
