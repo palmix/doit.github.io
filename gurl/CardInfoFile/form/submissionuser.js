@@ -100,6 +100,7 @@ $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/15Va2cpK8HdVl9CgpAbL1g2
 		$('#viewsender').html('مشاهدة البطاقة المرسلة');
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
+		$("#CreateData").css("display","none");
 		$("#SetSendSummary .CreateAFile").css("display","none");
 		$("#SetSendSummary .SendAFile").css("display","none");
 		$("#SetSendSummary .SendAFile2").css("display","none");
