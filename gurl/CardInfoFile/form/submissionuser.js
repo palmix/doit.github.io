@@ -61,13 +61,13 @@
       return false;
     }
 
-$("#CreateData .progress-bar").css("width","100%");
+$("#CreateData .progress-bar").css("width","80%");
 $("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
+$("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 
 $("#SetSendSummary .SetSummary").html('جاري تحضير الملف <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#SetSendSummary .progress-bar").css("width","100%");
 
 
     disableAllButtons(form);
@@ -78,23 +78,46 @@ $("#SetSendSummary .progress-bar").css("width","100%");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
+$("#CreateData .progress-bar").css("width","100%");
+$("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .SendAFile2").html('تحضير الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
+
+$("#SetSendSummary .SetSummary").html('جاري إنشاء رابط <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
+          
+          
+          
+$.getJSON("https://sheets.googleapis.com/v4/spreadsheets/15Va2cpK8HdVl9CgpAbL1g2aU94LUBVozbL5RRulAem4?", {
+    key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
+    fields: "sheets(properties.gridProperties.rowCount)"
+}).done(function(recosts) {
+    var id = recosts.sheets[0].properties.gridProperties.rowCount;
+ 		id = id - 3;
+		var els = $('#SendSettings');
+		els.addClass('btn-success');
+		els.removeClass('btn-primary');
+		$('#viewsender').html('مشاهدة البطاقة المرسلة');
 		$("#CreateData").css("display","none");
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
-		
-		
-$("#SetSendSummary .CreateAFile").html('');
-$("#SetSendSummary .SendAFile").html('');
-$("#SetSendSummary .SendAFile2").html('');
+		$("#SetSendSummary .CreateAFile").html('');
+		$("#SetSendSummary .SendAFile").html('');
+		$("#SetSendSummary .SendAFile2").html('');
+		$("#SetSendSummary .GetAFile").html('');
+		$("#SetSendSummary .SetSummary").html('تم إرسال الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
+		$("#SetSendSummary .progress").css("display","none");
+		$("#SetSendSummary .progress-bar").css("width","0%");
+		$(".btnNewform").css("display","inline-block");
+		$("#btnModifyClose").removeAttr("disabled");
+		$("#thankyou_message").css("display","block");
+		$("#SendSettings").attr("onclick","javascript:SendOut()");
+  
+		$(".SummarySendit").html('<li> إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i></li> <li> إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i></li> <li> تحضير الملف <i class="fa fa-check text-success" aria-hidden="true"></i></li> <li> إنشاء رابط <i class="fa fa-check text-success" aria-hidden="true"></i> <a href="https://card.geoarabic.com/p/card.html?card=ID1000000'+id+'" target="_blank"><i class="fa fa-external-link fa-flip-horizontal" style="font-size:0.8rem" aria-hidden="true"></i></a></li> <li> تم إرسال الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i></li> <br/><br/> نشكرك على المساهمة في جمع ونشر المعلومات <br/> سيتم مراجعة النموذج الذي أدخلته ونشره على موقعنا قريبًا<br/>ومع ذلك يمكنك مشاهدة ومشاركة بطاقتك في الرابط التالي:<br/><a href="https://card.geoarabic.com/p/card.html?card=ID1000000'+id+'" target="_blank">https://card.geoarabic.com/p/card.html?card=ID1000000'+id+'</a><br/>');
 
-$("#SetSendSummary .SetSummary").html('تم إرسال الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .progress").css("display","none");
-$("#SetSendSummary .progress-bar").css("width","0%");
-$("#btnNewform").css("display","inline-block");
-$("#btnModifyClose").removeAttr("disabled");
-$("#thankyou_message").css("display","block");
-$("#viewsender").html("مشاهدة البطاقة المرسلة");
-$("#SendSettings").attr("onclick","javascript:SendOut()");
+});
+          
+
 
 
           form.reset();
