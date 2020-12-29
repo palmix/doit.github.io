@@ -61,7 +61,7 @@
       return false;
     }
 
-$("#CreateData .progress-bar").css("width","80%");
+$("#SetSendSummary .progress-bar").css("width","80%");
 $("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
@@ -78,7 +78,7 @@ $("#SetSendSummary .SetSummary").html('جاري تحضير الملف <div class
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-$("#CreateData .progress-bar").css("width","100%");
+$("#SetSendSummary .progress-bar").css("width","100%");
 $("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
@@ -98,7 +98,7 @@ $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/15Va2cpK8HdVl9CgpAbL1g2
 		els.addClass('btn-success');
 		els.removeClass('btn-primary');
 		$('#viewsender').html('مشاهدة البطاقة المرسلة');
-		$("#CreateData").css("display","none");
+		$("#SetSendSummary").css("display","none");
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
 		$("#SetSendSummary .CreateAFile").html('');

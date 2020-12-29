@@ -65,7 +65,7 @@ $("#SetSendSummary .SendAFile").html('إرسال الملف <div class="spinner-
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .SetSummary").html('جاري إرسال الملف <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#CreateData .progress-bar").css("width","50%");
+$("#SetSendSummary .progress-bar").css("width","40%");
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -75,7 +75,7 @@ $("#CreateData .progress-bar").css("width","50%");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
 			$("#UsersendToSheetHide1").click();
-			$("#CreateData .progress-bar").css("width","60%");
+			$("#SetSendSummary .progress-bar").css("width","60%");
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
