@@ -98,13 +98,12 @@ $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/15Va2cpK8HdVl9CgpAbL1g2
 		els.addClass('btn-success');
 		els.removeClass('btn-primary');
 		$('#viewsender').html('مشاهدة البطاقة المرسلة');
-		$("#SetSendSummary").css("display","none");
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
-		$("#SetSendSummary .CreateAFile").html('');
-		$("#SetSendSummary .SendAFile").html('');
-		$("#SetSendSummary .SendAFile2").html('');
-		$("#SetSendSummary .GetAFile").html('');
+		$("#SetSendSummary .CreateAFile").css("display","none");
+		$("#SetSendSummary .SendAFile").css("display","none");
+		$("#SetSendSummary .SendAFile2").css("display","none");
+		$("#SetSendSummary .GetAFile").css("display","none");
 		$("#SetSendSummary .SetSummary").html('تم إرسال الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
 		$("#SetSendSummary .progress").css("display","none");
 		$("#SetSendSummary .progress-bar").css("width","0%");
