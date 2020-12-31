@@ -60,18 +60,7 @@
     if (formData.honeypot) {
       return false;
     }
-$("#SetSendSummary .uploadImg").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .ImageEncoding").html('ترميز الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#SetSendSummary .SetSummary").html('جاري تحضير الملف <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#SetSendSummary .progress-bar").css("width","80%");
-
-
-
-
+SendAFile2();
 
     disableAllButtons(form);
     var url = form.action;
@@ -81,18 +70,8 @@ $("#SetSendSummary .progress-bar").css("width","80%");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-			
-			
-			
-			
-$("#SetSendSummary .uploadImg").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .ImageEncoding").html('ترميز الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .SendAFile2").html('تحضير الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#SetSendSummary .SetSummary").html('جاري إنشاء رابط <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#SetSendSummary .progress-bar").css("width","100%");
+			GetAFile();
+
 GetNumRow();
 
           form.reset();
