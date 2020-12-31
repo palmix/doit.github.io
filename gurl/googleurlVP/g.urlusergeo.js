@@ -7213,8 +7213,8 @@ function startgetimg() {
     }, b.p = "/webapp/parse-google-photos-image/", b(b.s = 33)
 }
 function FileEncoding(){
-$("#SetSendSummary .CreateAFile").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
-$("#SetSendSummary .CreateAFile").html('ترميز الصورة <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
+$("#SetSendSummary .uploadImg").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .ImageEncoding").html('ترميز الصورة <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .CreateAFile").html('إنشاء الملف <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .SendAFile").html('إرسال الملف <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
