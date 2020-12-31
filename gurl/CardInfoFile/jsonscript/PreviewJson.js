@@ -173,8 +173,6 @@ btncardinf.onclick = function() {
 
 });
 }
-var noselectscard = document.getElementById("cardinfo");
-noselectscard.onselectstart = new Function("return false"), window.sidebar && (noselectscard.onmousedown = disabletextselect, noselectscard.onclick = renabletextselect);
 
   document.getElementById('cardinfo').innerHTML = table.join('');
   
