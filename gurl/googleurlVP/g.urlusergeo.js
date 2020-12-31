@@ -7216,5 +7216,5 @@ function FileEncoding(){
 ImageEncoding();
 }
 function spreadsheet(){
-UploadfileJsonToDrive();
+CreateAFile();
 }
