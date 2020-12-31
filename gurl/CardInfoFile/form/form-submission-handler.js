@@ -69,7 +69,7 @@ SendAFile();
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-			$("#UsersendToSheetHide1").click();
+			SendAFile2()
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
