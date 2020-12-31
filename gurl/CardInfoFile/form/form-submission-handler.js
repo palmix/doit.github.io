@@ -70,7 +70,6 @@ SendAFile();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
 			$("#UsersendToSheetHide1").click();
-			$("#SetSendSummary .progress-bar").css("width","60%");
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
