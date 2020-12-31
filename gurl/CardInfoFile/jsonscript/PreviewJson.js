@@ -15,7 +15,7 @@ var result = JSON.parse(getJSONs);
 
 
    
-    var gets,godrid,infolistDidYouKnow,img1,img2,getInfoRedList,PstatusSymbol,PopulationTrendnum,Enemy,FeedOn,Color;
+    var gets,godrid,spancardinfo,btncardinf,infolistDidYouKnow,img1,img2,getInfoRedList,PstatusSymbol,PopulationTrendnum,Enemy,FeedOn,Color;
     gets = result.info;
 	img1 = gets.Img.Answer;
 	img2 = gets.ImgSizeComparison.Answer;
