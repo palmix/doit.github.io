@@ -70,7 +70,6 @@ SendAFile();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
 			GetNumRow();
-          form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
             formElements.style.display = "none"; // hide form
