@@ -60,12 +60,14 @@
     if (formData.honeypot) {
       return false;
     }
+$("#SetSendSummary .uploadImg").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .ImageEncoding").html('ترميز الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile").html('إرسال الملف <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .SetSummary").html('جاري إرسال الملف <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-$("#SetSendSummary .progress-bar").css("width","40%");
+$("#SetSendSummary .progress-bar").css("width","60%");
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();

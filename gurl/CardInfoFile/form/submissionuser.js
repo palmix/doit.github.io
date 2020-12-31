@@ -60,14 +60,17 @@
     if (formData.honeypot) {
       return false;
     }
-
-$("#SetSendSummary .progress-bar").css("width","80%");
+$("#SetSendSummary .uploadImg").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .ImageEncoding").html('ترميز الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
 $("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-
 $("#SetSendSummary .SetSummary").html('جاري تحضير الملف <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
+$("#SetSendSummary .progress-bar").css("width","80%");
+
+
+
 
 
     disableAllButtons(form);
@@ -78,15 +81,21 @@ $("#SetSendSummary .SetSummary").html('جاري تحضير الملف <div class
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-$("#SetSendSummary .progress-bar").css("width","100%");
+			
+			
+			
+			
+$("#SetSendSummary .uploadImg").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .ImageEncoding").html('ترميز الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .SendAFile2").html('تحضير الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
 $("#SetSendSummary .GetAFile").html('إنشاء رابط <div class="spinner-grow spinner-grow-sm text-primary" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-
 $("#SetSendSummary .SetSummary").html('جاري إنشاء رابط <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">إنتظار...</span></div>');
-          
-          
+$("#SetSendSummary .progress-bar").css("width","100%");
+			
+			
+  
           
 $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/15Va2cpK8HdVl9CgpAbL1g2aU94LUBVozbL5RRulAem4?", {
     key: "AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ",
@@ -101,13 +110,24 @@ $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/15Va2cpK8HdVl9CgpAbL1g2
 		$("#sendToSheet .spinner-border").css("display","none");
 		$("#sendToSheet .fa-paper-plane").css("display","inline-block");
 		$("#CreateData").css("display","none");
-		$("#SetSendSummary .CreateAFile").css("display","none");
-		$("#SetSendSummary .SendAFile").css("display","none");
-		$("#SetSendSummary .SendAFile2").css("display","none");
-		$("#SetSendSummary .GetAFile").css("display","none");
-		$("#SetSendSummary .SetSummary").html('تم إرسال الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
-		$("#SetSendSummary .progress").css("display","none");
-		$("#SetSendSummary .progress-bar").css("width","0%");
+
+
+
+$("#SetSendSummary .uploadImg").html('رفع الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .ImageEncoding").html('ترميز الصور <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .CreateAFile").html('إنشاء الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .SendAFile").html('إرسال الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .SendAFile2").html('تحضير الملف <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .GetAFile").html('إنشاء رابط <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .SetSummary").html('تم إرسال الملف بنجاح <i class="fa fa-check text-success" aria-hidden="true"></i>');
+$("#SetSendSummary .progress").css("display","none");
+$("#SetSendSummary .progress-bar").css("width","0%");
+
+var ShowPreviewCardIfos = document.getElementById('ShowPreviewCardIfo')
+ShowPreviewCardIfos.addEventListener('hidden.bs.modal', function (event) {
+$("#SetSendSummary").css("display","none");
+})
+		
 		$(".btnNewform").css("display","inline-block");
 		$("#btnModifyClose").removeAttr("disabled");
 		$("#thankyou_message").css("display","block");
