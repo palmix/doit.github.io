@@ -61,7 +61,6 @@
       return false;
     }
 SendAFile2();
-
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -71,13 +70,11 @@ SendAFile2();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
 			GetAFile();
-			GetNumRow();
-
           form.reset();
           var formElements = form.querySelector(".form-sheet")
           if (formElements) {
             formElements.style.display = "none"; // hide form
-			UploadfileJsonToDrive();
+
           }
           var thankYouMessage = form.querySelector(".thankyou_message");
           if (thankYouMessage) {
