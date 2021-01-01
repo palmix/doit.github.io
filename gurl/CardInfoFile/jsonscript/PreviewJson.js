@@ -129,7 +129,7 @@ if(img2.length >= 1){
   table.push('</tbody></table>');
   
 if(img2.length >= 1){
-  table.push('<img border="0" data-original-height="101" data-original-width="162" src="'+img2+'">');
+  table.push('<img style="max-width:170px" border="0" data-original-height="101" data-original-width="162" src="'+img2+'">');
 }
 
 if (getInfoRedList >= 1 && getInfoRedList <= 9) {
