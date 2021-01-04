@@ -95,6 +95,8 @@ $('.ga5_classshow').css('display','block');
  var g9_2 = $('#g9_1').val();
    if(g9_2 == 0){
      g9_1 = 'مقارنة الحجم';
+   }else if(g9_2 == 1){
+     g9_1 = 'الحجم بالنسبة لمشبك الورق';
    }else{
      g9_1 = 'الحجم بالنسبة لل'+$("#g9_1 option:selected").text();
    }
