@@ -91,32 +91,3 @@ gapi.load("client:auth2", function() {
         client_id: "174081960663-doarvfi676utb4auvuvhlg54oipc80b5.apps.googleusercontent.com"
     });
 });
-  </script>
-
-<!--إرسال-->
-<script src='https://get.doitf.com/jsite/FileSaver/dist/savefile.js'></script>
-<script>
- document.getElementById('sendToSheet').onclick = function() {
-   var lengthtr = $("#cardinfo tr").length;
-    if (lengthtr <= 3) {
-        ErrorDataCardIfo();
-$("#ModalCardInfoConfirm").css("display" ,"none");
-    } else {
-$("#sendToSheet").attr("disabled" ,"disabled");
-$("#sendToSheet .spinner-border").css("display","inline-block");
-$("#sendToSheet .fa-paper-plane").css("display","none");
-$("#PreviewCardIfo").css("display","none");
-$("#ModalCardInfoConfirm").css("display","none");
-$("#btnModifyform").css("display","none");
-$("#cardinfoErrorSend").css("display","none");
-$("#btnModifyClose").css("display","inline-block");
-
-if(document.getElementById("fileUpload").value != "") {
-uploadFile();
-}else{
-  uploadFile();
-}
-      
-
-    }
-};
