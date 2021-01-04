@@ -513,7 +513,7 @@ var g10_Answer,g11_Answer,g10_Num;
     g10_Num = 3;
     }
    
-   
+var ImgCover_Answer = $("#ImgCover_Answer").val();
 
 var getd = new Date();
 var dd = String(getd.getDate()).padStart(2, '0');
@@ -566,6 +566,8 @@ $("#FeedOn_Question").val("الغذاء");
 $("#FeedOn_Answer").val(ga13);
 $("#Img_Question").val("صورة الحيوان");
 $("#Img_Answer").val(g1);
+$("#ImgCover_Question").val("صورة الغلاف");
+$("#ImgCover_Answer").val(ImgCover_Answer);
 $("#ImgInDrive_Question").val("صورة الحيوان في درايف");
 $("#ImgSizeComparison_Question").val(g9_1);
 $("#ImgSizeComparison_Answer").val(img2_url1600);
@@ -704,6 +706,10 @@ jsoncode += '},';
 jsoncode += '"ImgSizeComparison": {';
 jsoncode += '"Question": "'+g9_1+'",';
 jsoncode += '"Answer": "'+img2_url1600+'"';
+jsoncode += '},';
+jsoncode += '"ImgCover": {'
+jsoncode += '"Question": "صورة الغلاف",';
+jsoncode += '"Answer": "'+g1+'"';
 jsoncode += '},';
 jsoncode += '"ImgInDrive": {';
 jsoncode += '"Question": "صورة الحيوان في درايف",';
