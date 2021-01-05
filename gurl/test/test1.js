@@ -558,7 +558,7 @@ var g10_Answer,g11_Answer,g10_Num;
     g10_Num = 3;
     }
    
-var ImgCover_Answer = $("#ImgCover_Answer").val();
+
 
 var getd = new Date();
 var dd = String(getd.getDate()).padStart(2, '0');
@@ -569,6 +569,14 @@ var dateID = getd.getTime();
 var dateToday = mm + '/' + dd + '/' + yyyy;
 
 
+var ImgCover_Answer = $("#ImgCover").val();
+var SourceInfo_Title = $("#SourceInfo_Title").val();
+var SourceInfo_Link = $("#SourceInfo_Link").val();
+
+   
+
+   
+   
 $("#CommonName_Question").val("الإسم الشائع");
 $("#CommonName_Answer").val(g2);
 $("#CommonName_Answer_En").val(g2_En);
@@ -612,9 +620,9 @@ $("#FeedOn_Answer").val(ga13);
 $("#Img_Question").val("صورة الحيوان");
 $("#Img_Answer").val(g1);
 $("#ImgCover_Question").val("صورة الغلاف");
+$("#ImgCover_Answer").val(ImgCover_Answer);
 $("#MultipleImages_Question").val("صور متعددة");
 $("#MultipleImages_Answer").val(MImages);
-$("#ImgCover_Answer").val(ImgCover_Answer);
 $("#ImgInDrive_Question").val("صورة الحيوان في درايف");
 $("#ImgSizeComparison_Question").val(g9_1);
 $("#ImgSizeComparison_Answer").val(img2_url1600);
@@ -628,8 +636,14 @@ $("#info4_Question").val(ga11_1);
 $("#info4_Answer").val(ga11);
 $("#DidYouKnow_Question").val("هل تعلم");
 $("#DidYouKnow_Answer").val(g12);
+$("#SourceInfo_Question").val("المراجع");
+$("#SourceInfo_Answer_Title").val(SourceInfo_Title);
+$("#SourceInfo_Answer_link").val(SourceInfo_Link);
 $("#dateID").val(dateID);
 
+
+   
+   
 
     $(".gform textarea").each(function(){
         if ($.trim($(this).val()).length == 0){
@@ -656,7 +670,7 @@ var ScreenWidthJ = $('#ScreenWidth').val();
 var ScreenHeightJ = $('#ScreenHeight').val();
 var MoreInformationJ = $('#MoreInformation').val();
 var ImgInDriveJ = $('#ImgInDrive_Answer').val();
-var ImgCoverJ = $('#ImgCover_Answer').val();
+var ImgCoverJ = $('#ImgCover').val();
 var MultipleImagesJ = MImages_json;
    
 
@@ -801,6 +815,12 @@ jsoncode += '",';
 jsoncode += '"IUCN_EN": ""';
 jsoncode += '},';
 
+jsoncode += '"SourceInfo": {';
+jsoncode += '"Question": "المراجع",';
+jsoncode += '"Answer_Title": "'+SourceInfo_Title+'",';
+jsoncode += '"Answer_link": "'+SourceInfo_Link+'"';
+jsoncode += '},';
+
 jsoncode += '"UserAccountId": {';
 jsoncode += '"Question": "معرف حساب المستخدم",';
 jsoncode += '"Answer": "'+UserAccountIdJ+'"';
@@ -873,6 +893,7 @@ jsoncode += '}';
 jsoncode += '}';
 jsoncode += '}';
 $("#textareajson").val(jsoncode);
+
 
 
 
