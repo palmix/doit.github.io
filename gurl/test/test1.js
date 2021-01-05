@@ -217,7 +217,52 @@ g6_3_b = 1;
    var g12 = ''//هل تعلم
    var g12_json = '';
  
- 
+   
+var MImages = '';
+var MImages_json = '';
+var getMultipleimagesnumbers = $("#MultipleimagesNum .Multipleimages");
+var Multipleimagesvalnumber = "";
+var i;
+for (i = 0; i < getMultipleimagesnumbers.length; i++) {
+  Multipleimagesvalnumber += $('#CreateData .Multipleimages:eq('+i+')').val()+ "\n";
+}
+	var SortingImgs = Multipleimagesvalnumber;
+	SortingImgs = SortingImgs.trim();
+	SortingImgs = SortingImgs.replace(/(\r\n|\n|\r)/gm,'\r\n\r\n');
+	SortingImgs = SortingImgs.replace(/(\r\n|\r|\n){2,}/g, '$1\n');
+	SortingImgs = SortingImgs.replace(/(\n\n)/gm, '</li><li>');
+	SortingImgs = SortingImgs.replace(/(\r\n|\n|\r)/gm,'');
+	SortingImgs = SortingImgs.replace(/<\/li>/gm, '</li>');
+    if(SortingImgs ==""){
+    SortingImgs = "";
+    }else{
+	SortingImgs = "<li>" + SortingImgs + "</li>"; 
+	}
+   
+
+
+//for json
+	var SortingImgsJson = Multipleimagesvalnumber;
+	SortingImgsJson = SortingImgsJson.trim();
+	SortingImgsJson = SortingImgsJson.replace(/(\r\n|\n|\r)/gm,'\r\n\r\n');
+	SortingImgsJson = SortingImgsJson.replace(/(\r\n|\r|\n){2,}/g, '$1\n');
+	SortingImgsJson = SortingImgsJson.replace(/(\n\n)/gm, '}{"img":"');
+	SortingImgsJson = SortingImgsJson.replace(/(\r\n|\n|\r)/gm,'"');
+	SortingImgsJson = SortingImgsJson.replace(/}/gm, '},');
+    if(SortingImgsJson ==""){
+    SortingImgsJson = "";
+    }else{
+	SortingImgsJson = '{"img":"' + SortingImgsJson + '"}'; 
+	}
+   
+if(SortingImgs == ''){
+MImages = '';
+MImages_json = '';
+}else{
+MImages = '<ul>'+SortingImgs+'</ul>';
+MImages_json = SortingImgsJson;
+ }
+   
  
    
 var getinfonumbers = $("#DidYoUKnowNum .infonumbers");
@@ -567,6 +612,8 @@ $("#FeedOn_Answer").val(ga13);
 $("#Img_Question").val("صورة الحيوان");
 $("#Img_Answer").val(g1);
 $("#ImgCover_Question").val("صورة الغلاف");
+$("#MultipleImages_Question").val("صور متعددة");
+$("#MultipleImages_Answer").val(MImages);
 $("#ImgCover_Answer").val(ImgCover_Answer);
 $("#ImgInDrive_Question").val("صورة الحيوان في درايف");
 $("#ImgSizeComparison_Question").val(g9_1);
@@ -583,7 +630,6 @@ $("#DidYouKnow_Question").val("هل تعلم");
 $("#DidYouKnow_Answer").val(g12);
 $("#dateID").val(dateID);
 
-   
 
     $(".gform textarea").each(function(){
         if ($.trim($(this).val()).length == 0){
@@ -610,6 +656,11 @@ var ScreenWidthJ = $('#ScreenWidth').val();
 var ScreenHeightJ = $('#ScreenHeight').val();
 var MoreInformationJ = $('#MoreInformation').val();
 var ImgInDriveJ = $('#ImgInDrive_Answer').val();
+var ImgCoverJ = $('#ImgCover_Answer').val();
+var MultipleImagesJ = MImages_json;
+   
+
+
    
 var jsoncode = '';
 
@@ -707,9 +758,15 @@ jsoncode += '"ImgSizeComparison": {';
 jsoncode += '"Question": "'+g9_1+'",';
 jsoncode += '"Answer": "'+img2_url1600+'"';
 jsoncode += '},';
-jsoncode += '"ImgCover": {'
+jsoncode += '"ImgCover": {';
 jsoncode += '"Question": "صورة الغلاف",';
-jsoncode += '"Answer": "'+ImgCover_Answer+'"';
+jsoncode += '"Answer": "'+ImgCoverJ+'"';
+jsoncode += '},';
+jsoncode += '"MultipleImages": {';
+jsoncode += '"Question": "صورة متعددة",';
+jsoncode += '"Answer": [';
+jsoncode += MultipleImagesJ;
+jsoncode += ']';
 jsoncode += '},';
 jsoncode += '"ImgInDrive": {';
 jsoncode += '"Question": "صورة الحيوان في درايف",';
@@ -816,6 +873,7 @@ jsoncode += '}';
 jsoncode += '}';
 jsoncode += '}';
 $("#textareajson").val(jsoncode);
+
 
 
    
