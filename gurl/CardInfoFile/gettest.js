@@ -1155,8 +1155,8 @@ function test(){
 var img1 = $('.wp-image-2144').prop('src');
 var img2 = $('.wp-image-2145').prop('src');
 
-
-
+var t1 = $('.one_fourth table tbody td:eq(0)');
+var t2 = $('.one_fourth table tbody td:eq(1)');
 
 
 
@@ -1164,7 +1164,8 @@ var img2 = $('.wp-image-2145').prop('src');
 $('#g1').val(img1);
 $('#g9').val(img2);
 $('#g9_1').val(3);
-$('#g2').val('أرنب قطبي');
+$('#g2').val(t1);
+$('#g2_En').val(t2);
 $('#g3').val('Lepus arcticus');
 $('#g4').val('Mammals');
 $('#g5').val('Herbivore');
