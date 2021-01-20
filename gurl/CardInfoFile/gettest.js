@@ -49,13 +49,21 @@ set +="</div>";
 
 
 
-setTimeout(function(){
+	
+	
+	
+	
+	
+	
 var setb = "<div id='getscript'>";
 setb += "<\script src='https://get.doitf.com/jsite/bootstrap/bootstrap-5/dist/js/bootstrap.bundle.min.js?v=2' type='text/javascript'><\/script>";
 
 setb += "</div>";
 document.getElementById("getscripts").innerHTML = setb;
 document.getElementById("comments").innerHTML = set;
+
+
+
 
 
 
@@ -1165,13 +1173,5 @@ $('#DidYoUKnowNum .infonumbers:eq(0)').val('تقف الأرانب القطبية
 $('#DidYoUKnowNum .infonumbers:eq(1)').val('تتغذى الأرانب القطبية الشمالية في الغالب على صفصاف القطب الشمالي ، وتخرجها من تحت الثلج.');
 $('#DidYoUKnowNum .infonumbers:eq(2)').val('الأرانب الصغيرة في القطب الشمالي بنية اللون. تتحول إلى اللون الأبيض في ما يقارب 4 أسابيع.');
  }
-
-
-
-
-},2000);
-
-
-
 
 
