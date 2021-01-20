@@ -1155,8 +1155,8 @@ function test(){
 var img1 = $('.wp-image-2144').prop('src');
 var img2 = $('.wp-image-2145').prop('src');
 
-var t1 = $('.one_fourth table tbody td:eq(0)');
-var t2 = $('.one_fourth table tbody td:eq(1)');
+var t1 = $('.one_fourth table tbody td:eq(0)').text();
+var t2 = $('.one_fourth table tbody td:eq(1)').text();
 
 
 
