@@ -1148,8 +1148,8 @@ function setcode(){
 
 // اختبار
 
-var img1 = $(".wp-image-2144").arrt("src");
-var img2 = $(".wp-image-2145").arrt("src");
+var img1 = $('.wp-image-2144').prop('src');
+var img2 = $('.wp-image-2145').prop('src');
 
 
 function test(){
