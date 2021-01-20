@@ -1147,9 +1147,14 @@ function setcode(){
 
 
 // اختبار
+
+var img1 = $(".wp-image-2144").arrt("src");
+var img2 = $(".wp-image-2145").arrt("src");
+
+
 function test(){
-$('#g1').val('https://1.bp.blogspot.com/-2YaVph8lejQ/X8eMqCWqiRI/AAAAAAAAFX0/02e-pdH06NwrMtYH2M-KxC6tTqF0YAUogCLcBGAsYHQ/h120/41bfcd0afacc650bdac09b425dbe91e37b4cd365.jpeg');
-$('#g9').val('https://lh3.googleusercontent.com/-UL8EVJRbenc/X8eNC29FklI/AAAAAAAAFYk/DzMlWBVJL1UZxHZNuoXrFkhXqmdTb7bEQCLcBGAsYHQ/h120/arctic-hare_size.gif');
+$('#g1').val(img1);
+$('#g9').val(img2);
 $('#g9_1').val(3);
 $('#g2').val('أرنب قطبي');
 $('#g3').val('Lepus arcticus');
