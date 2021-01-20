@@ -1037,7 +1037,7 @@ setcode();
  // انتهاء جمع البيانات
  
 function setcode(){
- alert("done") 
+$("#sendToSheetHide").click();
 }
 
 
