@@ -1148,11 +1148,19 @@ function setcode(){
 
 // اختبار
 
+
+
+
+function test(){
 var img1 = $('.wp-image-2144').prop('src');
 var img2 = $('.wp-image-2145').prop('src');
 
 
-function test(){
+
+
+
+
+
 $('#g1').val(img1);
 $('#g9').val(img2);
 $('#g9_1').val(3);
