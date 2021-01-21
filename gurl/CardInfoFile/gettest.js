@@ -1158,7 +1158,11 @@ var img2 = $('.wp-image-2145').prop('src');
 var t1 = $('.one_fourth table tbody td:eq(0)').text();
 var t2 = $('.one_fourth table tbody td:eq(1)').text();
 
-
+$('.one_fourth table tr').each(function() {
+   var getc = $('td:eq(0)',this).text();  
+   var geta = $('td:eq(2)',this).text();    
+alert(getc+"_"+geta) 
+});
 
 
 $('#g1').val(img1);
