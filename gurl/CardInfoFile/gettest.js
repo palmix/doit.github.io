@@ -42,14 +42,6 @@ set +="</div>";
 document.getElementById("comments").innerHTML = set;
 
 
-$('#g6_5').click();
-$('#g7_5').click();
-$('#g8_5').click();
-$('#ga3_5').click();
-$('#ga4_5').click();
-$('#ga5_5').click();
-
-
 
 
    // انشاء الرمز
