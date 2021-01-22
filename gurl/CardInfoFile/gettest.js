@@ -1196,6 +1196,7 @@ $('#htmlTables').val(settable);
 
 
 function getsend(){
+(function() {
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
@@ -1295,7 +1296,7 @@ function getsend(){
       buttons[i].disabled = true;
     }
   }
-
+})();
 }
 
 
