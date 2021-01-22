@@ -49,10 +49,7 @@ set +="</div>";
 
 document.getElementById("comments").innerHTML = set;
 
-  var para = document.createElement("script");
-  para.setAttribute("data-cfasync", "false");
-  para.setAttribute("src", "https://get.doitf.com/gurl/CardInfoFile/sendsheet.js?v=1");
-  document.getElementById("comments").appendChild(para);
+
 
 
    // انشاء الرمز
