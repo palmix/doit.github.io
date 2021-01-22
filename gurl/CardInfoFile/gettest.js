@@ -1,6 +1,11 @@
 
 
+var ss = window.location.href;
+if(ss == "https://ajabanee.com/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%ab%d8%af%d9%8a%d9%8a%d8%a7%d8%aa/"){
 
+alert(ss)
+
+}else{
 
 
 
@@ -1281,3 +1286,5 @@ $('#htmlTables').val(settable);
  }
 
 
+
+}
