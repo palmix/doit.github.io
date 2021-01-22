@@ -12,9 +12,7 @@ alert(getnumCards)
 
 alert(getnumCards)
 
-  var para = document.createElement("script");
-  para.setAttribute("src", "https://get.doitf.com/gurl/CardInfoFile/sendsheet.js?v=1");
-  document.body.appendChild(para);
+
 
 	
 $("#topcontrol").remove();
@@ -51,7 +49,10 @@ set +="</div>";
 
 document.getElementById("comments").innerHTML = set;
 
-
+  var para = document.createElement("script");
+  para.setAttribute("data-cfasync", "false");
+  para.setAttribute("src", "https://get.doitf.com/gurl/CardInfoFile/sendsheet.js?v=1");
+  document.body.appendChild(para);
 
 
    // انشاء الرمز
