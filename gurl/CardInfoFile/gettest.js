@@ -113,7 +113,6 @@ $('.ga5_classshow').css('display','block');
 
  function yalla(){
 
-
  var g1 = $('#g1').val();
  var g1_01 = g1.replace(/\/s200\/|\/s320\/|\/h120\/|\/s1600\//gi, '/w136-h136-p/');
   g1_01 = g1_01.replace('=s120', '=w136-h136-p');
@@ -439,7 +438,10 @@ g12_json = SortingInfoJson;
     ga5_a = 1;
     }
   }
- 
+var ImgMapsvar = $('#ImgMaps').val();// خارطة التواجد
+var html_table = $('#htmlTables').val();// جدول اضافي
+
+
    var ga1 = $('#ga1').val();//الفصيلة
    var ga1_n = $('#ga1_n').val();//الرتبة
    var ga2 = $('#ga2').val();//الموطن البيئي
@@ -663,6 +665,8 @@ $("#Img_Question").val("صورة الحيوان");
 $("#Img_Answer").val(g1);
 $("#ImgCover_Question").val("صورة الغلاف");
 $("#ImgCover_Answer").val(ImgCover_Answer);
+$('#MapAnimals_Answer').val(ImgMapsvar);// صورة اماكن التواجد
+$('#html_table').val(html_table); // جدول اضافي
 $("#MultipleImages_Question").val("صور متعددة");
 $("#MultipleImages_Answer").val(MImages);
 $("#ImgInDrive_Question").val("صورة الحيوان في درايف");
@@ -1162,7 +1166,7 @@ $('#g1').val(img);
 }else if(s == 2){
 $('#g9').val(img);
 }else if(s == 3){
-$('#g9').val(img);
+$('#ImgMaps').val(img);
 }
 
 });
