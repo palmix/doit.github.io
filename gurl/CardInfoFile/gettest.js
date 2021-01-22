@@ -1195,7 +1195,6 @@ $('#htmlTables').val(settable);
 
 
 
-function getsend(){
 (function() {
   // get all data in form and return object
   function getFormData(form) {
@@ -1263,7 +1262,7 @@ function getsend(){
     var url = form.action;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
-    // xhr.withCredentials = true;
+    xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -1297,7 +1296,7 @@ function getsend(){
     }
   }
 })();
-}
+
 
 
 
