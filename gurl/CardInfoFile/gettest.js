@@ -33,7 +33,7 @@ set +="<button class='btn btn-primary btn-sm'id='SendSettings'onclick='yalla()'t
 
 
 
-set +="<iframe width='0' height='0' name='sendcodenow' id='frame1'></iframe><form target='sendcodenow' action='https://script.google.com/macros/s/AKfycbwNvLL5_H2Ndtue_SRCReCkeCFq7ZWFoKIt0ck8GhPI7IKaqIzptz-m0w/exec'class='gform pure-form pure-form-stacked'data-email='example@email.net'method='POST'><div class='form-sheet'style='display:none'><textarea id='Published'name='Published'rows='1'>1</textarea> <textarea id='UserStatus'name='UserStatus'rows='1'>1</textarea> <textarea id='CommonName_Question'name='CommonName_Question'rows='1'></textarea> <textarea id='CommonName_Answer'name='CommonName_Answer'rows='1'></textarea> <textarea id='CommonName_Answer_En'name='CommonName_Answer_En'rows='1'></textarea> <textarea id='ScientificName_Question'name='ScientificName_Question'rows='1'></textarea> <textarea id='ScientificName_Answer'name='ScientificName_Answer'rows='1'></textarea> <textarea id='Type_Question'name='Type_Question'rows='1'></textarea> <textarea id='Type_Answer'name='Type_Answer'rows='1'></textarea> <textarea id='Order_Question'name='Order_Question'rows='1'></textarea> <textarea id='Order_Answer'name='Order_Answer'rows='1'></textarea> <textarea id='Subfamily_Question'name='Subfamily_Question'rows='1'></textarea> <textarea id='Subfamily_Answer'name='Subfamily_Answer'rows='1'></textarea> <textarea id='Diet_Question'name='Diet_Question'rows='1'></textarea> <textarea id='Diet_Answer'name='Diet_Answer'rows='1'></textarea> <textarea id='Age_Question'name='Age_Question'rows='1'></textarea> <textarea id='Age_Answer'name='Age_Answer'rows='1'></textarea> <textarea id='Size_Question'name='Size_Question'rows='1'></textarea> <textarea id='Size_Answer'name='Size_Answer'rows='1'></textarea> <textarea id='Weight_Question'name='Weight_Question'rows='1'></textarea> <textarea id='Weight_Answer'name='Weight_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Question'name='PopulationTrend_Question'rows='1'></textarea> <textarea id='PopulationTrend_Answer'name='PopulationTrend_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Code'name='PopulationTrend_Code'rows='1'></textarea> <textarea id='PopulationTrend_Num'name='PopulationTrend_Num'rows='1'></textarea> <textarea id='RedList_Question'name='RedList_Question'rows='1'></textarea> <textarea id='RedList_Answer'name='RedList_Answer'rows='1'></textarea> <textarea id='RedList_Num'name='RedList_Num'rows='1'></textarea> <textarea id='Speed_Question'name='Speed_Question'rows='1'></textarea> <textarea id='Speed_Answer'name='Speed_Answer'rows='1'></textarea> <textarea id='DurationPregnancy_Question'name='DurationPregnancy_Question'rows='1'></textarea> <textarea id='DurationPregnancy_Answer'name='DurationPregnancy_Answer'rows='1'></textarea> <textarea id='NumBirths_Question'name='NumBirths_Question'rows='1'></textarea> <textarea id='NumBirths_Answer'name='NumBirths_Answer'rows='1'></textarea> <textarea id='EcologicalHabitat_Question'name='EcologicalHabitat_Question'rows='1'></textarea> <textarea id='EcologicalHabitat_Answer'name='EcologicalHabitat_Answer'rows='1'></textarea> <textarea id='Color_Question'name='Color_Question'rows='1'></textarea> <textarea id='Color_Answer'name='Color_Answer'rows='1'></textarea> <textarea id='Enemy_Question'name='Enemy_Question'rows='1'></textarea> <textarea id='Enemy_Answer'name='Enemy_Answer'rows='1'></textarea> <textarea id='FeedOn_Question'name='FeedOn_Question'rows='1'></textarea> <textarea id='FeedOn_Answer'name='FeedOn_Answer'rows='1'></textarea> <textarea id='ImgInDrive_Question'name='ImgInDrive_Question'rows='1'></textarea> <textarea id='ImgInDrive_Answer'name='ImgInDrive_Answer'rows='1'>https://drive.google.com/file/d/1jryqqXjG2kV1c352DjXS6G-IwIwEopBx</textarea> <textarea id='JsonFileIdInDrive_Question'name='JsonFileIdInDrive_Question'rows='1'></textarea> <textarea id='JsonFileIdInDrive_Answer'name='JsonFileIdInDrive_Answer'rows='1'></textarea> <textarea id='Img_Question'name='Img_Question'rows='1'></textarea> <textarea id='Img_Answer'name='Img_Answer'rows='1'></textarea> <textarea id='ImgCover_Question'name='ImgCover_Question'rows='1'></textarea> <textarea id='ImgCover_Answer'name='ImgCover_Answer'rows='1'></textarea><textarea id='MapAnimals_Question'name='MapAnimals_Question'rows='1'></textarea> <textarea id='MapAnimals_Answer'name='MapAnimals_Answer'rows='1'></textarea>  <textarea id='MultipleImages_Question'name='MultipleImages_Question'rows='1'></textarea> <textarea id='MultipleImages_Answer'name='MultipleImages_Answer'rows='1'></textarea> <textarea id='ImgSizeComparison_Question'name='ImgSizeComparison_Question'rows='1'></textarea> <textarea id='ImgSizeComparison_Answer'name='ImgSizeComparison_Answer'rows='1'></textarea> <textarea id='info1_Question'name='info1_Question'rows='1'></textarea> <textarea id='info1_Answer'name='info1_Answer'rows='1'></textarea> <textarea id='info2_Question'name='info2_Question'rows='1'></textarea> <textarea id='info2_Answer'name='info2_Answer'rows='1'></textarea> <textarea id='info3_Question'name='info3_Question'rows='1'></textarea> <textarea id='info3_Answer'name='info3_Answer'rows='1'></textarea> <textarea id='info4_Question'name='info4_Question'rows='1'></textarea> <textarea id='info4_Answer'name='info4_Answer'rows='1'></textarea> <textarea id='DidYouKnow_Question'name='DidYouKnow_Question'rows='1'></textarea> <textarea id='DidYouKnow_Answer'name='DidYouKnow_Answer'rows='1'></textarea> <textarea id='SourceInfo_Question'name='SourceInfo_Question'rows='1'></textarea> <textarea id='SourceInfo_Answer_Title'name='SourceInfo_Answer_Title'rows='1'></textarea> <textarea id='SourceInfo_Answer_link'name='SourceInfo_Answer_link'rows='1'></textarea> <textarea id='PostUrlInSite_Question'name='PostUrlInSite_Question'rows='1'></textarea> <textarea id='PostUrlInSite_Answer'name='PostUrlInSite_Answer'rows='1'></textarea> <textarea id='PostIdInSite_Question'name='PostIdInSite_Question'rows='1'></textarea> <textarea id='PostIdInSite_Answer'name='PostIdInSite_Answer'rows='1'></textarea> <textarea id='html_table'name='html_table'rows='1'></textarea><textarea id='UserName'name='UserName'rows='1'></textarea> <textarea id='UserEmail'name='UserEmail'rows='1'></textarea> <textarea id='UserAccountImg'name='UserAccountImg'rows='1'></textarea> <textarea id='UserAccountId'name='UserAccountId'rows='1'></textarea> <textarea id='UserLoginWith'name='UserLoginWith'rows='1'></textarea> <textarea id='Name_publishing'name='Name_publishing'rows='1'></textarea> <textarea id='PageTitle'name='PageTitle'rows='1'></textarea> <textarea id='PageLink'name='PageLink'rows='1'></textarea> <textarea id='TheState'name='TheState'rows='1'></textarea> <textarea id='CountryCode'name='CountryCode'rows='1'></textarea> <textarea id='IPAddress'name='IPAddress'rows='1'></textarea> <textarea id='ScreenWidth'name='ScreenWidth'rows='1'></textarea> <textarea id='ScreenHeight'name='ScreenHeight'rows='1'></textarea> <textarea id='MoreInformation'name='MoreInformation'rows='1'></textarea> <textarea id='dateID'name='dateID'rows='1'></textarea> <button class='button-success button-xlarge pure-button'id='sendToSheetHide'></button></div><div class='thankyou_message'style='display:none'><h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2></div></form>";
+set +="<form action='https://script.google.com/macros/s/AKfycbwNvLL5_H2Ndtue_SRCReCkeCFq7ZWFoKIt0ck8GhPI7IKaqIzptz-m0w/exec'class='gform pure-form pure-form-stacked'data-email='example@email.net'method='POST'><div class='form-sheet'style='display:none'><textarea id='Published'name='Published'rows='1'>1</textarea> <textarea id='UserStatus'name='UserStatus'rows='1'>1</textarea> <textarea id='CommonName_Question'name='CommonName_Question'rows='1'></textarea> <textarea id='CommonName_Answer'name='CommonName_Answer'rows='1'></textarea> <textarea id='CommonName_Answer_En'name='CommonName_Answer_En'rows='1'></textarea> <textarea id='ScientificName_Question'name='ScientificName_Question'rows='1'></textarea> <textarea id='ScientificName_Answer'name='ScientificName_Answer'rows='1'></textarea> <textarea id='Type_Question'name='Type_Question'rows='1'></textarea> <textarea id='Type_Answer'name='Type_Answer'rows='1'></textarea> <textarea id='Order_Question'name='Order_Question'rows='1'></textarea> <textarea id='Order_Answer'name='Order_Answer'rows='1'></textarea> <textarea id='Subfamily_Question'name='Subfamily_Question'rows='1'></textarea> <textarea id='Subfamily_Answer'name='Subfamily_Answer'rows='1'></textarea> <textarea id='Diet_Question'name='Diet_Question'rows='1'></textarea> <textarea id='Diet_Answer'name='Diet_Answer'rows='1'></textarea> <textarea id='Age_Question'name='Age_Question'rows='1'></textarea> <textarea id='Age_Answer'name='Age_Answer'rows='1'></textarea> <textarea id='Size_Question'name='Size_Question'rows='1'></textarea> <textarea id='Size_Answer'name='Size_Answer'rows='1'></textarea> <textarea id='Weight_Question'name='Weight_Question'rows='1'></textarea> <textarea id='Weight_Answer'name='Weight_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Question'name='PopulationTrend_Question'rows='1'></textarea> <textarea id='PopulationTrend_Answer'name='PopulationTrend_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Code'name='PopulationTrend_Code'rows='1'></textarea> <textarea id='PopulationTrend_Num'name='PopulationTrend_Num'rows='1'></textarea> <textarea id='RedList_Question'name='RedList_Question'rows='1'></textarea> <textarea id='RedList_Answer'name='RedList_Answer'rows='1'></textarea> <textarea id='RedList_Num'name='RedList_Num'rows='1'></textarea> <textarea id='Speed_Question'name='Speed_Question'rows='1'></textarea> <textarea id='Speed_Answer'name='Speed_Answer'rows='1'></textarea> <textarea id='DurationPregnancy_Question'name='DurationPregnancy_Question'rows='1'></textarea> <textarea id='DurationPregnancy_Answer'name='DurationPregnancy_Answer'rows='1'></textarea> <textarea id='NumBirths_Question'name='NumBirths_Question'rows='1'></textarea> <textarea id='NumBirths_Answer'name='NumBirths_Answer'rows='1'></textarea> <textarea id='EcologicalHabitat_Question'name='EcologicalHabitat_Question'rows='1'></textarea> <textarea id='EcologicalHabitat_Answer'name='EcologicalHabitat_Answer'rows='1'></textarea> <textarea id='Color_Question'name='Color_Question'rows='1'></textarea> <textarea id='Color_Answer'name='Color_Answer'rows='1'></textarea> <textarea id='Enemy_Question'name='Enemy_Question'rows='1'></textarea> <textarea id='Enemy_Answer'name='Enemy_Answer'rows='1'></textarea> <textarea id='FeedOn_Question'name='FeedOn_Question'rows='1'></textarea> <textarea id='FeedOn_Answer'name='FeedOn_Answer'rows='1'></textarea> <textarea id='ImgInDrive_Question'name='ImgInDrive_Question'rows='1'></textarea> <textarea id='ImgInDrive_Answer'name='ImgInDrive_Answer'rows='1'>https://drive.google.com/file/d/1jryqqXjG2kV1c352DjXS6G-IwIwEopBx</textarea> <textarea id='JsonFileIdInDrive_Question'name='JsonFileIdInDrive_Question'rows='1'></textarea> <textarea id='JsonFileIdInDrive_Answer'name='JsonFileIdInDrive_Answer'rows='1'></textarea> <textarea id='Img_Question'name='Img_Question'rows='1'></textarea> <textarea id='Img_Answer'name='Img_Answer'rows='1'></textarea> <textarea id='ImgCover_Question'name='ImgCover_Question'rows='1'></textarea> <textarea id='ImgCover_Answer'name='ImgCover_Answer'rows='1'></textarea><textarea id='MapAnimals_Question'name='MapAnimals_Question'rows='1'></textarea> <textarea id='MapAnimals_Answer'name='MapAnimals_Answer'rows='1'></textarea>  <textarea id='MultipleImages_Question'name='MultipleImages_Question'rows='1'></textarea> <textarea id='MultipleImages_Answer'name='MultipleImages_Answer'rows='1'></textarea> <textarea id='ImgSizeComparison_Question'name='ImgSizeComparison_Question'rows='1'></textarea> <textarea id='ImgSizeComparison_Answer'name='ImgSizeComparison_Answer'rows='1'></textarea> <textarea id='info1_Question'name='info1_Question'rows='1'></textarea> <textarea id='info1_Answer'name='info1_Answer'rows='1'></textarea> <textarea id='info2_Question'name='info2_Question'rows='1'></textarea> <textarea id='info2_Answer'name='info2_Answer'rows='1'></textarea> <textarea id='info3_Question'name='info3_Question'rows='1'></textarea> <textarea id='info3_Answer'name='info3_Answer'rows='1'></textarea> <textarea id='info4_Question'name='info4_Question'rows='1'></textarea> <textarea id='info4_Answer'name='info4_Answer'rows='1'></textarea> <textarea id='DidYouKnow_Question'name='DidYouKnow_Question'rows='1'></textarea> <textarea id='DidYouKnow_Answer'name='DidYouKnow_Answer'rows='1'></textarea> <textarea id='SourceInfo_Question'name='SourceInfo_Question'rows='1'></textarea> <textarea id='SourceInfo_Answer_Title'name='SourceInfo_Answer_Title'rows='1'></textarea> <textarea id='SourceInfo_Answer_link'name='SourceInfo_Answer_link'rows='1'></textarea> <textarea id='PostUrlInSite_Question'name='PostUrlInSite_Question'rows='1'></textarea> <textarea id='PostUrlInSite_Answer'name='PostUrlInSite_Answer'rows='1'></textarea> <textarea id='PostIdInSite_Question'name='PostIdInSite_Question'rows='1'></textarea> <textarea id='PostIdInSite_Answer'name='PostIdInSite_Answer'rows='1'></textarea> <textarea id='html_table'name='html_table'rows='1'></textarea><textarea id='UserName'name='UserName'rows='1'></textarea> <textarea id='UserEmail'name='UserEmail'rows='1'></textarea> <textarea id='UserAccountImg'name='UserAccountImg'rows='1'></textarea> <textarea id='UserAccountId'name='UserAccountId'rows='1'></textarea> <textarea id='UserLoginWith'name='UserLoginWith'rows='1'></textarea> <textarea id='Name_publishing'name='Name_publishing'rows='1'></textarea> <textarea id='PageTitle'name='PageTitle'rows='1'></textarea> <textarea id='PageLink'name='PageLink'rows='1'></textarea> <textarea id='TheState'name='TheState'rows='1'></textarea> <textarea id='CountryCode'name='CountryCode'rows='1'></textarea> <textarea id='IPAddress'name='IPAddress'rows='1'></textarea> <textarea id='ScreenWidth'name='ScreenWidth'rows='1'></textarea> <textarea id='ScreenHeight'name='ScreenHeight'rows='1'></textarea> <textarea id='MoreInformation'name='MoreInformation'rows='1'></textarea> <textarea id='dateID'name='dateID'rows='1'></textarea> <button class='button-success button-xlarge pure-button'id='sendToSheetHide'></button></div><div class='thankyou_message'style='display:none'><h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2></div></form>";
 set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 ripple'onclick='test()'style='position:fixed;bottom:0;right:0'type='button'><div class='splash-wrapper'></div>اختبار</button>";
 set +="<div id='tablediv'><table id='tableid'></table></div>";
 set +="\<script data-cfasync='false' src='https://get.doitf.com/gurl/CardInfoFile/sendsheet.js?v=1'><\/script>";
@@ -1196,7 +1196,105 @@ $('#htmlTables').val(settable);
 
 
 
+  // get all data in form and return object
+  function getFormData(form) {
+    var elements = form.elements;
+    var honeypot;
 
+    var fields = Object.keys(elements).filter(function(k) {
+      if (elements[k].name === "honeypot") {
+        honeypot = elements[k].value;
+        return false;
+      }
+      return true;
+    }).map(function(k) {
+      if(elements[k].name !== undefined) {
+        return elements[k].name;
+      // special case for Edge's html collection
+      }else if(elements[k].length > 0){
+        return elements[k].item(0).name;
+      }
+    }).filter(function(item, pos, self) {
+      return self.indexOf(item) == pos && item;
+    });
+
+    var formData = {};
+    fields.forEach(function(name){
+      var element = elements[name];
+      
+      // singular form elements just have one value
+      formData[name] = element.value;
+
+      // when our element has multiple items, get their values
+      if (element.length) {
+        var data = [];
+        for (var i = 0; i < element.length; i++) {
+          var item = element.item(i);
+          if (item.checked || item.selected) {
+            data.push(item.value);
+          }
+        }
+        formData[name] = data.join(', ');
+      }
+    });
+
+    // add form-specific values into the data
+    formData.formDataNameOrder = JSON.stringify(fields);
+    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+    formData.formGoogleSendEmail
+      = form.dataset.email || ""; // no email by default
+
+    return {data: formData, honeypot: honeypot};
+  }
+
+  function handleFormSubmit(event) {  // handles form submit without any jquery
+    event.preventDefault();           // we are submitting via xhr below
+    var form = event.target;
+    var formData = getFormData(form);
+    var data = formData.data;
+
+    // If a honeypot field is filled, assume it was done so by a spam bot.
+    if (formData.honeypot) {
+      return false;
+    }
+
+    disableAllButtons(form);
+    var url = form.action;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    // xhr.withCredentials = true;
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+			console.log("تم إرسال النموذج بنجاح");
+          var formElements = form.querySelector(".form-sheet")
+          if (formElements) {
+            formElements.style.display = "none"; // hide form
+          }
+        }
+    };
+    // url encode form data for sending as post data
+    var encoded = Object.keys(data).map(function(k) {
+        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+    }).join('&');
+    xhr.send(encoded);
+  }
+  
+  function loaded() {
+    // bind to the submit event of our form
+    var forms = document.querySelectorAll("form.gform");
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", handleFormSubmit, false);
+    }
+  };
+  document.addEventListener("DOMContentLoaded", loaded, false);
+
+  function disableAllButtons(form) {
+    var buttons = form.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+    }
+  }
 
 
 
