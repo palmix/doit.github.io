@@ -28,9 +28,9 @@ set +="<button class='btn btn-primary btn-sm'id='SendSettings'onclick='yalla()'t
 
 
 
-set +="<form action='https://script.google.com/macros/s/AKfycbwNvLL5_H2Ndtue_SRCReCkeCFq7ZWFoKIt0ck8GhPI7IKaqIzptz-m0w/exec'class='gform pure-form pure-form-stacked'data-email='example@email.net'method='POST'><div class='form-sheet'style='display:none'><textarea id='Published'name='Published'rows='1'>1</textarea> <textarea id='UserStatus'name='UserStatus'rows='1'>1</textarea> <textarea id='CommonName_Question'name='CommonName_Question'rows='1'></textarea> <textarea id='CommonName_Answer'name='CommonName_Answer'rows='1'></textarea> <textarea id='CommonName_Answer_En'name='CommonName_Answer_En'rows='1'></textarea> <textarea id='ScientificName_Question'name='ScientificName_Question'rows='1'></textarea> <textarea id='ScientificName_Answer'name='ScientificName_Answer'rows='1'></textarea> <textarea id='Type_Question'name='Type_Question'rows='1'></textarea> <textarea id='Type_Answer'name='Type_Answer'rows='1'></textarea> <textarea id='Order_Question'name='Order_Question'rows='1'></textarea> <textarea id='Order_Answer'name='Order_Answer'rows='1'></textarea> <textarea id='Subfamily_Question'name='Subfamily_Question'rows='1'></textarea> <textarea id='Subfamily_Answer'name='Subfamily_Answer'rows='1'></textarea> <textarea id='Diet_Question'name='Diet_Question'rows='1'></textarea> <textarea id='Diet_Answer'name='Diet_Answer'rows='1'></textarea> <textarea id='Age_Question'name='Age_Question'rows='1'></textarea> <textarea id='Age_Answer'name='Age_Answer'rows='1'></textarea> <textarea id='Size_Question'name='Size_Question'rows='1'></textarea> <textarea id='Size_Answer'name='Size_Answer'rows='1'></textarea> <textarea id='Weight_Question'name='Weight_Question'rows='1'></textarea> <textarea id='Weight_Answer'name='Weight_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Question'name='PopulationTrend_Question'rows='1'></textarea> <textarea id='PopulationTrend_Answer'name='PopulationTrend_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Code'name='PopulationTrend_Code'rows='1'></textarea> <textarea id='PopulationTrend_Num'name='PopulationTrend_Num'rows='1'></textarea> <textarea id='RedList_Question'name='RedList_Question'rows='1'></textarea> <textarea id='RedList_Answer'name='RedList_Answer'rows='1'></textarea> <textarea id='RedList_Num'name='RedList_Num'rows='1'></textarea> <textarea id='Speed_Question'name='Speed_Question'rows='1'></textarea> <textarea id='Speed_Answer'name='Speed_Answer'rows='1'></textarea> <textarea id='DurationPregnancy_Question'name='DurationPregnancy_Question'rows='1'></textarea> <textarea id='DurationPregnancy_Answer'name='DurationPregnancy_Answer'rows='1'></textarea> <textarea id='NumBirths_Question'name='NumBirths_Question'rows='1'></textarea> <textarea id='NumBirths_Answer'name='NumBirths_Answer'rows='1'></textarea> <textarea id='EcologicalHabitat_Question'name='EcologicalHabitat_Question'rows='1'></textarea> <textarea id='EcologicalHabitat_Answer'name='EcologicalHabitat_Answer'rows='1'></textarea> <textarea id='Color_Question'name='Color_Question'rows='1'></textarea> <textarea id='Color_Answer'name='Color_Answer'rows='1'></textarea> <textarea id='Enemy_Question'name='Enemy_Question'rows='1'></textarea> <textarea id='Enemy_Answer'name='Enemy_Answer'rows='1'></textarea> <textarea id='FeedOn_Question'name='FeedOn_Question'rows='1'></textarea> <textarea id='FeedOn_Answer'name='FeedOn_Answer'rows='1'></textarea> <textarea id='ImgInDrive_Question'name='ImgInDrive_Question'rows='1'></textarea> <textarea id='ImgInDrive_Answer'name='ImgInDrive_Answer'rows='1'>https://drive.google.com/file/d/1jryqqXjG2kV1c352DjXS6G-IwIwEopBx</textarea> <textarea id='JsonFileIdInDrive_Question'name='JsonFileIdInDrive_Question'rows='1'></textarea> <textarea id='JsonFileIdInDrive_Answer'name='JsonFileIdInDrive_Answer'rows='1'></textarea> <textarea id='Img_Question'name='Img_Question'rows='1'></textarea> <textarea id='Img_Answer'name='Img_Answer'rows='1'></textarea> <textarea id='ImgCover_Question'name='ImgCover_Question'rows='1'></textarea> <textarea id='ImgCover_Answer'name='ImgCover_Answer'rows='1'></textarea> <textarea id='MultipleImages_Question'name='MultipleImages_Question'rows='1'></textarea> <textarea id='MultipleImages_Answer'name='MultipleImages_Answer'rows='1'></textarea> <textarea id='ImgSizeComparison_Question'name='ImgSizeComparison_Question'rows='1'></textarea> <textarea id='ImgSizeComparison_Answer'name='ImgSizeComparison_Answer'rows='1'></textarea> <textarea id='info1_Question'name='info1_Question'rows='1'></textarea> <textarea id='info1_Answer'name='info1_Answer'rows='1'></textarea> <textarea id='info2_Question'name='info2_Question'rows='1'></textarea> <textarea id='info2_Answer'name='info2_Answer'rows='1'></textarea> <textarea id='info3_Question'name='info3_Question'rows='1'></textarea> <textarea id='info3_Answer'name='info3_Answer'rows='1'></textarea> <textarea id='info4_Question'name='info4_Question'rows='1'></textarea> <textarea id='info4_Answer'name='info4_Answer'rows='1'></textarea> <textarea id='DidYouKnow_Question'name='DidYouKnow_Question'rows='1'></textarea> <textarea id='DidYouKnow_Answer'name='DidYouKnow_Answer'rows='1'></textarea> <textarea id='SourceInfo_Question'name='SourceInfo_Question'rows='1'></textarea> <textarea id='SourceInfo_Answer_Title'name='SourceInfo_Answer_Title'rows='1'></textarea> <textarea id='SourceInfo_Answer_link'name='SourceInfo_Answer_link'rows='1'></textarea> <textarea id='PostUrlInSite_Question'name='PostUrlInSite_Question'rows='1'></textarea> <textarea id='PostUrlInSite_Answer'name='PostUrlInSite_Answer'rows='1'></textarea> <textarea id='PostIdInSite_Question'name='PostIdInSite_Question'rows='1'></textarea> <textarea id='PostIdInSite_Answer'name='PostIdInSite_Answer'rows='1'></textarea> <textarea id='UserName'name='UserName'rows='1'></textarea> <textarea id='UserEmail'name='UserEmail'rows='1'></textarea> <textarea id='UserAccountImg'name='UserAccountImg'rows='1'></textarea> <textarea id='UserAccountId'name='UserAccountId'rows='1'></textarea> <textarea id='UserLoginWith'name='UserLoginWith'rows='1'></textarea> <textarea id='Name_publishing'name='Name_publishing'rows='1'></textarea> <textarea id='PageTitle'name='PageTitle'rows='1'></textarea> <textarea id='PageLink'name='PageLink'rows='1'></textarea> <textarea id='TheState'name='TheState'rows='1'></textarea> <textarea id='CountryCode'name='CountryCode'rows='1'></textarea> <textarea id='IPAddress'name='IPAddress'rows='1'></textarea> <textarea id='ScreenWidth'name='ScreenWidth'rows='1'></textarea> <textarea id='ScreenHeight'name='ScreenHeight'rows='1'></textarea> <textarea id='MoreInformation'name='MoreInformation'rows='1'></textarea> <textarea id='dateID'name='dateID'rows='1'></textarea> <button class='button-success button-xlarge pure-button'id='sendToSheetHide'></button></div><div class='thankyou_message'style='display:none'><h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2></div></form>";
+set +="<form action='https://script.google.com/macros/s/AKfycbwNvLL5_H2Ndtue_SRCReCkeCFq7ZWFoKIt0ck8GhPI7IKaqIzptz-m0w/exec'class='gform pure-form pure-form-stacked'data-email='example@email.net'method='POST'><div class='form-sheet'style='display:none'><textarea id='Published'name='Published'rows='1'>1</textarea> <textarea id='UserStatus'name='UserStatus'rows='1'>1</textarea> <textarea id='CommonName_Question'name='CommonName_Question'rows='1'></textarea> <textarea id='CommonName_Answer'name='CommonName_Answer'rows='1'></textarea> <textarea id='CommonName_Answer_En'name='CommonName_Answer_En'rows='1'></textarea> <textarea id='ScientificName_Question'name='ScientificName_Question'rows='1'></textarea> <textarea id='ScientificName_Answer'name='ScientificName_Answer'rows='1'></textarea> <textarea id='Type_Question'name='Type_Question'rows='1'></textarea> <textarea id='Type_Answer'name='Type_Answer'rows='1'></textarea> <textarea id='Order_Question'name='Order_Question'rows='1'></textarea> <textarea id='Order_Answer'name='Order_Answer'rows='1'></textarea> <textarea id='Subfamily_Question'name='Subfamily_Question'rows='1'></textarea> <textarea id='Subfamily_Answer'name='Subfamily_Answer'rows='1'></textarea> <textarea id='Diet_Question'name='Diet_Question'rows='1'></textarea> <textarea id='Diet_Answer'name='Diet_Answer'rows='1'></textarea> <textarea id='Age_Question'name='Age_Question'rows='1'></textarea> <textarea id='Age_Answer'name='Age_Answer'rows='1'></textarea> <textarea id='Size_Question'name='Size_Question'rows='1'></textarea> <textarea id='Size_Answer'name='Size_Answer'rows='1'></textarea> <textarea id='Weight_Question'name='Weight_Question'rows='1'></textarea> <textarea id='Weight_Answer'name='Weight_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Question'name='PopulationTrend_Question'rows='1'></textarea> <textarea id='PopulationTrend_Answer'name='PopulationTrend_Answer'rows='1'></textarea> <textarea id='PopulationTrend_Code'name='PopulationTrend_Code'rows='1'></textarea> <textarea id='PopulationTrend_Num'name='PopulationTrend_Num'rows='1'></textarea> <textarea id='RedList_Question'name='RedList_Question'rows='1'></textarea> <textarea id='RedList_Answer'name='RedList_Answer'rows='1'></textarea> <textarea id='RedList_Num'name='RedList_Num'rows='1'></textarea> <textarea id='Speed_Question'name='Speed_Question'rows='1'></textarea> <textarea id='Speed_Answer'name='Speed_Answer'rows='1'></textarea> <textarea id='DurationPregnancy_Question'name='DurationPregnancy_Question'rows='1'></textarea> <textarea id='DurationPregnancy_Answer'name='DurationPregnancy_Answer'rows='1'></textarea> <textarea id='NumBirths_Question'name='NumBirths_Question'rows='1'></textarea> <textarea id='NumBirths_Answer'name='NumBirths_Answer'rows='1'></textarea> <textarea id='EcologicalHabitat_Question'name='EcologicalHabitat_Question'rows='1'></textarea> <textarea id='EcologicalHabitat_Answer'name='EcologicalHabitat_Answer'rows='1'></textarea> <textarea id='Color_Question'name='Color_Question'rows='1'></textarea> <textarea id='Color_Answer'name='Color_Answer'rows='1'></textarea> <textarea id='Enemy_Question'name='Enemy_Question'rows='1'></textarea> <textarea id='Enemy_Answer'name='Enemy_Answer'rows='1'></textarea> <textarea id='FeedOn_Question'name='FeedOn_Question'rows='1'></textarea> <textarea id='FeedOn_Answer'name='FeedOn_Answer'rows='1'></textarea> <textarea id='ImgInDrive_Question'name='ImgInDrive_Question'rows='1'></textarea> <textarea id='ImgInDrive_Answer'name='ImgInDrive_Answer'rows='1'>https://drive.google.com/file/d/1jryqqXjG2kV1c352DjXS6G-IwIwEopBx</textarea> <textarea id='JsonFileIdInDrive_Question'name='JsonFileIdInDrive_Question'rows='1'></textarea> <textarea id='JsonFileIdInDrive_Answer'name='JsonFileIdInDrive_Answer'rows='1'></textarea> <textarea id='Img_Question'name='Img_Question'rows='1'></textarea> <textarea id='Img_Answer'name='Img_Answer'rows='1'></textarea> <textarea id='ImgCover_Question'name='ImgCover_Question'rows='1'></textarea> <textarea id='ImgCover_Answer'name='ImgCover_Answer'rows='1'></textarea> <textarea id='MultipleImages_Question'name='MultipleImages_Question'rows='1'></textarea> <textarea id='MultipleImages_Answer'name='MultipleImages_Answer'rows='1'></textarea> <textarea id='ImgSizeComparison_Question'name='ImgSizeComparison_Question'rows='1'></textarea> <textarea id='ImgSizeComparison_Answer'name='ImgSizeComparison_Answer'rows='1'></textarea> <textarea id='info1_Question'name='info1_Question'rows='1'></textarea> <textarea id='info1_Answer'name='info1_Answer'rows='1'></textarea> <textarea id='info2_Question'name='info2_Question'rows='1'></textarea> <textarea id='info2_Answer'name='info2_Answer'rows='1'></textarea> <textarea id='info3_Question'name='info3_Question'rows='1'></textarea> <textarea id='info3_Answer'name='info3_Answer'rows='1'></textarea> <textarea id='info4_Question'name='info4_Question'rows='1'></textarea> <textarea id='info4_Answer'name='info4_Answer'rows='1'></textarea> <textarea id='DidYouKnow_Question'name='DidYouKnow_Question'rows='1'></textarea> <textarea id='DidYouKnow_Answer'name='DidYouKnow_Answer'rows='1'></textarea> <textarea id='SourceInfo_Question'name='SourceInfo_Question'rows='1'></textarea> <textarea id='SourceInfo_Answer_Title'name='SourceInfo_Answer_Title'rows='1'></textarea> <textarea id='SourceInfo_Answer_link'name='SourceInfo_Answer_link'rows='1'></textarea> <textarea id='PostUrlInSite_Question'name='PostUrlInSite_Question'rows='1'></textarea> <textarea id='PostUrlInSite_Answer'name='PostUrlInSite_Answer'rows='1'></textarea> <textarea id='PostIdInSite_Question'name='PostIdInSite_Question'rows='1'></textarea> <textarea id='PostIdInSite_Answer'name='PostIdInSite_Answer'rows='1'></textarea> <textarea id='UserName'name='UserName'rows='1'></textarea> <textarea id='UserEmail'name='UserEmail'rows='1'></textarea> <textarea id='UserAccountImg'name='UserAccountImg'rows='1'></textarea> <textarea id='UserAccountId'name='UserAccountId'rows='1'></textarea> <textarea id='UserLoginWith'name='UserLoginWith'rows='1'></textarea> <textarea id='Name_publishing'name='Name_publishing'rows='1'></textarea> <textarea id='PageTitle'name='PageTitle'rows='1'></textarea> <textarea id='PageLink'name='PageLink'rows='1'></textarea> <textarea id='TheState'name='TheState'rows='1'></textarea> <textarea id='CountryCode'name='CountryCode'rows='1'></textarea> <textarea id='IPAddress'name='IPAddress'rows='1'></textarea> <textarea id='ScreenWidth'name='ScreenWidth'rows='1'></textarea> <textarea id='ScreenHeight'name='ScreenHeight'rows='1'></textarea> <textarea id='MoreInformation'name='MoreInformation'rows='1'></textarea> <textarea id='dateID'name='dateID'rows='1'></textarea> <textarea id='tablemoreinfo'name='tablemoreinfo'rows='1'></textarea> <button class='button-success button-xlarge pure-button'id='sendToSheetHide'></button></div><div class='thankyou_message'style='display:none'><h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2></div></form>";
 set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 ripple'onclick='test()'style='position:fixed;bottom:0;right:0'type='button'><div class='splash-wrapper'></div>اختبار</button>";
-set +="00000000";
+set +="<div id='tablediv'><table id='tableid'></table></div>";
 set +="00000000";
 set +="00000000";
 set +="00000000";
@@ -63,7 +63,12 @@ document.getElementById("getscripts").innerHTML = setb;
 document.getElementById("comments").innerHTML = set;
 
 
-
+$('#g6_5').click();
+$('#g7_5').click();
+$('#g8_5').click();
+$('#ga3_5').click();
+$('#ga4_5').click();
+$('#ga5_5').click();
 
 
 
@@ -1152,44 +1157,124 @@ $("#sendToSheetHide").click();
 
 
 function test(){
-var img1 = $('.wp-image-2144').prop('src');
-var img2 = $('.wp-image-2145').prop('src');
 
-var t1 = $('.one_fourth table tbody td:eq(0)').text();
-var t2 = $('.one_fourth table tbody td:eq(1)').text();
 
-$('.one_fourth table tr').each(function() {
-   var getc = $('td:eq(0)',this).text();  
-   var geta = $('td:eq(2)',this).text();    
-alert(getc+"_"+geta) 
+
+var img1 = $('.wp-image-2144').attr('src');
+  $('#g1').val(img1);
+  var img2 = $('.wp-image-2145').attr('src');
+  $('#g9').val(img2);
+  
+var i=0; 
+ $('.one_fourth table tr').each(function() {
+ i +=1;
+
+
+var getc = $('td:eq(0)',this).text();  
+var geta = $('td:eq(1)',this).text();    
+ 
+
+if(i == 1){
+$('#g2').val(getc)
+}else if(i == 2){
+$('#g2_En').val(getc)
+}else{
+if(getc == 'الطائفة'){
+
+
+	if (geta == 'الثدييات' || geta == 'ثديات' || geta == 'الثديات' || geta == 'ألثدييات' || geta == 'حيوان من الثدييات' || geta == 'ثديي') {
+        $('#g4').val('Mammals');
+    } else if (geta == 'طائر' || geta == 'طيور' || geta == 'طير' || geta == 'الطيور' || geta == 'حيوان طائر' || geta == 'الطير') {
+        $('#g4').val('Birds');
+    } else if (geta == 'حيوان زاحف' || geta == 'زاحف' || geta == 'الحيوانات الزاحفة' || geta == 'زواحف' || geta == 'زاحفة' || geta == 'الزواحف') {
+        $('#g4').val('Reptiles');
+    } else if (geta == 'حيوان بحري' || geta == 'بر مائي' || geta == 'البرمائيات' || geta == 'برمائيات' || geta == 'حيوان برمائي' || geta == 'برمائي') {
+        $('#g4').val('Amphibians');
+    } else if (geta == 'سمك' || geta == 'اسماك' || geta == 'أسماك' || geta == 'الأسماك' || geta == 'الاسماك') {
+        $('#g4').val('Fishes');
+    } else if (geta == 'حشرات' || geta == 'الحشرات' || geta == 'حشرة') {
+        $('#g4').val('Insects');
+    } else if (geta == 'إسفنجيات' || geta == 'اسفنجيات' || geta == 'أسفنجيات') {
+        $('#g4').val('Sponges');
+    }else{
+    $('#tableid').append('<tr><td>'+getc+'</td><td>'+geta+'</td></tr>')
+    }
+
+
+
+
+
+}else if(getc == 'النظام الغذائي'){
+
+    if (geta == 'حيوان عاشب' || geta == 'آكل أعشاب' || geta == 'آكل اعشاب' || geta == 'عاشب' || geta == 'حيوانات عاشبة' || geta == 'آكل نبات' || geta == 'آكل نباتات' || geta == 'نباتي' || geta == 'عشبي') {
+        $('#g5').val('Herbivore');
+    } else if (geta == 'آكل لحوم' || geta == 'لاحم' || geta == 'حيوان لاحم' || geta == 'اكل لحوم' || geta == 'حيوان اكل لحوم' || geta == 'حيوان لاحم') {
+        $('#g5').val('Carnivore');
+    } else if (geta == 'قارت' || geta == 'آكل النبات و الحيوان' || geta == 'آكل النبات والحيوان' || geta == 'آكل الحيوان والنبات' || geta == 'آكل الحيوان و النبات' || geta == 'حيوان قارت' || geta == 'قوارض' || geta == 'حيوان قارض'|| geta == 'آكل لحوم ونبات') {
+        $('#g5').val('Omnivore');
+    } else if (geta == 'يتغذى على العوالق') {
+        $('#g5').val('Planktivore');
+    } else{
+    $('#tableid').append('<tr><td>'+getc+'</td><td>'+geta+'</td></tr>')
+    }
+
+
+
+}else if(getc == 'متوسط العمر'|| getc == 'العمر'){
+$('#g6_4').val(geta);
+
+}else if(getc.includes('الحجم') == true){
+$('#g7_4').val(geta);
+
+}else if(getc == 'الوزن'){
+$('#g8_4').val(geta);
+
+}else if(getc == 'الفصيلة'){
+$('#ga1').val(geta);
+}else if(getc == 'الرتبة'){
+$('#ga1_n').val(geta);
+}else if(getc.includes('السرعة') == true){
+$('#ga3_4').val(geta);
+}else if(getc == 'مدة الحمل'|| getc == 'مده الحمل'){
+$('#ga4_4').val(geta);
+}else if(getc == 'عدد الصغار'){
+$('#ga5_4').val(geta);
+}else if(getc == 'الموطن البيئي'){
+$('#ga2').val(geta);
+}else if(getc == 'اللون'){
+$('#ga6').val(geta);
+}else if(getc == 'الأعداء' || getc == 'الاعداء'){
+$('#ga7').val(geta);
+}else if(getc == 'الغذاء'){
+$('#ga13').val(geta);
+}else{
+var ga8_1 = $('#ga8_1').val();
+var ga9_1 = $('#ga9_1').val();
+var ga10_1 = $('#ga10_1').val();
+var ga11_1 = $('#ga11_1').val();
+
+if (ga8_1 == ''){
+$('#ga8_1').val(getc);
+$('#ga8').val(geta);
+}else if (ga9_1 == ''){
+$('#ga9_1').val(getc);
+$('#ga9').val(geta);
+}else if (ga10_1 == ''){
+$('#ga10_1').val(getc);
+$('#ga10').val(geta);
+}else if (ga11_1 == ''){
+$('#ga11_1').val(getc);
+$('#ga11').val(geta);
+}else{
+$('#tableid').append('<tr><td>'+getc+'</td><td>'+geta+'</td></tr>')
+}
+}
+
+ }
+var settable = $('#tablediv').html();
+$('#tablemoreinfo').val(settable);
 });
 
-
-$('#g1').val(img1);
-$('#g9').val(img2);
-$('#g9_1').val(3);
-$('#g2').val(t1);
-$('#g2_En').val(t2);
-$('#g3').val('Lepus arcticus');
-$('#g4').val('Mammals');
-$('#g5').val('Herbivore');
-$('#g6_4').val('8 سنوات');
-$('#g6_1').val(3);
-$('#g6_2').val(8);
-$('#g6_3').val('Year');
-$('#g7_4').val('45 – 67 سم');
-$('#g7_1').val(45);
-$('#g7_2').val(67);
-$('#g7_3').val('cm');
-$('#g8_4').val('3 – 7 كغم');
-$('#g8_1').val(3);
-$('#g8_2').val(7);
-$('#g8_3').val('kg');
-$('#g10').val('stable');
-$('#g11').val(1);
-$('#DidYoUKnowNum .infonumbers:eq(0)').val('تقف الأرانب القطبية الشمالية على أرجلها الخلفية لمراقبة الحيوانات المفترسة.');
-$('#DidYoUKnowNum .infonumbers:eq(1)').val('تتغذى الأرانب القطبية الشمالية في الغالب على صفصاف القطب الشمالي ، وتخرجها من تحت الثلج.');
-$('#DidYoUKnowNum .infonumbers:eq(2)').val('الأرانب الصغيرة في القطب الشمالي بنية اللون. تتحول إلى اللون الأبيض في ما يقارب 4 أسابيع.');
  }
 
 
