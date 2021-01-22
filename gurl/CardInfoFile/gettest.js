@@ -1139,10 +1139,19 @@ function test(){
 
 
 
-var img1 = $('.wp-image-2144').attr('src');
-  $('#g1').val(img1);
-  var img2 = $('.wp-image-2145').attr('src');
-  $('#g9').val(img2);
+var s=0;
+ $('.post-inner img').each(function() {
+s +=1;
+var img = $(this).attr('src')
+if(s == 1){
+$('#g1').val(img);
+}else if(s == 2){
+$('#g9').val(img);
+}else if(s == 3){
+$('#g9').val(img);
+}
+
+});
   
 var i=0; 
  $('.one_fourth table tr').each(function() {
