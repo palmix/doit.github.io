@@ -9,10 +9,7 @@
 	
 $("#topcontrol").remove();
 
-  var para = document.createElement("div");
-  para.innerText = "This is a paragraph.";
-  para.setAttribute("id", "getscripts");
-  document.body.appendChild(para);
+
 
 var set = "<div id='getcard'>";
 set +="<link href='https://get.doitf.com/jsite/bootstrap/bootstrap-5/dist/css/bootstrap.rtl.min.css?v=1.1'rel='stylesheet'crossorigin='anonymous'integrity='sha384-mUkCBeyHPdg0tqB6JDd+65Gpw5h/l8DKcCTV2D2UpaMMFd7Jo8A+mDAosaWgFBPl'><link href='https://get.doitf.com/font-awesome-4.7.0/css/font-awesome.min.css'rel='stylesheet'>";
@@ -42,16 +39,6 @@ set +="</div>";
 
 
 
-	
-	
-	
-	
-	
-var setb = "<div id='getscript'>";
-setb += "<\script src='https://get.doitf.com/jsite/bootstrap/bootstrap-5/dist/js/bootstrap.bundle.min.js?v=2' type='text/javascript'><\/script>";
-
-setb += "</div>";
-document.getElementById("getscripts").innerHTML = setb;
 document.getElementById("comments").innerHTML = set;
 
 
