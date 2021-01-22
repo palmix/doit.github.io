@@ -111,7 +111,6 @@ $('.ga5_classshow').css('display','block');
 
 
  function yalla(){
-
  var g1 = $('#g1').val();
  var g1_01 = g1.replace(/\/s200\/|\/s320\/|\/h120\/|\/s1600\//gi, '/w136-h136-p/');
   g1_01 = g1_01.replace('=s120', '=w136-h136-p');
@@ -1032,7 +1031,7 @@ $("#sendToSheetHide").click();
 
 function test(){
 
-
+$("#comments").append("\<script data-cfasync='false' src='https://get.doitf.com/gurl/CardInfoFile/sendsheet.js?v=1'><\/script>");
 
 $('#g6_5').click();
 $('#g7_5').click();
