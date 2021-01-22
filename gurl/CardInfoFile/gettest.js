@@ -1,13 +1,16 @@
 
 
-var ss = window.location.href;
-if(ss == "https://ajabanee.com/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%ab%d8%af%d9%8a%d9%8a%d8%a7%d8%aa/"){
+var ss = window.location.pathname;
+var getnumCards = $.query.get("card");
+if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/"){
 
-alert(window.location.pathname)
+
+
+alert(getnumCards)
 
 }else{
 
-alert(window.location.pathname)
+alert(getnumCards)
 
 
 
