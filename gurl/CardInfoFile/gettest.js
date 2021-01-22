@@ -46,9 +46,9 @@ set +="</div>";
 
 
 
-
+setTimeout(function(){
 document.getElementById("comments").innerHTML = set;
-
+},2000);
 
 
 
