@@ -684,14 +684,7 @@ $("#PostIdInSite_Question").val("معرف المنشور");
 
    
 
-    $(".gform textarea").each(function(){
-        if ($.trim($(this).val()).length == 0){
-            $(this).val("NoData");
-        }
-        else{
-            $(this).val();
-        }
-    });
+
   
   
 var UserAccountIdJ = $('#UserAccountId').val();
