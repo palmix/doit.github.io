@@ -7,7 +7,7 @@ alert(window.location.pathname)
 
 }else{
 
-
+alert(window.location.pathname)
 
 
 
