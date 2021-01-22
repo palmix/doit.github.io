@@ -665,6 +665,7 @@ $("#Img_Question").val("صورة الحيوان");
 $("#Img_Answer").val(g1);
 $("#ImgCover_Question").val("صورة الغلاف");
 $("#ImgCover_Answer").val(ImgCover_Answer);
+$('#MapAnimals_Question').val("خارطة أماكن التواجد");
 $('#MapAnimals_Answer').val(ImgMapsvar);// صورة اماكن التواجد
 $('#html_table').val(html_table); // جدول اضافي
 $("#MultipleImages_Question").val("صور متعددة");
