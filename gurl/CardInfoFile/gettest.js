@@ -1196,7 +1196,7 @@ if(getc == 'الطائفة'){
     } else if (geta == 'إسفنجيات' || geta == 'اسفنجيات' || geta == 'أسفنجيات') {
         $('#g4').val('Sponges');
     }else{
-    $('#tableid').append('<tr><td>'+getc+'</td><td>'+geta+'</td></tr>')
+    $('#tableid').append('<tr style="background:#f1c800;"><td>'+getc+'</td><td>'+geta+'</td></tr>')
     }
 
 
@@ -1207,14 +1207,14 @@ if(getc == 'الطائفة'){
 
     if (geta == 'حيوان عاشب' || geta == 'آكل أعشاب' || geta == 'آكل اعشاب' || geta == 'عاشب' || geta == 'حيوانات عاشبة' || geta == 'آكل نبات' || geta == 'آكل نباتات' || geta == 'نباتي' || geta == 'عشبي') {
         $('#g5').val('Herbivore');
-    } else if (geta == 'آكل لحوم' || geta == 'لاحم' || geta == 'حيوان لاحم' || geta == 'اكل لحوم' || geta == 'حيوان اكل لحوم' || geta == 'حيوان لاحم') {
+    } else if (geta == 'آكل لحوم' || geta == 'لاحم' || geta == 'حيوان لاحم' || geta == 'اكل لحوم' || geta == 'حيوان اكل لحوم' || geta == 'حيوان لاحم' || geta == 'آكلة اللحوم' || geta == 'آكلة لحوم') {
         $('#g5').val('Carnivore');
     } else if (geta == 'قارت' || geta == 'آكل النبات و الحيوان' || geta == 'آكل النبات والحيوان' || geta == 'آكل الحيوان والنبات' || geta == 'آكل الحيوان و النبات' || geta == 'حيوان قارت' || geta == 'قوارض' || geta == 'حيوان قارض'|| geta == 'آكل لحوم ونبات') {
         $('#g5').val('Omnivore');
     } else if (geta == 'يتغذى على العوالق') {
         $('#g5').val('Planktivore');
     } else{
-    $('#tableid').append('<tr><td>'+getc+'</td><td>'+geta+'</td></tr>')
+    $('#tableid').append('<tr style="background:#f1c800;"><td>'+getc+'</td><td>'+geta+'</td></tr>')
     }
 
 
@@ -1265,7 +1265,7 @@ $('#ga10').val(geta);
 $('#ga11_1').val(getc);
 $('#ga11').val(geta);
 }else{
-$('#tableid').append('<tr><td>'+getc+'</td><td>'+geta+'</td></tr>')
+$('#tableid').append('<tr style="background:#00dbf1"><td>'+getc+'</td><td>'+geta+'</td></tr>')
 }
 }
 
