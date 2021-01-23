@@ -4,7 +4,7 @@
 var ss = window.location.pathname;
 var getnumCards = $.query.get("card");
 
-if(ss == "/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%a7%d8%b3%d9%85%d8%a7%d9%83/"){
+if(ss == "/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%b2%d9%88%d8%a7%d8%ad%d9%81/"){
 var getnumCards1 = getnumCards + 1;
 var getlink = $('.entry .so-widget-sow-editor a:eq('+getnumCards1+')').attr('href');
 if(getnumCards1 <= 178){
@@ -1103,6 +1103,10 @@ if(getc == 'الطائفة'){
         $('#g4').val('Fishes');
     } else if (geta == 'شعاعايات ألزعانف' || geta == 'شعاعيات الزعانف' || geta == 'شعاعيات زعانف' || geta == 'زعانف شعاعيات' || geta == 'زعانف الشعاعيات') {
         $('#g4').val('Actinopterygii');
+    } else if (geta == 'الأسماك الغضروفية' || geta == 'الاسماك الغضروفية' || geta == 'اسماك غضروفية' || geta == 'أسماك غضروفية' || geta == 'سمك غضروفي' || geta == 'سمك غضروف') {
+        $('#g4').val('Chondrichthyes');
+    } else if (geta == 'لحميات الزعانف' || geta == 'لحميات زعانف' || geta == 'لحميات ألزعانف') {
+        $('#g4').val('Sarcopterygii');
     } else if (geta == 'حشرات' || geta == 'الحشرات' || geta == 'حشرة') {
         $('#g4').val('Insects');
     } else if (geta == 'إسفنجيات' || geta == 'اسفنجيات' || geta == 'أسفنجيات') {
@@ -1232,7 +1236,7 @@ $("#sendToSheetHide").click();
 
 
 setTimeout(function(){
-window.location.href = "https://ajabanee.com/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%a7%d8%b3%d9%85%d8%a7%d9%83/?card=" + getnumCards;
+window.location.href = "https://ajabanee.com/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%b2%d9%88%d8%a7%d8%ad%d9%81/?card=" + getnumCards;
 },10000);
 
 }
