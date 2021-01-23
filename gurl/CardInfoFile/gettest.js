@@ -5,7 +5,7 @@ var getnumCards = $.query.get("card");
 var getnumCards1 = getnumCards + 1;
 if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/"){
 
-var link = $('.entry .so-widget-sow-editor a:eq(26)').attr('href');
+var link = $('.entry .so-widget-sow-editor a:eq(24)').attr('href');
 
 alert(link)
 
