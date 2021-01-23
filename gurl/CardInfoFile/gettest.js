@@ -1228,3 +1228,21 @@ window.location.href = "https://ajabanee.com/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A
 
 
 $(document).ready(readyCard);
+
+
+
+setTimeout(function(){
+location.reload(true)
+},60000);
+
+
+
+
+
+
+
+
+
+
+
+
