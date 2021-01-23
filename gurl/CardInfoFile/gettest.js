@@ -1152,7 +1152,7 @@ $('#ga1_n').val(geta);
 $('#ga3_4').val(geta);
 }else if(getc == 'مدة الحمل'|| getc == 'مده الحمل'){
 $('#ga4_4').val(geta);
-}else if(getc == 'عدد الصغار'){
+}else if(getc == 'عدد الصغار' || getc == 'عدد البيض' || getc == 'عدد البيوض'){
 $('#ga5_4').val(geta);
 }else if(getc == 'الموطن البيئي'){
 $('#ga2').val(geta);
