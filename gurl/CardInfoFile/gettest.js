@@ -4,7 +4,7 @@
 var ss = window.location.pathname;
 var getnumCards = $.query.get("card");
 
-if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/"){
+if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%B7%D9%8A%D9%88%D8%B1/"){
 var getnumCards1 = getnumCards + 1;
 var getlink = $('.entry .so-widget-sow-editor a:eq('+getnumCards1+')').attr('href');
 if(getnumCards1 <= 178){
@@ -1092,12 +1092,14 @@ if(getc == 'الطائفة'){
 
 	if (geta == 'الثدييات' || geta == 'ثديات' || geta == 'الثديات' || geta == 'ألثدييات' || geta == 'حيوان من الثدييات' || geta == 'ثديي') {
         $('#g4').val('Mammals');
-    } else if (geta == 'طائر' || geta == 'طيور' || geta == 'طير' || geta == 'الطيور' || geta == 'حيوان طائر' || geta == 'الطير') {
+    } else if (geta == 'طائر' || geta == 'طيور' || geta == 'طير' || geta == 'الطيور' || geta == 'حيوان طائر' || geta == 'الطير' || geta == 'الطائر') {
         $('#g4').val('Birds');
     } else if (geta == 'حيوان زاحف' || geta == 'زاحف' || geta == 'الحيوانات الزاحفة' || geta == 'زواحف' || geta == 'زاحفة' || geta == 'الزواحف') {
         $('#g4').val('Reptiles');
     } else if (geta == 'حيوان بحري' || geta == 'بر مائي' || geta == 'البرمائيات' || geta == 'برمائيات' || geta == 'حيوان برمائي' || geta == 'برمائي') {
         $('#g4').val('Amphibians');
+		$('#getcollapse17 .input-group-text').html('عدد البيض');
+		
     } else if (geta == 'سمك' || geta == 'اسماك' || geta == 'أسماك' || geta == 'الأسماك' || geta == 'الاسماك') {
         $('#g4').val('Fishes');
     } else if (geta == 'حشرات' || geta == 'الحشرات' || geta == 'حشرة') {
@@ -1229,7 +1231,7 @@ $("#sendToSheetHide").click();
 
 
 setTimeout(function(){
-window.location.href = "https://ajabanee.com/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/?card=" + getnumCards;
+window.location.href = "https://ajabanee.com/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%B7%D9%8A%D9%88%D8%B1/?card=" + getnumCards;
 },10000);
 
 }
