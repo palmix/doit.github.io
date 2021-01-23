@@ -1,17 +1,17 @@
 
 
+	
 var ss = window.location.pathname;
 var getnumCards = $.query.get("card");
-var getnumCards1 = getnumCards + 1;
-if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/"){
 
-var link = $('.entry .so-widget-sow-editor a:eq(24)').attr('href');
-var links = $('.entry .so-widget-sow-editor a)').attr('href').length;
-alert(link)
-console.log('links num: '+links)
+if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/"){
+var getnumCards1 = getnumCards + 1;
+var getlink = $('.entry .so-widget-sow-editor a:eq('+getnumCards1+')').attr('href');
+window.location.href = getlink + "?card=" + getnumCards1;
+
 }else{
 
-alert(getnumCards)
+
 
 
 
@@ -1017,9 +1017,7 @@ setcode();
 
  // انتهاء جمع البيانات
  
-function setcode(){
-$("#sendToSheetHide").click();
-}
+
 
 
 
@@ -1193,3 +1191,35 @@ $('#htmlTables').val(settable);
 
 
 }
+
+function readyCard() {
+	
+setTimeout(function(){
+test()
+},2000);
+
+
+setTimeout(function(){
+yalla()
+},4000);
+	
+}
+	
+	
+
+
+function setcode(){
+	
+setTimeout(function(){
+$("#sendToSheetHide").click();
+},2000);
+
+
+setTimeout(function(){
+window.location.href = "https://ajabanee.com/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/?card=" + getnumCards;
+},10000);
+
+}
+
+
+$(document).ready(readyCard);
