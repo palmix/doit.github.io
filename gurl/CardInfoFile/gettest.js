@@ -1233,7 +1233,7 @@ $(document).ready(readyCard);
 
 setTimeout(function(){
 location.reload(true)
-},60000);
+},120000);
 
 
 
