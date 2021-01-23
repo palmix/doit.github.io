@@ -7,7 +7,7 @@ var getnumCards = $.query.get("card");
 if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D8%A7%D8%AA/"){
 var getnumCards1 = getnumCards + 1;
 var getlink = $('.entry .so-widget-sow-editor a:eq('+getnumCards1+')').attr('href');
-if(getnumCards1 <= 155){
+if(getnumCards1 <= 178){
 	
 window.location.href = getlink + "?card=" + getnumCards1;
 }else{
