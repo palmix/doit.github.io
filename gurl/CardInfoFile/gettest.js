@@ -49,6 +49,7 @@ set +="</div>";
 
 document.getElementById("comments").innerHTML = set;
 
+!function(){function e(e){var t,n=e.elements,o=Object.keys(n).filter(function(e){return"honeypot"===n[e].name?(t=n[e].value,!1):!0}).map(function(e){return void 0!==n[e].name?n[e].name:n[e].length>0?n[e].item(0).name:void 0}).filter(function(e,t,n){return n.indexOf(e)==t&&e}),r={};return o.forEach(function(e){var t=n[e];if(r[e]=t.value,t.length){for(var o=[],a=0;a<t.length;a++){var i=t.item(a);(i.checked||i.selected)&&o.push(i.value)}r[e]=o.join(", ")}}),r.formDataNameOrder=JSON.stringify(o),r.formGoogleSheetName=e.dataset.sheet||"responses",r.formGoogleSendEmail=e.dataset.email||"",{data:r,honeypot:t}}function t(t){t.preventDefault();var n=t.target,r=e(n),a=r.data;if(r.honeypot)return!1;o(n);var i=n.action,u=new XMLHttpRequest;u.open("POST",i),u.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),u.onreadystatechange=function(){if(4===u.readyState&&200===u.status){console.log("تم إرسال النموذج بنجاح");var e=n.querySelector(".form-sheet");e&&(e.style.display="none")}};var l=Object.keys(a).map(function(e){return encodeURIComponent(e)+"="+encodeURIComponent(a[e])}).join("&");u.send(l)}function n(){for(var e=document.querySelectorAll("form.gform"),n=0;n<e.length;n++)e[n].addEventListener("submit",t,!1)}function o(e){for(var t=e.querySelectorAll("button"),n=0;n<t.length;n++)t[n].disabled=!0}document.addEventListener("DOMContentLoaded",n,!1)}();
 
 
    // انشاء الرمز
