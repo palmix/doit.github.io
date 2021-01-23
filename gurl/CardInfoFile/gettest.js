@@ -8,7 +8,7 @@ if(ss == "/%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA/%D8%AB%D8%AF%D9%8A%D9%8A%D
 var link = $('.entry .so-widget-sow-editor a:eq(24)').attr('href');
 var links = $('.entry .so-widget-sow-editor a)').attr('href').length;
 alert(link)
-console.log('links num: 'links)
+console.log('links num: '+links)
 }else{
 
 alert(getnumCards)
