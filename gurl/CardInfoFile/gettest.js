@@ -1,4 +1,6 @@
-
+setTimeout(function(){
+location.reload(true)
+},120000);
 
 	
 var ss = window.location.pathname;
@@ -1239,9 +1241,7 @@ $(document).ready(readyCard);
 
 
 
-setTimeout(function(){
-location.reload(true)
-},120000);
+
 
 
 
