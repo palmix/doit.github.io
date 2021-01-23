@@ -1065,7 +1065,7 @@ $('#ImgMaps').val(img);
 
 
 
-var SourceInfo_Title = $("h1.name post-title.entry-title").text();
+var SourceInfo_Title = $("h1.post-title.entry-title").text();
 $('#SourceInfo_Title').val(SourceInfo_Title);
 
 var description = $("meta[name='description']").attr('content');
