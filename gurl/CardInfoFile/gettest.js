@@ -1,6 +1,4 @@
-setTimeout(function(){
-location.reload(true)
-},120000);
+
 
 	
 var ss = window.location.pathname;
