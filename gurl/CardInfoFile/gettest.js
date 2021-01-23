@@ -1094,12 +1094,11 @@ if(getc == 'الطائفة'){
         $('#g4').val('Mammals');
     } else if (geta == 'طائر' || geta == 'طيور' || geta == 'طير' || geta == 'الطيور' || geta == 'حيوان طائر' || geta == 'الطير' || geta == 'الطائر') {
         $('#g4').val('Birds');
+		$('#getcollapse17 .input-group-text').html('عدد البيض');
     } else if (geta == 'حيوان زاحف' || geta == 'زاحف' || geta == 'الحيوانات الزاحفة' || geta == 'زواحف' || geta == 'زاحفة' || geta == 'الزواحف') {
         $('#g4').val('Reptiles');
     } else if (geta == 'حيوان بحري' || geta == 'بر مائي' || geta == 'البرمائيات' || geta == 'برمائيات' || geta == 'حيوان برمائي' || geta == 'برمائي') {
         $('#g4').val('Amphibians');
-		$('#getcollapse17 .input-group-text').html('عدد البيض');
-		
     } else if (geta == 'سمك' || geta == 'اسماك' || geta == 'أسماك' || geta == 'الأسماك' || geta == 'الاسماك') {
         $('#g4').val('Fishes');
     } else if (geta == 'حشرات' || geta == 'الحشرات' || geta == 'حشرة') {
