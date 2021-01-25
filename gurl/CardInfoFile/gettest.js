@@ -4,7 +4,7 @@
 var ss = window.location.pathname;
 var getnumCards = $.query.get("card");
 
-if(ss == "/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%a8%d8%b1%d9%85%d8%a7%d8%a6%d9%8a%d8%a7%d8%aa/"){
+if(ss == "/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d9%84%d8%a7%d9%81%d9%82%d8%a7%d8%b1%d9%8a%d8%a7%d8%aa/"){
 var getnumCards1 = getnumCards + 1;
 var getlink = $('.entry .so-widget-sow-editor a:eq('+getnumCards1+')').attr('href');
 if(getnumCards1 <= 14){
@@ -1238,7 +1238,7 @@ $("#sendToSheetHide").click();
 
 
 setTimeout(function(){
-window.location.href = "https://ajabanee.com/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d8%a8%d8%b1%d9%85%d8%a7%d8%a6%d9%8a%d8%a7%d8%aa/?card=" + getnumCards;
+window.location.href = "https://ajabanee.com/%d8%ad%d9%8a%d9%88%d8%a7%d9%86%d8%a7%d8%aa/%d9%84%d8%a7%d9%81%d9%82%d8%a7%d8%b1%d9%8a%d8%a7%d8%aa/?card=" + getnumCards;
 },10000);
 
 }

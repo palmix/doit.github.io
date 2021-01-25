@@ -63,9 +63,16 @@ if(gets.CommonName.Answer.length >= 1){
 if(gets.ScientificName.Answer.length >= 1){
   table.push('<tr><td class="cardinfoname">'+gets.ScientificName.Question+'</td><td class="answercardinfo">'+gets.ScientificName.Answer+'</td></tr>');
 }
+if(gets.Type.Answer != gets.Class.AnswerAR){
 if(gets.Type.Answer.length >= 1){
   table.push('<tr><td class="cardinfoname">'+gets.Type.Question+'</td><td class="answercardinfo">'+gets.Type.Answer+'</td></tr>');
 }
+}
+if(gets.Class.AnswerAR.length >= 1){
+  table.push('<tr><td class="cardinfoname">'+gets.Class.Question+'</td><td class="answercardinfo">'+gets.Class.AnswerAR+'</td></tr>');
+}
+
+
 if(gets.Order.Answer.length >= 1){
   table.push('<tr><td class="cardinfoname">'+gets.Order.Question+'</td><td class="answercardinfo">'+gets.Order.Answer+'</td></tr>');
 }
