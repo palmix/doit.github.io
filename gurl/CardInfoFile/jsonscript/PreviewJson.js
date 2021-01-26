@@ -128,16 +128,12 @@ if(Enemy.length >= 1){
 if(PopulationTrendnum >= 0 && PopulationTrendnum <= 2){
   table.push('<tr><td class="cardinfoname">'+gets.PopulationTrend.Question+'</td><td class="answercardinfo">'+gets.PopulationTrend.Answer + PstatusSymbol +'</td></tr>');
 }
-if(img2.length >= 1){
-    table.push('<tr><td class="cardinfoname">'+gets.ImgSizeComparison.Question+'</td><td class="answercardinfo"></td></tr>');
-}
+
 
 
   table.push('</tbody></table>');
   
-if(img2.length >= 1){
-  table.push('<img style="max-width:170px" border="0" data-original-height="101" data-original-width="162" src="'+img2+'">');
-}
+
 
 if (getInfoRedList >= 1 && getInfoRedList <= 9) {
  table.push(gets.modalcardinf.IUCN_AR);
@@ -146,7 +142,35 @@ $(document).ready(function() {
 });
 }
     
-      
+
+
+
+
+          
+if(img2.length >= 1 || gets.ImgMaps.Answer.length >= 1){
+	table.push('<div class="row row-cols-1 row-cols-md-3 g-4 mt-2">');
+}
+if (img2.length >= 1) {
+  table.push('<div class="col m-auto mb-2"  style="width:12rem"><div class="card"><img src="'+img2+'" class="card-img-top" alt="'+gets.ImgSizeComparison.Question+'"><div class="card-body p-1 text-center border-top"><p class="card-text">'+gets.ImgSizeComparison.Question+'</p></div></div></div>');
+  }
+if (img2.length >= 1) {
+  table.push('<div class="col m-auto mb-2"  style="width:12rem"><div class="card"><img src="'+gets.ImgMaps.Answer+'" class="card-img-top" alt="'+gets.ImgMaps.Question+'"><div class="card-body p-1 text-center"><p class="card-text">'+gets.ImgMaps.Question+'</p></div></div></div>');
+
+}  
+if(img2.length >= 1 || gets.ImgMaps.Answer.length >= 1){
+	table.push('</div>');
+}
+
+
+
+
+
+
+
+
+
+
+
 if (gets.DidYouKnow.Answer.length != 0) {
     var entries = gets.DidYouKnow.Answer || [];
     table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
