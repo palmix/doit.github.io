@@ -620,17 +620,29 @@ var ImgCover_Answer = $("#ImgCover").val();
 var SourceInfo_Title = $("#SourceInfo_Title").val();
 var SourceInfo_Link = $("#SourceInfo_Link").val();
 
-   
+var SummaryPage = $('#SummaryPage').val();
+var ImgMaps = $('#ImgMaps').val();
+
 
    
+var Class_AnswerAR = $("#AnimalClass option:selected").text();
+var Class_AnswerEN = $("#AnimalClass option:selected").val();
+   
+$("#ImgMaps_Question").val("أماكن التواجد");
+$("#ImgMaps_Answer").val(ImgMaps);
+$("#SummaryPage_Question").val("الوصف");
+$("#SummaryPage_Answer").val(SummaryPage);
    
 $("#CommonName_Question").val("الإسم الشائع");
 $("#CommonName_Answer").val(g2);
 $("#CommonName_Answer_En").val(g2_En);
 $("#ScientificName_Question").val("الإسم العلمي");
 $("#ScientificName_Answer").val(g3);
-$("#Type_Question").val("الطائفة");
+$("#Type_Question").val("النوع");
 $("#Type_Answer").val(g4);
+$("#Class_Question").val("الطائفة");
+$("#Class_AnswerAR").val(Class_AnswerAR);
+$("#Class_AnswerEN").val(Class_AnswerEN);
 $("#Order_Question").val("الرتبة");
 $("#Order_Answer").val(ga1_n);
 $("#Subfamily_Question").val("الفصيلة");
@@ -668,9 +680,6 @@ $("#Img_Question").val("صورة الحيوان");
 $("#Img_Answer").val(g1);
 $("#ImgCover_Question").val("صورة الغلاف");
 $("#ImgCover_Answer").val(ImgCover_Answer);
-$('#MapAnimals_Question').val("خارطة أماكن التواجد");
-$('#MapAnimals_Answer').val(ImgMapsvar);// صورة اماكن التواجد
-$('#html_table').val(html_table); // جدول اضافي
 $("#MultipleImages_Question").val("صور متعددة");
 $("#MultipleImages_Answer").val(MImages);
 $("#ImgInDrive_Question").val("صورة الحيوان في درايف");
@@ -718,6 +727,7 @@ var MultipleImagesJ = MImages_json;
 var PostUrlJ = $("#PostUrlInSite_Answer").val();
 var PostIdJ = $("#PostIdInSite_Answer").val();
    
+
    
 var jsoncode = '';
 
@@ -741,8 +751,13 @@ jsoncode += '"Question": "الإسم العلمي",';
 jsoncode += '"Answer": "'+g3+'"';
 jsoncode += '},';
 jsoncode += '"Type": {';
-jsoncode += '"Question": "الطائفة",';
+jsoncode += '"Question": "النوع",';
 jsoncode += '"Answer": "'+g4+'"';
+jsoncode += '},';
+jsoncode += '"Class": {';
+jsoncode += '"Question": "الطائفة",';
+jsoncode += '"AnswerAR": "'+Class_AnswerAR+'",';
+jsoncode += '"AnswerEN": "'+Class_AnswerEN+'"';
 jsoncode += '},';
 jsoncode += '"Order": {';
 jsoncode += '"Question": "الرتبة",';
@@ -858,6 +873,16 @@ jsoncode += '",';
 jsoncode += '"IUCN_EN": ""';
 jsoncode += '},';
 
+jsoncode += '"SummaryPage": {';
+jsoncode += '"Question": "الوصف",';
+jsoncode += '"Answer": "'+SummaryPage+'"';
+jsoncode += '},';
+
+jsoncode += '"ImgMaps": {';
+jsoncode += '"Question": "خريطة التواجد",';
+jsoncode += '"Answer": "'+ImgMaps+'"';
+jsoncode += '},';
+   
 jsoncode += '"SourceInfo": {';
 jsoncode += '"Question": "المراجع",';
 jsoncode += '"Answer_Title": "'+SourceInfo_Title+'",';
@@ -939,13 +964,14 @@ jsoncode += '"ScreenHeight": {';
 jsoncode += '"Question": "إرتفاع الشاشة",';
 jsoncode += '"Answer": "'+ScreenHeightJ+'"';
 jsoncode += '},';
-
+   
 jsoncode += '"MoreInformation": {';
 jsoncode += '"Question": "معلومات إضافية",';
 jsoncode += '"Answer": "'+MoreInformationJ+'"';
 jsoncode += '}';
 jsoncode += '}';
 jsoncode += '}';
+
 
 
 
