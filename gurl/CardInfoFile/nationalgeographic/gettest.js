@@ -1327,7 +1327,7 @@ IUCNtext = IUCNtext.toLowerCase();
   
 var TRENDtext = $('.fast-facts__population-trend').text();
 if(TRENDtext.length > 1){
-$('.fast-facts__population-trend').find('span').remove();
+$('.fast-facts__population-trend span').remove();
 TRENDtext = TRENDtext.replace(' ','');
 setTimeout(function(){
 TRENDtext = TRENDtext.toLowerCase();
