@@ -1280,7 +1280,7 @@ $('#g9').val(sizeimg);
 
 var textsize = $( ".fast-facts__facts__key" ).last().text();
 if(textsize.length > 1){
-  if(textsize == "SIZE RELATIVE TO A 6-FT MAN:" || textsize == "SIZE RELATIVE TO A 6-FT MAN: "){
+  if(textsize.indexOf("6-FT") > 1){
   $('#g9_1').val(3);
   }
 }
