@@ -1327,8 +1327,7 @@ IUCNtext = IUCNtext.toLowerCase();
   
 var TRENDtext = $('.fast-facts__population-trend').text();
 if(TRENDtext.length > 1){
-TRENDtext = TRENDtext.replace('CURRENT POPULATION TREND: ','');
-TRENDtext = TRENDtext.replace('CURRENT POPULATION TREND:','');
+$('.fast-facts__population-trend').find('span').remove();
 TRENDtext = TRENDtext.replace(' ','');
 
   if(TRENDtext == "Stable"){
