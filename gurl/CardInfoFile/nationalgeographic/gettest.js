@@ -1269,7 +1269,7 @@ $('#nextcardname').val(CommonName_Answer_En);
       
 
 var sizeimg = $('.fast-facts__relative-size-image img').attr('src');
-if(sizeimg.lenght > 1){
+if(sizeimg.length > 1){
 sizeimg = sizeimg.replace('.gif','.adapt.1900.1.gif');
 $('#g9').val(sizeimg);
 }
