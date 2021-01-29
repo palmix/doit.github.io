@@ -1293,7 +1293,7 @@ if(animg.length > 1){
 animg = animg.replace('background-image: url("','');
 animg = animg.replace('"); background-position: center center;','');
 animg = animg.replace('.133.1.jpg','.1900.1.jpg');
-$('#g1').val(sizeimg);
+$('#g1').val(animg);
 }
       
 
