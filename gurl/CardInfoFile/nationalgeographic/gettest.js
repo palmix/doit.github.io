@@ -1275,9 +1275,26 @@ sizeimg = sizeimg.replace('/content','https://www.nationalgeographic.com/content
 sizeimg = sizeimg.replace('.gif','.adapt.1900.1.gif');
 $('#g9').val(sizeimg);
 }
+
+
+
+var textsize = $( ".fast-facts__facts__key" ).last().text();
+if(textsize.length > 1){
+  if(textsize == "SIZE RELATIVE TO A 6-FT MAN:"){
+  $('#g9_1').val(3);
+  }
+}
       
       
       
+      
+var animg = $('.fast-facts__thumbnail-image .modules-images__placeholder .low-rez-image').attr('style');
+if(animg.length > 1){
+animg = animg.replace('background-image: url("','');
+animg = animg.replace('"); background-position: center center;','');
+animg = animg.replace('.133.1.jpg','.1900.1.jpg');
+$('#g1').val(sizeimg);
+}
       
       
       
