@@ -1279,7 +1279,6 @@ $('#g9').val(sizeimg);
 
 
 var textsize = $(".fast-facts__facts__key").last().text();
-alert(textsize);
 if(textsize.length > 1){
   if(textsize.indexOf("6-ft") > 1){
   $('#g9_1').val(3);
