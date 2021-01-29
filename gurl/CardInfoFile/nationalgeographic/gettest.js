@@ -1329,6 +1329,7 @@ var TRENDtext = $('.fast-facts__population-trend').text();
 if(TRENDtext.length > 1){
 TRENDtext = TRENDtext.replace('CURRENT POPULATION TREND: ','');
 TRENDtext = TRENDtext.replace('CURRENT POPULATION TREND:','');
+TRENDtext = TRENDtext.replace(' ','');
 
   if(TRENDtext == "Stable"){
     $('#g10').val('stable');
@@ -1348,7 +1349,11 @@ var SNtext = $('.fast-facts__facts__key em').text();
 if(SNtext.length > 1){
 $('#g3').val(SNtext);
 }
-  
+
+      
+      
+      
+      
     });
 } 
 
