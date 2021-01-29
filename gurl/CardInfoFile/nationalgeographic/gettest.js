@@ -1267,8 +1267,8 @@ var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليز�
 $('#nextcardname').val(CommonName_Answer_En);
 
       
-      
-var sizeimg = $(".fast-facts__relative-size-image").find("img").attr("src");
+
+var sizeimg = $('.fast-facts__relative-size-image img').attr('src');
 if(sizeimg.lenght > 1){
 sizeimg = sizeimg.replace('.gif','.adapt.1900.1.gif');
 $('#g9').val(sizeimg);
@@ -1305,13 +1305,13 @@ var s = $("#nextcardname").val();
 s = s.toLowerCase();
 var name = s.replace(/ /ig,'-');
 var names =  s.substring(0,1);
-var nums = "?card=" + getnumCards1;
+var nums = getnumCards1;
   
   
 var sc = 'https://www.nationalgeographic.com/animals/mammals/';
   sc += names+'/';
   sc +=name;
-  sc +=nums;
+  sc +='?card='+ nums;
   
   
 if(getnumCards1 <= 387){
