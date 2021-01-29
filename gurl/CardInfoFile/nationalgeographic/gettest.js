@@ -1333,15 +1333,16 @@ TRENDtext = TRENDtext.replace(' ','');
 
   if(TRENDtext == "Stable"){
     $('#g10').val('stable');
-  }else if(IUCNtext == "Decreasing"){
+  }else if(TRENDtext == "Decreasing"){
     $('#g10').val('Decreasing');
-  }else if(IUCNtext == "Increasing"){
+  }else if(TRENDtext == "Increasing"){
     $('#g10').val('Increasing');
-  }else if(IUCNtext == "unknown"){
+  }else if(TRENDtext == "unknown"){
     $('#g10').val('unknown');
   }else{
     $('#g10').val('None');
   }
+  
 }
  
   
