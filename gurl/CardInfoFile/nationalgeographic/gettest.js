@@ -52,6 +52,294 @@ $("article").prepend(set);
 
 
 
+function getfromsheet(){
+
+
+if($('.needs-validation .form-check-input').is(':checked')){
+
+}else{
+$( ".needs-validation .form-check-input" ).click();
+}
+
+  
+  
+var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZCb2Qz1JMdic7bNnSDLBx7tSVBDY8Rw/values/ajabanee?";
+
+    var IdCard = $.query.get("card");
+    $.getJSON(getusercode2, {
+        key: keyGeoArabic,
+        range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
+        majorDimension: "COLUMNS"
+    }).catch(function(error) {
+alert('error 1');
+    }).done(function(recosts) {
+        var item = recosts.values;
+var Timestamp = item[0];//تاريخ النشر
+var ResponseNumber = item[1];//ID
+var Published = item[2];//حالة النشر
+var UserStatus = item[3];//حالة الحساب
+var CommonName_Question = item[4];//الإسم الشائع
+var CommonName_Answer = item[5];//الإسم الشائع هو
+var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
+var ScientificName_Question = item[7];//الاسم العلمي
+var ScientificName_Answer = item[8];//الاسم العلمي هو
+var Type_Question = item[9];//النوع
+var Type_Answer = item[10];//النوع هو
+var Class_Question = item[11];//الطائفة
+var Class_AnswerAR = item[12];//إسم الطائفة
+var Class_AnswerEN = item[13];//الإسم العلمي للطائفة
+var Order_Question = item[14];//الرتبة
+var Order_Answer = item[15];//الرتبة هي
+var Subfamily_Question = item[16];//الفصيلة
+var Subfamily_Answer = item[17];//الفصيلة هي
+var Diet_Question = item[18];//النظام الغذائي
+var Diet_Answer = item[19];//النظام الغذائي هو
+var Age_Question = item[20];//متوسط العمر
+var Age_Answer = item[21];//متوسط العمر هو
+var Size_Question = item[22];//الحجم
+var Size_Answer = item[23];//الحجم هو
+var Weight_Question = item[24];//الوزن
+var Weight_Answer = item[25];//الوزن هو
+var PopulationTrend_Question = item[26];//إتجاه السكان الحالي
+var PopulationTrend_Answer = item[27];//إتجاه السكان الحالي هو
+var PopulationTrend_Code = item[28];//رمز إتجاه السكان الحالي
+var PopulationTrend_Num = item[29];//رقم إتجاه السكان الحالي
+var RedList_Question = item[30];//حالة القائمة الحمراء (IUCN)
+var RedList_Answer = item[31];//حالة القائمة الحمراء (IUCN) هي
+var RedList_Num = item[32];//رقم حالة القائمة الحمراء (IUCN)
+var Speed_Question = item[33];//السرعة
+var Speed_Answer = item[34];//السرعة هي
+var DurationPregnancy_Question = item[35];//مدة الحمل
+var DurationPregnancy_Answer = item[36];//مدة الحمل هي
+var NumBirths_Question = item[37];//عدد الصغار/البيض
+var NumBirths_Answer = item[38];//عدد الصغار/البيض هو
+var EcologicalHabitat_Question = item[39];//الموطن البيئي
+var EcologicalHabitat_Answer = item[40];//الموطن البيئي هو
+var Color_Question = item[41];//الألوان
+var Color_Answer = item[42];//الألوان هي
+var Enemy_Question = item[43];//الأعداء
+var Enemy_Answer = item[44];//الأعداء هم
+var FeedOn_Question = item[45];//الغذاء
+var FeedOn_Answer = item[46];//الغذاء هو
+var Img_Question = item[47];//صورة الحيوان
+var Img_Answer = item[48];//عنوان صورة الحيوان
+var ImgInDrive_Question = item[49];//الصورة في درايف
+var ImgInDrive_Answer = item[50];//رابط الصور في درايف
+var ImgCover_Question = item[51];//صورة الغلاف
+var ImgCover_Answer = item[52];//عنوان صورة الغلاف
+var MultipleImages_Question = item[53];//صور متعددة
+var MultipleImages_Answer = item[54];//روابط الصور المتعددة
+var JsonFileIdInDrive_Question = item[55];//ملف Json
+var JsonFileIdInDrive_Answer = item[56];//معرف ملف Json
+var ImgSizeComparison_Question = item[57];//صورة مقارنة الحجم
+var ImgSizeComparison_Answer = item[58];//عنوان صورة مقارنة الحجم
+var info1_Question = item[59];//المعلومات الإضافية 1
+var info1_Answer = item[60];//المعلومات الإضافية 1 هي
+var info2_Question = item[61];//المعلومات الإضافية 2
+var info2_Answer = item[62];//المعلومات الإضافية 2 هي
+var info3_Question = item[63];//المعلومات الإضافية 3
+var info3_Answer = item[64];//المعلومات الإضافية 3 هي
+var info4_Question = item[65];//المعلومات الإضافية 4
+var info4_Answer = item[66];//المعلومات الإضافية 4 هي
+var DidYouKnow_Question = item[67];//هل تعلم
+var DidYouKnow_Answer = item[68];//معلومات هل تعلم
+var UserAccountId = item[69];//معرف حساب المستخدم
+var UserLoginWith = item[70];//تسجيل دخول بإستخدام
+var UserAccountImg = item[71];//صورة الملف الشخصي للمستخدم
+var UserName = item[72];//إسم المستخدم
+var UserEmail = item[73];//البريد الإلكتروني
+var Name_publishing = item[74];//اظهار معلومات الناشر
+var PageTitle = item[75];//عنوان الصفحة
+var PageLink = item[76];//رابط الصفحة
+var SourceInfo_Question = item[77];//المراجع
+var SourceInfo_Answer_Title = item[78];//عنوان المراجع
+var SourceInfo_Answer_link = item[79];//رابط المراجع
+var TheState = item[80];//الدولة
+var CountryCode = item[81];//رمز الدولة
+var IPAddress = item[82];//عنوان IP
+var ScreenWidth = item[83];//عرض الشاشة
+var ScreenHeight = item[84];//إرتفاع الشاشة
+var MoreInformation = item[85];//معلومات إضافية
+var dateID = item[86];//معرف تاريخ المنشور
+var PostUrlInSite_Question = item[87];//رابط المنشور
+var PostUrlInSite_Answer = item[88];//رابط المنشور هو
+var PostIdInSite_Question = item[89];//معرف المنشور هو
+var PostIdInSite_Answer = item[90];//معرف المنشور
+var html_table = item[91];//جدول غير معرف
+var MapAnimals_Question = item[92];//خريطة الحيوانات
+var MapAnimals_Answer = item[93];//صورة خريطة الحيوانات
+var description = item[94];//الوصف
+
+   
+$("#infoMoreSetToGet").append(html_table+'<br/>');
+$("#infoMoreSetToGet").append('<img src="'+MapAnimals_Answer+'"/>');
+$("#infoMoreSetToGet").append('<img src="'+ImgSizeComparison_Answer+'"/><br/>');
+
+
+
+
+
+
+      
+if(ImgSizeComparison_Question == "الحجم بالنسبة للإنسان"){
+ImgSizeComparison_Question = 3;
+}else if(ImgSizeComparison_Question == "الحجم بالنسبة للفنجان"){
+ImgSizeComparison_Question = 2;
+}else if(ImgSizeComparison_Question == "الحجم بالنسبة لمشبك الورق"){
+ImgSizeComparison_Question = 1;
+}
+
+      
+      
+      
+
+if (Type_Answer == "الثدييات"){
+  Type_Answer = 'Mammalia'
+}else if (Type_Answer == "طيور"){
+  Type_Answer = 'Aves'
+}else if (Type_Answer == "اللافقاريات"){
+  Type_Answer = 'Invertebrata'
+}else if (Type_Answer == "الزواحف"){
+  Type_Answer = 'Reptilia'
+}else if (Type_Answer == "البرمائيات"){
+  Type_Answer = 'Amphibia'
+}else if (Type_Answer == "الحشرات"){
+  Type_Answer = 'Insecta'
+}else if (Type_Answer == "أسماك"){
+  Type_Answer = 'Pisces'
+}else if (Type_Answer == "ديناصورات"){
+  Type_Answer = 'Dinosauria'
+}
+
+  
+
+      
+if (Diet_Answer == "آكل لحوم"){
+  Diet_Answer = 'Carnivore'
+}else if (Diet_Answer == "آكل أعشاب"){
+  Diet_Answer = 'Herbivore'
+} else if (Diet_Answer == "قارت"){
+  Diet_Answer = 'Omnivore'
+} else if (Diet_Answer == "آكل فطريات"){
+  Diet_Answer = 'Fungivore'
+} else if (Diet_Answer == "آكل بكتيريا"){
+  Diet_Answer = 'Bacterivore'
+} else if (Diet_Answer == "يتغذى على العوالق"){
+  Diet_Answer = 'Planktivore'
+}
+
+ var g10_Num = 'unknown';
+    if(PopulationTrend_Code == '+-'){
+    g10_Num = 'stable';
+    }else if(PopulationTrend_Code == '-+'){
+    g10_Num = 'stable';
+    }else if(PopulationTrend_Code == '-'){
+    g10_Num = 'Decreasing';
+    }else if(PopulationTrend_Code == '+'){
+    g10_Num = 'Increasing';
+    }else{
+    g10_Num = 'unknown';
+    }
+      
+var g11_Answer = 0;
+    if(RedList_Num == '1'){
+    g11_Answer = 1;
+    }else if(RedList_Num == '2'){
+    g11_Answer = 2;
+    }else if(RedList_Num == '3'){
+    g11_Answer = 3;
+    }else if(RedList_Num == '4'){
+    g11_Answer = 4;
+    }else if(RedList_Num == '5'){
+    g11_Answer = 5;
+    }else if(RedList_Num =='6'){
+    g11_Answer = 6;
+    }else if(RedList_Num == '7'){
+    g11_Answer = 7;
+    }else if(RedList_Num == '8'){
+    g11_Answer = 8;
+    }else if(RedList_Num == '9'){
+    g11_Answer = 9;
+    }else{
+    g11_Answer = 8;
+    }
+      
+      
+$('#g2').val(CommonName_Answer);
+$('#g1').val(Img_Answer);
+$('#g9').val(ImgSizeComparison_Answer);
+$('#g9_1').val(ImgSizeComparison_Question);
+$('#g2_En').val(CommonName_Answer_En);
+$('#g3').val(ScientificName_Answer);
+$('#g4').val(Type_Answer);
+$('#AnimalClass').val(Class_AnswerEN);
+$('#g5').val(Diet_Answer);
+$('#g6_4').val(Age_Answer);
+$('#g7_4').val(Size_Answer);
+$('#g8_4').val(Weight_Answer);
+$('#g10').val(g10_Num);
+$('#g11').val(g11_Answer);
+$('#ga1').val(Subfamily_Answer);
+$('#ga1_n').val(Order_Answer);
+$('#ga3_4').val(Speed_Answer);
+$('#ga4_4').val(DurationPregnancy_Answer);
+$('#ga5_4').val(NumBirths_Answer);
+$('#ga2').val(EcologicalHabitat_Answer);
+$('#ga6').val(Color_Answer);
+$('#ga7').val(Enemy_Answer);
+$('#ga13').val(FeedOn_Answer);
+$('#ga8_1').val(info1_Question);
+$('#ga8').val(info1_Answer);
+$('#ga9_1').val(info2_Question);
+$('#ga9').val(info2_Answer);
+$('#ga10_1').val(info3_Question);
+$('#ga10').val(info3_Answer);
+$('#ga11_1').val(info4_Question);
+$('#ga11').val(info4_Answer);
+
+
+$('#ImgCover').val(ImgCover_Answer);
+$('#SourceInfo_Title').val(SourceInfo_Answer_Title);
+$('#SourceInfo_Link').val(SourceInfo_Answer_link);
+
+$('#ImgMaps').val(MapAnimals_Answer);
+$('#SummaryPage').val(description);
+      
+      
+
+      
+      
+      
+      
+      
+                    $(MultipleImages_Answer.toString()).each(function() {
+                      var m =0;
+                        $(this).find('li').each(function() {
+                            var getimgs = $(this).html();
+                          getimgs = getimgs.replace(/\/s200\/|\/s320\/|\/s400\/|\/s640\/|\/s600\/|\/s72\/|\/h400\/|\/h72\/|\/h120\/|\/s1600\//gi, '/s120/');
+                          m+=1;
+        $('#MultipleimagesNum').append('<div class="input-group mb-1"> <span class="input-group-text">'+m+'</span> <span class="input-group-text">صورة</span> <input class="form-control Multipleimages" value="'+getimgs+'" placeholder="أدخل رابط صورة '+m+'" type="text"> </div>');
+                        });
+                    });
+ 
+
+      
+                    $(DidYouKnow_Answer.toString()).each(function() {
+                      var s =0;
+                        $(this).find('li').each(function() {
+                            var DidYoUKnows = $(this).html();
+                          s+=1;
+        $('#DidYoUKnowNum').append('<div class="input-group mb-1"> <span class="input-group-text">'+s+'</span> <span class="input-group-text">هل تعلم</span> <input type="text" class="form-control infonumbers" value="'+DidYoUKnows+'" placeholder="أدخل معلومة '+s+'"> </div>');
+                        });
+                    });
+
+
+
+
+
+// setgetAll();
+    });
+}
 
 
 function yalla(){
@@ -957,297 +1245,6 @@ g7_3_a = '1';
 
 
 
-function getfromsheet(){
-
-
-if($('.needs-validation .form-check-input').is(':checked')){
-
-}else{
-$( ".needs-validation .form-check-input" ).click();
-}
-
-  
-  
-var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZCb2Qz1JMdic7bNnSDLBx7tSVBDY8Rw/values/ajabanee?";
-
-    var getIdCard = $.query.get("card");
-    var IdCard = getIdCard.replace('ID1000000', '');
-    var IdCards = parseInt(IdCard)
-     IdCard = IdCards + 3;
-    $.getJSON(getusercode2, {
-        key: keyGeoArabic,
-        range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
-        majorDimension: "COLUMNS"
-    }).catch(function(error) {
-        document.getElementById('cardinfo').innerHTML = '<div class="alert alert-warning" role="alert"> حدث خطأ في جلب البطاقة </div>';
-    }).done(function(recosts) {
-        var item = recosts.values;
-var Timestamp = item[0];//تاريخ النشر
-var ResponseNumber = item[1];//ID
-var Published = item[2];//حالة النشر
-var UserStatus = item[3];//حالة الحساب
-var CommonName_Question = item[4];//الإسم الشائع
-var CommonName_Answer = item[5];//الإسم الشائع هو
-var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
-var ScientificName_Question = item[7];//الاسم العلمي
-var ScientificName_Answer = item[8];//الاسم العلمي هو
-var Type_Question = item[9];//النوع
-var Type_Answer = item[10];//النوع هو
-var Class_Question = item[11];//الطائفة
-var Class_AnswerAR = item[12];//إسم الطائفة
-var Class_AnswerEN = item[13];//الإسم العلمي للطائفة
-var Order_Question = item[14];//الرتبة
-var Order_Answer = item[15];//الرتبة هي
-var Subfamily_Question = item[16];//الفصيلة
-var Subfamily_Answer = item[17];//الفصيلة هي
-var Diet_Question = item[18];//النظام الغذائي
-var Diet_Answer = item[19];//النظام الغذائي هو
-var Age_Question = item[20];//متوسط العمر
-var Age_Answer = item[21];//متوسط العمر هو
-var Size_Question = item[22];//الحجم
-var Size_Answer = item[23];//الحجم هو
-var Weight_Question = item[24];//الوزن
-var Weight_Answer = item[25];//الوزن هو
-var PopulationTrend_Question = item[26];//إتجاه السكان الحالي
-var PopulationTrend_Answer = item[27];//إتجاه السكان الحالي هو
-var PopulationTrend_Code = item[28];//رمز إتجاه السكان الحالي
-var PopulationTrend_Num = item[29];//رقم إتجاه السكان الحالي
-var RedList_Question = item[30];//حالة القائمة الحمراء (IUCN)
-var RedList_Answer = item[31];//حالة القائمة الحمراء (IUCN) هي
-var RedList_Num = item[32];//رقم حالة القائمة الحمراء (IUCN)
-var Speed_Question = item[33];//السرعة
-var Speed_Answer = item[34];//السرعة هي
-var DurationPregnancy_Question = item[35];//مدة الحمل
-var DurationPregnancy_Answer = item[36];//مدة الحمل هي
-var NumBirths_Question = item[37];//عدد الصغار/البيض
-var NumBirths_Answer = item[38];//عدد الصغار/البيض هو
-var EcologicalHabitat_Question = item[39];//الموطن البيئي
-var EcologicalHabitat_Answer = item[40];//الموطن البيئي هو
-var Color_Question = item[41];//الألوان
-var Color_Answer = item[42];//الألوان هي
-var Enemy_Question = item[43];//الأعداء
-var Enemy_Answer = item[44];//الأعداء هم
-var FeedOn_Question = item[45];//الغذاء
-var FeedOn_Answer = item[46];//الغذاء هو
-var Img_Question = item[47];//صورة الحيوان
-var Img_Answer = item[48];//عنوان صورة الحيوان
-var ImgInDrive_Question = item[49];//الصورة في درايف
-var ImgInDrive_Answer = item[50];//رابط الصور في درايف
-var ImgCover_Question = item[51];//صورة الغلاف
-var ImgCover_Answer = item[52];//عنوان صورة الغلاف
-var MultipleImages_Question = item[53];//صور متعددة
-var MultipleImages_Answer = item[54];//روابط الصور المتعددة
-var JsonFileIdInDrive_Question = item[55];//ملف Json
-var JsonFileIdInDrive_Answer = item[56];//معرف ملف Json
-var ImgSizeComparison_Question = item[57];//صورة مقارنة الحجم
-var ImgSizeComparison_Answer = item[58];//عنوان صورة مقارنة الحجم
-var info1_Question = item[59];//المعلومات الإضافية 1
-var info1_Answer = item[60];//المعلومات الإضافية 1 هي
-var info2_Question = item[61];//المعلومات الإضافية 2
-var info2_Answer = item[62];//المعلومات الإضافية 2 هي
-var info3_Question = item[63];//المعلومات الإضافية 3
-var info3_Answer = item[64];//المعلومات الإضافية 3 هي
-var info4_Question = item[65];//المعلومات الإضافية 4
-var info4_Answer = item[66];//المعلومات الإضافية 4 هي
-var DidYouKnow_Question = item[67];//هل تعلم
-var DidYouKnow_Answer = item[68];//معلومات هل تعلم
-var UserAccountId = item[69];//معرف حساب المستخدم
-var UserLoginWith = item[70];//تسجيل دخول بإستخدام
-var UserAccountImg = item[71];//صورة الملف الشخصي للمستخدم
-var UserName = item[72];//إسم المستخدم
-var UserEmail = item[73];//البريد الإلكتروني
-var Name_publishing = item[74];//اظهار معلومات الناشر
-var PageTitle = item[75];//عنوان الصفحة
-var PageLink = item[76];//رابط الصفحة
-var SourceInfo_Question = item[77];//المراجع
-var SourceInfo_Answer_Title = item[78];//عنوان المراجع
-var SourceInfo_Answer_link = item[79];//رابط المراجع
-var TheState = item[80];//الدولة
-var CountryCode = item[81];//رمز الدولة
-var IPAddress = item[82];//عنوان IP
-var ScreenWidth = item[83];//عرض الشاشة
-var ScreenHeight = item[84];//إرتفاع الشاشة
-var MoreInformation = item[85];//معلومات إضافية
-var dateID = item[86];//معرف تاريخ المنشور
-var PostUrlInSite_Question = item[87];//رابط المنشور
-var PostUrlInSite_Answer = item[88];//رابط المنشور هو
-var PostIdInSite_Question = item[89];//معرف المنشور هو
-var PostIdInSite_Answer = item[90];//معرف المنشور
-var html_table = item[91];//جدول غير معرف
-var MapAnimals_Question = item[92];//خريطة الحيوانات
-var MapAnimals_Answer = item[93];//صورة خريطة الحيوانات
-var description = item[94];//الوصف
-
-   
-$("#infoMoreSetToGet").append(html_table+'<br/>');
-$("#infoMoreSetToGet").append('<img src="'+MapAnimals_Answer+'"/>');
-$("#infoMoreSetToGet").append('<img src="'+ImgSizeComparison_Answer+'"/><br/>');
-
-
-
-
-
-
-      
-if(ImgSizeComparison_Question == "الحجم بالنسبة للإنسان"){
-ImgSizeComparison_Question = 3;
-}else if(ImgSizeComparison_Question == "الحجم بالنسبة للفنجان"){
-ImgSizeComparison_Question = 2;
-}else if(ImgSizeComparison_Question == "الحجم بالنسبة لمشبك الورق"){
-ImgSizeComparison_Question = 1;
-}
-
-      
-      
-      
-
-if (Type_Answer == "الثدييات"){
-  Type_Answer = 'Mammalia'
-}else if (Type_Answer == "طيور"){
-  Type_Answer = 'Aves'
-}else if (Type_Answer == "اللافقاريات"){
-  Type_Answer = 'Invertebrata'
-}else if (Type_Answer == "الزواحف"){
-  Type_Answer = 'Reptilia'
-}else if (Type_Answer == "البرمائيات"){
-  Type_Answer = 'Amphibia'
-}else if (Type_Answer == "الحشرات"){
-  Type_Answer = 'Insecta'
-}else if (Type_Answer == "أسماك"){
-  Type_Answer = 'Pisces'
-}else if (Type_Answer == "ديناصورات"){
-  Type_Answer = 'Dinosauria'
-}
-
-  
-
-      
-if (Diet_Answer == "آكل لحوم"){
-  Diet_Answer = 'Carnivore'
-}else if (Diet_Answer == "آكل أعشاب"){
-  Diet_Answer = 'Herbivore'
-} else if (Diet_Answer == "قارت"){
-  Diet_Answer = 'Omnivore'
-} else if (Diet_Answer == "آكل فطريات"){
-  Diet_Answer = 'Fungivore'
-} else if (Diet_Answer == "آكل بكتيريا"){
-  Diet_Answer = 'Bacterivore'
-} else if (Diet_Answer == "يتغذى على العوالق"){
-  Diet_Answer = 'Planktivore'
-}
-
- var g10_Num = 'unknown';
-    if(PopulationTrend_Code == '+-'){
-    g10_Num = 'stable';
-    }else if(PopulationTrend_Code == '-+'){
-    g10_Num = 'stable';
-    }else if(PopulationTrend_Code == '-'){
-    g10_Num = 'Decreasing';
-    }else if(PopulationTrend_Code == '+'){
-    g10_Num = 'Increasing';
-    }else{
-    g10_Num = 'unknown';
-    }
-      
-var g11_Answer = 0;
-    if(RedList_Num == '1'){
-    g11_Answer = 1;
-    }else if(RedList_Num == '2'){
-    g11_Answer = 2;
-    }else if(RedList_Num == '3'){
-    g11_Answer = 3;
-    }else if(RedList_Num == '4'){
-    g11_Answer = 4;
-    }else if(RedList_Num == '5'){
-    g11_Answer = 5;
-    }else if(RedList_Num =='6'){
-    g11_Answer = 6;
-    }else if(RedList_Num == '7'){
-    g11_Answer = 7;
-    }else if(RedList_Num == '8'){
-    g11_Answer = 8;
-    }else if(RedList_Num == '9'){
-    g11_Answer = 9;
-    }else{
-    g11_Answer = 8;
-    }
-      
-      
-$('#g2').val(CommonName_Answer);
-$('#g1').val(Img_Answer);
-$('#g9').val(ImgSizeComparison_Answer);
-$('#g9_1').val(ImgSizeComparison_Question);
-$('#g2_En').val(CommonName_Answer_En);
-$('#g3').val(ScientificName_Answer);
-$('#g4').val(Type_Answer);
-$('#AnimalClass').val(Class_AnswerEN);
-$('#g5').val(Diet_Answer);
-$('#g6_4').val(Age_Answer);
-$('#g7_4').val(Size_Answer);
-$('#g8_4').val(Weight_Answer);
-$('#g10').val(g10_Num);
-$('#g11').val(g11_Answer);
-$('#ga1').val(Subfamily_Answer);
-$('#ga1_n').val(Order_Answer);
-$('#ga3_4').val(Speed_Answer);
-$('#ga4_4').val(DurationPregnancy_Answer);
-$('#ga5_4').val(NumBirths_Answer);
-$('#ga2').val(EcologicalHabitat_Answer);
-$('#ga6').val(Color_Answer);
-$('#ga7').val(Enemy_Answer);
-$('#ga13').val(FeedOn_Answer);
-$('#ga8_1').val(info1_Question);
-$('#ga8').val(info1_Answer);
-$('#ga9_1').val(info2_Question);
-$('#ga9').val(info2_Answer);
-$('#ga10_1').val(info3_Question);
-$('#ga10').val(info3_Answer);
-$('#ga11_1').val(info4_Question);
-$('#ga11').val(info4_Answer);
-
-
-$('#ImgCover').val(ImgCover_Answer);
-$('#SourceInfo_Title').val(SourceInfo_Answer_Title);
-$('#SourceInfo_Link').val(SourceInfo_Answer_link);
-
-$('#ImgMaps').val(MapAnimals_Answer);
-$('#SummaryPage').val(description);
-      
-      
-
-      
-      
-      
-      
-      
-                    $(MultipleImages_Answer.toString()).each(function() {
-                      var m =0;
-                        $(this).find('li').each(function() {
-                            var getimgs = $(this).html();
-                          getimgs = getimgs.replace(/\/s200\/|\/s320\/|\/s400\/|\/s640\/|\/s600\/|\/s72\/|\/h400\/|\/h72\/|\/h120\/|\/s1600\//gi, '/s120/');
-                          m+=1;
-        $('#MultipleimagesNum').append('<div class="input-group mb-1"> <span class="input-group-text">'+m+'</span> <span class="input-group-text">صورة</span> <input class="form-control Multipleimages" value="'+getimgs+'" placeholder="أدخل رابط صورة '+m+'" type="text"> </div>');
-                        });
-                    });
- 
-
-      
-                    $(DidYouKnow_Answer.toString()).each(function() {
-                      var s =0;
-                        $(this).find('li').each(function() {
-                            var DidYoUKnows = $(this).html();
-                          s+=1;
-        $('#DidYoUKnowNum').append('<div class="input-group mb-1"> <span class="input-group-text">'+s+'</span> <span class="input-group-text">هل تعلم</span> <input type="text" class="form-control infonumbers" value="'+DidYoUKnows+'" placeholder="أدخل معلومة '+s+'"> </div>');
-                        });
-                    });
-
-
-
-
-
-// setgetAll();
-    });
-}
 
 
 
@@ -1257,15 +1254,13 @@ var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZ
 
 
     var getIdCard = $.query.get("card");
-    var IdCard = getIdCard.replace('ID1000000', '');
-    var IdCards = parseInt(IdCard);
-     IdCard = IdCards + 4;
+     IdCard = getIdCard + 1;
     $.getJSON(getusercode2, {
         key: keyGeoArabic,
-        range: "ajabanee!A" + IdCard + ":DO" + IdCard,
+        range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
         majorDimension: "COLUMNS"
     }).catch(function(error) {
-
+alert('error');
 }).done(function(recosts) {
         var item = recosts.values;
 var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
