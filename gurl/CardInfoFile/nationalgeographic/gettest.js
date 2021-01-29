@@ -5,7 +5,7 @@
 
 
 	
- var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
+var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
 
 
 
@@ -1265,7 +1265,21 @@ alert('error');
         var item = recosts.values;
 var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
 $('#nextcardname').val(CommonName_Answer_En);
-gotonext();
+
+      
+      
+var sizeimg = $(".fast-facts__relative-size-image").find("img").attr("src");
+if(sizeimg.lenght > 1){
+sizeimg = sizeimg.replace('.gif','.adapt.1900.1.gif');
+$('#g9').val(sizeimg);
+}
+      
+      
+      
+      
+      
+      
+      
     });
 } 
 
