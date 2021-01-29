@@ -1330,6 +1330,7 @@ var TRENDtext = $('.fast-facts__population-trend').text();
 if(TRENDtext.length > 1){
 $('.fast-facts__population-trend').find('span').remove();
 TRENDtext = TRENDtext.replace(' ','');
+setTimeout(function(){
 TRENDtext = TRENDtext.toLowerCase();
   if(TRENDtext == "stable"){
     $('#g10').val('stable');
@@ -1342,10 +1343,10 @@ TRENDtext = TRENDtext.toLowerCase();
   }else{
     $('#g10').val('None');
   }
-  
+},1000);
 }
  
-var SNtext = $('.fast-facts__facts__key eq:(1) em').text();
+var SNtext = $('.fast-facts__facts em:eq(0)').text();
   if(SNtext.length > 1){
 $('#g3').val(SNtext);
 }
