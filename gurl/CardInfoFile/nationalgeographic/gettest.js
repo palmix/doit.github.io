@@ -1325,15 +1325,29 @@ IUCNtext = IUCNtext.toLowerCase();
 }
   
   
+var TRENDtext = $('.fast-facts__population-trend').text();
+if(TRENDtext.length > 1){
+TRENDtext = TRENDtext.replace('CURRENT POPULATION TREND: ','');
+TRENDtext = TRENDtext.replace('CURRENT POPULATION TREND:','');
+
+  if(TRENDtext == "Stable"){
+    $('#g10').val('stable');
+  }else if(IUCNtext == "Decreasing"){
+    $('#g10').val('Decreasing');
+  }else if(IUCNtext == "Increasing"){
+    $('#g10').val('Increasing');
+  }else if(IUCNtext == "unknown"){
+    $('#g10').val('unknown');
+  }else{
+    $('#g10').val('None');
+  }
+}
+ 
   
-  
-  
-  
-  
-  
-  
-  
-  
+var SNtext = $('.fast-facts__facts__key em').text();
+if(SNtext.length > 1){
+$('#g3').val(SNtext);
+}
   
     });
 } 
