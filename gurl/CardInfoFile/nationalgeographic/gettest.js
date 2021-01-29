@@ -1356,17 +1356,30 @@ $('#g3').val(SNtext);
       
 
 var t = $('#DidYoUKnowNum input').length;
+var factcontainer = $('.fact-container').length;
+  if(factcontainer >= 1){
    $('.fact-container').each(function() {
     t+= 1;
   $('#DidYoUKnowNum').append('<div class="input-group mb-1"> <span class="input-group-text">'+t+'</span> <span class="input-group-text">هل تعلم</span> <input class="form-control infonumbers" value="'+$(this).text()+'" placeholder="أدخل معلومة '+t+'" type="text"> </div>');
-
-
-});
-   
-   
-
-
+   });
+  }
       
+      
+var imgsall = $('#MultipleimagesNum input').length;
+var gallerywrapper = $('.inline-gallery__wrapper').length;
+  if(gallerywrapper >= 1){
+   $('.inline-gallery__wrapper .low-rez-image').each(function() {
+     var getimgs = $(this).attr('style');
+     
+getimgs = getimgs.replace('background-image: url("','');
+getimgs = getimgs.replace('"); background-position: center center;','');
+getimgs = getimgs.replace('.133.1.jpg','.1900.1.jpg');
+    imgsall+= 1;
+        $('#MultipleimagesNum').append('<div class="input-group mb-1"> <span class="input-group-text">'+imgsall+'</span> <span class="input-group-text">صورة</span> <input class="form-control Multipleimages" value="'+getimgs+'" placeholder="أدخل رابط صورة '+imgsall+'" type="text"> </div>')
+   });
+  }
+
+
       
       
       
