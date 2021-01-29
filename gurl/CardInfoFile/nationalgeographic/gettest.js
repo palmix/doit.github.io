@@ -1325,11 +1325,12 @@ IUCNtext = IUCNtext.toLowerCase();
 }
   
   
-var TRENDtext = $('.fast-facts__population-trend').text();
+var TRENDtexts = $('.fast-facts__population-trend').text();
 $('.fast-facts__population-trend span').remove();
-if(TRENDtext.length > 1){
-TRENDtext = TRENDtext.replace(' ','');
+if(TRENDtexts.length > 1){
 setTimeout(function(){
+var TRENDtext = $('.fast-facts__population-trend').text();
+TRENDtext = TRENDtext.replace(' ','');
 TRENDtext = TRENDtext.toLowerCase();
   if(TRENDtext == "stable"){
     $('#g10').val('stable');
