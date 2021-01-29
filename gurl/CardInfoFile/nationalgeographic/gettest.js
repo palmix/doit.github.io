@@ -1299,8 +1299,28 @@ $('#g1').val(animg);
 
 var IUCNtext = $('.fast-facts__status-value').text();
 if(IUCNtext.length > 1){
-  if(IUCNtext == "Least Concern"){
+IUCNtext = IUCNtext.toLowerCase();
+  
+  if(IUCNtext == "least concern"){
     $('#g11').val(1);
+  }else if(IUCNtext == "near threatened"){
+    $('#g11').val(2);
+  }else if(IUCNtext == "vulnerable"){
+    $('#g11').val(3);
+  }else if(IUCNtext == "endangered"){
+    $('#g11').val(4);
+  }else if(IUCNtext == "critically endangered"){
+    $('#g11').val(5);
+  }else if(IUCNtext == "extinct in the wild"){
+    $('#g11').val(6);
+  }else if(IUCNtext == "extinct"){
+    $('#g11').val(7);
+  }else if(IUCNtext == "data deficient"){
+    $('#g11').val(8);
+  }else if(IUCNtext == "not evaluated"){
+    $('#g11').val(9);
+  }else{
+    $('#g11').val(0);
   }
 }
   
