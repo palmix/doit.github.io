@@ -1330,12 +1330,12 @@ var TRENDtext = $('.fast-facts__population-trend').text();
 if(TRENDtext.length > 1){
 $('.fast-facts__population-trend').find('span').remove();
 TRENDtext = TRENDtext.replace(' ','');
-
-  if(TRENDtext == "Stable"){
+TRENDtext = TRENDtext.toLowerCase();
+  if(TRENDtext == "stable"){
     $('#g10').val('stable');
-  }else if(TRENDtext == "Decreasing"){
+  }else if(TRENDtext == "decreasing"){
     $('#g10').val('Decreasing');
-  }else if(TRENDtext == "Increasing"){
+  }else if(TRENDtext == "increasing"){
     $('#g10').val('Increasing');
   }else if(TRENDtext == "unknown"){
     $('#g10').val('unknown');
