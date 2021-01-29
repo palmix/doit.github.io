@@ -1245,7 +1245,7 @@ $('#SummaryPage').val(description);
 
 
 
-setgetAll();
+// setgetAll();
     });
 }
 
