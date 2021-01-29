@@ -1344,11 +1344,14 @@ TRENDtext = TRENDtext.replace(' ','');
   
 }
  
-  
-var SNtext = $('.fast-facts__facts__key em').text();
-if(SNtext.length > 1){
+$('.fast-facts__facts__key').each(function() {
+var SNtext = $(this).find('em').text();
+  if(SNtext.length > 1){
 $('#g3').val(SNtext);
 }
+});
+  
+
 
       
       
