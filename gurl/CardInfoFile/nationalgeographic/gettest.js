@@ -1278,7 +1278,8 @@ $('#g9').val(sizeimg);
 
 
 
-var textsize = $( ".fast-facts__facts__key" ).last().text();
+var textsize = $(".fast-facts__facts__key").last().text();
+alert(textsize);
 if(textsize.length > 1){
   if(textsize.indexOf("6-FT") > 1){
   $('#g9_1').val(3);
@@ -1344,12 +1345,10 @@ TRENDtext = TRENDtext.replace(' ','');
   
 }
  
-$('.fast-facts__facts__key').each(function() {
-var SNtext = $(this).find('em').text();
+var SNtext = $('.fast-facts__facts__key eq:(1) em').text();
   if(SNtext.length > 1){
 $('#g3').val(SNtext);
 }
-});
   
 
 
