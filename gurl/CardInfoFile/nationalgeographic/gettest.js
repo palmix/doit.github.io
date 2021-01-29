@@ -1296,9 +1296,25 @@ animg = animg.replace('.133.1.jpg','.1900.1.jpg');
 $('#g1').val(sizeimg);
 }
       
-      
-      
-      
+
+var IUCNtext = $('.fast-facts__status-value').text();
+if(IUCNtext.length > 1){
+  if(IUCNtext == "Least Concern"){
+    $('#g11').val(1);
+  }
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     });
 } 
 
