@@ -1276,9 +1276,9 @@ var titles = document.title;
 if(titles == "Oops!"){  
 yalla();
 }else{
+var sizeimgs = $('.fast-facts__relative-size-image').length;
+if(sizeimgs >= 1){
 var sizeimg = $('.fast-facts__relative-size-image img').attr('src');
-if(sizeimg.length > 1){
-  
 sizeimg = sizeimg.replace('/content','https://www.nationalgeographic.com/content');
 sizeimg = sizeimg.replace('.gif','.adapt.1900.1.gif');
 sizeimg = sizeimg.replace('.GIF','.adapt.1900.1.GIF');
