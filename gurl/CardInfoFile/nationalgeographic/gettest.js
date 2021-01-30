@@ -1341,7 +1341,6 @@ IUCNtext = IUCNtext.toLowerCase();
 var TRENDtexts = $('.fast-facts__population-trend').text();
 $('.fast-facts__population-trend span').remove();
 if(TRENDtexts.length > 1){
-setTimeout(function(){
 var TRENDtext = $('.fast-facts__population-trend').text();
 TRENDtext = TRENDtext.replace(' ','');
 TRENDtext = TRENDtext.toLowerCase();
@@ -1356,7 +1355,6 @@ TRENDtext = TRENDtext.toLowerCase();
   }else{
     $('#g10').val('None');
   }
-},1000);
 }
  
 var SNtext = $('.fast-facts__facts em:eq(0)').text();
