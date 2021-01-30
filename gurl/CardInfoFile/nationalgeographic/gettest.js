@@ -1436,7 +1436,7 @@ var sc = 'https://www.nationalgeographic.com/animals/mammals/';
   sc +=name;
   sc +='\?card='+ nums;
   sc +='\&name='+ getname;
-  
+ alert(sc);
   
 if(getnumCards1 <= 387){
 window.location.href = sc;
