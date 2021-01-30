@@ -11,7 +11,7 @@ var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
 
 function readyCard(){
 
-var titles = $("title").text();
+var titles = document.title;
 if(titles != "Oops!" || titles != "oops!"){
 readysetCard();
 }else{
