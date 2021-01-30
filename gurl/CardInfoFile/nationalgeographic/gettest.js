@@ -1422,20 +1422,21 @@ function gotonext(){
 
 
 
-var getnumCards = $.query.get("card");
-var getnumCards1 = getnumCards + 1;
-var getname = $("#nextcardname").val();
-var s = getname.toLowerCase();
-var name = s.replace(/ /ig,'-');
-var names =  s.substring(0,1);
-var nums = getnumCards1;
+var getnumCardsnext = $.query.get("card");
+var getnumCards1 = getnumCardsnext + 1;
+var getnamenext = $("#nextcardname").val();
+var s = getnamenext.toLowerCase();
+var namenext = s.replace(/ /ig,'-');
+var namesnext =  s.substring(0,1);
+var numsnext = getnumCards1;
   
 if(getnumCards1 <= 387){
 var sc = 'https://www.nationalgeographic.com/animals/mammals/';
-  sc += names+'/';
-  sc +=name;
-  sc +='?card='+ nums;
-  sc +='&name='+ getname;
+  sc += namesnext+'/';
+  sc +=namenext;
+  sc +='?card='+ numsnext;
+  sc +='&name='+ getnamenext;
+  alert(sc);
 window.location.assign(sc);
 }else{
 alert("تم الإنتهاء من العملية");
