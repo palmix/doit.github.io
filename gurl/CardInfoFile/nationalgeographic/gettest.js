@@ -1417,12 +1417,12 @@ function sendcode(){
 $("#sendToSheetHide").click();
 }
 
-
+var getnumCards = $.query.get("card");
 function gotonext(){
 
 
 
-var getnumCards = $.query.get("card");
+
 var getnumCards1 = getnumCards + 1;
 var getname = $("#nextcardname").val();
 var s = getname.toLowerCase();
