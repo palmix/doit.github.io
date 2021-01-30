@@ -1442,14 +1442,14 @@ var namenext = s.replace(/ /ig,'-');
 var namesnext =  s.substring(0,1);
   
 if(getnumCards1next <= numend){
-var sc = 'https://www.nationalgeographic.com/animals/';
+var sc = 'https://www.nationalgeographic.com/animals/birds/';
+
 
 if(GORB == 1){
-  sc += 'birds/';
+  sc += namesnext+'/';
 }else{
   sc += 'group/';
 }
-  sc += namesnext+'/';
   sc +=namenext;
   sc +='/?card='+ getnumCards1next;
   sc +='&name='+ getnamenext;
