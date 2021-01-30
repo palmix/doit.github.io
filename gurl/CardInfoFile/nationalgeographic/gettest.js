@@ -1435,8 +1435,8 @@ var s = getnamenext.toLowerCase();
 var namenext = s.replace(/ /ig,'-');
 var namesnext =  s.substring(0,1);
   
-if(getnumCards1next <= 387){
-var sc = 'https://www.nationalgeographic.com/animals/mammals/';
+if(getnumCards1next <= 218){
+var sc = 'https://www.nationalgeographic.com/animals/birds/';
   sc += namesnext+'/';
   sc +=namenext;
   sc +='/?card='+ getnumCards1next;
