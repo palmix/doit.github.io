@@ -17,7 +17,7 @@ readysetCard();
 }else{
 readysetCard();
   
-alert('error');
+alert(titles);
   
   
 }
