@@ -1416,7 +1416,8 @@ yalla();
 
 
 
-
+var getnumCardsnext = $.query.get("card");
+var getnumCards1next = getnumCardsnext + 1;
 
 function sendcode(){
 if(getnumCards1next <= numend){
@@ -1433,8 +1434,7 @@ function gotonext(){
 
 
 
-var getnumCardsnext = $.query.get("card");
-var getnumCards1next = getnumCardsnext + 1;
+
 var getnamenext = $("#nextcardname").val();
 var GORB = $("#GORB").val();
 var s = getnamenext.toLowerCase();
