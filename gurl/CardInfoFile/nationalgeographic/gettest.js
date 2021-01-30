@@ -1430,14 +1430,13 @@ var name = s.replace(/ /ig,'-');
 var names =  s.substring(0,1);
 var nums = getnumCards1;
   
-var s1 = 'https://www.nationalgeographic.com/animals/mammals/';
-var s2 = names+'/';
-var s3 =name;
-var s4 ='?card='+ nums;
-var s5 ='&name='+ getname;
-  
 if(getnumCards1 <= 387){
-window.location.href = s1+s2+s3+s4+s5;
+var sc = 'https://www.nationalgeographic.com/animals/mammals/';
+  sc += names+'/';
+  sc +=name;
+  sc +='?card='+ nums;
+  sc +='&name='+ getname;
+window.location.assign(sc);
 }else{
 alert("تم الإنتهاء من العملية");
 }
