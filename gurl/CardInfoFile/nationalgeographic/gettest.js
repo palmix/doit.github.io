@@ -1433,7 +1433,7 @@ if(getnumCards1next <= 387){
 var sc = 'https://www.nationalgeographic.com/animals/mammals/';
   sc += namesnext+'/';
   sc +=namenext;
-  sc +='?card='+ getnumCards1next;
+  sc +='/?card='+ getnumCards1next;
   sc +='&name='+ getnamenext;
   alert(sc);
 window.location.assign(sc);
@@ -1442,10 +1442,6 @@ alert("تم الإنتهاء من العملية");
 }
 
 } 
-
-
-
-
 
 
 
