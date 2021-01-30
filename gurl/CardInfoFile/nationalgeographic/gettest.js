@@ -14,6 +14,7 @@ function readyCard(){
 var titles = document.title;
 if(titles == "Oops!" || titles == "oops!"){
 readysetCard();
+setgetname();
   alert(titles);
 }else{
 readysetCard();
@@ -1456,7 +1457,23 @@ alert("تم الإنتهاء من العملية");
 
 
 
-
+function setgetname(){
+var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZCb2Qz1JMdic7bNnSDLBx7tSVBDY8Rw/values/ajabanee?";
+    var getIdCard = $.query.get("card");
+     IdCard = getIdCard + 1;
+    $.getJSON(getusercode2, {
+        key: keyGeoArabic,
+        range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
+        majorDimension: "COLUMNS"
+    }).catch(function(error) {
+alert('error');
+}).done(function(recosts) {
+        var item = recosts.values;
+var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
+$('#nextcardname').val(CommonName_Answer_En);
+gotonext();
+    });
+} 
 
 
 
