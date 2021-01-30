@@ -1298,6 +1298,8 @@ var textsize = $(".fast-facts__facts__key").last().text();
 if(textsize.length > 1){
   if(textsize.indexOf("6-ft") > 1){
   $('#g9_1').val(3);
+  }else if(textsize.indexOf("BUS") > 1){
+  $('#g9_1').val(4);
   }
 }
       
