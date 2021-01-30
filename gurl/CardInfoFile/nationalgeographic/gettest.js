@@ -15,7 +15,6 @@ var titles = document.title;
 if(titles == "Oops!" || titles == "oops!"){
 readysetCard();
 setgetname();
-  alert(titles);
 }else{
 readysetCard();
   
@@ -59,8 +58,9 @@ set +="</div>";
 
 $("body").prepend(set);
 
-
-
+setTimeout(function(){
+getfromsheet();
+},7000);
 }
 
 
@@ -86,7 +86,7 @@ var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZ
         range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
         majorDimension: "COLUMNS"
     }).catch(function(error) {
-alert('error 1');
+
     }).done(function(recosts) {
         var item = recosts.values;
 var Timestamp = item[0];//تاريخ النشر
@@ -352,7 +352,7 @@ $('#SummaryPage').val(description);
 
 
 
-// setgetAll();
+ setgetAll();
     });
 }
 
@@ -1251,10 +1251,9 @@ g7_3_a = '1';
   }
   
 
-
-
-
-   
+setTimeout(function(){
+sendcode();
+},3000);
  }
  
 
@@ -1275,7 +1274,7 @@ var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZ
         range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
         majorDimension: "COLUMNS"
     }).catch(function(error) {
-alert('error');
+
 }).done(function(recosts) {
         var item = recosts.values;
 var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
@@ -1411,7 +1410,7 @@ getimgs = getimgs.replace('.133.1.JPG','.1900.1.JPG');
       
       
       
-      
+yalla();
     });
 } 
 
@@ -1422,8 +1421,12 @@ getimgs = getimgs.replace('.133.1.JPG','.1900.1.JPG');
 
 
 function sendcode(){
-	
 $("#sendToSheetHide").click();
+  
+setTimeout(function(){
+gotonext();
+},6000);
+  
 }
 
 
@@ -1444,7 +1447,7 @@ var sc = 'https://www.nationalgeographic.com/animals/mammals/';
   sc +=namenext;
   sc +='/?card='+ getnumCards1next;
   sc +='&name='+ getnamenext;
-  alert(sc);
+
 window.location.assign(sc);
 }else{
 alert("تم الإنتهاء من العملية");
@@ -1463,12 +1466,12 @@ function setgetname(){
 var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZCb2Qz1JMdic7bNnSDLBx7tSVBDY8Rw/values/ajabanee?";
     var getIdCard = $.query.get("card");
      IdCard = getIdCard + 1;
+if(getnumCards1next <= 387){
     $.getJSON(getusercode2, {
         key: keyGeoArabic,
         range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
         majorDimension: "COLUMNS"
     }).catch(function(error) {
-alert('error');
 }).done(function(recosts) {
         var item = recosts.values;
 var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
@@ -1476,7 +1479,7 @@ $('#nextcardname').val(CommonName_Answer_En);
 gotonext();
     });
 } 
-
+} 
 
 
 
