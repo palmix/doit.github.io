@@ -1449,17 +1449,17 @@ var namesnext =  s.substring(0,1);
 if(getnumCards1next <= numend){
 var sc = 'https://www.nationalgeographic.com/animals/';
 
-if(GORB == 1){
+if(TypeAN == 1){
   sc += 'birds/';
-}else if(GORB == 2){
+}else if(TypeAN == 2){
   sc += 'fish/';
-}else if(GORB == 3){
+}else if(TypeAN == 3){
   sc += 'reptiles/';
-}else if(GORB == 4){
+}else if(TypeAN == 4){
   sc += 'invertebrates/';
-}else if(GORB == 5){
+}else if(TypeAN == 5){
   sc += 'amphibians/';
-}else if(GORB == 6){
+}else if(TypeAN == 6){
   sc += 'invertebrates/';
 }else{
   sc += 'mammals/';
