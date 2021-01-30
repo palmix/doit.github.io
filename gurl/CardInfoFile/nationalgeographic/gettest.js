@@ -11,6 +11,11 @@ var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
 
 function readyCard(){
 
+var titles = $("title").text();
+if(titles != "Oops!"){
+  
+  
+  
 var set = "<div id='getcard' dir='rtl'>";
 set +="<link href='https://get.doitf.com/jsite/bootstrap/bootstrap-5/dist/css/bootstrap.rtl.min.css?v=1.1'rel='stylesheet'crossorigin='anonymous'integrity='sha384-mUkCBeyHPdg0tqB6JDd+65Gpw5h/l8DKcCTV2D2UpaMMFd7Jo8A+mDAosaWgFBPl'><link href='https://get.doitf.com/font-awesome-4.7.0/css/font-awesome.min.css'rel='stylesheet'>";
 
@@ -42,9 +47,15 @@ set +="</div>";
 
 
 
-$("article").prepend(set);
+$("body").prepend(set);
 
+}else{
 
+  
+alert('error');
+  
+  
+}
 
 }
 
@@ -1406,8 +1417,8 @@ function gotonext(){
 
 var getnumCards = $.query.get("card");
 var getnumCards1 = getnumCards + 1;
-var s = $("#nextcardname").val();
-s = s.toLowerCase();
+var getname = $("#nextcardname").val();
+var s = getname.toLowerCase();
 var name = s.replace(/ /ig,'-');
 var names =  s.substring(0,1);
 var nums = getnumCards1;
@@ -1417,6 +1428,7 @@ var sc = 'https://www.nationalgeographic.com/animals/mammals/';
   sc += names+'/';
   sc +=name;
   sc +='?card='+ nums;
+  sc +='&name='+ getname;
   
   
 if(getnumCards1 <= 387){
