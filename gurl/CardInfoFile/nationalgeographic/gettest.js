@@ -1434,8 +1434,8 @@ var nums = getnumCards1;
 var sc = 'https://www.nationalgeographic.com/animals/mammals/';
   sc += names+'/';
   sc +=name;
-  sc +='?card='+ nums;
-  sc +='&name='+ getname;
+  sc +='\?card='+ nums;
+  sc +='\&name='+ getname;
   
   
 if(getnumCards1 <= 387){
