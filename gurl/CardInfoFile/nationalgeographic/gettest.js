@@ -34,6 +34,12 @@ set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 ripple
 set +="<div id='tablediv'><table id='tableid'></table></div>";
 set +="<input class='form-control' id='nextcardname' type='text'>";
 
+set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 mx-2 ripple'onclick='getfromsheet()'type='button'>getfromsheet</button>";
+set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 mx-2 ripple'onclick='setgetAll()'type='button'>setgetAll</button>";
+set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 mx-2 ripple'onclick='yalla()'type='button'>yalla</button>";
+set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 mx-2 ripple'onclick='sendcode()'type='button'>sendcode</button>";
+set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 mx-2 ripple'onclick='gotonext()'type='button'>gotonext</button>";
+
 
 set +="</div>";
 
@@ -1242,10 +1248,6 @@ sendcode();
 },3000);
  }
  
-
-
-
-
 
 
 function setgetAll(){
