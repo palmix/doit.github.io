@@ -6,12 +6,13 @@
 
 	
 var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
+
+
+function readyCard(){
 var titles = document.title;
 if(titles == "Oops!"){  
 $("body").prepend('<iframe width="0" height="0" src="https://www.youtube-nocookie.com/embed/YwANQb4phH0?autoplay=true&" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 }
-
-function readyCard(){
 
 readysetCard();
 } 
