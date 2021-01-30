@@ -13,9 +13,18 @@ function readyCard(){
 
 var titles = $("title").text();
 if(titles != "Oops!"){
+readysetCard();
+}else{
+readysetCard();
+  
+alert('error');
   
   
+}
+} 
   
+  
+function readysetCard(){
 var set = "<div id='getcard' dir='rtl'>";
 set +="<link href='https://get.doitf.com/jsite/bootstrap/bootstrap-5/dist/css/bootstrap.rtl.min.css?v=1.1'rel='stylesheet'crossorigin='anonymous'integrity='sha384-mUkCBeyHPdg0tqB6JDd+65Gpw5h/l8DKcCTV2D2UpaMMFd7Jo8A+mDAosaWgFBPl'><link href='https://get.doitf.com/font-awesome-4.7.0/css/font-awesome.min.css'rel='stylesheet'>";
 
@@ -49,13 +58,7 @@ set +="</div>";
 
 $("body").prepend(set);
 
-}else{
 
-  
-alert('error');
-  
-  
-}
 
 }
 
