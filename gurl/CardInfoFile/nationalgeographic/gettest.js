@@ -1287,6 +1287,7 @@ if(sizeimg.length > 1){
   
 sizeimg = sizeimg.replace('/content','https://www.nationalgeographic.com/content');
 sizeimg = sizeimg.replace('.gif','.adapt.1900.1.gif');
+sizeimg = sizeimg.replace('.GIF','.adapt.1900.1.GIF');
 $('#g9').val(sizeimg);
 }
 
@@ -1307,6 +1308,7 @@ if(animg.length > 1){
 animg = animg.replace('background-image: url("','');
 animg = animg.replace('"); background-position: center center;','');
 animg = animg.replace('.133.1.jpg','.1900.1.jpg');
+animg = animg.replace('.133.1.JPG','.1900.1.JPG');
 $('#g1').val(animg);
 }
       
@@ -1388,6 +1390,7 @@ var gallerywrapper = $('.inline-gallery__wrapper').length;
 getimgs = getimgs.replace('background-image: url("','');
 getimgs = getimgs.replace('"); background-position: center center;','');
 getimgs = getimgs.replace('.133.1.jpg','.1900.1.jpg');
+getimgs = getimgs.replace('.133.1.JPG','.1900.1.JPG');
     imgsall+= 1;
         $('#MultipleimagesNum').append('<div class="input-group mb-1"> <span class="input-group-text">'+imgsall+'</span> <span class="input-group-text">صورة</span> <input class="form-control Multipleimages" value="'+getimgs+'" placeholder="أدخل رابط صورة '+imgsall+'" type="text"> </div>')
    });
