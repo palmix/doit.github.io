@@ -6,7 +6,7 @@
 
 	
 var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
-
+var numend = 218;
 
 function readyCard(){
 var titles = document.title;
@@ -1415,8 +1415,9 @@ yalla();
 
 
 function sendcode(){
+if(getnumCards1next <= numend){
 $("#sendToSheetHide").click();
-  
+}
 setTimeout(function(){
 gotonext();
 },6000);
@@ -1435,7 +1436,7 @@ var s = getnamenext.toLowerCase();
 var namenext = s.replace(/ /ig,'-');
 var namesnext =  s.substring(0,1);
   
-if(getnumCards1next <= 218){
+if(getnumCards1next <= numend){
 var sc = 'https://www.nationalgeographic.com/animals/birds/';
   sc += namesnext+'/';
   sc +=namenext;
