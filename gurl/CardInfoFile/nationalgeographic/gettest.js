@@ -1464,7 +1464,7 @@ var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZ
 if(IdCardx <= 387){
     $.getJSON(getusercode2, {
         key: keyGeoArabic,
-        range: "ajabanee!A" + IdCard + ":ZZ" + IdCard,
+        range: "ajabanee!A" + IdCardx + ":ZZ" + IdCardx,
         majorDimension: "COLUMNS"
     }).catch(function(error) {
 }).done(function(recosts) {
