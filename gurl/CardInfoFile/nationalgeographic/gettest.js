@@ -1303,9 +1303,13 @@ textsize = textsize.toLowerCase();
   $('#g9_1').val(4);
   }else if(textsize.indexOf("clip") > 1){
   $('#g9_1').val(1);
+  }else if(textsize.indexOf("teacup") > 1){
+  $('#g9_1').val(2);
+  }else{
+  $('#g9_1').val(0);
   }
 }
-      
+
 
       
       
