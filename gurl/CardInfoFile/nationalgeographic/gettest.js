@@ -38,6 +38,7 @@ set +="<form action='https://script.google.com/macros/s/AKfycbwNvLL5_H2Ndtue_SRC
 set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 ripple'onclick='test()'style='position:fixed;bottom:0;right:0'type='button'><div class='splash-wrapper'></div>اختبار</button>";
 set +="<div id='tablediv'><table id='tableid'></table></div>";
 set +="<input class='form-control' id='nextcardname' type='text'>";
+set +="<input class='form-control' id='GORB' type='text'>";
 
 set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 mx-2 ripple'onclick='getfromsheet()'type='button'>getfromsheet</button>";
 set +="<button class='awsub btn btn-primary btn-sm flat-button-white my-4 mx-2 ripple'onclick='setgetAll()'type='button'>setgetAll</button>";
@@ -1269,8 +1270,11 @@ var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZ
 
 }).done(function(recosts) {
         var item = recosts.values;
+var Published = item[2];//حالة النشر
+
 var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
 $('#nextcardname').val(CommonName_Answer_En);
+$('#GORB').val(Published);
 
 var titles = document.title;
 if(titles == "Oops!"){  
@@ -1432,12 +1436,19 @@ function gotonext(){
 var getnumCardsnext = $.query.get("card");
 var getnumCards1next = getnumCardsnext + 1;
 var getnamenext = $("#nextcardname").val();
+var GORB = $("#GORB").val();
 var s = getnamenext.toLowerCase();
 var namenext = s.replace(/ /ig,'-');
 var namesnext =  s.substring(0,1);
   
 if(getnumCards1next <= numend){
-var sc = 'https://www.nationalgeographic.com/animals/birds/';
+var sc = 'https://www.nationalgeographic.com/animals/';
+
+if(GORB == 1){
+  sc += 'birds/';
+}else{
+  sc += 'group/';
+}
   sc += namesnext+'/';
   sc +=namenext;
   sc +='/?card='+ getnumCards1next;
