@@ -11,15 +11,7 @@ var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
 
 function readyCard(){
 
-var titles = document.title;
-if(titles == "Oops!"){
-setgetname();
-}else{
 readysetCard();
-  
-  
-  
-}
 } 
   
   
@@ -1274,8 +1266,10 @@ var getusercode2 = "https://sheets.googleapis.com/v4/spreadsheets/1rkFhYrxZJ7VAZ
 var CommonName_Answer_En = item[6];//الإسم الشائع بالانجليزية هو
 $('#nextcardname').val(CommonName_Answer_En);
 
-      
-
+var titles = document.title;
+if(titles == "Oops!"){  
+yalla();
+}else{
 var sizeimg = $('.fast-facts__relative-size-image img').attr('src');
 if(sizeimg.length > 1){
   
@@ -1405,6 +1399,8 @@ getimgs = getimgs.replace('.133.1.JPG','.1900.1.JPG');
       
       
 yalla();
+}
+  
     });
 } 
 
