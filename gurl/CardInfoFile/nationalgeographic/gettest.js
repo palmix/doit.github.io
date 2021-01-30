@@ -14,6 +14,7 @@ function readyCard(){
 var titles = document.title;
 if(titles != "Oops!" || titles != "oops!"){
 readysetCard();
+  alert(titles);
 }else{
 readysetCard();
   
