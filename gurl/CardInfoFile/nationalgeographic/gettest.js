@@ -12,13 +12,12 @@ var keyGeoArabic = 'AIzaSyDpCuvAcL0ESYhI5X9amoy12NGpswwXdlQ';
 function readyCard(){
 
 var titles = document.title;
-if(titles != "Oops!" || titles != "oops!"){
+if(titles == "Oops!" || titles == "oops!"){
 readysetCard();
   alert(titles);
 }else{
 readysetCard();
   
-alert(titles);
   
   
 }
