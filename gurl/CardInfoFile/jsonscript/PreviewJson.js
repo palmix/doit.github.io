@@ -153,7 +153,7 @@ if(img2.length >= 1 || gets.ImgMaps.Answer.length >= 1){
 if (img2.length >= 1) {
   table.push('<div class="col m-auto mb-2"  style="width:12rem"><div class="card"><img src="'+img2+'" class="card-img-top" alt="'+gets.ImgSizeComparison.Question+'"><div class="card-body p-1 text-center border-top"><p class="card-text">'+gets.ImgSizeComparison.Question+'</p></div></div></div>');
   }
-if (img2.length >= 1) {
+if (gets.ImgMaps.Answer.length >= 1) {
   table.push('<div class="col m-auto mb-2"  style="width:12rem"><div class="card"><img src="'+gets.ImgMaps.Answer+'" class="card-img-top" alt="'+gets.ImgMaps.Question+'"><div class="card-body p-1 text-center"><p class="card-text">'+gets.ImgMaps.Question+'</p></div></div></div>');
 
 }  
