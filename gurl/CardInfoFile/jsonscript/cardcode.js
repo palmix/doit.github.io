@@ -1,4 +1,3 @@
-
    $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/"+sheetId+"/?", {
     key: keyGeoArabic,
     alt: "json",
@@ -9,7 +8,7 @@
    $(".setSheetHideSite").removeClass("setSheetHideSite");
    $("#cardslistall").addClass("d-none");
     }).done(function(recosts) {
-var cardss = '<p class="mt-5">';
+var cardss = '<p class="mt-2">';
 var cardse = '</p><hr class="my-1"/><div class="row row-cols-1 row-cols-md-3 g-4 mt-2">';
 
 
@@ -25,8 +24,7 @@ var cards6 = [cardss+'البرمائيات'+cardse];
 var cards7 = [cardss+'اللافقاريات'+cardse];
 var cards8 = [cardss+'حيوانات ما قبل التاريخ'+cardse];
 var cards1num=0,cards2num=0,cards3num=0,cards4num=0,cards5num=0,cards6num=0,cards7num=0,cards8num=0;
-
-     
+var type1='',type2='',type3='',type4='',type5='',type6='',type7='',type8='';     
      
      
      
@@ -284,47 +282,81 @@ function GetList(num) {
   
 if(Type_Answer == "الثدييات"){
 cards1num += 1;
- if(cards1num <= 300){
+type1 = Type_Answer;
+ if(cards1num <= nomepost){
 GetList(cards1);
  }
 }
   
-  
+
+
 if(Type_Answer == "طيور"){
-GetList(cards2);
 cards2num += 1;
+type2 = Type_Answer;
+ if(cards2num <= nomepost){
+GetList(cards2);
+ }
 }
+
+
 
 if(Type_Answer == "أسماك"){
-GetList(cards3);
 cards3num += 1;
+type3 = Type_Answer;
+ if(cards3num <= nomepost){
+GetList(cards3);
+ }
 }
-  
+
+
+
 if(Type_Answer == "الزواحف"){
-GetList(cards4);
 cards4num += 1;
+type4 = Type_Answer;
+ if(cards4num <= nomepost){
+GetList(cards4);
+ }
 }
+
 
 if(Type_Answer == "الحشرات"){
-GetList(cards5);
 cards5num += 1;
+type5 = Type_Answer;
+ if(cards5num <= nomepost){
+GetList(cards5);
+ }
 }
+
+
 
 if(Type_Answer == "البرمائيات"){
- GetList(cards6);
 cards6num += 1;
+type6 = Type_Answer;
+ if(cards6num <= nomepost){
+GetList(cards6);
+ }
 }
-  
+
+
 if(Type_Answer == "اللافقاريات"){
- GetList(cards7);
 cards7num += 1;
+type7 = Type_Answer;
+ if(cards7num <= nomepost){
+GetList(cards7);
+ }
+}
+
+  
+if(Type_Answer == "حيوانات ما قبل التاريخ"){
+cards8num += 1;
+type8 = Type_Answer;
+ if(cards8num <= nomepost){
+GetList(cards8);
+ }
 }
   
 
-if(Type_Answer == "حيوانات ما قبل التاريخ"){
- GetList(cards8);
-cards8num += 1;
-}
+
 
 
   
@@ -350,14 +382,56 @@ cards8num += 1;
 
 
 });
+
+if(cards1num > 20){
+cards1.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type1+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards1num+'</span></a></div></div>');
+}else{
 cards1.push('</div>');
+}
+
+
+if(cards2num > 20){
+cards2.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type2+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards2num+'</span></a></div></div>');
+}else{
 cards2.push('</div>');
+}
+
+if(cards3num > 20){
+cards3.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type3+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards3num+'</span></a></div></div>');
+}else{
 cards3.push('</div>');
+}
+
+if(cards4num > 20){
+cards4.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type4+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards4num+'</span></a></div></div>');
+}else{
 cards4.push('</div>');
+}
+
+if(cards5num > 20){
+cards5.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type5+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards5num+'</span></a></div></div>');
+}else{
 cards5.push('</div>');
+}
+
+if(cards6num > 20){
+cards6.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type6+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards6num+'</span></a></div></div>');
+}else{
 cards6.push('</div>');
+}
+
+if(cards7num > 20){
+cards7.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type7+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards7num+'</span></a></div></div>');
+}else{
 cards7.push('</div>');
+}
+
+if(cards8num > 20){
+cards8.push('<div class="text-center mx-auto my-2"><a href="https://card.geoarabic.com/p/type.html?type='+type8+'" class="btn btn-primary mt-2">عرض الكل <span class="badge bg-secondary">'+cards8num+'</span></a></div></div>');
+}else{
 cards8.push('</div>');
+}
+
 
 
 document.getElementById('cardslistall').innerHTML = '';
