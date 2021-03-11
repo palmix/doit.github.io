@@ -155,7 +155,6 @@
 
  $('#showingCardModal').on('show.bs.modal', function () {
    
- history.pushState("", document.title, window.location.pathname + window.location.search);
   
    window.location.hash = "CardModal";
 });
@@ -175,19 +174,36 @@ $('#modalsharecard,#modalIUCN').on('hidden.bs.modal', function () {
   $('#showingCardModal').modal('show');
   $("#ShareACard").css("display","block");
   $("#InfoaboutCard").css("display","block");
+
 })
 $('#showingCardModal').on('hidden.bs.modal', function () {
   clearAllSlots();
   $("#ShareACard").css("display","none");
   $("#InfoaboutCard").css("display","none");
 
-
-if (window.location.href.indexOf('#CardModal') !== -1) {
-   history.pushState("", document.title, window.location.pathname + window.location.search);
-}
 })
 
 
+  
+$('#modalsharecard,#modalIUCN,#showingCardModal').on('hide.bs.modal', function () {
+if(location.hash == "#CardModal") {
+window.history.go(-1);
+}else if(location.hash == "#modalIUCN" ){
+window.history.go(-1);
+}else if(location.hash == "#modalsharecard" ){
+window.history.go(-1);
+}
+});
+$('#modalsharecard,#modalIUCN,#showingCardModal').on('show.bs.modal', function () {
+if(location.hash == "#CardModal") {
+setTimeout(function(){ window.location.hash = "CardModal"; }, 500);
+}else if(location.hash == "#modalIUCN" ){
+setTimeout(function(){ window.location.hash = "modalIUCN"; }, 500);
+}else if(location.hash == "#modalsharecard" ){
+setTimeout(function(){ window.location.hash = "modalsharecard"; }, 500);
+}
+});
+  
   
 
   
