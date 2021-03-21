@@ -154,9 +154,12 @@
   
 
  $('#showingCardModal').on('show.bs.modal', function () {
-   
   
    window.location.hash = "CardModal";
+   
+if(scrollY == 0){
+  window.scrollTo(0, 1);
+}
 });
   
 $('#modalsharecard').on('show.bs.modal', function () {
