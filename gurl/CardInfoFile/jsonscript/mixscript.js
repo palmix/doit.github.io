@@ -1,4 +1,20 @@
-    function replaceurl() {
+if(IncludeImg == 5) {
+  var newCSS=document.createElement('link');
+  newCSS.href='https://get.geoarabic.com/tools/PhotoSwipe-4.1.3/dist/default-skin/all.min.css';
+  newCSS.rel='stylesheet';
+  document.getElementsByTagName("head")[0].appendChild(newCSS);
+
+  var newJS=document.createElement('script');
+  newJS.src='https://get.geoarabic.com/tools/PhotoSwipe-4.1.3/dist/photoswipe.min.js';
+  document.getElementsByTagName("head")[0].appendChild(newJS);
+
+  var newJS=document.createElement('script');
+  newJS.src='https://get.geoarabic.com/tools/PhotoSwipe-4.1.3/dist/photoswipe-ui-default.min.js';
+  document.getElementsByTagName("head")[0].appendChild(newJS);
+}
+
+
+   function replaceurl() {
         var s = "https://card.geoarabic.com/p/card.html?id=" + $("#linkcardb").val();
         var t = $("#linkShareforcopy").val();
         var n = $(".answercardinfo:eq(0)").html();
