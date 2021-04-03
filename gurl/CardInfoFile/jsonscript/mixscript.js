@@ -466,7 +466,7 @@ $('#gallery').removeClass('d-none');
   
    window.location.hash = "CardModal";
    
-if(scrollY == 0){
+if(scrollY < 2){
   window.scrollTo(0, 1);
 }
 });
@@ -474,7 +474,7 @@ if(scrollY == 0){
 $('#modalsharecard').on('show.bs.modal', function () {
   $('#showingCardModal').modal('hide');
    window.location.hash = "modalsharecard";
-if(scrollY == 0){
+if(scrollY < 2){
   window.scrollTo(0, 1);
 }
 });
@@ -482,7 +482,7 @@ if(scrollY == 0){
 $('#modalIUCN').on('show.bs.modal', function () {
   $('#showingCardModal').modal('hide');
    window.location.hash = "modalIUCN";
-if(scrollY == 0){
+if(scrollY < 2){
   window.scrollTo(0, 1);
 }
 });
