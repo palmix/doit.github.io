@@ -549,3 +549,7 @@ var cfullscreen = $('#showingCardModal .modal-dialog').hasClass('modal-fullscree
     }
 
     
+	
+function showAndroidToast(toast) {
+        Android.showToast(toast);
+}
