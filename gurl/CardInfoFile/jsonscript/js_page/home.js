@@ -7,6 +7,7 @@
         loadmorepost();
    $(".setSheetHideSite").removeClass("setSheetHideSite");
    $("#cardslistall").addClass("d-none");
+   $('footer').removeClass('d-none');
     }).done(function(recosts) {
 var cardss = '<h4 class="mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone">';
 var cardse = '</h4><div class="row row-cols-1 row-cols-md-3 g-4 mt-0">';
