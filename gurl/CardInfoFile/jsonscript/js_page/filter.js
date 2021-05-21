@@ -1,3 +1,8 @@
+
+$(document).ready(function() {
+$('.loadingFullscreen').addClass('d-none');
+});
+
 function selecttypetext(){
 $('#g4').val('none');
 $('#g9_1').val('none');
