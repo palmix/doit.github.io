@@ -5,7 +5,7 @@
     }).catch(function(error) {
 
    $(".setSheetHideSite").removeClass("setSheetHideSite");
-   $("#cardslistall").html('<div class="alert alert-danger d-flex align-items-center" role="alert"><i class="fa fa-info-circle mx-2" aria-hidden="true"></i><div>حدث خطأ ما! يرجى إعادة المحاولة، رمز الخطأ: '+error.status+'</div></div>');
+   $("#cardslistall").html('<div class="alert alert-danger d-flex align-items-center mx-4" role="alert"><i class="fa fa-info-circle my-2" aria-hidden="true"></i><div>حدث خطأ ما! يرجى إعادة المحاولة، رمز الخطأ: '+error.status+'</div></div>');
      $('.loadingFullscreen').addClass('d-none');
      $("#PageCardName").addClass('d-none');
      
