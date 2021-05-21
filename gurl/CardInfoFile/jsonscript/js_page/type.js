@@ -300,10 +300,6 @@ $("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 roun
   
   
 }
-}else{
-cards1num += 1;
-GetList(cards1);
-$("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>قائمة الحيوانات</h3>');
 }
   
 
