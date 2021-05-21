@@ -273,8 +273,7 @@ function GetList(num) {
 if(gettype == "all" || gettype == "" || gettype == true){
 cards1num += 1;
 GetList(cards1);
-$(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('قائمة الحيوانات');
-$( "p.lead" ).remove();
+$("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>قائمة الحيوانات</h3>');
 }else{
 if(Type_Answer == gettype){
 cards1num += 1;
@@ -282,22 +281,19 @@ cards1num += 1;
 GetList(cards1);
    
     if (gettype.substring(0, 2) == "ال") {
-$(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html(gettype);
-$("p.lead").remove();
+$("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>'+gettype+'</h3>');
     } else {
-       $(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html("ال" + gettype);
-      $( "p.lead" ).remove();
+       $("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>ال'+gettype+'</h3>');
     }
    }
 }else{
-  $(".post-body h3:first-child").addClass('mt-4').html('<div class="alert alert-danger" role="alert">حدث خطأ ما</div>');
-$( "p.lead" ).html('يبدو أنك اتبعت رابط خاطئ او قد تم إزالة هذه الصفحة');
+  $("#PageCardName").addClass('mt-4').html('<div class="alert alert-danger d-flex align-items-center" role="alert"><i class="fa fa-info-circle mx-2" aria-hidden="true"></i><div>يبدو أنك اتبعت رابط خاطئ او قد تم إزالة هذه الصفحة</div></div>');
 }
 }
   
 
-
   
+
 
   
   
