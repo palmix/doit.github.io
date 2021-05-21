@@ -1,4 +1,4 @@
-$.getJSON("https://sheets.googleapis.com/v4/spreadsheets/"+sheetId+"/?", {
+   $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/"+sheetId+"/?", {
     key: keyGeoArabic,
     alt: "json",
     fields: "sheets(data.rowData.values.formattedValue)"
@@ -272,24 +272,33 @@ function GetList(num) {
   
 if(gettype == "all" || gettype == "" || gettype == true){
 cards1num += 1;
- if(cards1num <= 300){
 GetList(cards1);
- }
- $(".post-body h3:first-child").html('قائمة الحيوانات');
+$(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('قائمة الحيوانات');
+$( "p.lead" ).remove();
 }else{
 if(Type_Answer == gettype){
 cards1num += 1;
  if(cards1num >= 1){
 GetList(cards1);
- $(".post-body h3:first-child").html(gettype);
+   
+    if (gettype.substring(0, 2) == "ال") {
+$(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html(gettype);
+$("p.lead").remove();
+    } else {
+       $(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html("ال" + gettype);
+      $( "p.lead" ).remove();
+    }
    }
+}else{
+  $(".post-body h3:first-child").addClass('mt-4').html('<div class="alert alert-danger" role="alert">حدث خطأ ما</div>');
+$( "p.lead" ).html('يبدو أنك اتبعت رابط خاطئ او قد تم إزالة هذه الصفحة');
 }
 }
   
 
 
   
-  
+
   
   
   
@@ -311,16 +320,6 @@ GetList(cards1);
 
 
 });
-
-    if (gettype.substring(0, 2) == "ال") {
-       $(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html(gettype);
-      $("p.lead").remove();
-    } else {
-       $(".post-body h3:first-child").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html("ال" + gettype);
-       $(".post-body p:first-child").remove();
-      $( "p.lead" ).remove();
-    }
-
 
 
      
