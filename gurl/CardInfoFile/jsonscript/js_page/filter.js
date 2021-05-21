@@ -162,8 +162,7 @@ function filter(){
     alt: "json",
     fields: "sheets(data.rowData.values.formattedValue)"
     }).catch(function(error) {
-
-   $(".setSheetHideSite").removeClass("setSheetHideSite");
+$('.loadingFullscreen').addClass('d-none');
    $("#cardslistall").html('<div class="alert alert-danger d-flex align-items-center" role="alert"><i class="fa fa-info-circle mx-2" aria-hidden="true"></i><div>حدث خطأ ما! يرجى إعادة المحاولة، رمز الخطأ: '+error.status+'</div></div>');
      
 
