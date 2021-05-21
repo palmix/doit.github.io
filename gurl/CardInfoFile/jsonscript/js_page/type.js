@@ -274,8 +274,8 @@ if(gettype == "all" || gettype == "" || gettype == true){
 cards1num += 1;
 GetList(cards1);
 $("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>قائمة الحيوانات</h3>');
-}else{
-if(Type_Answer == gettype){
+}else if(Type_Answer == gettype){
+  
 cards1num += 1;
  if(cards1num >= 1){
 GetList(cards1);
@@ -286,9 +286,24 @@ $("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 roun
        $("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>ال'+gettype+'</h3>');
     }
    }
-}else{
-  $("#PageCardName").addClass('mt-4').html('<div class="alert alert-danger d-flex align-items-center" role="alert"><i class="fa fa-info-circle mx-2" aria-hidden="true"></i><div>يبدو أنك اتبعت رابط خاطئ او قد تم إزالة هذه الصفحة</div></div>');
+  
+  
+}else if(gettype == "حيوانات ما قبل التاريخ" && gettype == Type_Answer){
+
+  
+cards1num += 1;
+ if(cards1num >= 1){
+GetList(cards1);
+   
+$("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>'+gettype+'</h3>');
+
+  
+  
 }
+}else{
+cards1num += 1;
+GetList(cards1);
+$("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone').html('<h3>قائمة الحيوانات</h3>');
 }
   
 
@@ -318,8 +333,9 @@ $("#PageCardName").addClass('mt-4 bg-danger bg-gradient text-light mb-0 p-2 roun
 });
 
 
-     
-     
+if (cards1num <= 0){
+  $("#PageCardName").addClass('mt-4').html('<div class="alert alert-danger d-flex align-items-center" role="alert"><i class="fa fa-info-circle mx-2" aria-hidden="true"></i><div>يبدو أنك اتبعت رابط خاطئ او قد تم إزالة هذه الصفحة</div></div>');
+}
      
 
 cards1.push('</div>');
