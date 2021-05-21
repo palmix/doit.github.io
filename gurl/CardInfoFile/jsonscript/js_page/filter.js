@@ -532,7 +532,7 @@ if(p3 != 'none'){
 		GetList(cards1);
  	 }
   }else if(p3 == 'Pisces'){
-  	if(Class_AnswerEN == 'Pisces'){
+  	if(Type_Answer == 'أسماك'){
 		cards1num += 1;
 		GetList(cards1);
  	 }
