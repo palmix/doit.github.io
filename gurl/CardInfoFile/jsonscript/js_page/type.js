@@ -2,11 +2,16 @@
     key: keyGeoArabic,
     alt: "json",
     fields: "sheets(data.rowData.values.formattedValue)"
-
     }).catch(function(error) {
-        loadmorepost();
+     console.log(error.status)
    $(".setSheetHideSite").removeClass("setSheetHideSite");
-   $("#cardslistall").addClass("d-none");
+   $("#cardslistall").html('<div class="alert alert-danger d-flex align-items-center" role="alert"><i class="fa fa-info-circle mx-2" aria-hidden="true"></i><div>حدث خطأ ما! يرجى إعادة المحاولة، رمز الخطأ: '+error.status+'</div></div>');
+     
+     $("#PageCardName").addClass('d-none');
+     
+     
+     
+     
     }).done(function(recosts) {
 var cardss = '<h4 class="mt-4 bg-danger bg-gradient text-light mb-0 p-2 rounded-top text-center typeicone">';
 var cardse = '</h4><div class="row row-cols-1 row-cols-md-3 g-4 mt-0">';
