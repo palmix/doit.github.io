@@ -412,7 +412,7 @@ $('#gallery').removeClass('d-none');
         iframe += '" ';
         iframe += 'height="';
         iframe += iframeHeight;
-        iframe += '"></iframe>';
+        iframe += '" allowfullscreen></iframe>';
         iframe += '\n</div>';
         $("#colors").val($("#colorstext").val())
         $("#iframeShareforcopy").val(iframe);
