@@ -548,7 +548,14 @@ var cfullscreen = $('#showingCardModal .modal-dialog').hasClass('modal-fullscree
         });
     }
 
-    
+        function InfoaboutpublisherItme() {
+        $('#Infoaboutpublisher').on('shown.bs.collapse', function() {
+            var hash = "#Infoaboutpublisher";
+            $('html,body').animate({
+                scrollTop: $(hash).offset().top
+            }, 100);
+        });
+    }
 	
 function showAndroidToast(toast) {
         Android.showToast(toast);
