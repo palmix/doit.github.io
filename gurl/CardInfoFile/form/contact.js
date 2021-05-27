@@ -60,6 +60,7 @@
     if (formData.honeypot) {
       return false;
     }
+
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
