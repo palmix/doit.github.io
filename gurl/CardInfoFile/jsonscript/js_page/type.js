@@ -561,7 +561,11 @@ titleNameEng = ' ('+CommonName_Answer_En+')';
         if (Published == 0) {
             var table = ['<div class="alert alert-secondary" role="alert"> هذه البطاقة غير متوفرة! </div>'];
         } else {
-            var table = ['<span class="incardbackgroundimage"><span class="cardbackgroundimage" style="background-image: url(&quot;' + Img_Answer + '&quot;);"></span></span>'];
+			var SummaryPage = vapp1+SummaryPage_Answer+vapp2;
+			if(SummaryPage_Answer == "NoData"){
+				SummaryPage = "";
+			}
+            var table = ['<span '+SummaryPage+' class="incardbackgroundimage"><span class="cardbackgroundimage" style="background-image: url(&quot;' + Img_Answer + '&quot;);"></span></span>'];
             table.push('<div class="TableDiv">');
             table.push('<table class="FastFactsTable" style="overflow-x:auto"><tbody>');
             if (CommonName_Answer != 'NoData' && typeof CommonName_Answer !== 'undefined' && CommonName_Answer != '') {
