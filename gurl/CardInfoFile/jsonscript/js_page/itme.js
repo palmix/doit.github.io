@@ -674,7 +674,7 @@ img.src = getimgs1600;
         if (SourceInfo_Answer_link != 'NoData' && typeof SourceInfo_Answer_link !== 'undefined' && SourceInfo_Answer_link != '') {
             table.push("<hr/><p class='py-2 fspcard'>المزيد من المعلومات حول " + CommonName_Answer + ": <a href='" + SourceInfo_Answer_link + "' target='_blank'>" + SourceInfo_Answer_Title + " <i class='fa fa-external-link fa-flip-horizontal' style='font-size:0.8rem' aria-hidden='true'></i></a></p>");
         }
-        table.push("<hr/><p class='fspcard'><strong>حول:</strong> تم إنشاء هذه البطاقة عبر <a target='_blank' href='https://card.geoarabic.com/p/create-card.html'>أداة إنشاء بطاقات الكائنات الحية</a> في جيو عربي، يمكنك إنشاء بطاقات جديدة ونشرها بعد مراجعتها من الإدارة.</p>");
+        table.push("<hr /><p class='fspcard'><strong>حول:</strong> تم إنشاء هذه البطاقة عبر <a target='_blank' href='https://card.geoarabic.com/p/create-card.html'>أداة نشر البطاقات</a>في جيو عربي، يمكنك تقديم طلب لإنشاء ونشر بطاقات جديدة.</p>");
         table.push("</div>");
         document.getElementById('cardinfo').innerHTML = table.join('');
         var xhr = new XMLHttpRequest();
