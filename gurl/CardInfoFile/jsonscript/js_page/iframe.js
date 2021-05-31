@@ -163,7 +163,29 @@ var SummaryPage_Answer = item[92];//وصف الموضوع هو
 var ImgMaps_Question = item[93];//صورة خريطة التواجد
 var ImgMaps_Answer = item[94];//الخارطة URL
 
-     
+var setIDCard = getIdCard;
+var IDURL = PostUrlInSite_Answer.toString();
+IDURL = IDURL.replace('http://','https://');
+var IDTitle = CommonName_Answer.toString();
+var IDDescription = SummaryPage_Answer.toString();
+
+      
+if(IDURL == "" || IDURL == "NoData"){
+IDURL = "https://card.geoarabic.com"
+}
+if(IDTitle == "" || IDTitle == "NoData"){
+IDTitle = "جيو عربي"
+}
+if(IDDescription == "" || IDDescription == "NoData"){
+IDDescription = "بطاقة معلومات الحيوانات"
+}
+
+$("#IDURL").val(IDURL);
+$("#IDTitle").val(IDTitle);
+$("#IDDescription").val(IDDescription);
+$("#linkcardb").val(setIDCard);
+
+
 var urlpost = PostUrlInSite_Answer;
 Published = parseInt(Published); //حالة النشر
         UserStatus = parseInt(UserStatus); //حالة الحساب

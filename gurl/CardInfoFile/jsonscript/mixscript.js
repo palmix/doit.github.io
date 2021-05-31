@@ -462,9 +462,16 @@ $('#gallery').removeClass('d-none');
   
   
 
- $('#showingCardModal').on('show.bs.modal', function () {
+ $('#showingCardModal').on('shown.bs.modal', function () {
   
-   window.location.hash = "CardModal";
+if ( document.location.protocol === 'file:' ) {
+window.location.hash = "CardModal";
+}else{
+var IDTitle = $('#IDTitle').val();
+var IDURL = $('#IDURL').val();
+history.replaceState({page:1,rand:Math.random()},IDTitle, IDURL);
+ window.location.hash = "CardModal";
+}
    
 if(scrollY == 0){
   window.scrollTo(0, 1);
@@ -489,10 +496,14 @@ $('#modalsharecard,#modalIUCN').on('hidden.bs.modal', function () {
 
 })
 $('#showingCardModal').on('hidden.bs.modal', function () {
-  clearAllSlots();
   $("#ShareACard").css("display","none");
   $("#InfoaboutCard").css("display","none");
-
+if ( document.location.protocol !== 'file:' ) {
+if(location.hash != "#CardModal" || location.hash == "#modalIUCN" || location.hash == "#modalsharecard") {
+clearAllSlots();
+history.replaceState({state:1,rand:Math.random()},$("#IDTitleOld").val(), $("#IDURLOld").val());
+}
+}
 })
 
 
@@ -560,3 +571,23 @@ var cfullscreen = $('#showingCardModal .modal-dialog').hasClass('modal-fullscree
 function showAndroidToast(toast) {
         Android.showToast(toast);
 }
+
+function setSizeModal(){
+var width = $("body").width();
+if (width <= 299){
+refreshAdSlot1();
+$('#showingCardModal .modal-dialog,#modalsharecard .modal-dialog').removeClass('modal-slg');
+$('#showingCardModal .modal-dialog,#modalsharecard .modal-dialog').addClass('modal-fullscreen');
+}else if (width >= 300 && width <= 430){
+refreshAdSlot2();
+$('#showingCardModal .modal-dialog,#modalsharecard .modal-dialog').removeClass('modal-slg');
+$('#showingCardModal .modal-dialog,#modalsharecard .modal-dialog').addClass('modal-fullscreen');
+}else{
+refreshAdSlot3();
+$('#showingCardModal .modal-dialog,#modalsharecard .modal-dialog').removeClass('modal-fullscreen');
+$('#showingCardModal .modal-dialog,#modalsharecard .modal-dialog').addClass('modal-slg');
+}
+}
+
+$('#IDURLOld').val(window.location.href);
+$('#IDTitleOld').val(window.document.title);

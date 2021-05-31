@@ -226,7 +226,27 @@ var ImgMaps_Answer = obj.ImgMaps.Answer;//الخارطة URL
 
         
 
+var setIDCard = getIdCard;
+var IDURL = PostUrlInSite_Answer.toString();
+IDURL = IDURL.replace('http://','https://');
+var IDTitle = CommonName_Answer.toString();
+var IDDescription = SummaryPage_Answer.toString();
 
+      
+if(IDURL == "" || IDURL == "NoData"){
+IDURL = "https://card.geoarabic.com"
+}
+if(IDTitle == "" || IDTitle == "NoData"){
+IDTitle = "جيو عربي"
+}
+if(IDDescription == "" || IDDescription == "NoData"){
+IDDescription = "بطاقة معلومات الحيوانات"
+}
+
+$("#IDURL").val(IDURL);
+$("#IDTitle").val(IDTitle);
+$("#IDDescription").val(IDDescription);
+$("#linkcardb").val(setIDCard);
 
 
 
