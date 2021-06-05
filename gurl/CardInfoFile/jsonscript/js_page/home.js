@@ -1292,5 +1292,5 @@ postviews();
 
   });
 
-$('footer').removeClass('d-none');
+
 });
