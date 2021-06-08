@@ -1105,7 +1105,7 @@ img.src = getimgs1600;
           
         
 
-$("#ShareACard").html("<button type='button' class= 'btn btn-sm btn-primary' data-bs-toggle='modal' data-bs-target='#modalsharecard'><i title='مشاركة' class='fa fa-share-alt' aria-hidden='true'></i> مشاركة</button>");
+$("#ShareACard").html("<button type='button' class= 'btn btn-sm btn-danger' data-bs-toggle='modal' data-bs-target='#modalsharecard'><i title='مشاركة' class='fa fa-share-alt' aria-hidden='true'></i> مشاركة</button>");
 
 $("#InfoaboutCard").html("<button type='button' class='btn btn-sm btn-secondary' data-bs-toggle='collapse' onclick='Infoaboutpublisher()' data-bs-target='#Infoaboutpublisher' role='button' aria-expanded='false' aria-controls='Infoaboutpublisher'><i title='حول هذه البطاقة' class='fa fa-info-circle' aria-hidden='true'></i></button>");
 
