@@ -362,7 +362,7 @@ titleNameEng = ' ('+CommonName_Answer_En+')';
             }
             table.push('</tbody></table>');
 if (RedList_Num >= 1 && RedList_Num <= 9) {
-var IUCN_TitleS,IUCN_TitleE,disnone; 
+var disnone; 
 	if (IncludeIUCN == 1) {
 		disnone = '';
 	if (RedList_Num == 8 || RedList_Num == 9) {
@@ -371,18 +371,10 @@ var IUCN_TitleS,IUCN_TitleE,disnone;
 			
 var GeoArabicAndroid = /GeoArabicAndroid/.test(navigator.userAgent);
 
-if (GeoArabicAndroid == true) {
-tCommonName_Answer_EnAndroid = 'onClick="showAndroidToast(&#039;' + ScientificName_Answer + '&#039;)"';
-IUCN_TitleS = 'onClick="showAndroidToast(&#039;';
-IUCN_TitleE = '&#039;)"';
-		}else{
-IUCN_TitleS = 'title="';
-IUCN_TitleE = '"';
-}
+
 
                   
-SetIUCNHTML(table,IUCN_TitleS,IUCN_TitleE,disnone,RedList_Num);
-                  
+SetIUCNHTML(table,disnone,RedList_Num);                  
                   
 
                 }
