@@ -1187,28 +1187,32 @@ titleNameEng = ' ('+CommonName_Answer_En+')';
           
           
           
-            if (RedList_Num >= 1 && RedList_Num <= 9) {
-                if (IncludeIUCN == 1) {
-            var disnone = '';
-            if (RedList_Num == 8 || RedList_Num == 9) {
-              disnone = 'd-none';
-            }
+if (RedList_Num >= 1 && RedList_Num <= 9) {
+var IUCN_TitleS,IUCN_TitleE,disnone; 
+	if (IncludeIUCN == 1) {
+		disnone = '';
+	if (RedList_Num == 8 || RedList_Num == 9) {
+	disnone = 'd-none';
+}
+			
+
+
 if (GeoArabicAndroid == true) {
 tCommonName_Answer_EnAndroid = 'onClick="showAndroidToast(&#039;' + ScientificName_Answer + '&#039;)"';
-
 IUCN_TitleS = 'onClick="showAndroidToast(&#039;';
 IUCN_TitleE = '&#039;)"';
 		}else{
 IUCN_TitleS = 'title="';
 IUCN_TitleE = '"';
 }
-                    table.push("<div class='IUCNClass'> <div class='FastFactsmodalcardinfListContainer'> <div class='factsLabel_3x2xkx'><span class='factsKey_rambtt'>حالة القائمة الحمراء لـ <span title='الإتحاد الدولي لحفظ الطبيعة'>IUCN <span></span></span><span class='factsKeyValue_card'><button type='button' class='btn btn-sm btn-light border border-1 p-0' data-bs-toggle='modal' data-bs-target='#modalIUCN' id='Btnscardinfcardinf'><i class='fa fa-question fa-flip-horizontal p-0 px-2' aria-hidden='true'></i></button> : </span><span class='statusValueText' id='settextstatus'></span></span></div> </div> <div class='factsextinctionsContainer000 "+disnone+"'><span class='factsextinctionsLine000'></span> <div class='factsextinctions0001'> <div class='extinction_notthis' id='setclassList1' "+IUCN_TitleS+"غير مهدد"+IUCN_TitleE+"><span>غم</span></div> <div class='extinction_notthis' id='setclassList2' "+IUCN_TitleS+"قريب من التهديد"+IUCN_TitleE+"><span>قخ</span></div> <div class='extinction_notthis' id='setclassList3' "+IUCN_TitleS+"معرض للإنقراض"+IUCN_TitleE+"><span>خد</span></div> <div class='extinction_notthis' id='setclassList4' "+IUCN_TitleS+"مهدد بالإنقراض"+IUCN_TitleE+"><span>خم</span></div> <div class='extinction_notthis' id='setclassList5' "+IUCN_TitleS+"مهدد بشكل حرج بالانقراض"+IUCN_TitleE+"><span>خق</span></div> <div class='extinction_notthis' id='setclassList6' "+IUCN_TitleS+"منقرض من الحياة البرية"+IUCN_TitleE+"><span>قب</span></div> <div class='extinction_notthis' id='setclassList7' "+IUCN_TitleS+"منقرض تماماً"+IUCN_TitleE+"><span>نق</span></div> </div><span class='Labelcard0001'>أقل خطورة</span><span class='Labelcard0002'>منقرضة</span> </div></div><hr />");
-                    $(document).ready(function() {
-                        1 == RedList_Num ? (document.getElementById("setclassList1").className = "extinction_this extinctionbackgroundcolor160", document.getElementById("settextstatus").innerHTML = "غير مهدد", document.getElementById("settextstatus").style.color = "rgb(0, 160, 0)") : 2 == RedList_Num ? (document.getElementById("setclassList2").className = "extinction_this extinctionbackgroundcolor174", document.getElementById("settextstatus").innerHTML = "قريب من التهديد", document.getElementById("settextstatus").style.color = "rgb(174, 202, 0)") : 3 == RedList_Num ? (document.getElementById("setclassList3").className = "extinction_this extinctionbackgroundcolor249", document.getElementById("settextstatus").innerHTML = "معرض للإنقراض", document.getElementById("settextstatus").style.color = "rgb(249, 190, 2)") : 4 == RedList_Num ? (document.getElementById("setclassList4").className = "extinction_this extinctionbackgroundcolor235", document.getElementById("settextstatus").innerHTML = "مهدد بالإنقراض", document.getElementById("settextstatus").style.color = "rgb(235, 120, 0)") : 5 == RedList_Num ? (document.getElementById("setclassList5").className = "extinction_this extinctionbackgroundcolor215", document.getElementById("settextstatus").innerHTML = "مهدد بشكل حرج بالانقراض", document.getElementById("settextstatus").style.color = "rgb(215, 41, 0)") : 6 == RedList_Num ? (document.getElementById("setclassList6").className = "extinction_this extinctionbackgroundcolor60", document.getElementById("settextstatus").innerHTML = "منقرض من الحياة البرية", document.getElementById("settextstatus").style.color = "rgb(60, 0, 168)") : 7 == RedList_Num ? (document.getElementById("setclassList7").className = "extinction_this extinctionbackgroundcolor25", document.getElementById("settextstatus").innerHTML = "منقرض تماماً", document.getElementById("settextstatus").style.color = "rgb(25, 25, 25)") : 8 == RedList_Num ? (document.getElementById("settextstatus").innerHTML = "لا يتوفر عنه معلومات كافية", document.getElementById("settextstatus").style.color = "#000000") : 9 == RedList_Num ? (document.getElementById("settextstatus").innerHTML = "لم يقيَّم بعد", document.getElementById("settextstatus").style.color = "#000000") : document.getElementById("settextstatus").innerHTML = "لم يتم تحديد المعلومات";
-                    });
+
+                  
+SetIUCNHTML(table,IUCN_TitleS,IUCN_TitleE,disnone,RedList_Num);
+                  
+                  
+
                 }
-            }
-          
+            }    
 if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 'undefined' && ImgSizeComparison_Answer != '' || ImgMaps_Answer != 'NoData' && typeof ImgMaps_Answer !== 'undefined' && ImgMaps_Answer != '') {
  table.push('<div class="row row-cols-1 row-cols-md-3 g-0 mt-2">');
 }

@@ -361,23 +361,32 @@ titleNameEng = ' ('+CommonName_Answer_En+')';
                 }
             }
             table.push('</tbody></table>');
-            if (RedList_Num >= 1 && RedList_Num <= 9) {
-                if (IncludeIUCN == 1) {
-var settextstatus = '';
-var settextstatuscolor = '';
-var settextstatusclass1 = 'extinction_notthis';
-var settextstatusclass2 = 'extinction_notthis';
-var settextstatusclass3 = 'extinction_notthis';
-var settextstatusclass4 = 'extinction_notthis';
-var settextstatusclass5 = 'extinction_notthis';
-var settextstatusclass6 = 'extinction_notthis';
-var settextstatusclass7 = 'extinction_notthis';
-1 == RedList_Num ? (settextstatusclass1 = "extinction_this extinctionbackgroundcolor160", settextstatus = "غير مهدد", settextstatuscolor = "rgb(0, 160, 0)") : 2 == RedList_Num ? (settextstatusclass2 = "extinction_this extinctionbackgroundcolor174", settextstatus = "قريب من التهديد", settextstatuscolor = "rgb(174, 202, 0)") : 3 == RedList_Num ? (settextstatusclass3 = "extinction_this extinctionbackgroundcolor249", settextstatus = "معرض للإنقراض", settextstatuscolor = "rgb(249, 190, 2)") : 4 == RedList_Num ? (settextstatusclass4 = "extinction_this extinctionbackgroundcolor235", settextstatus = "مهدد بالإنقراض", settextstatuscolor = "rgb(235, 120, 0)") : 5 == RedList_Num ? (settextstatusclass5 = "extinction_this extinctionbackgroundcolor215", settextstatus = "مهدد بشكل حرج بالانقراض", settextstatuscolor = "rgb(215, 41, 0)") : 6 == RedList_Num ? (settextstatusclass6 = "extinction_this extinctionbackgroundcolor60", settextstatus = "منقرض من الحياة البرية", settextstatuscolor = "rgb(60, 0, 168)") : 7 == RedList_Num ? (settextstatusclass7 = "extinction_this extinctionbackgroundcolor25", settextstatus = "منقرض تماماً", settextstatuscolor = "rgb(25, 25, 25)") : 8 == RedList_Num ? (settextstatus = "لا يتوفر عنه معلومات كافية", settextstatuscolor = "#000000") : 9 == RedList_Num ? (settextstatus = "لم يقيَّم بعد", settextstatuscolor = "#000000") : settextstatus = "لم يتم تحديد المعلومات";
+if (RedList_Num >= 1 && RedList_Num <= 9) {
+var IUCN_TitleS,IUCN_TitleE,disnone; 
+	if (IncludeIUCN == 1) {
+		disnone = '';
+	if (RedList_Num == 8 || RedList_Num == 9) {
+	disnone = 'd-none';
+}
+			
+var GeoArabicAndroid = /GeoArabicAndroid/.test(navigator.userAgent);
+
+if (GeoArabicAndroid == true) {
+tCommonName_Answer_EnAndroid = 'onClick="showAndroidToast(&#039;' + ScientificName_Answer + '&#039;)"';
+IUCN_TitleS = 'onClick="showAndroidToast(&#039;';
+IUCN_TitleE = '&#039;)"';
+		}else{
+IUCN_TitleS = 'title="';
+IUCN_TitleE = '"';
+}
+
                   
-table.push("<hr/><div class='IUCNClass'><div class='FastFactsmodalcardinfListContainer'><div class='factsLabel_3x2xkx'><span class='factsKey_rambtt'>حالة القائمة الحمراء لـ <span title='الإتحاد الدولي لحفظ الطبيعة'>IUCN <span></span></span><span class='factsKeyValue_card'><button type='button' class='btn btn-sm btn-light border border-1 p-0' data-bs-toggle='modal' data-bs-target='#modalIUCN' id='Btnscardinfcardinf'><i class='fa fa-question fa-flip-horizontal p-0 px-2' aria-hidden='true'></i></button> : </span><span class='statusValueText'id='settextstatus' style='color:"+settextstatuscolor+"'>"+settextstatus+"</span></span></div></div><div class='factsextinctionsContainer000'><span class='factsextinctionsLine000'></span><div class='factsextinctions0001'><div class='"+settextstatusclass1+"'id='setclassList1'><span>غم</span></div><div class='"+settextstatusclass2+"'id='setclassList2'><span>قخ</span></div><div class='"+settextstatusclass3+"'id='setclassList3'><span>خد</span></div><div class='"+settextstatusclass4+"'id='setclassList4'><span>خم</span></div><div class='"+settextstatusclass5+"'id='setclassList5'><span>خق</span></div><div class='"+settextstatusclass6+"'id='setclassList6'><span>قب</span></div><div class='"+settextstatusclass7+"'id='setclassList7'><span>نق</span></div></div><span class='Labelcard0001'>أقل خطورة</span><span class='Labelcard0002'>منقرضة</span></div></div>");
+SetIUCNHTML(table,IUCN_TitleS,IUCN_TitleE,disnone,RedList_Num);
+                  
+                  
+
                 }
             }
-
 if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 'undefined' && ImgSizeComparison_Answer != '' || ImgMaps_Answer != 'NoData' && typeof ImgMaps_Answer !== 'undefined' && ImgMaps_Answer != '') {
  table.push('<hr/><div class="row row-cols-1 row-cols-md-3 g-4 mt-2">');
 }
