@@ -638,32 +638,32 @@ $('#settextstatus').html('<span data-description="الأنواع المنتشر�
 $('#settextstatus').css('color','rgb(0, 160, 0)');
 }else if(RedList_Num == 2){
 $('#setclassList2').addClass('extinction_this extinctionbackgroundcolor174');
-$('#setclassList1').removeClass('extinction_notthis');
+$('#setclassList2').removeClass('extinction_notthis');
 $('#settextstatus').html('<span data-description="الأنواع التي لا تتأهل كي تصنف ضمن الفئات المذكورة في التالي ولكنها من المرجح أن تصل إلى إحدى هذه الفئات في المستقبل القريب">قريب من التهديد</span>');
 $('#settextstatus').css('color','rgb(174, 202, 0)');
 }else if(RedList_Num == 3){
 $('#setclassList3').addClass('extinction_this extinctionbackgroundcolor249');
-$('#setclassList1').removeClass('extinction_notthis');
+$('#setclassList3').removeClass('extinction_notthis');
 $('#settextstatus').html('<span data-description="الأنواع المعرضة لخطورة الانقراض من الطبيعة">معرض للإنقراض</span>');
 $('#settextstatus').css('color','rgb(249, 190, 2)');
 }else if(RedList_Num == 4){
 $('#setclassList4').addClass('extinction_this extinctionbackgroundcolor235');
-$('#setclassList1').removeClass('extinction_notthis');
+$('#setclassList4').removeClass('extinction_notthis');
 $('#settextstatus').html('<span data-description="الأنواع المعرضة بشكل كبير لخطورة الانقراض من الطبيعة">مهدد بالإنقراض</span>');
 $('#settextstatus').css('color','rgb(235, 120, 0)');
 }else if(RedList_Num == 5){
 $('#setclassList5').addClass('extinction_this extinctionbackgroundcolor215');
-$('#setclassList1').removeClass('extinction_notthis');
+$('#setclassList5').removeClass('extinction_notthis');
 $('#settextstatus').html('<span data-description="الأنواع المعرضة بشدة كبيرة جدا لخطورة الانقراض من الطبيعة">مهدد بشكل حرج بالانقراض</span>');
 $('#settextstatus').css('color','rgb(215, 41, 0)');
 }else if(RedList_Num == 6){
 $('#setclassList6').addClass('extinction_this extinctionbackgroundcolor60');
-$('#setclassList1').removeClass('extinction_notthis');
+$('#setclassList6').removeClass('extinction_notthis');
 $('#settextstatus').html('<span data-description="الأنواع التي تتواجد فقط في الأسر أو التربية الداخلية أو تتواجد في تجمعات غير طبيعية (تتواجد بعيدا عن التوزيع الطبيعي الأصلي لهذه الفئة)">منقرض من الحياة البرية</span>');
 $('#settextstatus').css('color','rgb(60, 0, 168)');
 }else if(RedList_Num == 7){
 $('#setclassList7').addClass('extinction_this extinctionbackgroundcolor25');
-$('#setclassList1').removeClass('extinction_notthis');
+$('#setclassList7').removeClass('extinction_notthis');
 $('#settextstatus').html('<span data-description="لا يوجد في البرية او في الأسر من هذا الفصيل على قيد الحياة">منقرض تماماً</span>');
 $('#settextstatus').css('color','rgb(25, 25, 25)');
 }else if(RedList_Num == 8){
