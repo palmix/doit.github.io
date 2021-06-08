@@ -630,5 +630,31 @@ table.push("<div class='IUCNClass'><div class='FastFactsmodalcardinfListContaine
 $(document).ready(function() {
 1 == RedList_Num ? (document.getElementById("setclassList1").className = "extinction_this extinctionbackgroundcolor160", document.getElementById("settextstatus").innerHTML = "غير مهدد", document.getElementById("settextstatus").style.color = "rgb(0, 160, 0)") : 2 == RedList_Num ? (document.getElementById("setclassList2").className = "extinction_this extinctionbackgroundcolor174", document.getElementById("settextstatus").innerHTML = "قريب من التهديد", document.getElementById("settextstatus").style.color = "rgb(174, 202, 0)") : 3 == RedList_Num ? (document.getElementById("setclassList3").className = "extinction_this extinctionbackgroundcolor249", document.getElementById("settextstatus").innerHTML = "معرض للإنقراض", document.getElementById("settextstatus").style.color = "rgb(249, 190, 2)") : 4 == RedList_Num ? (document.getElementById("setclassList4").className = "extinction_this extinctionbackgroundcolor235", document.getElementById("settextstatus").innerHTML = "مهدد بالإنقراض", document.getElementById("settextstatus").style.color = "rgb(235, 120, 0)") : 5 == RedList_Num ? (document.getElementById("setclassList5").className = "extinction_this extinctionbackgroundcolor215", document.getElementById("settextstatus").innerHTML = "مهدد بشكل حرج بالانقراض", document.getElementById("settextstatus").style.color = "rgb(215, 41, 0)") : 6 == RedList_Num ? (document.getElementById("setclassList6").className = "extinction_this extinctionbackgroundcolor60", document.getElementById("settextstatus").innerHTML = "منقرض من الحياة البرية", document.getElementById("settextstatus").style.color = "rgb(60, 0, 168)") : 7 == RedList_Num ? (document.getElementById("setclassList7").className = "extinction_this extinctionbackgroundcolor25", document.getElementById("settextstatus").innerHTML = "منقرض تماماً", document.getElementById("settextstatus").style.color = "rgb(25, 25, 25)") : 8 == RedList_Num ? (document.getElementById("settextstatus").innerHTML = "لا يتوفر عنه معلومات كافية", document.getElementById("settextstatus").style.color = "#000000") : 9 == RedList_Num ? (document.getElementById("settextstatus").innerHTML = "لم يقيَّم بعد", document.getElementById("settextstatus").style.color = "#000000") : document.getElementById("settextstatus").innerHTML = "لم يتم تحديد المعلومات";
 
+
+
+
+
+var GeoArabicAndroid = /GeoArabicAndroid/.test(navigator.userAgent);
+if (GeoArabicAndroid == true) {
+  
+$('[data-description]').click(function() {
+var m = $(this).attr("data-description");
+Android.showToast(m)
+});
+}else{
+
+$('[data-description]').hover(
+function() {
+var m = $(this).attr("data-description");
+    $(this).attr("title",m)
+  }, function() {
+    $(this).removeAttr("title")
+  }
+);
+  
+}
+
+
+
 });
 }
