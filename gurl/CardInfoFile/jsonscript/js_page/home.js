@@ -878,7 +878,11 @@ IUCN_TitleS = 'title="';
 IUCN_TitleE = '"';
 }
 
-                  
+IUCN_TitleS = 'data-description="';
+IUCN_TitleE = '"';
+
+
+
 SetIUCNHTML(table,IUCN_TitleS,IUCN_TitleE,disnone,RedList_Num);
                   
                   
