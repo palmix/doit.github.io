@@ -707,36 +707,20 @@ $("#linkcardb").val(setIDCard);
 
 
 
-var vapp1="",vapp2="",vapp3="",titleNameEng="";
+var vapp1,vapp2,vapp3,titleNameEng;
 
 
-var GeoArabicAndroid = /GeoArabicAndroid/.test(navigator.userAgent);
 
 
-        if (CommonName_Answer_En != 'NoData') {
+if (CommonName_Answer_En != 'NoData') {
 titleNameEng = ' ('+CommonName_Answer_En+')';
-        } else {
-            titleNameEng = '';
-        }
-
-
-
-       	 if (GeoArabicAndroid == true) {
-tCommonName_Answer_EnAndroid = 'onClick="showAndroidToast(&#039;' + ScientificName_Answer + '&#039;)"';
-
-
-
-
-vapp1 = 'data-description="';
-vapp2 = '"';
-vapp3 = ': ';
-titleNameEng = titleNameEng;
-		}else{
-vapp1 = 'data-description="';
-vapp2 = '"';
-vapp3 = ': ';
-titleNameEng = titleNameEng;
+} else {
+titleNameEng = '';
 }
+
+vapp1 = 'data-description="';
+vapp2 = '"';
+vapp3 = ': ';
 
 
 
