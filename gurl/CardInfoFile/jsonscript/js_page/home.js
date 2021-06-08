@@ -709,9 +709,6 @@ $("#linkcardb").val(setIDCard);
 
 var vapp1,vapp2,vapp3,titleNameEng;
 
-
-
-
 if (CommonName_Answer_En != 'NoData') {
 titleNameEng = ' ('+CommonName_Answer_En+')';
 } else {
