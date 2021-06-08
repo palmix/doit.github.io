@@ -627,8 +627,48 @@ function SetIUCNHTML(table,disnone,RedList_Num) {
 table.push("<div class='IUCNClass'><div class='FastFactsmodalcardinfListContainer'><div class='factsLabel_3x2xkx'><span class='factsKey_rambtt'>حالة القائمة الحمراء لـ <span title='الإتحاد الدولي لحفظ الطبيعة'>IUCN <span></span></span><span class='factsKeyValue_card'><button type='button' class='btn btn-sm btn-light border border-1 p-0' data-bs-toggle='modal' data-bs-target='#modalIUCN' id='Btnscardinfcardinf'><i class='fa fa-question fa-flip-horizontal p-0 px-2' aria-hidden='true'></i></button> : </span><span class='statusValueText' id='settextstatus'></span></span></div> </div> <div class='factsextinctionsContainer000 "+disnone+"'><span class='factsextinctionsLine000'></span> <div class='factsextinctions0001'> <div class='extinction_notthis' id='setclassList1' data-description='غير مهدد'><span>غم</span></div> <div class='extinction_notthis' id='setclassList2' data-description='قريب من التهديد'><span>قخ</span></div> <div class='extinction_notthis' id='setclassList3' data-description='معرض للإنقراض'><span>خد</span></div> <div class='extinction_notthis' id='setclassList4' data-description='مهدد بالإنقراض'><span>خم</span></div> <div class='extinction_notthis' id='setclassList5' data-description='مهدد بشكل حرج بالانقراض'><span>خق</span></div> <div class='extinction_notthis' id='setclassList6' data-description='منقرض من الحياة البرية'><span>قب</span></div> <div class='extinction_notthis' id='setclassList7' data-description='منقرض تماماً'><span>نق</span></div> </div><span class='Labelcard0001'>أقل خطورة</span><span class='Labelcard0002'>منقرضة</span> </div></div><hr/>");
 
 
+
+
+
 $(document).ready(function() {
-1 == RedList_Num ? (document.getElementById("setclassList1").className = "extinction_this extinctionbackgroundcolor160", document.getElementById("settextstatus").innerHTML = "غير مهدد", document.getElementById("settextstatus").style.color = "rgb(0, 160, 0)") : 2 == RedList_Num ? (document.getElementById("setclassList2").className = "extinction_this extinctionbackgroundcolor174", document.getElementById("settextstatus").innerHTML = "قريب من التهديد", document.getElementById("settextstatus").style.color = "rgb(174, 202, 0)") : 3 == RedList_Num ? (document.getElementById("setclassList3").className = "extinction_this extinctionbackgroundcolor249", document.getElementById("settextstatus").innerHTML = "معرض للإنقراض", document.getElementById("settextstatus").style.color = "rgb(249, 190, 2)") : 4 == RedList_Num ? (document.getElementById("setclassList4").className = "extinction_this extinctionbackgroundcolor235", document.getElementById("settextstatus").innerHTML = "مهدد بالإنقراض", document.getElementById("settextstatus").style.color = "rgb(235, 120, 0)") : 5 == RedList_Num ? (document.getElementById("setclassList5").className = "extinction_this extinctionbackgroundcolor215", document.getElementById("settextstatus").innerHTML = "مهدد بشكل حرج بالانقراض", document.getElementById("settextstatus").style.color = "rgb(215, 41, 0)") : 6 == RedList_Num ? (document.getElementById("setclassList6").className = "extinction_this extinctionbackgroundcolor60", document.getElementById("settextstatus").innerHTML = "منقرض من الحياة البرية", document.getElementById("settextstatus").style.color = "rgb(60, 0, 168)") : 7 == RedList_Num ? (document.getElementById("setclassList7").className = "extinction_this extinctionbackgroundcolor25", document.getElementById("settextstatus").innerHTML = "منقرض تماماً", document.getElementById("settextstatus").style.color = "rgb(25, 25, 25)") : 8 == RedList_Num ? (document.getElementById("settextstatus").innerHTML = "لا يتوفر عنه معلومات كافية", document.getElementById("settextstatus").style.color = "#000000") : 9 == RedList_Num ? (document.getElementById("settextstatus").innerHTML = "لم يقيَّم بعد", document.getElementById("settextstatus").style.color = "#000000") : document.getElementById("settextstatus").innerHTML = "لم يتم تحديد المعلومات";
+if(RedList_Num == 1){
+$('#setclassList1').addClass('extinction_this extinctionbackgroundcolor160');
+$('#settextstatus').html('غير مهدد');
+$('#settextstatus').css('color','rgb(0, 160, 0)');
+}else if(RedList_Num == 2){
+$('#setclassList2').addClass('extinction_this extinctionbackgroundcolor174');
+$('#settextstatus').html('قريب من التهديد');
+$('#settextstatus').css('color','rgb(174, 202, 0)');
+}else if(RedList_Num == 3){
+$('#setclassList3').addClass('extinction_this extinctionbackgroundcolor249');
+$('#settextstatus').html('معرض للإنقراض');
+$('#settextstatus').css('color','rgb(249, 190, 2)');
+}else if(RedList_Num == 4){
+$('#setclassList4').addClass('extinction_this extinctionbackgroundcolor235');
+$('#settextstatus').html('مهدد بالإنقراض');
+$('#settextstatus').css('color','rgb(235, 120, 0)');
+}else if(RedList_Num == 5){
+$('#setclassList5').addClass('extinction_this extinctionbackgroundcolor215');
+$('#settextstatus').html('مهدد بشكل حرج بالانقراض');
+$('#settextstatus').css('color','rgb(215, 41, 0)');
+}else if(RedList_Num == 6){
+$('#setclassList6').addClass('extinction_this extinctionbackgroundcolor60');
+$('#settextstatus').html('منقرض من الحياة البرية');
+$('#settextstatus').css('color','rgb(60, 0, 168)');
+}else if(RedList_Num == 7){
+$('#setclassList7').addClass('extinction_this extinctionbackgroundcolor25');
+$('#settextstatus').html('منقرض تماماً');
+$('#settextstatus').css('color','rgb(25, 25, 25)');
+}else if(RedList_Num == 8){
+$('#settextstatus').html('لا يتوفر عنه معلومات كافية');
+$('#settextstatus').css('color','#000000');
+}else if(RedList_Num == 9){
+$('#settextstatus').html('لم يقيَّم بعد');
+$('#settextstatus').css('color','#000000');
+}else{
+$('#settextstatus').html('لم يتم تحديد المعلومات');
+$('#settextstatus').css('color','#5f5f5f');
+}
 });
 }
 
