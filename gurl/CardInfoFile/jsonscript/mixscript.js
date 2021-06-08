@@ -633,7 +633,7 @@ table.push("<div class='IUCNClass'><div class='FastFactsmodalcardinfListContaine
 $(document).ready(function() {
 if(RedList_Num == 1){
 $('#setclassList1').addClass('extinction_this extinctionbackgroundcolor160');
-$('#settextstatus').html('غير مهدد');
+$('#settextstatus').html('<span data-description="الأنواع المنتشرة والمتوفرة في الطبيعة">غير مهدد</span>');
 $('#settextstatus').css('color','rgb(0, 160, 0)');
 }else if(RedList_Num == 2){
 $('#setclassList2').addClass('extinction_this extinctionbackgroundcolor174');
