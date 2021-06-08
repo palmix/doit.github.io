@@ -714,7 +714,7 @@ var GeoArabicAndroid = /GeoArabicAndroid/.test(navigator.userAgent);
 
 
         if (CommonName_Answer_En != 'NoData') {
-titleNameEng = CommonName_Answer_En;
+titleNameEng = ' ('+CommonName_Answer_En+')';
         } else {
             titleNameEng = '';
         }
@@ -727,19 +727,19 @@ tCommonName_Answer_EnAndroid = 'onClick="showAndroidToast(&#039;' + ScientificNa
 
 
 
-vapp1 = 'onClick="showAndroidToast(&#039;';
-vapp2 = '&#039;)"';
-vapp3 = ': ';
-titleNameEng = ' ('+CommonName_Answer_En+')';
-		}else{
-vapp1 = 'data-title="';
+vapp1 = 'data-description="';
 vapp2 = '"';
 vapp3 = ': ';
-titleNameEng = ' ('+CommonName_Answer_En+')';
+titleNameEng = titleNameEng;
+		}else{
+vapp1 = 'data-description="';
+vapp2 = '"';
+vapp3 = ': ';
+titleNameEng = titleNameEng;
 }
 
 
-vapp1 = 'data-description="';
+
 
 
 
