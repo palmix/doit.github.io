@@ -873,7 +873,7 @@ var disnone;
 
 
 SetIUCNHTML(table,disnone,RedList_Num);                  
-                  
+dataDescription();
 
                 }
             }      
