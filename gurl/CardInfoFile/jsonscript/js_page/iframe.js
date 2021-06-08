@@ -753,4 +753,5 @@ blogStats.child("value").set(data.value);
             }
         }
 postviews();
+dataDescription();
     });
