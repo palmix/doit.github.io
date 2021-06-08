@@ -572,6 +572,35 @@ function showAndroidToast(toast) {
         Android.showToast(toast);
 }
 
+
+
+var GeoArabicAndroid = /GeoArabicAndroid/.test(navigator.userAgent);
+if (GeoArabicAndroid == true) {
+  
+$('[data-description]').click(function() {
+var m = $(this).attr("data-description");
+Android.showToast(m)
+});
+}else{
+
+$('[data-description]').hover(
+function() {
+var m = $(this).attr("data-description");
+    $(this).attr("title",m)
+  }, function() {
+    $(this).removeAttr("title")
+  }
+);
+  
+}
+
+
+
+
+
+
+
+
 function setSizeModal(){
 var width = $("body").width();
 if (width <= 299){
