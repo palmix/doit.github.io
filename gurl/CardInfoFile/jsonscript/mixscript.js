@@ -633,37 +633,44 @@ table.push("<div class='IUCNClass'><div class='FastFactsmodalcardinfListContaine
 $(document).ready(function() {
 if(RedList_Num == 1){
 $('#setclassList1').addClass('extinction_this extinctionbackgroundcolor160');
+$('#setclassList1').removeClass('extinction_notthis');
 $('#settextstatus').html('<span data-description="الأنواع المنتشرة والمتوفرة في الطبيعة">غير مهدد</span>');
 $('#settextstatus').css('color','rgb(0, 160, 0)');
 }else if(RedList_Num == 2){
 $('#setclassList2').addClass('extinction_this extinctionbackgroundcolor174');
-$('#settextstatus').html('قريب من التهديد');
+$('#setclassList1').removeClass('extinction_notthis');
+$('#settextstatus').html('<span data-description="الأنواع التي لا تتأهل كي تصنف ضمن الفئات المذكورة في التالي ولكنها من المرجح أن تصل إلى إحدى هذه الفئات في المستقبل القريب">قريب من التهديد</span>');
 $('#settextstatus').css('color','rgb(174, 202, 0)');
 }else if(RedList_Num == 3){
 $('#setclassList3').addClass('extinction_this extinctionbackgroundcolor249');
-$('#settextstatus').html('معرض للإنقراض');
+$('#setclassList1').removeClass('extinction_notthis');
+$('#settextstatus').html('<span data-description="الأنواع المعرضة لخطورة الانقراض من الطبيعة">معرض للإنقراض</span>');
 $('#settextstatus').css('color','rgb(249, 190, 2)');
 }else if(RedList_Num == 4){
 $('#setclassList4').addClass('extinction_this extinctionbackgroundcolor235');
-$('#settextstatus').html('مهدد بالإنقراض');
+$('#setclassList1').removeClass('extinction_notthis');
+$('#settextstatus').html('<span data-description="الأنواع المعرضة بشكل كبير لخطورة الانقراض من الطبيعة">مهدد بالإنقراض</span>');
 $('#settextstatus').css('color','rgb(235, 120, 0)');
 }else if(RedList_Num == 5){
 $('#setclassList5').addClass('extinction_this extinctionbackgroundcolor215');
-$('#settextstatus').html('مهدد بشكل حرج بالانقراض');
+$('#setclassList1').removeClass('extinction_notthis');
+$('#settextstatus').html('<span data-description="الأنواع المعرضة بشدة كبيرة جدا لخطورة الانقراض من الطبيعة">مهدد بشكل حرج بالانقراض</span>');
 $('#settextstatus').css('color','rgb(215, 41, 0)');
 }else if(RedList_Num == 6){
 $('#setclassList6').addClass('extinction_this extinctionbackgroundcolor60');
-$('#settextstatus').html('منقرض من الحياة البرية');
+$('#setclassList1').removeClass('extinction_notthis');
+$('#settextstatus').html('<span data-description="الأنواع التي تتواجد فقط في الأسر أو التربية الداخلية أو تتواجد في تجمعات غير طبيعية (تتواجد بعيدا عن التوزيع الطبيعي الأصلي لهذه الفئة)">منقرض من الحياة البرية</span>');
 $('#settextstatus').css('color','rgb(60, 0, 168)');
 }else if(RedList_Num == 7){
 $('#setclassList7').addClass('extinction_this extinctionbackgroundcolor25');
-$('#settextstatus').html('منقرض تماماً');
+$('#setclassList1').removeClass('extinction_notthis');
+$('#settextstatus').html('<span data-description="لا يوجد في البرية او في الأسر من هذا الفصيل على قيد الحياة">منقرض تماماً</span>');
 $('#settextstatus').css('color','rgb(25, 25, 25)');
 }else if(RedList_Num == 8){
-$('#settextstatus').html('لا يتوفر عنه معلومات كافية');
+$('#settextstatus').html('<span data-description="لا تتوفر عنها معلومات عن توزيعها في الطبيعة أو تعرضها للتهديدات">لا يتوفر عنه معلومات كافية</span>');
 $('#settextstatus').css('color','#000000');
 }else if(RedList_Num == 9){
-$('#settextstatus').html('لم يقيَّم بعد');
+$('#settextstatus').html('<span data-description="الأنواع التي لم يتم تقييمها بعد">لم يقيَّم بعد</span>');
 $('#settextstatus').css('color','#000000');
 }else{
 $('#settextstatus').html('لم يتم تحديد المعلومات');
