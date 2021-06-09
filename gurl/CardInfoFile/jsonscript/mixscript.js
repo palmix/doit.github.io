@@ -712,8 +712,7 @@ function conDidYouKnow(table,DidYouKnow_Answer){
                    $(DidYouKnow_Answer).each(function() {
                         $(this).find('li').each(function() {
 							var DidYouKnows = $(this).html();
-							var btnFacebook = "<a class='rounded-circle sharerfb2' href='#' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' target='_blank'>
-<i class='fa fa-facebook-square' aria-hidden='true'></i></a>";
+							var btnFacebook = "<a class='rounded-circle sharerfb2' href='#' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' target='_blank'><i class='fa fa-facebook-square' aria-hidden='true'></i></a>";
 							var btnWhatsApp = '';
 							var btnTwitter = '';
 							var btnCopy = '';
