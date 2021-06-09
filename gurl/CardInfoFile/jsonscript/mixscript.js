@@ -712,11 +712,10 @@ function conDidYouKnow(table,DidYouKnow_Answer,sharelink){
                    $(DidYouKnow_Answer).each(function() {
                         $(this).find('li').each(function() {
 							var DidYouKnows = $(this).html();
-							var btns = "<div class='text-center'><a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=هل تعلم: " + DidYouKnows + "&via=GeoArabs&related=GeoArabs'  rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'> </i> </a> <a class='sharer sharer-wa' data-action='share/whatsapp/share' href='https://api.whatsapp.com/send?text=هل تعلم: " + DidYouKnows + "   " + sharelink + "' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='WhatsApp'><i class='fa fa-whatsapp' aria-hidden='true'></i></a></div>";
 
                                 table.push('<div class="dukText">');
 								table.push(DidYouKnows);
-								table.push(btns);
+								table.push("<div class='text-center'><a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=هل تعلم: " + DidYouKnows + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'> </i> </a> <a class='sharer sharer-wa' data-action='share/whatsapp/share' href='https://api.whatsapp.com/send?text=هل تعلم: " + DidYouKnows + "   " + sharelink + "' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='WhatsApp'><i class='fa fa-whatsapp' aria-hidden='true'></i></a></div>");
 								table.push('</div>');
 								
 								
