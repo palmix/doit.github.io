@@ -882,8 +882,6 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
                     var DidYouKnow_Answer = DidYouKnow_Answer;
                     DidYouKnow_Answer = DidYouKnow_Answer.toString().replace("<br/>", "");
                     DidYouKnow_Answer = DidYouKnow_Answer.replace("<br>", "");
-                    DidYouKnow_Answer = DidYouKnow_Answer.replace("<ul>", "");
-                    DidYouKnow_Answer = DidYouKnow_Answer.replace("</ul>", "");
                     table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
                    $(DidYouKnow_Answer).each(function() {
                         var nomDidYouKnow_Answer = -1;
