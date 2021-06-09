@@ -879,24 +879,7 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
           
             if (DidYouKnow_Answer != 'NoData' && typeof DidYouKnow_Answer !== 'undefined' && DidYouKnow_Answer != '') {
                 if (IncludeDidUknow == 1) {
-                    var DidYouKnow_Answer = DidYouKnow_Answer;
-                    DidYouKnow_Answer = DidYouKnow_Answer.toString().replace("<br/>", "");
-                    DidYouKnow_Answer = DidYouKnow_Answer.replace("<br>", "");
-                    table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
-                   $(DidYouKnow_Answer).each(function() {
-                        var nomDidYouKnow_Answer = -1;
-                        $(this).find('li').each(function() {
-							var DidYouKnows = $(this).html();
-                            nomDidYouKnow_Answer += 1;
-                            if (nomDidYouKnow_Answer == 0) {
-
-                                table.push('<div class="dukText">'+DidYouKnows+'<p>###</p></div>');
-                            } else {
-                                table.push('<div class="dukText">'+DidYouKnows+'<p>###</p></div>');
-                            }
-                        });
-					});
-                    table.push('</div></div></center>');
+conDidYouKnow(table,DidYouKnow_Answer);
                 }
             }
             if (MultipleImages_Answer != 'NoData' && typeof MultipleImages_Answer !== 'undefined' && MultipleImages_Answer != '') {
