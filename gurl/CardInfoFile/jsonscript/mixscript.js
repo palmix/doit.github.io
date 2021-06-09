@@ -324,6 +324,7 @@ $('#gallery').removeClass('d-none');
         $(".sharer.sharer-wa").attr("href", wa);
         $(".sharerwa2").attr("href", wa);
         $(".sharerml2").attr("href", "mailto:?subject=معلومات حول "+n+"&body="+t);
+		$(".sharer.sharer-copy").attr("data-clipboard-text", t);
     }
     $("#codebtn").click(function() {
         $("#iframeShare").css("display", "block");
