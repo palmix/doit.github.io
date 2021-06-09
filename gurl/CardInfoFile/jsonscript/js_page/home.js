@@ -886,7 +886,9 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
                     DidYouKnow_Answer = DidYouKnow_Answer.replace("</ul>", "");
                     table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
                     table.push(DidYouKnow_Answer);
+	                    table.push("<p>###</p>");
                     table.push('</div></div></center>');
+                    table.push('');
                 }
             }
             if (MultipleImages_Answer != 'NoData' && typeof MultipleImages_Answer !== 'undefined' && MultipleImages_Answer != '') {
