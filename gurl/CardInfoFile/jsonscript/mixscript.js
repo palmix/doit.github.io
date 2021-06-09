@@ -307,8 +307,13 @@ $('#gallery').removeClass('d-none');
 
 	};
 	
-   function replaceurl(PostUrlInSite_Answer) {
-        var s = PostUrlInSite_Answer;
+function replaceurl(PostUrlInSite_Answer) {
+var s = PostUrlInSite_Answer;
+if (s.length >= 15 && s != "NoData"){
+s = PostUrlInSite_Answer;
+}else{
+s = $("#linkShareforcopy").val();
+}
         var t = $("#linkShareforcopy").val();
         var n = $(".answercardinfo:eq(0)").html();
         var fb = $("#Infoaboutpublisher .sharer.sharer-fb").attr("href");
@@ -317,18 +322,21 @@ $('#gallery').removeClass('d-none');
         $(".sharerfb2").attr("href", fb);
         var tw = $("#Infoaboutpublisher .sharer.sharer-tw").attr("href");
         tw = tw.replace(s, t);
-        $("#Infoaboutpublisher  .sharer.sharer-tw").attr("href", tw);
+        $("#Infoaboutpublisher .sharer.sharer-tw").attr("href", tw);
         $(".sharertw2").attr("href", tw);
-        var wa = $(".sharer.sharer-wa").attr("href");
+        var wa = $("#Infoaboutpublisher .sharer.sharer-wa").attr("href");
         wa = wa.replace(s, t);
         $("#Infoaboutpublisher  .sharer.sharer-wa").attr("href", wa);
         $(".sharerwa2").attr("href", wa);
         $(".sharerml2").attr("href", "mailto:?subject=معلومات حول "+n+"&body="+t);
 		$("#Infoaboutpublisher .sharer.sharer-copy").attr("data-clipboard-text", t);
 		
-		
-		
-		
+
+
+        var didyouknowShareWa = $("#didyouknow .sharer.sharer-wa").attr("href");
+		didyouknowShare.replace(s,t);
+		var didyouknowShareTw = $("#didyouknow .sharer.sharer-tw").attr("href");
+		didyouknowShareTw.replace(s,t);
     }
     $("#codebtn").click(function() {
         $("#iframeShare").css("display", "block");
