@@ -309,8 +309,7 @@ $('#gallery').removeClass('d-none');
 	
 function replaceurl(PostUrlInSite_Answer) {
 var s = PostUrlInSite_Answer;
-var ca =s.length;
-if (ca >= 15 && s != "NoData"){
+if (s != "NoData" && s != "undefined" ){
 s = PostUrlInSite_Answer;
 }else{
 s = $("#linkShareforcopy").val();
