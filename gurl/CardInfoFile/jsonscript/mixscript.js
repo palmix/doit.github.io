@@ -717,7 +717,7 @@ function conDidYouKnow(table,DidYouKnow_Answer,sharelink){
                                 table.push('<div class="item dukText">');
 								table.push(DidYouKnows);
 								table.push("<br/>");
-								table.push('<a href="https://api.whatsapp.com/send?text=هل تعلم: ' + DidYouKnows + '   ' + sharelink + '" target="_blank">'+DidYouKnows+'</a>');
+								table.push("<a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=هل تعلم: " + DidYouKnows + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'> </i> </a>");
 								table.push(btns);
 								table.push('</div>');
 								
