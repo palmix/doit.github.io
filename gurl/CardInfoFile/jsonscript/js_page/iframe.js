@@ -170,6 +170,7 @@ var IDTitle = CommonName_Answer.toString();
 var IDDescription = SummaryPage_Answer.toString();
 
 
+conLinkShort(PostUrlInSite_Answer);
 
 if(IDURL == "" || IDURL == "NoData"){
 IDURL = "https://card.geoarabic.com"
@@ -616,22 +617,7 @@ img.src = getimgs1600;
         table.push("<hr /><p class='fspcard'><strong>حول:</strong> تم إنشاء هذه البطاقة عبر <a target='_blank' href='https://card.geoarabic.com/p/create-card.html'> أداة نشر البطاقات</a>في جيو عربي، يمكنك تقديم طلب لإنشاء ونشر بطاقات جديدة.</p>");
         table.push("</div>");
         document.getElementById('cardinfo').innerHTML = table.join('');
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api-ssl.bitly.com/v3/shorten?access_token=6ba802f80588128f34474436559fcae8556dd5c1&longUrl="+urlpost);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    var text = xhr.responseText;
-                    var obj = JSON.parse(text);
-                    var objlink = obj.data.url;
-                    $("#linkShareforcopy").val(objlink);
-                    replaceurl()
-                } else {
-                    $("#linkShareforcopy").val(urlpost);
-                }
-            }
-        }
-        var obj = xhr.send();
+
         setiframe();
 
 
