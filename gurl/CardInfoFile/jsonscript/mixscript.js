@@ -716,6 +716,8 @@ function conDidYouKnow(table,DidYouKnow_Answer,sharelink){
 
                                 table.push('<div class="item dukText">');
 								table.push(DidYouKnows);
+								table.push("<br/>");
+								table.push('<a href="https://api.whatsapp.com/send?text=هل تعلم: ' + DidYouKnows + '   ' + sharelink + '" target="_blank">'+DidYouKnows+'</a>');
 								table.push(btns);
 								table.push('</div>');
 								
