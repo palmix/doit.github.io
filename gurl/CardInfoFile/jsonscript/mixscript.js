@@ -307,8 +307,8 @@ $('#gallery').removeClass('d-none');
 
 	};
 	
-   function replaceurl() {
-        var s = "https://card.geoarabic.com/p/card.html?id=" + $("#linkcardb").val();
+   function replaceurl(PostUrlInSite_Answer) {
+        var s = PostUrlInSite_Answer;
         var t = $("#linkShareforcopy").val();
         var n = $(".answercardinfo:eq(0)").html();
         var fb = $("#Infoaboutpublisher .sharer.sharer-fb").attr("href");
@@ -325,6 +325,10 @@ $('#gallery').removeClass('d-none');
         $(".sharerwa2").attr("href", wa);
         $(".sharerml2").attr("href", "mailto:?subject=معلومات حول "+n+"&body="+t);
 		$("#Infoaboutpublisher .sharer.sharer-copy").attr("data-clipboard-text", t);
+		
+		
+		
+		
     }
     $("#codebtn").click(function() {
         $("#iframeShare").css("display", "block");
@@ -739,7 +743,7 @@ $("#linkShareforcopy").val(PostUrlInSite_Answer);
                     var objlink = obj.data.url;
                     $("#linkShareforcopy").val(objlink);
 					console.log(objlink)
-					replaceurl();
+					replaceurl(PostUrlInSite_Answer);
                      }
                 }
             }
