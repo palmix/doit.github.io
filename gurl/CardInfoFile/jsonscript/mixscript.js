@@ -334,7 +334,7 @@ s = $("#linkShareforcopy").val();
 
 
         var didyouknowShareWa = $("#didyouknow .sharer.sharer-wa").attr("href");
-		didyouknowShare.replace(s,t);
+		didyouknowShareWa.replace(s,t);
 		var didyouknowShareTw = $("#didyouknow .sharer.sharer-tw").attr("href");
 		didyouknowShareTw.replace(s,t);
     }
