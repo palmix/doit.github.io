@@ -738,6 +738,7 @@ $("#linkShareforcopy").val(PostUrlInSite_Answer);
                   if (obj.status_code == 200){
                     var objlink = obj.data.url;
                     $("#linkShareforcopy").val(objlink);
+					console.log(objlink)
 					replaceurl();
                      }
                 }
