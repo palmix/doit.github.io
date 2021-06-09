@@ -711,14 +711,8 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
           
             if (DidYouKnow_Answer != 'NoData' && typeof DidYouKnow_Answer !== 'undefined' && DidYouKnow_Answer != '') {
                 if (IncludeDidUknow == 1) {
-                    var DidYouKnow_Answer = DidYouKnow_Answer;
-                    DidYouKnow_Answer = DidYouKnow_Answer.toString().replace("<br/>", "");
-                    DidYouKnow_Answer = DidYouKnow_Answer.replace("<br>", "");
-                    DidYouKnow_Answer = DidYouKnow_Answer.replace("<ul>", "");
-                    DidYouKnow_Answer = DidYouKnow_Answer.replace("</ul>", "");
-                    table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
-                    table.push(DidYouKnow_Answer);
-                    table.push('</div></div></center>');
+var sharelink = $("#linkShareforcopy").val();
+conDidYouKnow(table,DidYouKnow_Answer,sharelink);
                 }
             }
             if (MultipleImages_Answer != 'NoData' && typeof MultipleImages_Answer !== 'undefined' && MultipleImages_Answer != '') {

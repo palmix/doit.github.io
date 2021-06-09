@@ -881,7 +881,7 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
           
             if (DidYouKnow_Answer != 'NoData' && typeof DidYouKnow_Answer !== 'undefined' && DidYouKnow_Answer != '') {
                 if (IncludeDidUknow == 1) {
-			var sharelink = $("#linkShareforcopy").val();
+var sharelink = $("#linkShareforcopy").val();
 conDidYouKnow(table,DidYouKnow_Answer,sharelink);
                 }
             }
