@@ -982,10 +982,6 @@ $("#InfoaboutCard").css("display","block");
         document.getElementById('cardinfo').innerHTML = table.join('');
       $(".spinnercard").css("display","none");
 $("#cardinfo").css("display","block");
-      
-      
-
-      replaceurl();
         setiframe();
         if (MultipleImages_Answer != 'NoData' && typeof MultipleImages_Answer !== 'undefined' && MultipleImages_Answer != '') {
             if (IncludeImg == 1) {
