@@ -493,6 +493,8 @@ IDURL = IDURL.replace('http://','https://');
 var IDTitle = CommonName_Answer.toString();
 var IDDescription = SummaryPage_Answer.toString();
 
+
+conLinkShort(PostUrlInSite_Answer);
       
 if(IDURL == "" || IDURL == "NoData"){
 IDURL = "https://card.geoarabic.com"
@@ -982,22 +984,7 @@ $("#InfoaboutCard").css("display","block");
 $("#cardinfo").css("display","block");
       
       
-$("#linkShareforcopy").val(PostUrlInSite_Answer);
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api-ssl.bitly.com/v3/shorten?access_token=6ba802f80588128f34474436559fcae8556dd5c1&longUrl=" + PostUrlInSite_Answer);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    var text = xhr.responseText;
-                    var obj = JSON.parse(text);
-                  if (obj.status_code == 200){
-                    var objlink = obj.data.url;
-                    $("#linkShareforcopy").val(objlink);
-                     }
-                }
-            }
-        }
-        var obj = xhr.send();
+
       replaceurl();
         setiframe();
         if (MultipleImages_Answer != 'NoData' && typeof MultipleImages_Answer !== 'undefined' && MultipleImages_Answer != '') {
