@@ -890,9 +890,9 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
                             nomDidYouKnow_Answer += 1;
                             if (nomDidYouKnow_Answer == 0) {
 
-                                table.push('<li>'+DidYouKnows+'</li>');
+                                table.push('<div class="dukText">'+DidYouKnows+'<p>###</p></div>');
                             } else {
-                                table.push('<div class="item">'+DidYouKnows+'<p>###</p></div>');
+                                table.push('<div class="dukText">'+DidYouKnows+'<p>###</p></div>');
                             }
                         });
 					});
