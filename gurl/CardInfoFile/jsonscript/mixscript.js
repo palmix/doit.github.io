@@ -715,7 +715,7 @@ function conDidYouKnow(table,DidYouKnow_Answer,sharelink){
 							var btnFacebook = "";
 							var btnWhatsApp = "<a href='https://api.whatsapp.com/send?text="+DidYouKnows+"%20%20"+sharelink+"' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' target='_blank'><i class='fa fa-whatsapp' aria-hidden='true'></i></a>";;
 							var btnTwitter = '';
-							var btns = "<ul class='list-group list-group-flush text-center'> <li class='list-group-item'><a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=" + DidYouKnows + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'> </i> </a> <a class='sharer sharer-wa' data-action='share/whatsapp/share' href='https://api.whatsapp.com/send?text=" + DidYouKnows + "   " + sharelink + "' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='WhatsApp'><i class='fa fa-whatsapp' aria-hidden='true'> </i> </a> <div class='sharer sharer-copy copy' data-clipboard-target='#linkShareforcopy' rel='nofollow' title='copy link'><i class='fa fa-clone' aria-hidden='true'></i> </div> </li> </ul>";
+							var btns = "<div class='list-group list-group-flush text-center'><a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=" + DidYouKnows + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'> </i> </a> <a class='sharer sharer-wa' data-action='share/whatsapp/share' href='https://api.whatsapp.com/send?text=" + DidYouKnows + "   " + sharelink + "' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='WhatsApp'><i class='fa fa-whatsapp' aria-hidden='true'> </i> </a> <div class='sharer sharer-copy copy' onclick='copyLink()' rel='nofollow' title='copy link'><i class='fa fa-clone' aria-hidden='true'></i> </div></div>";
 
                                 table.push('<div class="dukText">'+DidYouKnows+'<div>'+btns+'</div></div>');
                         });
@@ -741,4 +741,8 @@ $("#linkShareforcopy").val(PostUrlInSite_Answer);
             }
         }
 var obj = xhr.send();
+}
+
+function copyLink(){
+$(".copylink.copy").click();
 }
