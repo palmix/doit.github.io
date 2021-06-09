@@ -660,7 +660,9 @@ IDURL = IDURL.replace('http://','https://');
 var IDTitle = CommonName_Answer.toString();
 var IDDescription = SummaryPage_Answer.toString();
 
-      
+conLinkShort(PostUrlInSite_Answer);
+
+
 if(IDURL == "" || IDURL == "NoData"){
 IDURL = "https://card.geoarabic.com"
 }
@@ -879,7 +881,8 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
           
             if (DidYouKnow_Answer != 'NoData' && typeof DidYouKnow_Answer !== 'undefined' && DidYouKnow_Answer != '') {
                 if (IncludeDidUknow == 1) {
-conDidYouKnow(table,DidYouKnow_Answer);
+			var sharelink = $("#linkShareforcopy").val();
+conDidYouKnow(table,DidYouKnow_Answer,sharelink);
                 }
             }
             if (MultipleImages_Answer != 'NoData' && typeof MultipleImages_Answer !== 'undefined' && MultipleImages_Answer != '') {
@@ -1135,9 +1138,12 @@ $("#ShareACard").css("display","block");
 $("#InfoaboutCard").css("display","block");
       
       
-      
+var data-clipboard-target="#linkShareforcopy"
+var sharelink = $("#linkShareforcopy").val();
+
+
         table.push("<div id='Infoaboutpublisher' class='my-2 mt-4 collapse'>");
-        table.push("<hr/>" + alertcard + "<hr style='background-color:#999999'/><ul class='list-group list-group-flush text-center'><li class='list-group-item'><img src='" + CardUserImg + "' alt='Avatar' class='avatar'><br>" + CardUserName + "</li><li class='list-group-item'>" + CardTimestamp + "</li><li class='list-group-item" + removedcard + "'><a class='sharer sharer-fb' href='https://www.facebook.com/dialog/feed?app_id=453684218377321&display=popup&link=https://card.geoarabic.com/p/card.html?id=" + getsetIdCard + "&redirect_uri=https://card.geoarabic.com/p/card.html?id=" + getsetIdCard + "&quote="+CardName+"&hashtag=#جيو_عربي' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Facebook'><i class='fa fa-facebook-square' aria-hidden='true'></i></a><a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=https://card.geoarabic.com/p/card.html?id=" + getsetIdCard + "&text=" + CardName + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'></i></a> <a class='sharer sharer-wa' data-action='share/whatsapp/share' href='https://api.whatsapp.com/send?text=" + CardName + "   https://card.geoarabic.com/p/card.html?id=" + getsetIdCard + "' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='WhatsApp'><i class='fa fa-whatsapp' aria-hidden='true'></i></a><div class='sharer sharer-copy copy' data-clipboard-text='https://card.geoarabic.com/p/card.html?id=" + PostUrlInSite_Answer + "' rel='nofollow' title='copy link'><i class='fa fa-clone' aria-hidden='true'></i></div></li></ul>");
+        table.push("<hr/>" + alertcard + "<hr style='background-color:#999999'/><ul class='list-group list-group-flush text-center'><li class='list-group-item'><img src='" + CardUserImg + "' alt='Avatar' class='avatar'><br>" + CardUserName + "</li><li class='list-group-item'>" + CardTimestamp + "</li><li class='list-group-item" + removedcard + "'><a class='sharer sharer-fb' href='https://www.facebook.com/dialog/feed?app_id=453684218377321&display=popup&link=" + sharelink + "&redirect_uri=" + sharelink + "&quote="+CardName+"&hashtag=#جيو_عربي' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Facebook'><i class='fa fa-facebook-square' aria-hidden='true'></i></a><a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=" + CardName + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'></i></a> <a class='sharer sharer-wa' data-action='share/whatsapp/share' href='https://api.whatsapp.com/send?text=" + CardName + "   " + sharelink + "' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='WhatsApp'><i class='fa fa-whatsapp' aria-hidden='true'></i></a><div class='sharer sharer-copy copy' data-clipboard-target='#linkShareforcopy' rel='nofollow' title='copy link'><i class='fa fa-clone' aria-hidden='true'></i></div></li></ul>");
         $("#linkcardb").val(getsetIdCard);
         if (SourceInfo_Answer_link != 'NoData' && typeof SourceInfo_Answer_link !== 'undefined' && SourceInfo_Answer_link != '') {
             table.push("<hr/><p class='py-2 fspcard'>المزيد من المعلومات حول " + CommonName_Answer + ": <a href='" + SourceInfo_Answer_link + "' target='_blank'>" + SourceInfo_Answer_Title + " <i class='fa fa-external-link fa-flip-horizontal' style='font-size:0.8rem' aria-hidden='true'></i></a></p>");
@@ -1149,22 +1155,7 @@ $("#InfoaboutCard").css("display","block");
 $("#cardinfo").css("display","block");
       
       
-$("#linkShareforcopy").val(PostUrlInSite_Answer);
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api-ssl.bitly.com/v3/shorten?access_token=6ba802f80588128f34474436559fcae8556dd5c1&longUrl=" + PostUrlInSite_Answer);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    var text = xhr.responseText;
-                    var obj = JSON.parse(text);
-                  if (obj.status_code == 200){
-                    var objlink = obj.data.url;
-                    $("#linkShareforcopy").val(objlink);
-                     }
-                }
-            }
-        }
-        var obj = xhr.send();
+
       replaceurl();
         setiframe();
         if (MultipleImages_Answer != 'NoData' && typeof MultipleImages_Answer !== 'undefined' && MultipleImages_Answer != '') {
