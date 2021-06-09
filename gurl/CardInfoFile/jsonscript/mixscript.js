@@ -330,15 +330,6 @@ s = $("#linkShareforcopy").val();
         $(".sharerwa2").attr("href", wa);
         $(".sharerml2").attr("href", "mailto:?subject=معلومات حول "+n+"&body="+t);
 		$("#Infoaboutpublisher .sharer.sharer-copy").attr("data-clipboard-text", t);
-		
-
-
-        var didyouknowShareWa = $("#didyouknow .sharer.sharer-wa").attr("href");
-		didyouknowShareWa = didyouknowShareWa.replace(s,t);
-		$("#didyouknow .sharer.sharer-wa").attr("href", didyouknowShareWa);
-		var didyouknowShareTw = $("#didyouknow .sharer.sharer-tw").attr("href");
-		didyouknowShareTw = didyouknowShareTw.replace(s,t);
-		$("#didyouknow .sharer.sharer-wa").attr("href", didyouknowShareTw);
     }
     $("#codebtn").click(function() {
         $("#iframeShare").css("display", "block");
@@ -719,13 +710,16 @@ var m = $(this).attr("data-description");
 }
 
 
-function conDidYouKnow(table,DidYouKnow_Answer,sharelink){
+		
+function conDidYouKnow(table,DidYouKnow_Answer){
                     DidYouKnow_Answer = DidYouKnow_Answer.toString().replace("<br/>", "");
                     DidYouKnow_Answer = DidYouKnow_Answer.replace("<br>", "");
+
                     table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
                    $(DidYouKnow_Answer).each(function() {
                         $(this).find('li').each(function() {
 							var DidYouKnows = $(this).html();
+							var sharelink = $("#linkShareforcopy").val();
 							var btns = "<div class='text-center'><a class='sharer sharer-tw' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=هل تعلم: " + DidYouKnows + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'> </i> </a> <a class='sharer sharer-wa' data-action='share/whatsapp/share' href='https://api.whatsapp.com/send?text=هل تعلم: " + DidYouKnows + "   " + sharelink + "' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='WhatsApp'><i class='fa fa-whatsapp' aria-hidden='true'></i></a></div>";
 
                                 table.push('<div class="item dukText">');
