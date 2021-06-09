@@ -888,7 +888,7 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
                    $(DidYouKnow_Answer.toString()).each(function() {
                         var nomDidYouKnow_Answer = -1;
                         $(this).find('li').each(function() {
-							var DidYouKnows = $(this).text();
+							var DidYouKnows = $(this).html();
                             nomDidYouKnow_Answer += 1;
                             if (nomDidYouKnow_Answer == 0) {
                                 table.push('<li>'+DidYouKnows+'</li>');
