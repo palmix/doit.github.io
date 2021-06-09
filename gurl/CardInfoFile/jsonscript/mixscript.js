@@ -311,20 +311,20 @@ $('#gallery').removeClass('d-none');
         var s = "https://card.geoarabic.com/p/card.html?id=" + $("#linkcardb").val();
         var t = $("#linkShareforcopy").val();
         var n = $(".answercardinfo:eq(0)").html();
-        var fb = $(".sharer.sharer-fb").attr("href");
+        var fb = $("#Infoaboutpublisher .sharer.sharer-fb").attr("href");
         fb = fb.replace(s, t);
-        $(".sharer.sharer-fb").attr("href", fb);
+        $("#Infoaboutpublisher .sharer.sharer-fb").attr("href", fb);
         $(".sharerfb2").attr("href", fb);
-        var tw = $(".sharer.sharer-tw").attr("href");
+        var tw = $("#Infoaboutpublisher .sharer.sharer-tw").attr("href");
         tw = tw.replace(s, t);
-        $(".sharer.sharer-tw").attr("href", tw);
+        $("#Infoaboutpublisher  .sharer.sharer-tw").attr("href", tw);
         $(".sharertw2").attr("href", tw);
         var wa = $(".sharer.sharer-wa").attr("href");
         wa = wa.replace(s, t);
-        $(".sharer.sharer-wa").attr("href", wa);
+        $("#Infoaboutpublisher  .sharer.sharer-wa").attr("href", wa);
         $(".sharerwa2").attr("href", wa);
         $(".sharerml2").attr("href", "mailto:?subject=معلومات حول "+n+"&body="+t);
-		$(".sharer.sharer-copy").attr("data-clipboard-text", t);
+		$("#Infoaboutpublisher .sharer.sharer-copy").attr("data-clipboard-text", t);
     }
     $("#codebtn").click(function() {
         $("#iframeShare").css("display", "block");
@@ -716,8 +716,6 @@ function conDidYouKnow(table,DidYouKnow_Answer,sharelink){
 
                                 table.push('<div class="item dukText">');
 								table.push(DidYouKnows);
-								table.push("<br/>");
-								table.push("<a class='' href='https://twitter.com/intent/tweet?hashtags=جيو_عربي&url=" + sharelink + "&text=هل تعلم: " + DidYouKnows + "&via=GeoArabs&related=GeoArabs' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' rel='nofollow' target='_blank' title='Twitter'><i class='fa fa-twitter' aria-hidden='true'> </i> </a>");
 								table.push(btns);
 								table.push('</div>');
 								
