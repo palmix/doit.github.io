@@ -705,21 +705,23 @@ var m = $(this).attr("data-description");
 }
 
 
-function conDidYouKnow(table,DidYouKnow_Answer){
+function conDidYouKnow(table,DidYouKnow_Answer,sharelink){
                     DidYouKnow_Answer = DidYouKnow_Answer.toString().replace("<br/>", "");
                     DidYouKnow_Answer = DidYouKnow_Answer.replace("<br>", "");
                     table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
                    $(DidYouKnow_Answer).each(function() {
                         $(this).find('li').each(function() {
 							var DidYouKnows = $(this).html();
-							var btnFacebook = "<a class='rounded-circle sharerfb2' href='#' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' target='_blank'><i class='fa fa-facebook-square' aria-hidden='true'></i></a>";
-							var btnWhatsApp = '';
+							var btnFacebook = "";
+							var btnWhatsApp = "<a href='https://api.whatsapp.com/send?text="+DidYouKnows+"%20%20"+sharelink+"' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' target='_blank'><i class='fa fa-whatsapp' aria-hidden='true'></i></a>";;
 							var btnTwitter = '';
 							var btnCopy = '';
 
-                                table.push('<div class="dukText">'+DidYouKnows+'<div>'+btnFacebook+'</div></div>');
+                                table.push('<div class="dukText">'+DidYouKnows+'<div>'+btnWhatsApp+'</div></div>');
                         });
 					});
                     table.push('</div></div></center>');
  
  }
+
+
