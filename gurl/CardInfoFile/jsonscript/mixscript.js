@@ -334,9 +334,11 @@ s = $("#linkShareforcopy").val();
 
 
         var didyouknowShareWa = $("#didyouknow .sharer.sharer-wa").attr("href");
-		didyouknowShareWa.replace(s,t);
+		didyouknowShareWa = didyouknowShareWa.replace(s,t);
+		$("#didyouknow .sharer.sharer-wa").attr("href", didyouknowShareWa);
 		var didyouknowShareTw = $("#didyouknow .sharer.sharer-tw").attr("href");
-		didyouknowShareTw.replace(s,t);
+		didyouknowShareTw = didyouknowShareTw.replace(s,t);
+		$("#didyouknow .sharer.sharer-wa").attr("href", didyouknowShareTw);
     }
     $("#codebtn").click(function() {
         $("#iframeShare").css("display", "block");
