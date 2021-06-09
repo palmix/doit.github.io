@@ -889,11 +889,10 @@ if (ImgSizeComparison_Answer != 'NoData' && typeof ImgSizeComparison_Answer !== 
 							var DidYouKnows = $(this).html();
                             nomDidYouKnow_Answer += 1;
                             if (nomDidYouKnow_Answer == 0) {
+
                                 table.push('<li>'+DidYouKnows+'</li>');
-								table.push("<p>###</p>");
                             } else {
-                                table.push('<li>'+DidYouKnows+'</li>');
-								table.push("<p>###</p>");
+                                table.push('<div class="item">'+DidYouKnows+'<p>###</p></div>');
                             }
                         });
 					});
