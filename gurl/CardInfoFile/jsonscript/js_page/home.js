@@ -1138,7 +1138,7 @@ $("#ShareACard").css("display","block");
 $("#InfoaboutCard").css("display","block");
       
       
-var data-clipboard-target="#linkShareforcopy"
+
 var sharelink = $("#linkShareforcopy").val();
 
 
