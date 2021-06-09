@@ -710,15 +710,15 @@ function conDidYouKnow(table,DidYouKnow_Answer){
                     DidYouKnow_Answer = DidYouKnow_Answer.replace("<br>", "");
                     table.push("<hr/><center><div id='didyouknow'><p class='didyouknow0005'>هل تعلم</p><div class='didyouknow0004'></div><div class='owl-carousel owl-theme'>");
                    $(DidYouKnow_Answer).each(function() {
-                        var nomDidYouKnow_Answer = -1;
                         $(this).find('li').each(function() {
 							var DidYouKnows = $(this).html();
-                            nomDidYouKnow_Answer += 1;
-                            if (nomDidYouKnow_Answer == 0) {
-                                table.push('<div class="dukText">'+DidYouKnows+'<p>###</p></div>');
-                            } else {
-                                table.push('<div class="dukText">'+DidYouKnows+'<p>###</p></div>');
-                            }
+							var btnFacebook = "<a class='rounded-circle sharerfb2' href='#' onclick='window.open(this.href,&quot;popupwindow&quot;,&quot;status=0,height=500,width=500,resizable=0,top=50,left=100&quot;);return false;' target='_blank'>
+<i class='fa fa-facebook-square' aria-hidden='true'></i></a>";
+							var btnWhatsApp = '';
+							var btnTwitter = '';
+							var btnCopy = '';
+
+                                table.push('<div class="dukText">'+DidYouKnows+'<div>'+btnFacebook+'</div></div>');
                         });
 					});
                     table.push('</div></div></center>');
