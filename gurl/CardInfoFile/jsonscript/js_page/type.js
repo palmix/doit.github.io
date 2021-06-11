@@ -347,7 +347,7 @@ document.getElementById('cardslistall').innerHTML = '';
 if(cards1num > 1){
 document.getElementById('cardslistall').innerHTML +=  cards1.join('');
 }
-imglazy();
+
 $(document).ready(function() {
 
 $(".showModal").click(function(e) {

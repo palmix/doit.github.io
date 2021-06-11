@@ -515,7 +515,7 @@ document.getElementById('cardslistall').innerHTML +=  cards7.join('');
 if(cards8num > 1){
 document.getElementById('cardslistall').innerHTML +=  cards8.join('');
 }
-imglazy();
+
 $(document).ready(function() {
 
 $(".showModal").click(function(e) {

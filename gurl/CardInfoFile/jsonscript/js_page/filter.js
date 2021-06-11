@@ -842,7 +842,6 @@ document.getElementById('cardslistall').innerHTML +=  cards1.join('');
 document.getElementById('cardslistall').innerHTML += '<div class="alert alert-warning d-flex align-items-center mx-4" role="alert"><i class="fa fa-info-circle mx-2" aria-hidden="true"></i><div>عذرًا! لا يوجد محتوى مطابق.</div></div>';
   
 }
-imglazy();
 $('.loadingFullscreen').addClass('d-none');
 $(document).ready(function() {
 
