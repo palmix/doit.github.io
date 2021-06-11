@@ -763,3 +763,18 @@ $("#linkShareforcopy").val(PostUrlInSite_Answer);
         }
 var obj = xhr.send();
 }
+
+function imglazy(){
+  if ('loading' in HTMLImageElement.prototype) {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+      img.src = img.dataset.src;
+      img.srcset = img.dataset.srcset;
+    });
+  } else {
+    const script = document.createElement('script');
+    script.src =
+      'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js';
+    document.body.appendChild(script);
+  }
+}

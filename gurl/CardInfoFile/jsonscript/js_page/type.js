@@ -264,7 +264,7 @@ showModalOnClick = 'return false;';
 function GetList(num) {
  num.push('<div class="col mx-'+mx+' px-'+paddingx+' mt-'+margint+'" style="width:'+widthcard+'">');
  num.push('<div class="card">');
- num.push('<a href="'+PostUrlInSite_Answer+'" data-post-id="'+PostIdInSite_Answer+'" data-card-href="'+cardURL+'" style="height:'+Img_H+'px;" class="'+showModalClassImg+' dataimg" onclick="'+showModalOnClickImg+'" data-id="'+ResponseNumber+'" title="'+ScientificName_Answer+'"><img src="'+ImgCover_Answer+'" width="'+Img_W+'" height="'+Img_H+'" class="card-img-top" alt="'+CommonName_Answer+'"></a>');
+ num.push('<a href="'+PostUrlInSite_Answer+'" data-post-id="'+PostIdInSite_Answer+'" data-card-href="'+cardURL+'" style="height:'+Img_H+'px;" class="'+showModalClassImg+' dataimg" onclick="'+showModalOnClickImg+'" data-id="'+ResponseNumber+'" title="'+ScientificName_Answer+'"><img src="'+ImgCover_Answer+'" width="'+Img_W+'" height="'+Img_H+'" loading="lazy" class="card-img-top lazyload" alt="'+CommonName_Answer+'"></a>');
  num.push('<div class="card-body text-center p-0 rounded-bottom">');
  num.push('<a href="'+PostUrlInSite_Answer+'" data-post-id="'+PostIdInSite_Answer+'" data-card-href="'+cardURL+'" data-id="'+ResponseNumber+'" onclick="'+showModalOnClick+'" title="'+CommonName_Answer_En+'" class="list-group-item list-group-item-action border-0 '+showModalClass+'">'+CommonName_Answer+'</a>');
  num.push('</div>');
@@ -347,7 +347,7 @@ document.getElementById('cardslistall').innerHTML = '';
 if(cards1num > 1){
 document.getElementById('cardslistall').innerHTML +=  cards1.join('');
 }
-
+imglazy();
 $(document).ready(function() {
 
 $(".showModal").click(function(e) {
