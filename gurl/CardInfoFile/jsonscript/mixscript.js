@@ -755,7 +755,6 @@ $("#linkShareforcopy").val(PostUrlInSite_Answer);
                   if (obj.status_code == 200){
                     var objlink = obj.data.url;
                     $("#linkShareforcopy").val(objlink);
-					console.log(objlink)
 					replaceurl(PostUrlInSite_Answer);
                      }
                 }
@@ -764,7 +763,6 @@ $("#linkShareforcopy").val(PostUrlInSite_Answer);
 var obj = xhr.send();
 }
 
-function imglazy(){
   if ('loading' in HTMLImageElement.prototype) {
     const images = document.querySelectorAll('img[loading="lazy"]');
     images.forEach(img => {
@@ -777,4 +775,3 @@ function imglazy(){
       'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js';
     document.body.appendChild(script);
   }
-}
